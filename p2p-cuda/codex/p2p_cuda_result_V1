@@ -1,0 +1,25 @@
+benchmark=p2p-cuda
+job_id=945101
+node=gn1227.twcc.ai
+bench_dir=/home/r14525078/HeCBench/src/p2p-cuda
+arch=sm_70
+repeat=2000
+cuda_visible_devices=0,1
+start_time=2026-06-05 16:16:48
+
+[CMD] ./main 2000
+[./main] - Starting...
+Checking for multiple GPUs...
+There are 2 GPUs
+
+Checking GPU(s) for support of peer to peer memory access...
+> Peer access from Tesla V100-SXM2-32GB (GPU0) -> Tesla V100-SXM2-32GB (GPU1) : Yes
+> Peer access from Tesla V100-SXM2-32GB (GPU1) -> Tesla V100-SXM2-32GB (GPU0) : Yes
+
+Measuring the bandwidth of peer to peer memory access...
+> Peer access from Tesla V100-SXM2-32GB (GPU0) -> Tesla V100-SXM2-32GB (GPU1) : 
+Allocating buffers (64MB on GPU0, GPU1 and CPU Host)...
+Peer-to-peer copy between GPU0 and GPU1: 48.17 GB/s
+PASS
+
+end_time=2026-06-05 16:16:51

@@ -1,0 +1,473 @@
+/*
+ * Copyright 1993-2015 NVIDIA Corporation.  All rights reserved.
+ *
+ * This sample demonstrates Peer-to-Peer (P2P) and UVA behavior.
+ */
+
+#include <algorithm>
+#include <cmath>
+#include <cstdio>
+#include <cstdlib>
+#include <cstring>
+#include <string>
+#include <vector>
+
+#include <cuda_runtime.h>
+
+#define GPU_CHECK(x) do {                                    \
+    cudaError_t err = x;                                     \
+    if (err != cudaSuccess) {                                \
+        printf("CUDA error %s:%d: %s\n",                     \
+               __FILE__, __LINE__, cudaGetErrorString(err)); \
+    }                                                        \
+} while (0)
+
+__global__ void SimpleKernel(const float *src, float *dst)
+{
+  const int idx = blockIdx.x * blockDim.x + threadIdx.x;
+  dst[idx] = src[idx] * 2.0f;
+}
+
+inline bool IsAppBuiltAs64()
+{
+  return sizeof(void*) == 8;
+}
+
+enum CopyMethod
+{
+  COPY_PEER_ASYNC,
+  COPY_UVA_ASYNC
+};
+
+struct BufferCase
+{
+  size_t bytes;
+  int repeat;
+};
+
+struct ResultRecord
+{
+  int src;
+  int dst;
+  std::string src_name;
+  std::string dst_name;
+  CopyMethod method;
+  size_t bytes;
+  int repeat;
+  int warmup;
+  float time_ms;
+  double gbps;
+  bool correctness_pass;
+};
+
+const char *copy_method_name(CopyMethod method)
+{
+  return method == COPY_PEER_ASYNC ? "cudaMemcpyPeerAsync" : "cudaMemcpyAsync(Default)";
+}
+
+void enqueue_directional_copy(CopyMethod method, int src, int dst,
+                              const float *src_buf, float *dst_buf,
+                              size_t bytes, cudaStream_t stream)
+{
+  if (method == COPY_PEER_ASYNC)
+  {
+    GPU_CHECK(cudaMemcpyPeerAsync(dst_buf, dst, src_buf, src, bytes, stream));
+  }
+  else
+  {
+    GPU_CHECK(cudaMemcpyAsync(dst_buf, src_buf, bytes, cudaMemcpyDefault, stream));
+  }
+}
+
+bool enable_peer_access(int dev, int peer)
+{
+  GPU_CHECK(cudaSetDevice(dev));
+  cudaError_t err = cudaDeviceEnablePeerAccess(peer, 0);
+  if (err == cudaErrorPeerAccessAlreadyEnabled)
+  {
+    cudaGetLastError();
+    return true;
+  }
+  if (err != cudaSuccess)
+  {
+    printf("PEER_ENABLE,device=%d,peer=%d,status=FAIL,error=%s\n",
+           dev, peer, cudaGetErrorString(err));
+    return false;
+  }
+  return true;
+}
+
+void disable_peer_access(int dev, int peer)
+{
+  GPU_CHECK(cudaSetDevice(dev));
+  cudaError_t err = cudaDeviceDisablePeerAccess(peer);
+  if (err == cudaErrorPeerAccessNotEnabled)
+  {
+    cudaGetLastError();
+    return;
+  }
+  if (err != cudaSuccess)
+  {
+    printf("PEER_DISABLE,device=%d,peer=%d,status=FAIL,error=%s\n",
+           dev, peer, cudaGetErrorString(err));
+  }
+}
+
+bool verify_pair_correctness(int src, int dst, float *src_buf, float *dst_buf,
+                             float *host_buf, size_t bytes)
+{
+  const int len = int(bytes / sizeof(float));
+  for (int i = 0; i < len; i++)
+  {
+    host_buf[i] = float(i % 4096);
+  }
+
+  GPU_CHECK(cudaSetDevice(src));
+  GPU_CHECK(cudaMemcpy(src_buf, host_buf, bytes, cudaMemcpyDefault));
+  GPU_CHECK(cudaSetDevice(dst));
+  GPU_CHECK(cudaMemset(dst_buf, 0, bytes));
+
+  const dim3 threads(256);
+  const dim3 blocks((len + int(threads.x) - 1) / int(threads.x));
+
+  GPU_CHECK(cudaSetDevice(dst));
+  SimpleKernel<<<blocks, threads>>>(src_buf, dst_buf);
+  GPU_CHECK(cudaGetLastError());
+  GPU_CHECK(cudaDeviceSynchronize());
+
+  GPU_CHECK(cudaSetDevice(src));
+  SimpleKernel<<<blocks, threads>>>(dst_buf, src_buf);
+  GPU_CHECK(cudaGetLastError());
+  GPU_CHECK(cudaDeviceSynchronize());
+
+  GPU_CHECK(cudaMemcpy(host_buf, src_buf, bytes, cudaMemcpyDefault));
+
+  int error_count = 0;
+  for (int i = 0; i < len; i++)
+  {
+    const float ref = float(i % 4096) * 4.0f;
+    if (host_buf[i] != ref)
+    {
+      printf("Verification error pair=%d->%d element=%d val=%f ref=%f\n",
+             src, dst, i, host_buf[i], ref);
+      if (error_count++ > 10)
+      {
+        break;
+      }
+    }
+  }
+
+  return error_count == 0;
+}
+
+double measure_direction(CopyMethod method, int src, int dst,
+                         const float *src_buf, float *dst_buf,
+                         size_t bytes, int repeat, int warmup,
+                         float *elapsed_ms)
+{
+  GPU_CHECK(cudaSetDevice(src));
+  GPU_CHECK(cudaDeviceSynchronize());
+  GPU_CHECK(cudaSetDevice(dst));
+  GPU_CHECK(cudaDeviceSynchronize());
+
+  cudaStream_t stream;
+  cudaEvent_t start, stop;
+  GPU_CHECK(cudaSetDevice(dst));
+  GPU_CHECK(cudaStreamCreateWithFlags(&stream, cudaStreamNonBlocking));
+  GPU_CHECK(cudaEventCreate(&start));
+  GPU_CHECK(cudaEventCreate(&stop));
+
+  for (int i = 0; i < warmup; i++)
+  {
+    enqueue_directional_copy(method, src, dst, src_buf, dst_buf, bytes, stream);
+  }
+  GPU_CHECK(cudaStreamSynchronize(stream));
+
+  GPU_CHECK(cudaEventRecord(start, stream));
+  for (int i = 0; i < repeat; i++)
+  {
+    enqueue_directional_copy(method, src, dst, src_buf, dst_buf, bytes, stream);
+  }
+  GPU_CHECK(cudaEventRecord(stop, stream));
+  GPU_CHECK(cudaEventSynchronize(stop));
+  GPU_CHECK(cudaEventElapsedTime(elapsed_ms, start, stop));
+
+  GPU_CHECK(cudaEventDestroy(stop));
+  GPU_CHECK(cudaEventDestroy(start));
+  GPU_CHECK(cudaStreamDestroy(stream));
+
+  return double(repeat) * double(bytes) / (double(*elapsed_ms) * 1.0e6);
+}
+
+void print_result(const ResultRecord &r, const char *kind, int trial)
+{
+  printf("%s,pair=%d->%d,src_name=%s,dst_name=%s,method=%s,buffer=%zu,"
+         "repeat=%d,warmup=%d,time_ms=%.3f,gbps=%.4f,status=%s",
+         kind, r.src, r.dst, r.src_name.c_str(), r.dst_name.c_str(),
+         copy_method_name(r.method), r.bytes, r.repeat, r.warmup,
+         r.time_ms, r.gbps, r.correctness_pass ? "PASS" : "FAIL");
+  if (trial >= 0)
+  {
+    printf(",trial=%d", trial);
+  }
+  printf("\n");
+}
+
+void print_summary(const ResultRecord &base, const std::vector<ResultRecord> &trials)
+{
+  double sum = 0.0;
+  double min_gbps = trials[0].gbps;
+  double max_gbps = trials[0].gbps;
+  for (const ResultRecord &r : trials)
+  {
+    sum += r.gbps;
+    min_gbps = std::min(min_gbps, r.gbps);
+    max_gbps = std::max(max_gbps, r.gbps);
+  }
+  const double avg = sum / double(trials.size());
+  double variance = 0.0;
+  for (const ResultRecord &r : trials)
+  {
+    const double diff = r.gbps - avg;
+    variance += diff * diff;
+  }
+  variance /= double(trials.size());
+  const double stddev = std::sqrt(variance);
+  const double cv = avg == 0.0 ? 0.0 : stddev / avg;
+
+  printf("SUMMARY,pair=%d->%d,src_name=%s,dst_name=%s,method=%s,buffer=%zu,"
+         "repeat=%d,warmup=%d,trials=%zu,avg_gbps=%.4f,min_gbps=%.4f,"
+         "max_gbps=%.4f,stddev_gbps=%.4f,cv=%.6f,status=%s\n",
+         base.src, base.dst, base.src_name.c_str(), base.dst_name.c_str(),
+         copy_method_name(base.method), base.bytes, base.repeat, base.warmup,
+         trials.size(), avg, min_gbps, max_gbps, stddev, cv,
+         base.correctness_pass ? "PASS" : "FAIL");
+}
+
+int main(int argc, char **argv)
+{
+  setvbuf(stdout, NULL, _IOLBF, 0);
+  printf("[%s] - Starting...\n", argv[0]);
+  if (argc > 1)
+  {
+    printf("legacy_repeat_arg=%s (ignored by sweep mode)\n", argv[1]);
+  }
+
+  if (!IsAppBuiltAs64())
+  {
+    printf("%s is only supported on 64-bit OSs. Waiving test.\n", argv[0]);
+    exit(0);
+  }
+
+  int gpu_n = 0;
+  GPU_CHECK(cudaGetDeviceCount(&gpu_n));
+  printf("There are %d GPUs\n", gpu_n);
+
+  if (gpu_n < 2)
+  {
+    printf("Two or more GPUs with Peer-to-Peer access capability are required for %s.\n", argv[0]);
+    printf("Waiving test.\n");
+    exit(0);
+  }
+
+  std::vector<cudaDeviceProp> prop(gpu_n);
+  for (int i = 0; i < gpu_n; i++)
+  {
+    GPU_CHECK(cudaGetDeviceProperties(&prop[i], i));
+    printf("DEVICE,id=%d,name=%s,totalGlobalMem=%zu\n", i, prop[i].name, prop[i].totalGlobalMem);
+  }
+
+  printf("\nChecking GPU(s) for support of peer to peer memory access...\n");
+  std::vector<std::vector<int> > can_access(gpu_n, std::vector<int>(gpu_n, 0));
+  for (int i = 0; i < gpu_n; i++)
+  {
+    for (int j = 0; j < gpu_n; j++)
+    {
+      if (i == j)
+      {
+        continue;
+      }
+      GPU_CHECK(cudaDeviceCanAccessPeer(&can_access[i][j], i, j));
+      printf("P2P_ACCESS,src=%d,dst=%d,src_name=%s,dst_name=%s,status=%s\n",
+             i, j, prop[i].name, prop[j].name, can_access[i][j] ? "Yes" : "No");
+    }
+  }
+
+  const int warmup = 8;
+  const size_t mib = 1024 * 1024;
+  const std::vector<BufferCase> buffers = {
+    {1 * mib, 8000},
+    {8 * mib, 2048},
+    {16 * mib, 1024},
+    {64 * mib, 256},
+    {128 * mib, 128},
+    {256 * mib, 64}
+  };
+  const std::vector<CopyMethod> methods = {COPY_PEER_ASYNC, COPY_UVA_ASYNC};
+  const size_t max_bytes = buffers.back().bytes;
+  const size_t correctness_bytes = 64 * mib;
+
+  std::vector<ResultRecord> sweep_results;
+
+  for (int src = 0; src < gpu_n; src++)
+  {
+    for (int dst = 0; dst < gpu_n; dst++)
+    {
+      if (src == dst)
+      {
+        continue;
+      }
+
+      if (!can_access[src][dst])
+      {
+        printf("RESULT,pair=%d->%d,src_name=%s,dst_name=%s,method=none,buffer=0,"
+               "repeat=0,warmup=0,time_ms=0,gbps=0,status=SKIP,p2p_access=No\n",
+               src, dst, prop[src].name, prop[dst].name);
+        continue;
+      }
+
+      const bool src_enable = enable_peer_access(src, dst);
+      const bool dst_enable = enable_peer_access(dst, src);
+      if (!src_enable || !dst_enable)
+      {
+        printf("RESULT,pair=%d->%d,src_name=%s,dst_name=%s,method=none,buffer=0,"
+               "repeat=0,warmup=0,time_ms=0,gbps=0,status=FAIL,p2p_enable=No\n",
+               src, dst, prop[src].name, prop[dst].name);
+        disable_peer_access(src, dst);
+        disable_peer_access(dst, src);
+        continue;
+      }
+
+      float *src_buf = NULL;
+      float *dst_buf = NULL;
+      float *host_buf = NULL;
+      GPU_CHECK(cudaSetDevice(src));
+      GPU_CHECK(cudaMalloc(&src_buf, max_bytes));
+      GPU_CHECK(cudaMallocHost(&host_buf, max_bytes));
+      GPU_CHECK(cudaSetDevice(dst));
+      GPU_CHECK(cudaMalloc(&dst_buf, max_bytes));
+
+      const bool correctness = verify_pair_correctness(src, dst, src_buf, dst_buf,
+                                                       host_buf, correctness_bytes);
+      printf("CORRECTNESS,pair=%d->%d,bytes=%zu,status=%s\n",
+             src, dst, correctness_bytes, correctness ? "PASS" : "FAIL");
+
+      if (correctness)
+      {
+        for (const BufferCase &buf : buffers)
+        {
+          for (CopyMethod method : methods)
+          {
+            float elapsed_ms = 0.0f;
+            const double gbps = measure_direction(method, src, dst, src_buf, dst_buf,
+                                                  buf.bytes, buf.repeat, warmup, &elapsed_ms);
+            ResultRecord r;
+            r.src = src;
+            r.dst = dst;
+            r.src_name = prop[src].name;
+            r.dst_name = prop[dst].name;
+            r.method = method;
+            r.bytes = buf.bytes;
+            r.repeat = buf.repeat;
+            r.warmup = warmup;
+            r.time_ms = elapsed_ms;
+            r.gbps = gbps;
+            r.correctness_pass = correctness;
+            sweep_results.push_back(r);
+            print_result(r, "RESULT", -1);
+          }
+        }
+      }
+      else
+      {
+        printf("RESULT,pair=%d->%d,src_name=%s,dst_name=%s,method=all,buffer=all,"
+               "repeat=0,warmup=%d,time_ms=0,gbps=0,status=FAIL\n",
+               src, dst, prop[src].name, prop[dst].name, warmup);
+      }
+
+      GPU_CHECK(cudaSetDevice(src));
+      GPU_CHECK(cudaFree(src_buf));
+      GPU_CHECK(cudaFreeHost(host_buf));
+      GPU_CHECK(cudaSetDevice(dst));
+      GPU_CHECK(cudaFree(dst_buf));
+      disable_peer_access(src, dst);
+      disable_peer_access(dst, src);
+    }
+  }
+
+  if (sweep_results.empty())
+  {
+    printf("FAIL\n");
+    return 1;
+  }
+
+  std::sort(sweep_results.begin(), sweep_results.end(),
+            [](const ResultRecord &a, const ResultRecord &b) {
+              return a.gbps > b.gbps;
+            });
+
+  printf("\nTop sweep candidates before variance trials:\n");
+  const int top_n = std::min(3, int(sweep_results.size()));
+  for (int i = 0; i < top_n; i++)
+  {
+    print_result(sweep_results[i], "TOP", -1);
+  }
+
+  printf("\nRepeating top %d configurations for variance...\n", top_n);
+  for (int idx = 0; idx < top_n; idx++)
+  {
+    const ResultRecord base = sweep_results[idx];
+    const int src = base.src;
+    const int dst = base.dst;
+    enable_peer_access(src, dst);
+    enable_peer_access(dst, src);
+
+    float *src_buf = NULL;
+    float *dst_buf = NULL;
+    float *host_buf = NULL;
+    GPU_CHECK(cudaSetDevice(src));
+    GPU_CHECK(cudaMalloc(&src_buf, base.bytes));
+    GPU_CHECK(cudaMallocHost(&host_buf, base.bytes));
+    GPU_CHECK(cudaSetDevice(dst));
+    GPU_CHECK(cudaMalloc(&dst_buf, base.bytes));
+
+    const bool correctness = verify_pair_correctness(src, dst, src_buf, dst_buf,
+                                                     host_buf, base.bytes);
+    std::vector<ResultRecord> trials;
+    for (int trial = 0; trial < 5 && correctness; trial++)
+    {
+      float elapsed_ms = 0.0f;
+      const double gbps = measure_direction(base.method, src, dst, src_buf, dst_buf,
+                                            base.bytes, base.repeat, base.warmup,
+                                            &elapsed_ms);
+      ResultRecord r = base;
+      r.time_ms = elapsed_ms;
+      r.gbps = gbps;
+      r.correctness_pass = correctness;
+      trials.push_back(r);
+      print_result(r, "TRIAL", trial);
+    }
+    if (!correctness)
+    {
+      printf("TRIAL,pair=%d->%d,method=%s,buffer=%zu,repeat=%d,warmup=%d,"
+             "time_ms=0,gbps=0,status=FAIL,trial=all\n",
+             src, dst, copy_method_name(base.method), base.bytes, base.repeat,
+             base.warmup);
+    }
+    else
+    {
+      print_summary(base, trials);
+    }
+
+    GPU_CHECK(cudaSetDevice(src));
+    GPU_CHECK(cudaFree(src_buf));
+    GPU_CHECK(cudaFreeHost(host_buf));
+    GPU_CHECK(cudaSetDevice(dst));
+    GPU_CHECK(cudaFree(dst_buf));
+    disable_peer_access(src, dst);
+    disable_peer_access(dst, src);
+  }
+
+  printf("PASS\n");
+  return 0;
+}

@@ -1,0 +1,357 @@
+/*
+ * Copyright 1993-2015 NVIDIA Corporation.  All rights reserved.
+ *
+ * Please refer to the NVIDIA end user license agreement (EULA) associated
+ * with this source code for terms and conditions that govern your use of
+ * this software. Any use, reproduction, disclosure, or distribution of
+ * this software and related documentation outside the terms of the EULA
+ * is strictly prohibited.
+ *
+ */
+
+/*
+ * This sample demonstrates a combination of Peer-to-Peer (P2P) and
+ * Unified Virtual Address Space (UVA) features new to SDK 4.0
+ */
+
+#include <stdlib.h>
+#include <stdio.h>
+#include <cuda_runtime.h>
+
+#define GPU_CHECK(x) do {                                    \
+    cudaError_t err = x;                                     \
+    if (err != cudaSuccess) {                                \
+        printf("CUDA error %s:%d: %s\n",                     \
+               __FILE__, __LINE__, cudaGetErrorString(err)); \
+    }                                                        \
+} while (0)
+
+__global__ void SimpleKernel(const float *src, float *dst)
+{
+  // Just a dummy kernel, doing enough for us to verify that everything
+  // worked
+  const int idx = blockIdx.x * blockDim.x + threadIdx.x;
+  dst[idx] = src[idx] * 2.0f;
+}
+
+inline bool IsAppBuiltAs64()
+{
+  return sizeof(void*) == 8;
+}
+
+enum CopyMethod
+{
+  COPY_PEER_ASYNC,
+  COPY_UVA_ASYNC
+};
+
+const char *copy_method_name(CopyMethod method)
+{
+  return method == COPY_PEER_ASYNC ? "cudaMemcpyPeerAsync" : "cudaMemcpyAsync(Default)";
+}
+
+void enqueue_p2p_copy(CopyMethod method, int iter, const int *gpuid,
+                      float *g0, float *g1, size_t buf_size, cudaStream_t stream)
+{
+  const bool forward = (iter % 2) == 0;
+  if (method == COPY_PEER_ASYNC)
+  {
+    if (forward)
+    {
+      GPU_CHECK(cudaMemcpyPeerAsync(g1, gpuid[1], g0, gpuid[0], buf_size, stream));
+    }
+    else
+    {
+      GPU_CHECK(cudaMemcpyPeerAsync(g0, gpuid[0], g1, gpuid[1], buf_size, stream));
+    }
+  }
+  else
+  {
+    if (forward)
+    {
+      GPU_CHECK(cudaMemcpyAsync(g1, g0, buf_size, cudaMemcpyDefault, stream));
+    }
+    else
+    {
+      GPU_CHECK(cudaMemcpyAsync(g0, g1, buf_size, cudaMemcpyDefault, stream));
+    }
+  }
+}
+
+double measure_p2p_pingpong(CopyMethod method, const int *gpuid,
+                            float *g0, float *g1, size_t buf_size,
+                            int repeat, int warmup, float *elapsed_ms)
+{
+  GPU_CHECK(cudaSetDevice(gpuid[0]));
+  GPU_CHECK(cudaDeviceSynchronize());
+  GPU_CHECK(cudaSetDevice(gpuid[1]));
+  GPU_CHECK(cudaDeviceSynchronize());
+
+  cudaStream_t copy_stream;
+  cudaEvent_t start, stop;
+  GPU_CHECK(cudaSetDevice(gpuid[0]));
+  GPU_CHECK(cudaStreamCreateWithFlags(&copy_stream, cudaStreamNonBlocking));
+  GPU_CHECK(cudaEventCreate(&start));
+  GPU_CHECK(cudaEventCreate(&stop));
+
+  for (int i=0; i<warmup; i++)
+  {
+    enqueue_p2p_copy(method, i, gpuid, g0, g1, buf_size, copy_stream);
+  }
+  GPU_CHECK(cudaStreamSynchronize(copy_stream));
+
+  GPU_CHECK(cudaEventRecord(start, copy_stream));
+  for (int i=0; i<repeat; i++)
+  {
+    enqueue_p2p_copy(method, i, gpuid, g0, g1, buf_size, copy_stream);
+  }
+  GPU_CHECK(cudaEventRecord(stop, copy_stream));
+  GPU_CHECK(cudaEventSynchronize(stop));
+
+  GPU_CHECK(cudaEventElapsedTime(elapsed_ms, start, stop));
+  GPU_CHECK(cudaEventDestroy(stop));
+  GPU_CHECK(cudaEventDestroy(start));
+  GPU_CHECK(cudaStreamDestroy(copy_stream));
+
+  return double(repeat) * double(buf_size) / (double(*elapsed_ms) * 1.0e6);
+}
+
+void pair_access(int i, int j, int repeat)
+{
+  // Use first pair of p2p capable GPUs detected.
+  int gpuid[2] = {i, j}; // we want to find the first two GPU's that can support P2P
+
+  // Enable peer access
+#ifdef DEBUG
+  printf("Enabling peer access between GPU%d and GPU%d...\n", gpuid[0], gpuid[1]);
+#endif
+  GPU_CHECK(cudaSetDevice(gpuid[0]));
+  GPU_CHECK(cudaDeviceEnablePeerAccess(gpuid[1], 0));
+
+  GPU_CHECK(cudaSetDevice(gpuid[1]));
+  GPU_CHECK(cudaDeviceEnablePeerAccess(gpuid[0], 0));
+
+  // Allocate buffers
+  const size_t buf_size = 1024 * 1024 * 16 * sizeof(float);
+  printf("Allocating buffers (%iMB on GPU%d, GPU%d and CPU Host)...\n",
+         int(buf_size / 1024 / 1024), gpuid[0], gpuid[1]);
+
+  // GPU0
+  GPU_CHECK(cudaSetDevice(gpuid[0]));
+  float *g0;
+  GPU_CHECK(cudaMalloc(&g0, buf_size));
+
+  float *h0;
+  GPU_CHECK(cudaMallocHost(&h0, buf_size)); // Automatically portable with UVA
+
+  // GPU1
+  GPU_CHECK(cudaSetDevice(gpuid[1]));
+  float *g1;
+  GPU_CHECK(cudaMalloc(&g1, buf_size));
+
+  const int warmup = 8;
+  float peer_time_ms = 0.0f;
+  float uva_time_ms = 0.0f;
+  const double peer_gbps = measure_p2p_pingpong(COPY_PEER_ASYNC, gpuid, g0, g1,
+                                                buf_size, repeat, warmup, &peer_time_ms);
+  const double uva_gbps = measure_p2p_pingpong(COPY_UVA_ASYNC, gpuid, g0, g1,
+                                               buf_size, repeat, warmup, &uva_time_ms);
+  const CopyMethod best_method = peer_gbps >= uva_gbps ? COPY_PEER_ASYNC : COPY_UVA_ASYNC;
+  const double best_gbps = peer_gbps >= uva_gbps ? peer_gbps : uva_gbps;
+  const float best_time_ms = peer_gbps >= uva_gbps ? peer_time_ms : uva_time_ms;
+
+  printf("P2P candidate %s between GPU%d and GPU%d: %.2f GB/s "
+         "(repeat=%d, buffer=%zu bytes, time=%.3f ms, warmup=%d)\n",
+         copy_method_name(COPY_PEER_ASYNC), gpuid[0], gpuid[1], peer_gbps,
+         repeat, buf_size, peer_time_ms, warmup);
+  printf("P2P candidate %s between GPU%d and GPU%d: %.2f GB/s "
+         "(repeat=%d, buffer=%zu bytes, time=%.3f ms, warmup=%d)\n",
+         copy_method_name(COPY_UVA_ASYNC), gpuid[0], gpuid[1], uva_gbps,
+         repeat, buf_size, uva_time_ms, warmup);
+
+  printf("Peer-to-peer copy between GPU%d and GPU%d: %.2f GB/s "
+         "(method=%s, repeat=%d, buffer=%zu bytes, time=%.3f ms, warmup=%d)\n",
+         gpuid[0], gpuid[1], best_gbps, copy_method_name(best_method),
+         repeat, buf_size, best_time_ms, warmup);
+
+  // Prepare host buffer and copy to GPU 0
+#ifdef DEBUG
+  printf("Preparing host buffer and memcpy to GPU%d...\n", gpuid[0]);
+#endif
+
+  const int buf_len = buf_size / sizeof(float);
+  for (int i=0; i<buf_len; i++)
+  {
+    h0[i] = float(i % 4096);
+  }
+
+  GPU_CHECK(cudaSetDevice(gpuid[0]));
+  GPU_CHECK(cudaMemcpy(g0, h0, buf_size, cudaMemcpyDefault));
+
+  // Kernel launch configuration
+  const dim3 threads(256);
+  const dim3 blocks(buf_len / 256);
+
+  // Run kernel on GPU 1, reading input from the GPU 0 buffer, writing
+  // output to the GPU 1 buffer
+#ifdef DEBUG
+  printf("Run kernel on GPU%d, taking source data from GPU%d and writing to GPU%d...\n",
+         gpuid[1], gpuid[0], gpuid[1]);
+#endif
+
+  GPU_CHECK(cudaSetDevice(gpuid[1]));
+  SimpleKernel<<<blocks, threads>>>(g0, g1);
+
+  GPU_CHECK(cudaDeviceSynchronize());
+
+  // Run kernel on GPU 0, reading input from the GPU 1 buffer, writing
+  // output to the GPU 0 buffer
+#ifdef DEBUG
+  printf("Run kernel on GPU%d, taking source data from GPU%d and writing to GPU%d...\n",
+         gpuid[0], gpuid[1], gpuid[0]);
+#endif
+
+  GPU_CHECK(cudaSetDevice(gpuid[0]));
+  SimpleKernel<<<blocks, threads>>>(g1, g0);
+
+  GPU_CHECK(cudaDeviceSynchronize());
+
+  // Copy data back to host and verify
+#ifdef DEBUG
+  printf("Copy data back to host from GPU%d and verify results...\n", gpuid[0]);
+#endif
+  GPU_CHECK(cudaMemcpy(h0, g0, buf_size, cudaMemcpyDefault));
+
+  int error_count = 0;
+
+  for (int i=0; i<buf_len; i++)
+  {
+    // Re-generate input data and apply 2x '* 2.0f' computation of both
+    // kernel runs
+    if (h0[i] != i % 4096 * 2.0f * 2.0f)
+    {
+      printf("Verification error @ element %i: val = %f, ref = %f\n", i, h0[i], i%4096*2.0f*2.0f);
+
+      if (error_count++ > 10)
+      {
+        break;
+      }
+    }
+  }
+
+  // Disable peer access (also unregisters memory for non-UVA cases)
+#ifdef DEBUG
+  printf("Disabling peer access...\n");
+#endif
+  GPU_CHECK(cudaSetDevice(gpuid[0]));
+  GPU_CHECK(cudaDeviceDisablePeerAccess(gpuid[1]));
+
+  GPU_CHECK(cudaSetDevice(gpuid[1]));
+  GPU_CHECK(cudaDeviceDisablePeerAccess(gpuid[0]));
+
+  // Cleanup and shutdown
+#ifdef DEBUG
+  printf("Shutting down...\n");
+#endif
+  GPU_CHECK(cudaSetDevice(gpuid[0]));
+  GPU_CHECK(cudaFree(g0));
+  GPU_CHECK(cudaFreeHost(h0));
+
+  GPU_CHECK(cudaSetDevice(gpuid[1]));
+  GPU_CHECK(cudaFree(g1));
+
+  if (error_count != 0)
+  {
+    printf("FAIL\n");
+  }
+  else
+  {
+    printf("PASS\n");
+  }
+}
+
+int main(int argc, char **argv)
+{
+  printf("[%s] - Starting...\n", argv[0]);
+  const int repeat = atoi(argv[1]);
+
+  if (!IsAppBuiltAs64())
+  {
+    printf("%s is only supported with on 64-bit OSs and the application must be built as a 64-bit target.  Test is being waived.\n", argv[0]);
+    exit(0);
+  }
+
+  // Number of GPUs
+  printf("Checking for multiple GPUs...\n");
+  int gpu_n;
+  GPU_CHECK(cudaGetDeviceCount(&gpu_n));
+  printf("There are %d GPUs\n", gpu_n);
+
+  if (gpu_n < 2)
+  {
+    printf("Two or more GPUs with Peer-to-Peer access capability are required for %s.\n", argv[0]);
+    printf("Waiving test.\n");
+    exit(0);
+  }
+
+  // Query device properties
+  cudaDeviceProp prop[64];
+
+  for (int i=0; i < gpu_n; i++)
+  {
+    GPU_CHECK(cudaGetDeviceProperties(&prop[i], i));
+  }
+  // Check possibility for peer access
+  printf("\nChecking GPU(s) for support of peer to peer memory access...\n");
+
+  int can_access_peer;
+  int p2pCapableGPUs[2] = {-1, -1}; // We take only 1 pair of P2P capable GPUs
+
+  // Show all the combinations of supported P2P GPUs
+  for (int i = 0; i < gpu_n; i++)
+  {
+    for (int j = 0; j < gpu_n; j++)
+    {
+      if (i == j)
+      {
+        continue;
+      }
+      GPU_CHECK(cudaDeviceCanAccessPeer(&can_access_peer, i, j));
+      printf("> Peer access from %s (GPU%d) -> %s (GPU%d) : %s\n", prop[i].name, i,
+             prop[j].name, j, can_access_peer ? "Yes" : "No");
+      if (can_access_peer && p2pCapableGPUs[0] == -1)
+      {
+        p2pCapableGPUs[0] = i;
+        p2pCapableGPUs[1] = j;
+      }
+    }
+  }
+
+  if (p2pCapableGPUs[0] == -1 || p2pCapableGPUs[1] == -1)
+  {
+    printf("Two or more GPUs with Peer-to-Peer access capability are required for %s.\n", argv[0]);
+    printf("Peer to Peer access is not available amongst GPUs in the system, waiving test.\n");
+    exit(0);
+  }
+
+  printf("\nMeasuring the bandwidth of peer to peer memory access...\n");
+  for (int i = 0; i < gpu_n; i++)
+  {
+    for (int j = i; j < gpu_n; j++)
+    {
+      if (i == j)
+      {
+        continue;
+      }
+      GPU_CHECK(cudaDeviceCanAccessPeer(&can_access_peer, i, j));
+      if (can_access_peer)
+      {
+        printf("> Peer access from %s (GPU%d) -> %s (GPU%d) : \n", prop[i].name, i,
+               prop[j].name, j);
+        pair_access(i, j, repeat);
+      }
+    }
+  }
+
+  return 0;
+}

@@ -1,0 +1,32 @@
+benchmark=allreduce-cuda
+job_id=945252
+node=gn1222.twcc.ai
+bench_dir=/home/r14525078/HeCBench/src/allreduce-cuda
+arch=sm_70
+cuda_visible_devices=0,1
+MPI_ROOT=/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/hpcx/hpcx-2.20/ompi
+start_time=2026-06-05 17:26:29
+
+UCX_TLS=self,shm,cuda_copy,cuda_ipc
+MPI launcher: mpirun -x UCX_TLS=self,shm,cuda_copy,cuda_ipc --mca coll ^hcoll,ucc --mca pml ucx -n 2
+
+[CMD] mpirun -x UCX_TLS=self,shm,cuda_copy,cuda_ipc --mca coll ^hcoll,ucc --mca pml ucx -n 2 ./mpi_cuda_allreduce_sanity
+CUDA-aware MPI_Allreduce sanity PASS count=1024 world_size=2
+sanity_exit_code=0
+
+[CMD] mpirun -x UCX_TLS=self,shm,cuda_copy,cuda_ipc --mca coll ^hcoll,ucc --mca pml ucx -n 2 ./main
+Verified allreduce for size 0 (9.46563 us per iteration)
+Verified allreduce for size 32 (59.6158 us per iteration)
+Verified allreduce for size 256 (58.6288 us per iteration)
+Verified allreduce for size 1024 (61.5702 us per iteration)
+Verified allreduce for size 4096 (68.1908 us per iteration)
+Verified allreduce for size 16384 (57.019 us per iteration)
+Verified allreduce for size 65536 (101.789 us per iteration)
+Verified allreduce for size 262144 (741.179 us per iteration)
+Verified allreduce for size 1048576 (1728.23 us per iteration)
+Verified allreduce for size 8388608 (3643.89 us per iteration)
+Verified allreduce for size 67108864 (16462.7 us per iteration)
+Verified allreduce for size 536870912 (120385 us per iteration)
+ring_allreduce_exit_code=0
+
+end_time=2026-06-05 17:27:03
