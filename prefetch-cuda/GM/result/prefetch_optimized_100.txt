@@ -1,0 +1,61 @@
+info: set device to 0
+Concurrent managed access with prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 1.712870 (ms)
+PASS
+Concurrent managed access with prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 1.712612 (ms)
+PASS
+Concurrent managed access with prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 1.711669 (ms)
+PASS
+Concurrent managed access with prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 1.690159 (ms)
+PASS
+Concurrent managed access with prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 1.653076 (ms)
+PASS
+Concurrent managed access with prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 1.702659 (ms)
+PASS
+Concurrent managed access with prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 1.708010 (ms)
+PASS
+Concurrent managed access with prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 1.711387 (ms)
+PASS
+Concurrent managed access with prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 1.710424 (ms)
+PASS
+Concurrent managed access with prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 1.663755 (ms)
+PASS
+Concurrent managed access without prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 1.729438 (ms)
+PASS
+Concurrent managed access without prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 1.733486 (ms)
+PASS
+Concurrent managed access without prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 1.743705 (ms)
+PASS
+Concurrent managed access without prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 1.699355 (ms)
+PASS
+Concurrent managed access without prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 1.712037 (ms)
+PASS
+Concurrent managed access without prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 1.766515 (ms)
+PASS
+Concurrent managed access without prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 1.750543 (ms)
+PASS
+Concurrent managed access without prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 1.746214 (ms)
+PASS
+Concurrent managed access without prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 1.674129 (ms)
+PASS
+Concurrent managed access without prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 1.739522 (ms)
+PASS

@@ -1,0 +1,15 @@
+job_id,node,batch_size,hidden_size,topk,repeat,warmup,avg_us,cpu_chrono_us,correctness,status,variant,source
+946771,gn1222.twcc.ai,3072,3072,2048,100,10,701.839371,701.754570,PASS,PASS,cuda_event_instrumented,result/topk_cuda_result_946771.txt
+946771,gn1222.twcc.ai,3072,3072,1024,100,10,668.385315,668.332160,PASS,PASS,cuda_event_instrumented,result/topk_cuda_result_946771.txt
+946771,gn1222.twcc.ai,3072,4096,2048,100,10,741.386261,741.328160,PASS,PASS,cuda_event_instrumented,result/topk_cuda_result_946771.txt
+946771,gn1222.twcc.ai,3072,4096,1024,100,10,730.910721,730.863700,PASS,PASS,cuda_event_instrumented,result/topk_cuda_result_946771.txt
+946771,gn1222.twcc.ai,3072,8192,2048,100,10,960.552979,960.508410,PASS,PASS,cuda_event_instrumented,result/topk_cuda_result_946771.txt
+946771,gn1222.twcc.ai,3072,8192,1024,100,10,887.480316,887.413290,PASS,PASS,cuda_event_instrumented,result/topk_cuda_result_946771.txt
+946771,gn1222.twcc.ai,3072,16384,2048,100,10,1506.416626,1506.348380,PASS,PASS,cuda_event_instrumented,result/topk_cuda_result_946771.txt
+946771,gn1222.twcc.ai,3072,16384,1024,100,10,1628.190765,1628.126330,PASS,PASS,cuda_event_instrumented,result/topk_cuda_result_946771.txt
+946771,gn1222.twcc.ai,3072,32768,2048,100,10,3510.681458,3510.596860,PASS,PASS,cuda_event_instrumented,result/topk_cuda_result_946771.txt
+946771,gn1222.twcc.ai,3072,32768,1024,100,10,3364.853821,3364.771240,PASS,PASS,cuda_event_instrumented,result/topk_cuda_result_946771.txt
+946771,gn1222.twcc.ai,3072,65536,2048,100,10,6344.202271,6344.084840,PASS,PASS,cuda_event_instrumented,result/topk_cuda_result_946771.txt
+946771,gn1222.twcc.ai,3072,65536,1024,100,10,6166.651001,6166.542710,PASS,PASS,cuda_event_instrumented,result/topk_cuda_result_946771.txt
+946771,gn1222.twcc.ai,3072,131072,2048,100,10,11933.736572,11933.580100,PASS,PASS,cuda_event_instrumented,result/topk_cuda_result_946771.txt
+946771,gn1222.twcc.ai,3072,131072,1024,100,10,11709.481201,11709.308300,PASS,PASS,cuda_event_instrumented,result/topk_cuda_result_946771.txt

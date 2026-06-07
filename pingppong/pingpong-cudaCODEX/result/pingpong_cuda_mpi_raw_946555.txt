@@ -1,0 +1,12 @@
+MPI : Transfer size (B):     524288, Transfer Time (s):     0.000096459, Bandwidth (GB/s):     5.435351786
+MPI : Transfer size (B):    1048576, Transfer Time (s):     0.000250837, Bandwidth (GB/s):     4.180301495
+MPI : Transfer size (B):    2097152, Transfer Time (s):     0.000408054, Bandwidth (GB/s):     5.139397839
+MPI : Transfer size (B):    4194304, Transfer Time (s):     0.000759183, Bandwidth (GB/s):     5.524763226
+MPI : Transfer size (B):    8388608, Transfer Time (s):     0.001557188, Bandwidth (GB/s):     5.387022895
+MPI : Transfer size (B):   16777216, Transfer Time (s):     0.003523447, Bandwidth (GB/s):     4.761592027
+MPI : Transfer size (B):   33554432, Transfer Time (s):     0.006496330, Bandwidth (GB/s):     5.165136933
+MPI : Transfer size (B):   67108864, Transfer Time (s):     0.013097604, Bandwidth (GB/s):     5.123751109
+MPI : Transfer size (B):  134217728, Transfer Time (s):     0.026918400, Bandwidth (GB/s):     4.986096081
+MPI : Transfer size (B):  268435456, Transfer Time (s):     0.056754788, Bandwidth (GB/s):     4.729741155
+MPI : Transfer size (B):  536870912, Transfer Time (s):     0.113624566, Bandwidth (GB/s):     4.724954567
+MPI : Transfer size (B): 1073741824, Transfer Time (s):     0.222098240, Bandwidth (GB/s):     4.834535501

@@ -1,0 +1,60 @@
+Average kernel execution time: 4.535808 (ms)
+PASS
+RESULT,impl=0,batch=100000,slice=128,repeat=100,avg_ms=4.535808,status=PASS
+Average kernel execution time: 0.132229 (ms)
+PASS
+RESULT,impl=1,batch=100000,slice=128,repeat=100,avg_ms=0.132229,status=PASS
+Average kernel execution time: 0.129300 (ms)
+PASS
+RESULT,impl=2,batch=100000,slice=128,repeat=100,avg_ms=0.129300,status=PASS
+Average kernel execution time: 0.252815 (ms)
+PASS
+RESULT,impl=3,batch=100000,slice=128,repeat=100,avg_ms=0.252815,status=PASS
+Average kernel execution time: 15.743037 (ms)
+PASS
+RESULT,impl=0,batch=100000,slice=256,repeat=100,avg_ms=15.743037,status=PASS
+Average kernel execution time: 0.319529 (ms)
+PASS
+RESULT,impl=1,batch=100000,slice=256,repeat=100,avg_ms=0.319529,status=PASS
+Average kernel execution time: 0.346481 (ms)
+PASS
+RESULT,impl=2,batch=100000,slice=256,repeat=100,avg_ms=0.346481,status=PASS
+Average kernel execution time: 0.306514 (ms)
+PASS
+RESULT,impl=3,batch=100000,slice=256,repeat=100,avg_ms=0.306514,status=PASS
+Average kernel execution time: 55.378628 (ms)
+PASS
+RESULT,impl=0,batch=100000,slice=784,repeat=100,avg_ms=55.378628,status=PASS
+Average kernel execution time: 1.455944 (ms)
+PASS
+RESULT,impl=1,batch=100000,slice=784,repeat=100,avg_ms=1.455944,status=PASS
+Average kernel execution time: 1.237299 (ms)
+PASS
+RESULT,impl=2,batch=100000,slice=784,repeat=100,avg_ms=1.237299,status=PASS
+Average kernel execution time: 0.929280 (ms)
+PASS
+RESULT,impl=3,batch=100000,slice=784,repeat=100,avg_ms=0.929280,status=PASS
+Average kernel execution time: 65.308907 (ms)
+PASS
+RESULT,impl=0,batch=100000,slice=1024,repeat=100,avg_ms=65.308907,status=PASS
+Average kernel execution time: 2.108539 (ms)
+PASS
+RESULT,impl=1,batch=100000,slice=1024,repeat=100,avg_ms=2.108539,status=PASS
+Average kernel execution time: 1.583637 (ms)
+PASS
+RESULT,impl=2,batch=100000,slice=1024,repeat=100,avg_ms=1.583637,status=PASS
+Average kernel execution time: 1.184686 (ms)
+PASS
+RESULT,impl=3,batch=100000,slice=1024,repeat=100,avg_ms=1.184686,status=PASS
+Average kernel execution time: 42.144474 (ms)
+PASS
+RESULT,impl=0,batch=50000,slice=2048,repeat=100,avg_ms=42.144474,status=PASS
+Average kernel execution time: 2.245407 (ms)
+PASS
+RESULT,impl=1,batch=50000,slice=2048,repeat=100,avg_ms=2.245407,status=PASS
+Average kernel execution time: 1.907896 (ms)
+PASS
+RESULT,impl=2,batch=50000,slice=2048,repeat=100,avg_ms=1.907896,status=PASS
+Average kernel execution time: 1.679667 (ms)
+PASS
+RESULT,impl=3,batch=50000,slice=2048,repeat=100,avg_ms=1.679667,status=PASS

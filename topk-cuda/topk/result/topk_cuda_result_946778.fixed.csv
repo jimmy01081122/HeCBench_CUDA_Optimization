@@ -1,0 +1,15 @@
+job_id,node,batch_size,hidden_size,topk,repeat,warmup,avg_us,cpu_chrono_us,correctness,status,variant,source
+946778,gn1222.twcc.ai,3072,3072,2048,100,10,409.804802,1.934400,PASS,PASS,cached_workspace_async,result/topk_cuda_result_946778.txt
+946778,gn1222.twcc.ai,3072,3072,1024,100,10,397.004814,2.031310,PASS,PASS,cached_workspace_async,result/topk_cuda_result_946778.txt
+946778,gn1222.twcc.ai,3072,4096,2048,100,10,479.795189,1.919600,PASS,PASS,cached_workspace_async,result/topk_cuda_result_946778.txt
+946778,gn1222.twcc.ai,3072,4096,1024,100,10,455.690231,1.997590,PASS,PASS,cached_workspace_async,result/topk_cuda_result_946778.txt
+946778,gn1222.twcc.ai,3072,8192,2048,100,10,739.184647,1.983080,PASS,PASS,cached_workspace_async,result/topk_cuda_result_946778.txt
+946778,gn1222.twcc.ai,3072,8192,1024,100,10,623.677444,1.991360,PASS,PASS,cached_workspace_async,result/topk_cuda_result_946778.txt
+946778,gn1222.twcc.ai,3072,16384,2048,100,10,1141.032944,2.024950,PASS,PASS,cached_workspace_async,result/topk_cuda_result_946778.txt
+946778,gn1222.twcc.ai,3072,16384,1024,100,10,1227.458572,2.148780,PASS,PASS,cached_workspace_async,result/topk_cuda_result_946778.txt
+946778,gn1222.twcc.ai,3072,32768,2048,100,10,3010.027466,1.966370,PASS,PASS,cached_workspace_async,result/topk_cuda_result_946778.txt
+946778,gn1222.twcc.ai,3072,32768,1024,100,10,2874.470520,2.035810,PASS,PASS,cached_workspace_async,result/topk_cuda_result_946778.txt
+946778,gn1222.twcc.ai,3072,65536,2048,100,10,5614.663696,1.945830,PASS,PASS,cached_workspace_async,result/topk_cuda_result_946778.txt
+946778,gn1222.twcc.ai,3072,65536,1024,100,10,5426.913452,2.234380,PASS,PASS,cached_workspace_async,result/topk_cuda_result_946778.txt
+946778,gn1222.twcc.ai,3072,131072,2048,100,10,10745.487061,1.957490,PASS,PASS,cached_workspace_async,result/topk_cuda_result_946778.txt
+946778,gn1222.twcc.ai,3072,131072,1024,100,10,10507.663574,2.015960,PASS,PASS,cached_workspace_async,result/topk_cuda_result_946778.txt

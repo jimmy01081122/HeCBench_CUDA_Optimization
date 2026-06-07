@@ -1,0 +1,5 @@
+job_id,node,test_name,repeat,block_size,grid_size,shared_bytes,avg_us,min_us,max_us,bandwidth_GBps,correctness,status,notes
+947389,gn1222.twcc.ai,shmembench,1000,128,2048,12288,6455.914,6018.048,7911.424,13313.32,PASS,PASS,dynamic_shared_memory_volta_opt
+947389,gn1222.twcc.ai,shmembench,1000,256,1024,24576,6479.818,5746.688,6608.896,13264.21,PASS,PASS,dynamic_shared_memory_volta_opt
+947389,gn1222.twcc.ai,shmembench,1000,512,512,49152,6175.696,6147.072,6999.040,13917.41,PASS,PASS,dynamic_shared_memory_volta_opt
+947389,gn1222.twcc.ai,shmembench,1000,1024,256,98304,7116.199,7109.632,7124.992,12078.03,PASS,PASS,dynamic_shared_memory_volta_opt

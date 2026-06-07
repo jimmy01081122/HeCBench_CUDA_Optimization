@@ -1,0 +1,15 @@
+job_id,node,batch_size,hidden_size,topk,repeat,warmup,avg_us,cpu_chrono_us,correctness,status,variant,source
+946764,gn1222.twcc.ai,3072,3072,2048,100,10,700.016632,699.926350,PASS,PASS,cuda_event_instrumented,result/topk_cuda_result_946764.txt
+946764,gn1222.twcc.ai,3072,3072,1024,100,10,681.727982,681.674200,PASS,PASS,cuda_event_instrumented,result/topk_cuda_result_946764.txt
+946764,gn1222.twcc.ai,3072,4096,2048,100,10,766.689301,766.635390,PASS,PASS,cuda_event_instrumented,result/topk_cuda_result_946764.txt
+946764,gn1222.twcc.ai,3072,4096,1024,100,10,758.968353,758.910460,PASS,PASS,cuda_event_instrumented,result/topk_cuda_result_946764.txt
+946764,gn1222.twcc.ai,3072,8192,2048,100,10,1035.704346,1035.632890,PASS,PASS,cuda_event_instrumented,result/topk_cuda_result_946764.txt
+946764,gn1222.twcc.ai,3072,8192,1024,100,10,894.074860,894.002830,PASS,PASS,cuda_event_instrumented,result/topk_cuda_result_946764.txt
+946764,gn1222.twcc.ai,3072,16384,2048,100,10,1486.336060,1486.263900,PASS,PASS,cuda_event_instrumented,result/topk_cuda_result_946764.txt
+946764,gn1222.twcc.ai,3072,16384,1024,100,10,1634.211884,1634.146840,PASS,PASS,cuda_event_instrumented,result/topk_cuda_result_946764.txt
+946764,gn1222.twcc.ai,3072,32768,2048,100,10,3498.106995,3498.024390,PASS,PASS,cuda_event_instrumented,result/topk_cuda_result_946764.txt
+946764,gn1222.twcc.ai,3072,32768,1024,100,10,3371.048889,3370.959850,PASS,PASS,cuda_event_instrumented,result/topk_cuda_result_946764.txt
+946764,gn1222.twcc.ai,3072,65536,2048,100,10,6336.266479,6336.142740,PASS,PASS,cuda_event_instrumented,result/topk_cuda_result_946764.txt
+946764,gn1222.twcc.ai,3072,65536,1024,100,10,6230.446167,6230.332830,PASS,PASS,cuda_event_instrumented,result/topk_cuda_result_946764.txt
+946764,gn1222.twcc.ai,3072,131072,2048,100,10,11941.611328,11941.460090,PASS,PASS,cuda_event_instrumented,result/topk_cuda_result_946764.txt
+946764,gn1222.twcc.ai,3072,131072,1024,100,10,11721.768799,11721.606440,PASS,PASS,cuda_event_instrumented,result/topk_cuda_result_946764.txt

@@ -1,0 +1,13 @@
+--------------------------------
+loading CUDA 12.8 with cuDNN / NCCL
+based on cuda_12.8.0_570.86.10_linux.run
+--------------------------------
+
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+kernels_v2.h(256): warning #177-D: variable "num_tokens" was declared but never referenced
+    const int num_tokens = gridDim.x;
+              ^
+
+Remark: The warnings can be suppressed with "-diag-suppress <warning-number>"
+
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).

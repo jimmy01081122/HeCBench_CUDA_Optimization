@@ -1,0 +1,6 @@
+Shared memory bandwidth microbenchmark
+Buffer sizes: 8MB
+RESULT,test=shmembench,repeat=1000,block=128,shared_bytes=12288,avg_us=6455.914,min_us=6018.048,max_us=7911.424,bandwidth_GBps=13313.32,correctness=PASS,status=PASS
+RESULT,test=shmembench,repeat=1000,block=256,shared_bytes=24576,avg_us=6479.818,min_us=5746.688,max_us=6608.896,bandwidth_GBps=13264.21,correctness=PASS,status=PASS
+RESULT,test=shmembench,repeat=1000,block=512,shared_bytes=49152,avg_us=6175.696,min_us=6147.072,max_us=6999.040,bandwidth_GBps=13917.41,correctness=PASS,status=PASS
+RESULT,test=shmembench,repeat=1000,block=1024,shared_bytes=98304,avg_us=7116.199,min_us=7109.632,max_us=7124.992,bandwidth_GBps=12078.03,correctness=PASS,status=PASS

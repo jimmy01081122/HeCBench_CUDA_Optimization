@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "parse_topk_results.py", line 72, in <module>
+    raise SystemExit(main())
+  File "parse_topk_results.py", line 45, in main
+    input_path, output_path, job_id = sys.argv[1:]
+ValueError: too many values to unpack (expected 3)

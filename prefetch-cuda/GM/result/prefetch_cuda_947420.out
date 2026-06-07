@@ -1,0 +1,281 @@
+=== Loading modules ===
+=== Environment ===
+/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/cuda/cuda-12.8/bin/nvcc
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2025 NVIDIA Corporation
+Built on Wed_Jan_15_19:20:09_PST_2025
+Cuda compilation tools, release 12.8, V12.8.61
+Build cuda_12.8.r12.8/compiler.35404655_0
+gn1221.twcc.ai
+CUDA_VISIBLE_DEVICES: 0
+GPU 0: Tesla V100-SXM2-32GB (UUID: GPU-218718b2-f5f5-53f6-7d72-d91846f3feb2)
+Sun Jun  7 22:12:35 2026       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 535.161.08             Driver Version: 535.161.08   CUDA Version: 12.8     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  Tesla V100-SXM2-32GB           On  | 00000000:1C:00.0 Off |                    0 |
+| N/A   25C    P0              41W / 300W |      0MiB / 32768MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|  No running processes found                                                           |
++---------------------------------------------------------------------------------------+
+=== Build Baseline ===
+=== Build Optimized ===
+=== Run Baseline (repeat=10) ===
+info: set device to 0
+Concurrent managed access with prefetch
+Average execution time: 6.377929 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 6.858966 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 6.833293 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 6.832196 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 6.269437 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 6.845786 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 6.865003 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 6.811916 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 6.422330 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 6.836234 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 12.747087 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 13.202588 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 12.715047 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 12.982794 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 12.573055 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 12.911160 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 12.891942 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 12.681776 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 12.990056 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 12.816213 (ms)
+PASS
+=== Run Optimized (repeat=10) ===
+info: set device to 0
+Concurrent managed access with prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 6.883900 (ms)
+PASS
+Concurrent managed access with prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 6.804586 (ms)
+PASS
+Concurrent managed access with prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 6.286537 (ms)
+PASS
+Concurrent managed access with prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 6.800125 (ms)
+PASS
+Concurrent managed access with prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 6.821854 (ms)
+PASS
+Concurrent managed access with prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 6.388621 (ms)
+PASS
+Concurrent managed access with prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 6.795468 (ms)
+PASS
+Concurrent managed access with prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 6.730028 (ms)
+PASS
+Concurrent managed access with prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 6.492861 (ms)
+PASS
+Concurrent managed access with prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 6.822005 (ms)
+PASS
+Concurrent managed access without prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 8.305742 (ms)
+PASS
+Concurrent managed access without prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 8.465295 (ms)
+PASS
+Concurrent managed access without prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 8.512930 (ms)
+PASS
+Concurrent managed access without prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 8.424146 (ms)
+PASS
+Concurrent managed access without prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 8.561121 (ms)
+PASS
+Concurrent managed access without prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 8.553432 (ms)
+PASS
+Concurrent managed access without prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 8.052672 (ms)
+PASS
+Concurrent managed access without prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 8.586572 (ms)
+PASS
+Concurrent managed access without prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 8.456949 (ms)
+PASS
+Concurrent managed access without prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 8.062994 (ms)
+PASS
+=== Run Baseline (repeat=100) ===
+info: set device to 0
+Concurrent managed access with prefetch
+Average execution time: 1.763245 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 1.753834 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 1.716221 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 1.765397 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 1.765654 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 1.766178 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 1.702526 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 1.765637 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 1.765373 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 1.754222 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 2.203362 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 2.159806 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 2.197215 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 2.182612 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 2.160949 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 2.159819 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 2.166564 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 2.194779 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 2.211615 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 2.177518 (ms)
+PASS
+=== Run Optimized (repeat=100) ===
+info: set device to 0
+Concurrent managed access with prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 1.712870 (ms)
+PASS
+Concurrent managed access with prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 1.712612 (ms)
+PASS
+Concurrent managed access with prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 1.711669 (ms)
+PASS
+Concurrent managed access with prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 1.690159 (ms)
+PASS
+Concurrent managed access with prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 1.653076 (ms)
+PASS
+Concurrent managed access with prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 1.702659 (ms)
+PASS
+Concurrent managed access with prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 1.708010 (ms)
+PASS
+Concurrent managed access with prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 1.711387 (ms)
+PASS
+Concurrent managed access with prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 1.710424 (ms)
+PASS
+Concurrent managed access with prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 1.663755 (ms)
+PASS
+Concurrent managed access without prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 1.729438 (ms)
+PASS
+Concurrent managed access without prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 1.733486 (ms)
+PASS
+Concurrent managed access without prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 1.743705 (ms)
+PASS
+Concurrent managed access without prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 1.699355 (ms)
+PASS
+Concurrent managed access without prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 1.712037 (ms)
+PASS
+Concurrent managed access without prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 1.766515 (ms)
+PASS
+Concurrent managed access without prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 1.750543 (ms)
+PASS
+Concurrent managed access without prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 1.746214 (ms)
+PASS
+Concurrent managed access without prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 1.674129 (ms)
+PASS
+Concurrent managed access without prefetch (blockSize=256, numBlocks=1280)
+Average execution time: 1.739522 (ms)
+PASS

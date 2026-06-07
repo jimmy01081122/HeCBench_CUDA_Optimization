@@ -1,0 +1,50 @@
+=== Loading modules ===
+=== Environment ===
+/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/cuda/cuda-12.8/bin/nvcc
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2025 NVIDIA Corporation
+Built on Wed_Jan_15_19:20:09_PST_2025
+Cuda compilation tools, release 12.8, V12.8.61
+Build cuda_12.8.r12.8/compiler.35404655_0
+gn1222.twcc.ai
+CUDA_VISIBLE_DEVICES: 0
+GPU 0: Tesla V100-SXM2-32GB (UUID: GPU-145c9ce9-e63a-59f8-c6d7-cd0a7a73ba66)
+Sun Jun  7 21:28:19 2026       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 535.161.08             Driver Version: 535.161.08   CUDA Version: 12.8     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  Tesla V100-SXM2-32GB           On  | 00000000:B1:00.0 Off |                    0 |
+| N/A   25C    P0              40W / 300W |      0MiB / 32768MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|  No running processes found                                                           |
++---------------------------------------------------------------------------------------+
+=== Build ===
+rm -rf main main.o shmem_kernels.o
+nvcc  -std=c++17 -Wno-deprecated-gpu-targets -Xcompiler -Wall -arch=sm_70 -O3 -c main.cu -o main.o
+nvcc  -std=c++17 -Wno-deprecated-gpu-targets -Xcompiler -Wall -arch=sm_70 -O3 -c shmem_kernels.cu -o shmem_kernels.o
+nvcc  -std=c++17 -Wno-deprecated-gpu-targets -Xcompiler -Wall -arch=sm_70 -O3 main.o shmem_kernels.o -o main 
+=== Run ===
+Shared memory bandwidth microbenchmark
+Buffer sizes: 8MB
+RESULT,test=shmembench,repeat=1000,block=128,shared_bytes=12288,avg_us=6455.914,min_us=6018.048,max_us=7911.424,bandwidth_GBps=13313.32,correctness=PASS,status=PASS
+RESULT,test=shmembench,repeat=1000,block=256,shared_bytes=24576,avg_us=6479.818,min_us=5746.688,max_us=6608.896,bandwidth_GBps=13264.21,correctness=PASS,status=PASS
+RESULT,test=shmembench,repeat=1000,block=512,shared_bytes=49152,avg_us=6175.696,min_us=6147.072,max_us=6999.040,bandwidth_GBps=13917.41,correctness=PASS,status=PASS
+RESULT,test=shmembench,repeat=1000,block=1024,shared_bytes=98304,avg_us=7116.199,min_us=7109.632,max_us=7124.992,bandwidth_GBps=12078.03,correctness=PASS,status=PASS
+=== Processing Results ===
+=== CSV Content ===
+job_id,node,test_name,repeat,block_size,grid_size,shared_bytes,avg_us,min_us,max_us,bandwidth_GBps,correctness,status,notes
+947389,gn1222.twcc.ai,shmembench,1000,128,2048,12288,6455.914,6018.048,7911.424,13313.32,PASS,PASS,dynamic_shared_memory_volta_opt
+947389,gn1222.twcc.ai,shmembench,1000,256,1024,24576,6479.818,5746.688,6608.896,13264.21,PASS,PASS,dynamic_shared_memory_volta_opt
+947389,gn1222.twcc.ai,shmembench,1000,512,512,49152,6175.696,6147.072,6999.040,13917.41,PASS,PASS,dynamic_shared_memory_volta_opt
+947389,gn1222.twcc.ai,shmembench,1000,1024,256,98304,7116.199,7109.632,7124.992,12078.03,PASS,PASS,dynamic_shared_memory_volta_opt

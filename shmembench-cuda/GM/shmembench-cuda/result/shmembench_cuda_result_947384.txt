@@ -1,0 +1,5 @@
+Shared memory bandwidth microbenchmark
+Buffer sizes: 8MB
+Average kernel execution time : 6.521804 (ms)
+Memory throughput
+	using 128bit operations : 13178.82 GB/sec (823.68 billion accesses/sec)

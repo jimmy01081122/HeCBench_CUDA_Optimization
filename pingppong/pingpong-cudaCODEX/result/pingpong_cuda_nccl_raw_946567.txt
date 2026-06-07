@@ -1,0 +1,12 @@
+RESULT,backend=NCCL,size_bytes=524288,loop_count=50,avg_time_s=0.001838783,gbps=0.285127736
+RESULT,backend=NCCL,size_bytes=1048576,loop_count=50,avg_time_s=0.000517967,gbps=2.024407703
+RESULT,backend=NCCL,size_bytes=2097152,loop_count=50,avg_time_s=0.001077946,gbps=1.945507799
+RESULT,backend=NCCL,size_bytes=4194304,loop_count=50,avg_time_s=0.000708862,gbps=5.916952213
+RESULT,backend=NCCL,size_bytes=8388608,loop_count=50,avg_time_s=0.001595314,gbps=5.258279298
+RESULT,backend=NCCL,size_bytes=16777216,loop_count=50,avg_time_s=0.002892428,gbps=5.800391699
+RESULT,backend=NCCL,size_bytes=33554432,loop_count=50,avg_time_s=0.010690368,gbps=3.138753557
+RESULT,backend=NCCL,size_bytes=67108864,loop_count=50,avg_time_s=0.016014405,gbps=4.190531246
+RESULT,backend=NCCL,size_bytes=134217728,loop_count=50,avg_time_s=0.025425320,gbps=5.278900190
+RESULT,backend=NCCL,size_bytes=268435456,loop_count=50,avg_time_s=0.052878994,gbps=5.076410010
+RESULT,backend=NCCL,size_bytes=536870912,loop_count=50,avg_time_s=0.107853966,gbps=4.977757741
+RESULT,backend=NCCL,size_bytes=1073741824,loop_count=50,avg_time_s=0.214945510,gbps=4.995414073

@@ -1,0 +1,6 @@
+Average kernel execution time: 55.366821 (ms)
+PASS
+RESULT,impl=0,batch=100000,slice=784,repeat=100,avg_ms=55.366821,status=PASS
+Average kernel execution time: 1.453220 (ms)
+PASS
+RESULT,impl=1,batch=100000,slice=784,repeat=100,avg_ms=1.453220,status=PASS

@@ -1,0 +1,57 @@
+=== Environment ===
+
+Currently Loaded Modules:
+  1) hpcx-ompi   2) nvhpc-24.11_hpcx-2.20_cuda-12.6
+
+ 
+
+which nvcc: /work/HPC_SYS/twnia2/pkg-rocky8/nvidia/hpc_sdk/Linux_x86_64/24.11/compilers/bin/nvcc
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2024 NVIDIA Corporation
+Built on Thu_Sep_12_02:18:05_PDT_2024
+Cuda compilation tools, release 12.6, V12.6.77
+Build cuda_12.6.r12.6/compiler.34841621_0
+which mpicc: /work/HPC_SYS/twnia2/pkg-rocky8/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/hpcx/hpcx-2.20/ompi/bin/mpicc
+which mpirun: /work/HPC_SYS/twnia2/pkg-rocky8/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/hpcx/hpcx-2.20/ompi/bin/mpirun
+mpirun (Open MPI) 4.1.7a1
+
+Report bugs to http://www.open-mpi.org/community/help/
+GPU 0: Tesla V100-SXM2-32GB (UUID: GPU-f19ea2fc-4fa5-b54a-8007-bc60b89e9c8b)
+GPU 1: Tesla V100-SXM2-32GB (UUID: GPU-bc07e200-ab98-39c4-6fe1-eb2f4bb33aea)
+CUDA_VISIBLE_DEVICES=0,1
+MPI_ROOT=/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/hpcx/hpcx-2.20/ompi
+UCX_TLS=self,shm,cuda_copy,cuda_ipc
+Launcher: mpirun -x UCX_TLS --mca coll ^hcoll,ucc --mca pml ucx -n 2
+=== Build ===
+rm -rf main-mpi main-mpi.o
+rm -rf main-nccl main-nccl.o
+nvcc  -std=c++17 -I/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/hpcx/hpcx-2.20/ompi/include -DOMPI_SKIP_MPICXX= -Xcompiler -Wall -arch=sm_70 -O3 -c main-mpi.cu -o main-mpi.o
+nvcc  -std=c++17 -I/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/hpcx/hpcx-2.20/ompi/include -DOMPI_SKIP_MPICXX= -Xcompiler -Wall -arch=sm_70 -O3 main-mpi.o -o main-mpi -L/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/hpcx/hpcx-2.20/ompi/lib -lmpi -lnccl
+nvcc  -std=c++17 -I/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/hpcx/hpcx-2.20/ompi/include -DOMPI_SKIP_MPICXX= -Xcompiler -Wall -arch=sm_70 -O3 -c main-nccl.cu -o main-nccl.o
+nvcc  -std=c++17 -I/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/hpcx/hpcx-2.20/ompi/include -DOMPI_SKIP_MPICXX= -Xcompiler -Wall -arch=sm_70 -O3 main-nccl.o -o main-nccl -L/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/hpcx/hpcx-2.20/ompi/lib -lmpi -lnccl
+=== MPI baseline ===
+RESULT,backend=MPI,size_bytes=524288,loop_count=50,avg_time_s=0.000134327,gbps=3.903085138
+RESULT,backend=MPI,size_bytes=1048576,loop_count=50,avg_time_s=0.000236341,gbps=4.436711168
+RESULT,backend=MPI,size_bytes=2097152,loop_count=50,avg_time_s=0.000362647,gbps=5.782897684
+RESULT,backend=MPI,size_bytes=4194304,loop_count=50,avg_time_s=0.000823561,gbps=5.092890492
+RESULT,backend=MPI,size_bytes=8388608,loop_count=50,avg_time_s=0.001582802,gbps=5.299845857
+RESULT,backend=MPI,size_bytes=16777216,loop_count=50,avg_time_s=0.003513703,gbps=4.774795692
+RESULT,backend=MPI,size_bytes=33554432,loop_count=50,avg_time_s=0.006298622,gbps=5.327265357
+RESULT,backend=MPI,size_bytes=67108864,loop_count=50,avg_time_s=0.013116639,gbps=5.116315365
+RESULT,backend=MPI,size_bytes=134217728,loop_count=50,avg_time_s=0.026570352,gbps=5.051409521
+RESULT,backend=MPI,size_bytes=268435456,loop_count=50,avg_time_s=0.056869458,gbps=4.720204233
+RESULT,backend=MPI,size_bytes=536870912,loop_count=50,avg_time_s=0.112706326,gbps=4.763449675
+RESULT,backend=MPI,size_bytes=1073741824,loop_count=50,avg_time_s=0.222248219,gbps=4.831273021
+=== NCCL baseline ===
+RESULT,backend=NCCL,size_bytes=524288,loop_count=50,avg_time_s=0.001838783,gbps=0.285127736
+RESULT,backend=NCCL,size_bytes=1048576,loop_count=50,avg_time_s=0.000517967,gbps=2.024407703
+RESULT,backend=NCCL,size_bytes=2097152,loop_count=50,avg_time_s=0.001077946,gbps=1.945507799
+RESULT,backend=NCCL,size_bytes=4194304,loop_count=50,avg_time_s=0.000708862,gbps=5.916952213
+RESULT,backend=NCCL,size_bytes=8388608,loop_count=50,avg_time_s=0.001595314,gbps=5.258279298
+RESULT,backend=NCCL,size_bytes=16777216,loop_count=50,avg_time_s=0.002892428,gbps=5.800391699
+RESULT,backend=NCCL,size_bytes=33554432,loop_count=50,avg_time_s=0.010690368,gbps=3.138753557
+RESULT,backend=NCCL,size_bytes=67108864,loop_count=50,avg_time_s=0.016014405,gbps=4.190531246
+RESULT,backend=NCCL,size_bytes=134217728,loop_count=50,avg_time_s=0.025425320,gbps=5.278900190
+RESULT,backend=NCCL,size_bytes=268435456,loop_count=50,avg_time_s=0.052878994,gbps=5.076410010
+RESULT,backend=NCCL,size_bytes=536870912,loop_count=50,avg_time_s=0.107853966,gbps=4.977757741
+RESULT,backend=NCCL,size_bytes=1073741824,loop_count=50,avg_time_s=0.214945510,gbps=4.995414073
