@@ -1,0 +1,10 @@
+prompt_file,lines,chars,mentions_correctness,mentions_baseline,mentions_sbatch,mentions_submission_limit,mentions_raw_output,main_strength,main_gap
+moe/moe_prompt.md,31,898,True,False,True,True,True,基本約束完整,缺少 profiler 指標要求；缺少變異與重複統計要求
+pingppong/pingpong-cudaCODEX/prompt.md,374,9971,True,True,True,True,True,限制清楚，利於避免偽加速,缺少 profiler 指標要求
+prefetch-cuda/GM/prompt.md,46,1047,True,True,True,False,False,基本約束完整,缺少 profiler 指標要求
+shmembench-cuda/CG/prompt.md,414,10548,True,True,True,True,True,限制清楚，利於避免偽加速,規格相對完整
+shmembench-cuda/GM/shmembench-cuda/prompt.md,413,10486,True,True,True,True,True,限制清楚，利於避免偽加速,規格相對完整
+simpleMutiDevice/GM/simpleMultiDevice-cuda/prompt.md,382,9126,True,True,True,True,True,限制清楚，利於避免偽加速,規格相對完整
+softmax-cuda/GM/prompt.md,394,9889,True,True,True,True,True,限制清楚，利於避免偽加速,規格相對完整
+topk-cuda/CG/prompt.md,384,9821,True,True,True,True,True,限制清楚，利於避免偽加速,規格相對完整
+topk-cuda/GM/topk-cuda/prompt.md,379,9712,True,True,True,True,True,限制清楚，利於避免偽加速,規格相對完整
