@@ -1,0 +1,98 @@
+tag=baseline
+job_id=948013
+node=gn1222
+date=2026-06-08T22:57:48+08:00
+repeat=100000
+cuda_visible_devices=0
+hostname=gn1222.twcc.ai
+nvcc=/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/cuda/cuda-12.8/bin/nvcc
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2025 NVIDIA Corporation
+Built on Wed_Jan_15_19:20:09_PST_2025
+Cuda compilation tools, release 12.8, V12.8.61
+Build cuda_12.8.r12.8/compiler.35404655_0
+Mon Jun  8 22:57:48 2026       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 535.161.08             Driver Version: 535.161.08   CUDA Version: 12.8     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  Tesla V100-SXM2-32GB           On  | 00000000:1B:00.0 Off |                    0 |
+| N/A   29C    P0              42W / 300W |      0MiB / 32768MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|  No running processes found                                                           |
++---------------------------------------------------------------------------------------+
+rm -rf main main.o
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 -c main.cu -o main.o
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 main.o -o main 
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Average execution time of the kernels (tokens 1, topk: 2, expert: 32, block_size 32): 12.233857 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 3, expert: 32, block_size 32): 11.919770 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 4, expert: 32, block_size 32): 11.918153 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 2, expert: 128, block_size 32): 16.188017 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 3, expert: 128, block_size 32): 16.265076 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 4, expert: 128, block_size 32): 16.198227 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 2, expert: 32, block_size 32): 11.922036 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 3, expert: 32, block_size 32): 11.930408 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 4, expert: 32, block_size 32): 12.041750 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 2, expert: 128, block_size 32): 16.237841 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 3, expert: 128, block_size 32): 16.249554 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 4, expert: 128, block_size 32): 16.230148 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 2, expert: 32, block_size 32): 13.550758 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 3, expert: 32, block_size 32): 14.464845 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 4, expert: 32, block_size 32): 16.701511 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 2, expert: 128, block_size 32): 16.471741 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 3, expert: 128, block_size 32): 16.553774 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 4, expert: 128, block_size 32): 16.499422 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 2, expert: 32, block_size 32): 21.035830 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 3, expert: 32, block_size 32): 23.542009 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 4, expert: 32, block_size 32): 25.809927 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 2, expert: 128, block_size 32): 20.557356 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 3, expert: 128, block_size 32): 22.990267 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 4, expert: 128, block_size 32): 25.100201 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 2, expert: 32, block_size 32): 26.002132 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 3, expert: 32, block_size 32): 31.030277 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 4, expert: 32, block_size 32): 36.177139 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 2, expert: 128, block_size 32): 25.007883 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 3, expert: 128, block_size 32): 29.648033 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 4, expert: 128, block_size 32): 34.645435 (us)
+PASS

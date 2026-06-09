@@ -1,0 +1,42 @@
+benchmark=moe-cuda
+job_id=948366
+node=gn1230.twcc.ai
+bench_dir=/home/r14525078/p1/HeCBench/src/moe-cuda
+arch=sm_70
+CUDA_VISIBLE_DEVICES=0
+
+=== Environment ===
+
+Currently Loaded Modules:
+  1) cuda/12.8
+
+ 
+
+/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/cuda/cuda-12.8/bin/nvcc
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2025 NVIDIA Corporation
+Built on Wed_Jan_15_19:20:09_PST_2025
+Cuda compilation tools, release 12.8, V12.8.61
+Build cuda_12.8.r12.8/compiler.35404655_0
+GPU 0: Tesla V100-SXM2-32GB (UUID: GPU-d2daa301-1808-2756-6790-64c7e1682fad)
+
+=== Build ===
+rm -rf main main.o
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 -c main.cu -o main.o
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 main.o -o main 
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+
+=== Run ===
+./main 32768 384 1 1000
+PASS
+Average execution time of kernels: 211.019272 (us)
+./main 32768 384 2 1000
+FAIL
+Average execution time of kernels: 273.709503 (us)
+./main 32768 384 4 1000
+FAIL
+Average execution time of kernels: 453.196533 (us)
+./main 32768 384 8 1000
+FAIL
+Average execution time of kernels: 877.459106 (us)

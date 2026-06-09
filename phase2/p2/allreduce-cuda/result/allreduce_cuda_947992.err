@@ -1,0 +1,9 @@
++--------------------------------------------------+
+| Nvidia hpc sdk v24.11 with cuda v12.6 is loaded. |
++--------------------------------------------------+
+
+Currently Loaded Modules:
+  1) hpcx-ompi   2) nvhpc-24.11_hpcx-2.20_cuda-12.6
+
+ 
+

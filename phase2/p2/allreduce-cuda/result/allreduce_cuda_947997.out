@@ -1,0 +1,22 @@
+job_id=947997
+node_list=gn1222
+submit_dir=/home/r14525078/p2/HeCBench/src/allreduce-cuda
+date=2026-06-08T22:26:30+08:00
+cuda_visible_devices=0,1
+rm -rf main main.o collectives.o timer.o
+nvcc  -std=c++17 -I/opt/nvidia/hpc_sdk/Linux_x86_64/24.5/comm_libs/12.4/openmpi4/openmpi-4.1.5//include -DOMPI_SKIP_MPICXX= -Xcompiler -Wall -arch=sm_70 -O3 -c main.cu -o main.o
+nvcc  -std=c++17 -I/opt/nvidia/hpc_sdk/Linux_x86_64/24.5/comm_libs/12.4/openmpi4/openmpi-4.1.5//include -DOMPI_SKIP_MPICXX= -Xcompiler -Wall -arch=sm_70 -O3 -c collectives.cu -o collectives.o
+nvcc  -std=c++17 -I/opt/nvidia/hpc_sdk/Linux_x86_64/24.5/comm_libs/12.4/openmpi4/openmpi-4.1.5//include -DOMPI_SKIP_MPICXX= -Xcompiler -Wall -arch=sm_70 -O3 -c timer.cu -o timer.o
+nvcc  -std=c++17 -I/opt/nvidia/hpc_sdk/Linux_x86_64/24.5/comm_libs/12.4/openmpi4/openmpi-4.1.5//include -DOMPI_SKIP_MPICXX= -Xcompiler -Wall -arch=sm_70 -O3 main.o collectives.o timer.o -o main -L/opt/nvidia/hpc_sdk/Linux_x86_64/24.5/comm_libs/12.4/openmpi4/openmpi-4.1.5//lib -lmpi -DOMPI_SKIP_MPICXX=
+Verified allreduce for size 0 (0.0673032 us per iteration)
+Verified allreduce for size 32 (29.5263 us per iteration)
+Verified allreduce for size 256 (31.2285 us per iteration)
+Verified allreduce for size 1024 (35.9302 us per iteration)
+Verified allreduce for size 4096 (54.5206 us per iteration)
+Verified allreduce for size 16384 (35.805 us per iteration)
+Verified allreduce for size 65536 (37.4076 us per iteration)
+Verified allreduce for size 262144 (84.476 us per iteration)
+Verified allreduce for size 1048576 (722.306 us per iteration)
+Verified allreduce for size 8388608 (2610.8 us per iteration)
+Verified allreduce for size 67108864 (17343.6 us per iteration)
+Verified allreduce for size 536870912 (131252 us per iteration)

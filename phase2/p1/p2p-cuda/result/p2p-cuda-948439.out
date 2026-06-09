@@ -1,0 +1,50 @@
+benchmark=p2p-cuda
+job_id=948439
+node=gn1221.twcc.ai
+bench_dir=/home/r14525078/p1/HeCBench/src/p2p-cuda
+arch=sm_70
+repeat=2000
+CUDA_VISIBLE_DEVICES=0,1
+
+=== Environment ===
+
+Currently Loaded Modules:
+  1) cuda/12.8
+
+ 
+
+/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/cuda/cuda-12.8/bin/nvcc
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2025 NVIDIA Corporation
+Built on Wed_Jan_15_19:20:09_PST_2025
+Cuda compilation tools, release 12.8, V12.8.61
+Build cuda_12.8.r12.8/compiler.35404655_0
+GPU 0: Tesla V100-SXM2-32GB (UUID: GPU-877f5a63-b694-155a-afc5-85653c15ccca)
+GPU 1: Tesla V100-SXM2-32GB (UUID: GPU-7b0b6d6a-ac08-324d-1a44-7565ed8a0a15)
+
+=== Build ===
+rm -rf main main.o
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 -c main.cu -o main.o
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 main.o -o main 
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+
+=== Run ===
+[./main] - Starting...
+Checking for multiple GPUs...
+There are 2 GPUs
+
+Checking GPU(s) for support of peer to peer memory access...
+> Peer access from Tesla V100-SXM2-32GB (GPU0) -> Tesla V100-SXM2-32GB (GPU1) : Yes
+> Peer access from Tesla V100-SXM2-32GB (GPU1) -> Tesla V100-SXM2-32GB (GPU0) : Yes
+
+Measuring the bandwidth of peer to peer memory access...
+> Peer access from Tesla V100-SXM2-32GB (GPU0) -> Tesla V100-SXM2-32GB (GPU1) : 
+Allocating buffers (64MB on GPU0, GPU1 and CPU Host)...
+Peer-to-peer copy GPU0 -> GPU1: 8.44 GB/s
+PASS
+> Peer access from Tesla V100-SXM2-32GB (GPU1) -> Tesla V100-SXM2-32GB (GPU0) : 
+Allocating buffers (64MB on GPU1, GPU0 and CPU Host)...
+Peer-to-peer copy GPU1 -> GPU0: 3.21 GB/s
+PASS
+Result file: /home/r14525078/p1/HeCBench/src/p2p-cuda/result/p2p_cuda_result_948439.txt

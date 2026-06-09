@@ -1,0 +1,43 @@
+benchmark,job_id,node,prompt_level,submission_index,variant,case,metric_name,metric_value,metric_unit,correctness,status,result_type,accepted,reject_reason,notes
+p2p-cuda,948464,gn1115.twcc.ai,P3,baseline,baseline,pair=GPU0-GPU1,p2p_bandwidth,48.14,GB/s,PASS,valid,TOPOLOGY_MEASURE,true,,unordered ping-pong baseline trial=1
+p2p-cuda,948464,gn1115.twcc.ai,P3,baseline,baseline,pair=GPU0-GPU2,p2p_bandwidth,24.17,GB/s,PASS,valid,TOPOLOGY_MEASURE,true,,unordered ping-pong baseline trial=1
+p2p-cuda,948464,gn1115.twcc.ai,P3,baseline,baseline,pair=GPU0-GPU3,p2p_bandwidth,48.16,GB/s,PASS,valid,TOPOLOGY_MEASURE,true,,unordered ping-pong baseline trial=1
+p2p-cuda,948464,gn1115.twcc.ai,P3,baseline,baseline,pair=GPU1-GPU2,p2p_bandwidth,48.16,GB/s,PASS,valid,TOPOLOGY_MEASURE,true,,unordered ping-pong baseline trial=1
+p2p-cuda,948464,gn1115.twcc.ai,P3,baseline,baseline,pair=GPU1-GPU3,p2p_bandwidth,24.18,GB/s,PASS,valid,TOPOLOGY_MEASURE,true,,unordered ping-pong baseline trial=1
+p2p-cuda,948464,gn1115.twcc.ai,P3,baseline,baseline,pair=GPU2-GPU3,p2p_bandwidth,24.18,GB/s,PASS,valid,TOPOLOGY_MEASURE,true,,unordered ping-pong baseline trial=1
+p2p-cuda,948466,gn1115.twcc.ai,P3,1,directed-p2p-copy,src=GPU0;dst=GPU1;trial=1,p2p_bandwidth,48.28,GB/s,PASS,valid,MEASURE_FIX,true,,directed cudaMemcpyPeer with remote-kernel validation
+p2p-cuda,948466,gn1115.twcc.ai,P3,1,directed-p2p-copy,src=GPU0;dst=GPU2;trial=1,p2p_bandwidth,24.21,GB/s,PASS,valid,MEASURE_FIX,true,,directed cudaMemcpyPeer with remote-kernel validation
+p2p-cuda,948466,gn1115.twcc.ai,P3,1,directed-p2p-copy,src=GPU0;dst=GPU3;trial=1,p2p_bandwidth,48.28,GB/s,PASS,valid,MEASURE_FIX,true,,directed cudaMemcpyPeer with remote-kernel validation
+p2p-cuda,948466,gn1115.twcc.ai,P3,1,directed-p2p-copy,src=GPU1;dst=GPU0;trial=1,p2p_bandwidth,48.28,GB/s,PASS,valid,MEASURE_FIX,true,,directed cudaMemcpyPeer with remote-kernel validation
+p2p-cuda,948466,gn1115.twcc.ai,P3,1,directed-p2p-copy,src=GPU1;dst=GPU2;trial=1,p2p_bandwidth,48.28,GB/s,PASS,valid,MEASURE_FIX,true,,directed cudaMemcpyPeer with remote-kernel validation
+p2p-cuda,948466,gn1115.twcc.ai,P3,1,directed-p2p-copy,src=GPU1;dst=GPU3;trial=1,p2p_bandwidth,24.21,GB/s,PASS,valid,MEASURE_FIX,true,,directed cudaMemcpyPeer with remote-kernel validation
+p2p-cuda,948466,gn1115.twcc.ai,P3,1,directed-p2p-copy,src=GPU2;dst=GPU0;trial=1,p2p_bandwidth,24.21,GB/s,PASS,valid,MEASURE_FIX,true,,directed cudaMemcpyPeer with remote-kernel validation
+p2p-cuda,948466,gn1115.twcc.ai,P3,1,directed-p2p-copy,src=GPU2;dst=GPU1;trial=1,p2p_bandwidth,48.28,GB/s,PASS,valid,MEASURE_FIX,true,,directed cudaMemcpyPeer with remote-kernel validation
+p2p-cuda,948466,gn1115.twcc.ai,P3,1,directed-p2p-copy,src=GPU2;dst=GPU3;trial=1,p2p_bandwidth,24.21,GB/s,PASS,valid,MEASURE_FIX,true,,directed cudaMemcpyPeer with remote-kernel validation
+p2p-cuda,948466,gn1115.twcc.ai,P3,1,directed-p2p-copy,src=GPU3;dst=GPU0;trial=1,p2p_bandwidth,48.28,GB/s,PASS,valid,MEASURE_FIX,true,,directed cudaMemcpyPeer with remote-kernel validation
+p2p-cuda,948466,gn1115.twcc.ai,P3,1,directed-p2p-copy,src=GPU3;dst=GPU1;trial=1,p2p_bandwidth,24.21,GB/s,PASS,valid,MEASURE_FIX,true,,directed cudaMemcpyPeer with remote-kernel validation
+p2p-cuda,948466,gn1115.twcc.ai,P3,1,directed-p2p-copy,src=GPU3;dst=GPU2;trial=1,p2p_bandwidth,24.21,GB/s,PASS,valid,MEASURE_FIX,true,,directed cudaMemcpyPeer with remote-kernel validation
+p2p-cuda,948466,gn1115.twcc.ai,P3,1,directed-p2p-copy,src=GPU0;dst=GPU1;trial=2,p2p_bandwidth,48.28,GB/s,PASS,valid,MEASURE_FIX,true,,directed cudaMemcpyPeer with remote-kernel validation
+p2p-cuda,948466,gn1115.twcc.ai,P3,1,directed-p2p-copy,src=GPU0;dst=GPU2;trial=2,p2p_bandwidth,24.21,GB/s,PASS,valid,MEASURE_FIX,true,,directed cudaMemcpyPeer with remote-kernel validation
+p2p-cuda,948466,gn1115.twcc.ai,P3,1,directed-p2p-copy,src=GPU0;dst=GPU3;trial=2,p2p_bandwidth,48.28,GB/s,PASS,valid,MEASURE_FIX,true,,directed cudaMemcpyPeer with remote-kernel validation
+p2p-cuda,948466,gn1115.twcc.ai,P3,1,directed-p2p-copy,src=GPU1;dst=GPU0;trial=2,p2p_bandwidth,48.28,GB/s,PASS,valid,MEASURE_FIX,true,,directed cudaMemcpyPeer with remote-kernel validation
+p2p-cuda,948466,gn1115.twcc.ai,P3,1,directed-p2p-copy,src=GPU1;dst=GPU2;trial=2,p2p_bandwidth,48.28,GB/s,PASS,valid,MEASURE_FIX,true,,directed cudaMemcpyPeer with remote-kernel validation
+p2p-cuda,948466,gn1115.twcc.ai,P3,1,directed-p2p-copy,src=GPU1;dst=GPU3;trial=2,p2p_bandwidth,24.21,GB/s,PASS,valid,MEASURE_FIX,true,,directed cudaMemcpyPeer with remote-kernel validation
+p2p-cuda,948466,gn1115.twcc.ai,P3,1,directed-p2p-copy,src=GPU2;dst=GPU0;trial=2,p2p_bandwidth,24.21,GB/s,PASS,valid,MEASURE_FIX,true,,directed cudaMemcpyPeer with remote-kernel validation
+p2p-cuda,948466,gn1115.twcc.ai,P3,1,directed-p2p-copy,src=GPU2;dst=GPU1;trial=2,p2p_bandwidth,48.28,GB/s,PASS,valid,MEASURE_FIX,true,,directed cudaMemcpyPeer with remote-kernel validation
+p2p-cuda,948466,gn1115.twcc.ai,P3,1,directed-p2p-copy,src=GPU2;dst=GPU3;trial=2,p2p_bandwidth,24.21,GB/s,PASS,valid,MEASURE_FIX,true,,directed cudaMemcpyPeer with remote-kernel validation
+p2p-cuda,948466,gn1115.twcc.ai,P3,1,directed-p2p-copy,src=GPU3;dst=GPU0;trial=2,p2p_bandwidth,48.28,GB/s,PASS,valid,MEASURE_FIX,true,,directed cudaMemcpyPeer with remote-kernel validation
+p2p-cuda,948466,gn1115.twcc.ai,P3,1,directed-p2p-copy,src=GPU3;dst=GPU1;trial=2,p2p_bandwidth,24.21,GB/s,PASS,valid,MEASURE_FIX,true,,directed cudaMemcpyPeer with remote-kernel validation
+p2p-cuda,948466,gn1115.twcc.ai,P3,1,directed-p2p-copy,src=GPU3;dst=GPU2;trial=2,p2p_bandwidth,24.21,GB/s,PASS,valid,MEASURE_FIX,true,,directed cudaMemcpyPeer with remote-kernel validation
+p2p-cuda,948466,gn1115.twcc.ai,P3,1,directed-p2p-copy,src=GPU0;dst=GPU1;trial=3,p2p_bandwidth,48.28,GB/s,PASS,valid,MEASURE_FIX,true,,directed cudaMemcpyPeer with remote-kernel validation
+p2p-cuda,948466,gn1115.twcc.ai,P3,1,directed-p2p-copy,src=GPU0;dst=GPU2;trial=3,p2p_bandwidth,24.21,GB/s,PASS,valid,MEASURE_FIX,true,,directed cudaMemcpyPeer with remote-kernel validation
+p2p-cuda,948466,gn1115.twcc.ai,P3,1,directed-p2p-copy,src=GPU0;dst=GPU3;trial=3,p2p_bandwidth,48.28,GB/s,PASS,valid,MEASURE_FIX,true,,directed cudaMemcpyPeer with remote-kernel validation
+p2p-cuda,948466,gn1115.twcc.ai,P3,1,directed-p2p-copy,src=GPU1;dst=GPU0;trial=3,p2p_bandwidth,48.28,GB/s,PASS,valid,MEASURE_FIX,true,,directed cudaMemcpyPeer with remote-kernel validation
+p2p-cuda,948466,gn1115.twcc.ai,P3,1,directed-p2p-copy,src=GPU1;dst=GPU2;trial=3,p2p_bandwidth,48.28,GB/s,PASS,valid,MEASURE_FIX,true,,directed cudaMemcpyPeer with remote-kernel validation
+p2p-cuda,948466,gn1115.twcc.ai,P3,1,directed-p2p-copy,src=GPU1;dst=GPU3;trial=3,p2p_bandwidth,24.21,GB/s,PASS,valid,MEASURE_FIX,true,,directed cudaMemcpyPeer with remote-kernel validation
+p2p-cuda,948466,gn1115.twcc.ai,P3,1,directed-p2p-copy,src=GPU2;dst=GPU0;trial=3,p2p_bandwidth,24.21,GB/s,PASS,valid,MEASURE_FIX,true,,directed cudaMemcpyPeer with remote-kernel validation
+p2p-cuda,948466,gn1115.twcc.ai,P3,1,directed-p2p-copy,src=GPU2;dst=GPU1;trial=3,p2p_bandwidth,48.28,GB/s,PASS,valid,MEASURE_FIX,true,,directed cudaMemcpyPeer with remote-kernel validation
+p2p-cuda,948466,gn1115.twcc.ai,P3,1,directed-p2p-copy,src=GPU2;dst=GPU3;trial=3,p2p_bandwidth,24.21,GB/s,PASS,valid,MEASURE_FIX,true,,directed cudaMemcpyPeer with remote-kernel validation
+p2p-cuda,948466,gn1115.twcc.ai,P3,1,directed-p2p-copy,src=GPU3;dst=GPU0;trial=3,p2p_bandwidth,48.28,GB/s,PASS,valid,MEASURE_FIX,true,,directed cudaMemcpyPeer with remote-kernel validation
+p2p-cuda,948466,gn1115.twcc.ai,P3,1,directed-p2p-copy,src=GPU3;dst=GPU1;trial=3,p2p_bandwidth,24.21,GB/s,PASS,valid,MEASURE_FIX,true,,directed cudaMemcpyPeer with remote-kernel validation
+p2p-cuda,948466,gn1115.twcc.ai,P3,1,directed-p2p-copy,src=GPU3;dst=GPU2;trial=3,p2p_bandwidth,24.21,GB/s,PASS,valid,MEASURE_FIX,true,,directed cudaMemcpyPeer with remote-kernel validation

@@ -1,0 +1,8 @@
+job_id=948500
+node=gn1224
+date=2026-06-09T15:48:38+08:00
+UCX_TLS=self,shm,cuda_copy,cuda_ipc
+NCCL_DEBUG=unset
+CUDA_VISIBLE_DEVICES=0,1
+Field "cuda_version" is not a valid field to query.
+

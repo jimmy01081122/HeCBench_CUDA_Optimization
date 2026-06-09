@@ -1,0 +1,208 @@
+--------------------------------
+loading CUDA 12.8 with cuDNN / NCCL
+based on cuda_12.8.0_570.86.10_linux.run
+--------------------------------
+
+job_id=948057
+node=gn1115
+CUDA_VISIBLE_DEVICES=0
+profiler_command=ncu --metrics sm__warps_active.avg.pct_of_peak_sustained_active,dram__throughput.avg.pct_of_peak_sustained_elapsed --target-processes all --launch-count 12 ./main 1
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2025 NVIDIA Corporation
+Built on Wed_Jan_15_19:20:09_PST_2025
+Cuda compilation tools, release 12.8, V12.8.61
+Build cuda_12.8.r12.8/compiler.35404655_0
+
+Currently Loaded Modules:
+  1) cuda/12.8
+
+ 
+
+rm -rf main main.o
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 -c main.cu -o main.o
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 main.o -o main 
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+==PROF== Connected to process 2969138 (/home/r14525078/p3/HeCBench/src/moe-align-cuda/main)
+==PROF== Profiling "moe_align_block_size_small_ba..." - 0 (1/12): 0%....50%....100% - 3 passes
+==PROF== Profiling "moe_align_block_size_small_ba..." - 1 (2/12): 0%....50%....100% - 3 passes
+==PROF== Profiling "moe_align_block_size_small_ba..." - 2 (3/12): 0%....50%....100% - 3 passes
+==PROF== Profiling "moe_align_block_size_kernel" - 3 (4/12): 0%....50%....100% - 3 passes
+==PROF== Profiling "count_and_sort_expert_tokens_..." - 4 (5/12): 0%....50%....100% - 3 passes
+==PROF== Profiling "moe_align_block_size_kernel" - 5 (6/12): 0%....50%....100% - 3 passes
+==PROF== Profiling "count_and_sort_expert_tokens_..." - 6 (7/12): 0%....50%....100% - 3 passes
+==PROF== Profiling "moe_align_block_size_kernel" - 7 (8/12): 0%....50%....100% - 3 passes
+==PROF== Profiling "count_and_sort_expert_tokens_..." - 8 (9/12): 0%....50%....100% - 3 passes
+==PROF== Profiling "moe_align_block_size_small_ba..." - 9 (10/12): 0%....50%....100% - 3 passes
+==PROF== Profiling "moe_align_block_size_small_ba..." - 10 (11/12): 0%....50%....100% - 3 passes
+==PROF== Profiling "moe_align_block_size_small_ba..." - 11 (12/12): 0%....50%....100% - 3 passes
+Average execution time of the kernels (tokens 1, topk: 2, expert: 32, block_size 32): 728496.750000 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 3, expert: 32, block_size 32): 47149.859375 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 4, expert: 32, block_size 32): 43613.199219 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 2, expert: 128, block_size 32): 89010.539062 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 3, expert: 128, block_size 32): 89685.531250 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 4, expert: 128, block_size 32): 99376.820312 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 2, expert: 32, block_size 32): 43854.453125 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 3, expert: 32, block_size 32): 41364.429688 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 4, expert: 32, block_size 32): 41888.867188 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 2, expert: 128, block_size 32): 89.713005 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 3, expert: 128, block_size 32): 72.063004 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 4, expert: 128, block_size 32): 67.383003 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 2, expert: 32, block_size 32): 40.929001 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 3, expert: 32, block_size 32): 36.956001 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 4, expert: 32, block_size 32): 71.133003 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 2, expert: 128, block_size 32): 70.434006 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 3, expert: 128, block_size 32): 70.267006 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 4, expert: 128, block_size 32): 71.467003 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 2, expert: 32, block_size 32): 73.454002 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 3, expert: 32, block_size 32): 69.958000 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 4, expert: 32, block_size 32): 69.288002 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 2, expert: 128, block_size 32): 70.029007 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 3, expert: 128, block_size 32): 71.986000 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 4, expert: 128, block_size 32): 70.242004 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 2, expert: 32, block_size 32): 72.114006 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 3, expert: 32, block_size 32): 74.425003 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 4, expert: 32, block_size 32): 78.223007 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 2, expert: 128, block_size 32): 73.583000 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 3, expert: 128, block_size 32): 76.510002 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 4, expert: 128, block_size 32): 75.667000 (us)
+PASS
+==PROF== Disconnected from process 2969138
+[2969138] main@127.0.0.1
+  void moe_align_block_size_small_batch_expert_kernel<int, 256>(const T1 *, int *, int *, int *, int *, int, int, int, int, int) (1, 1, 1)x(288, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+    Section: Command line profiler metrics
+    -------------------------------------------------- ----------- ------------
+    Metric Name                                        Metric Unit Metric Value
+    -------------------------------------------------- ----------- ------------
+    dram__throughput.avg.pct_of_peak_sustained_elapsed           %         0.15
+    sm__warps_active.avg.pct_of_peak_sustained_active            %         5.72
+    -------------------------------------------------- ----------- ------------
+
+  void moe_align_block_size_small_batch_expert_kernel<int, 256>(const T1 *, int *, int *, int *, int *, int, int, int, int, int) (1, 1, 1)x(288, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+    Section: Command line profiler metrics
+    -------------------------------------------------- ----------- ------------
+    Metric Name                                        Metric Unit Metric Value
+    -------------------------------------------------- ----------- ------------
+    dram__throughput.avg.pct_of_peak_sustained_elapsed           %         0.15
+    sm__warps_active.avg.pct_of_peak_sustained_active            %         5.73
+    -------------------------------------------------- ----------- ------------
+
+  void moe_align_block_size_small_batch_expert_kernel<int, 256>(const T1 *, int *, int *, int *, int *, int, int, int, int, int) (1, 1, 1)x(288, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+    Section: Command line profiler metrics
+    -------------------------------------------------- ----------- ------------
+    Metric Name                                        Metric Unit Metric Value
+    -------------------------------------------------- ----------- ------------
+    dram__throughput.avg.pct_of_peak_sustained_elapsed           %         0.15
+    sm__warps_active.avg.pct_of_peak_sustained_active            %         5.62
+    -------------------------------------------------- ----------- ------------
+
+  void moe_align_block_size_kernel<int>(const T1 *, int *, int *, int *, int *, int, int, int, int, int, int *, int, int) (2, 1, 1)x(1024, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+    Section: Command line profiler metrics
+    -------------------------------------------------- ----------- ------------
+    Metric Name                                        Metric Unit Metric Value
+    -------------------------------------------------- ----------- ------------
+    dram__throughput.avg.pct_of_peak_sustained_elapsed           %         0.15
+    sm__warps_active.avg.pct_of_peak_sustained_active            %        49.14
+    -------------------------------------------------- ----------- ------------
+
+  void count_and_sort_expert_tokens_kernel<int>(const T1 *, int *, int *, int *, int, int, int, int) (1, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+    Section: Command line profiler metrics
+    -------------------------------------------------- ----------- ------------
+    Metric Name                                        Metric Unit Metric Value
+    -------------------------------------------------- ----------- ------------
+    dram__throughput.avg.pct_of_peak_sustained_elapsed           %         0.08
+    sm__warps_active.avg.pct_of_peak_sustained_active            %         7.36
+    -------------------------------------------------- ----------- ------------
+
+  void moe_align_block_size_kernel<int>(const T1 *, int *, int *, int *, int *, int, int, int, int, int, int *, int, int) (2, 1, 1)x(1024, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+    Section: Command line profiler metrics
+    -------------------------------------------------- ----------- ------------
+    Metric Name                                        Metric Unit Metric Value
+    -------------------------------------------------- ----------- ------------
+    dram__throughput.avg.pct_of_peak_sustained_elapsed           %         0.14
+    sm__warps_active.avg.pct_of_peak_sustained_active            %        49.16
+    -------------------------------------------------- ----------- ------------
+
+  void count_and_sort_expert_tokens_kernel<int>(const T1 *, int *, int *, int *, int, int, int, int) (1, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+    Section: Command line profiler metrics
+    -------------------------------------------------- ----------- ------------
+    Metric Name                                        Metric Unit Metric Value
+    -------------------------------------------------- ----------- ------------
+    dram__throughput.avg.pct_of_peak_sustained_elapsed           %         0.08
+    sm__warps_active.avg.pct_of_peak_sustained_active            %         8.13
+    -------------------------------------------------- ----------- ------------
+
+  void moe_align_block_size_kernel<int>(const T1 *, int *, int *, int *, int *, int, int, int, int, int, int *, int, int) (2, 1, 1)x(1024, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+    Section: Command line profiler metrics
+    -------------------------------------------------- ----------- ------------
+    Metric Name                                        Metric Unit Metric Value
+    -------------------------------------------------- ----------- ------------
+    dram__throughput.avg.pct_of_peak_sustained_elapsed           %         0.14
+    sm__warps_active.avg.pct_of_peak_sustained_active            %        49.18
+    -------------------------------------------------- ----------- ------------
+
+  void count_and_sort_expert_tokens_kernel<int>(const T1 *, int *, int *, int *, int, int, int, int) (1, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+    Section: Command line profiler metrics
+    -------------------------------------------------- ----------- ------------
+    Metric Name                                        Metric Unit Metric Value
+    -------------------------------------------------- ----------- ------------
+    dram__throughput.avg.pct_of_peak_sustained_elapsed           %         0.09
+    sm__warps_active.avg.pct_of_peak_sustained_active            %         7.32
+    -------------------------------------------------- ----------- ------------
+
+  void moe_align_block_size_small_batch_expert_kernel<int, 256>(const T1 *, int *, int *, int *, int *, int, int, int, int, int) (1, 1, 1)x(288, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+    Section: Command line profiler metrics
+    -------------------------------------------------- ----------- ------------
+    Metric Name                                        Metric Unit Metric Value
+    -------------------------------------------------- ----------- ------------
+    dram__throughput.avg.pct_of_peak_sustained_elapsed           %         0.15
+    sm__warps_active.avg.pct_of_peak_sustained_active            %         5.81
+    -------------------------------------------------- ----------- ------------
+
+  void moe_align_block_size_small_batch_expert_kernel<int, 256>(const T1 *, int *, int *, int *, int *, int, int, int, int, int) (1, 1, 1)x(288, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+    Section: Command line profiler metrics
+    -------------------------------------------------- ----------- ------------
+    Metric Name                                        Metric Unit Metric Value
+    -------------------------------------------------- ----------- ------------
+    dram__throughput.avg.pct_of_peak_sustained_elapsed           %         0.14
+    sm__warps_active.avg.pct_of_peak_sustained_active            %         5.56
+    -------------------------------------------------- ----------- ------------
+
+  void moe_align_block_size_small_batch_expert_kernel<int, 256>(const T1 *, int *, int *, int *, int *, int, int, int, int, int) (1, 1, 1)x(288, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+    Section: Command line profiler metrics
+    -------------------------------------------------- ----------- ------------
+    Metric Name                                        Metric Unit Metric Value
+    -------------------------------------------------- ----------- ------------
+    dram__throughput.avg.pct_of_peak_sustained_elapsed           %         0.14
+    sm__warps_active.avg.pct_of_peak_sustained_active            %         5.29
+    -------------------------------------------------- ----------- ------------
+

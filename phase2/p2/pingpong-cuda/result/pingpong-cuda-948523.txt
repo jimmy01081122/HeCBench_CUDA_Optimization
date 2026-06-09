@@ -1,0 +1,41 @@
+job_id=948523
+node=gn1224
+date=2026-06-09T16:04:48+08:00
+UCX_TLS=self,shm,cuda_copy,cuda_ipc
+NCCL_DEBUG=unset
+CUDA_VISIBLE_DEVICES=0,1
+GPU 0: Tesla V100-SXM2-32GB (UUID: GPU-5492b972-e756-f9e1-ec9e-74c0cacb0cef)
+GPU 1: Tesla V100-SXM2-32GB (UUID: GPU-61ce1b75-9645-45f9-63d1-6ecbdfaa99a9)
+name, driver_version
+Tesla V100-SXM2-32GB, 535.161.08
+Tesla V100-SXM2-32GB, 535.161.08
+rm -rf main-mpi main-mpi.o
+rm -rf main-nccl main-nccl.o
+nvcc  -std=c++17 -I/opt/nvidia/hpc_sdk/Linux_x86_64/25.7/comm_libs/12.9/openmpi4/openmpi-4.1.5//include -Xcompiler -Wall -arch=sm_70 -O3 -c main-mpi.cu -o main-mpi.o
+nvcc  -std=c++17 -I/opt/nvidia/hpc_sdk/Linux_x86_64/25.7/comm_libs/12.9/openmpi4/openmpi-4.1.5//include -Xcompiler -Wall -arch=sm_70 -O3 main-mpi.o -o main-mpi -L/opt/nvidia/hpc_sdk/Linux_x86_64/25.7/comm_libs/12.9/openmpi4/openmpi-4.1.5//lib -lmpi -lnccl
+nvcc  -std=c++17 -I/opt/nvidia/hpc_sdk/Linux_x86_64/25.7/comm_libs/12.9/openmpi4/openmpi-4.1.5//include -Xcompiler -Wall -arch=sm_70 -O3 -c main-nccl.cu -o main-nccl.o
+nvcc  -std=c++17 -I/opt/nvidia/hpc_sdk/Linux_x86_64/25.7/comm_libs/12.9/openmpi4/openmpi-4.1.5//include -Xcompiler -Wall -arch=sm_70 -O3 main-nccl.o -o main-nccl -L/opt/nvidia/hpc_sdk/Linux_x86_64/25.7/comm_libs/12.9/openmpi4/openmpi-4.1.5//lib -lmpi -lnccl
+MPI : Transfer size (B):     524288, Transfer Time (s):     0.000032630, Bandwidth (GB/s):    16.067874609
+MPI : Transfer size (B):    1048576, Transfer Time (s):     0.000054096, Bandwidth (GB/s):    19.383474572
+MPI : Transfer size (B):    2097152, Transfer Time (s):     0.000099169, Bandwidth (GB/s):    21.147196102
+MPI : Transfer size (B):    4194304, Transfer Time (s):     0.000182869, Bandwidth (GB/s):    22.936139075
+MPI : Transfer size (B):    8388608, Transfer Time (s):     0.000356721, Bandwidth (GB/s):    23.515851669
+MPI : Transfer size (B):   16777216, Transfer Time (s):     0.000702765, Bandwidth (GB/s):    23.873149759
+MPI : Transfer size (B):   33554432, Transfer Time (s):     0.001394802, Bandwidth (GB/s):    24.056776818
+MPI : Transfer size (B):   67108864, Transfer Time (s):     0.002778365, Bandwidth (GB/s):    24.154086257
+MPI : Transfer size (B):  134217728, Transfer Time (s):     0.005545167, Bandwidth (GB/s):    24.204452131
+MPI : Transfer size (B):  268435456, Transfer Time (s):     0.011077689, Bandwidth (GB/s):    24.232081925
+MPI : Transfer size (B):  536870912, Transfer Time (s):     0.022142648, Bandwidth (GB/s):    24.246012152
+MPI : Transfer size (B): 1073741824, Transfer Time (s):     0.044270360, Bandwidth (GB/s):    24.254192499
+NCCL: Transfer size (B):     524288, Transfer Time (s):     0.000049658, Bandwidth (GB/s):    10.557974434
+NCCL: Transfer size (B):    1048576, Transfer Time (s):     0.000072622, Bandwidth (GB/s):    14.438836098
+NCCL: Transfer size (B):    2097152, Transfer Time (s):     0.000118889, Bandwidth (GB/s):    17.639599064
+NCCL: Transfer size (B):    4194304, Transfer Time (s):     0.000213188, Bandwidth (GB/s):    19.674229814
+NCCL: Transfer size (B):    8388608, Transfer Time (s):     0.000406832, Bandwidth (GB/s):    20.619342152
+NCCL: Transfer size (B):   16777216, Transfer Time (s):     0.000782757, Bandwidth (GB/s):    21.433500346
+NCCL: Transfer size (B):   33554432, Transfer Time (s):     0.001492377, Bandwidth (GB/s):    22.483880668
+NCCL: Transfer size (B):   67108864, Transfer Time (s):     0.002956839, Bandwidth (GB/s):    22.696149628
+NCCL: Transfer size (B):  134217728, Transfer Time (s):     0.005885542, Bandwidth (GB/s):    22.804649982
+NCCL: Transfer size (B):  268435456, Transfer Time (s):     0.011743414, Bandwidth (GB/s):    22.858382526
+NCCL: Transfer size (B):  536870912, Transfer Time (s):     0.023458569, Bandwidth (GB/s):    22.885919417
+NCCL: Transfer size (B): 1073741824, Transfer Time (s):     0.046889276, Bandwidth (GB/s):    22.899517934

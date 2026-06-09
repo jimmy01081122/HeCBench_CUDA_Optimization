@@ -1,0 +1,11 @@
+benchmark,category,P1,P2,P3,notes
+p2p-cuda,multi_gpu_interconnect,yes,yes,yes,Topology-aware measurement; improvement below 1% should be marked measurement-equivalent.
+shmembench-cuda,shared_memory,yes,yes,yes,Block-size sweeps are valid only if checksum/reference remains valid for that configuration.
+topk-cuda,ai_topk,yes,yes,yes,Workspace reuse and radix-selection block-size tuning are known high-value hypotheses.
+allreduce-cuda,mpi_collective,yes,yes,yes,"Known valid launcher: UCX_TLS=self,shm,cuda_copy,cuda_ipc with --mca coll ^hcoll,ucc --mca pml ucx."
+moe-cuda,moe_inference,yes,yes,yes,Hybrid dispatch should be evaluated per top-k; full fusion can regress for topk=8.
+pingpong-cuda,mpi_nccl_pingpong,yes,yes,yes,Record UCX_TLS and NCCL environment. Full size sweep required.
+simpleMultiDevice-cuda,multi_gpu_scaling,yes,yes,yes,End-to-end speedup may be H2D-copy-limited.
+moe-align,moe_alignment,yes,yes,yes,Existing comparison CSV lacked explicit correctness field; Phase 2 must fix that.
+prefetch-cuda,unified_memory,yes,yes,yes,Separate prefetch API overhead from demand-paging penalty.
+softmax-cuda,softmax_kernel,yes,yes,yes,Dispatch policy may depend on slice size; do not assume one kernel dominates all shapes.

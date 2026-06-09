@@ -1,0 +1,64 @@
+#!/bin/bash
+#SBATCH -A ACD115083
+#SBATCH -J pingpong-cuda
+#SBATCH -N 1
+#SBATCH --ntasks=2
+#SBATCH --gres=gpu:2
+#SBATCH -t 00:20:00
+#SBATCH -o /home/r14525078/p3/HeCBench/src/pingpong-cuda/result/pingpong-cuda_%j.out
+#SBATCH -e /home/r14525078/p3/HeCBench/src/pingpong-cuda/result/pingpong-cuda_%j.err
+
+set -u
+set -o pipefail
+
+BENCH_DIR=/home/r14525078/p3/HeCBench/src/pingpong-cuda
+RESULT_DIR=${BENCH_DIR}/result
+RESULT_TXT=${RESULT_DIR}/pingpong-cuda_result_${SLURM_JOB_ID}.txt
+
+mkdir -p "${RESULT_DIR}"
+cd "${BENCH_DIR}" || exit 1
+
+{
+  echo "benchmark=pingpong-cuda"
+  echo "job_id=${SLURM_JOB_ID}"
+  echo "node=${SLURMD_NODENAME:-unknown}"
+  echo "nodelist=${SLURM_JOB_NODELIST:-unknown}"
+  echo "CUDA_VISIBLE_DEVICES=${CUDA_VISIBLE_DEVICES:-unset}"
+  echo "UCX_TLS=self,shm,cuda_copy,cuda_ipc"
+  echo "NCCL_DEBUG=${NCCL_DEBUG:-unset}"
+  echo "NCCL_SOCKET_IFNAME=${NCCL_SOCKET_IFNAME:-unset}"
+  echo "NCCL_IB_DISABLE=${NCCL_IB_DISABLE:-unset}"
+  echo "date=$(date -Is)"
+  echo
+  echo "=== modules ==="
+  module purge
+  module load nvhpc-24.11_hpcx-2.20_cuda-12.6
+  module list 2>&1
+  echo
+  echo "=== compiler ==="
+  nvcc --version
+  echo
+  echo "=== GPU topology ==="
+  nvidia-smi
+  nvidia-smi topo -m
+  echo
+  echo "=== build ==="
+  make clean || true
+  make ARCH=sm_70
+  echo
+  echo "=== MPI command ==="
+  echo "UCX_TLS=self,shm,cuda_copy,cuda_ipc mpirun -x UCX_TLS --mca coll ^hcoll,ucc --mca pml ucx -n 2 ./main-mpi"
+  UCX_TLS=self,shm,cuda_copy,cuda_ipc mpirun -x UCX_TLS --mca coll ^hcoll,ucc --mca pml ucx -n 2 ./main-mpi
+  MPI_STATUS=$?
+  echo "mpi_exit_status=${MPI_STATUS}"
+  echo
+  echo "=== NCCL command ==="
+  echo "UCX_TLS=self,shm,cuda_copy,cuda_ipc mpirun -x UCX_TLS --mca coll ^hcoll,ucc --mca pml ucx -n 2 ./main-nccl"
+  UCX_TLS=self,shm,cuda_copy,cuda_ipc mpirun -x UCX_TLS --mca coll ^hcoll,ucc --mca pml ucx -n 2 ./main-nccl
+  NCCL_STATUS=$?
+  echo "nccl_exit_status=${NCCL_STATUS}"
+  echo
+  if [ "${MPI_STATUS}" -ne 0 ] || [ "${NCCL_STATUS}" -ne 0 ]; then
+    exit 1
+  fi
+} 2>&1 | tee "${RESULT_TXT}"
