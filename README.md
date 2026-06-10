@@ -36,3 +36,109 @@ python3 phase2/scripts/generate_evaluation_summary.py
 
 - **Prompt 約束直接影響學術嚴謹度**：P1（弱約束）因缺少 baseline 與重試，容易產生包含測量範圍變更在內的「偽加速」宣稱；而 P3（強約束）透過 `correctness gate` 與 `contradiction check`，在資料集內達成了矛盾發生率為 0 的高審核性。
 - **優化類型精確分類**：研究成功將優化成果區分為實質核心優化（`KERNEL_OPT`）、超參調校（`PARAM_TUNE`）、環境修復（`ENV_FIX`）與多 GPU 擴展限制（`MULTI_GPU_SCALING`），避免將 launcher 設置等系統庫修復誤宣稱為算法加速。
+
+## TODO 
+detail in [abstract.md]((file:///home/a/PP/abstract.md))
+
+探討在程式優化領域中，如何透過 **prompt.md、AI agent、操作者介入、一般網頁對話、CLI agent、自動化實驗流程** 等不同人機協作形式，最大化 AI 與人類協作的效率、效能與結果可信度。
+
+研究的核心不是單純回答「AI 能否讓程式變快」，而是進一步追問：
+
+```text
+1. 什麼樣的 prompt 設計能讓 AI 產生可驗證的優化結果？
+2. AI agent 在程式優化中容易犯哪些錯？
+3. 人類操作者應該在哪些節點介入？
+4. 如何避免偽加速、錯誤 baseline、correctness 缺失與不可重現結果？
+5. 如何把 AI 輔助優化從一次性嘗試，轉化為論文級可審核實驗流程？
+```
+
+***
+
+### Benchmark 
+
+
+```text
+1. softmax-cuda
+2. topk-cuda
+3. moe-cuda
+4. moe-align-cuda
+5. prefetch-cuda
+6. shmembench-cuda
+7. p2p-cuda
+8. allreduce-cuda
+9. pingpong-cuda
+10. simpleMultiDevice-cuda
+```
+
+## NEXT：人機協作優化
+
+
+```text
+低優化空間：shmembench-cuda
+中優化空間：topk-cuda
+高優化空間：softmax-cuda
+```
+
+### 1. `shmembench-cuda`：低優化空間
+
+研究重點：
+
+```text
+AI 是否能判斷已接近硬體限制？
+是否會將微小提升過度宣稱？
+人類如何用 profiler 與 measurement-equivalent 規則限制 agent？
+```
+
+### 2. `topk-cuda`：中優化空間
+
+研究重點：
+
+```text
+AI 是否能辨識 workspace allocation / synchronization overhead？
+人類如何引導 agent 從 trial-and-error 走向 shape-aware dispatch 或 radix strategy？
+```
+
+### 3. `softmax-cuda`：高優化空間
+
+研究重點：
+
+```text
+AI 是否能進一步設計 shape-aware softmax dispatch？
+人類如何防止過度特化單一 slice？
+如何使用 profiler 驗證 expf、reduction、memory traffic 的瓶頸？
+```
+
+***
+
+## Workflow
+
+Phase 3 不應再只是「給 prompt → agent 跑完」。應採用自適應工作流：
+
+```text
+1. Observe
+   讀取 baseline、raw log、profiler 結果
+
+2. Diagnose
+   形成 bottleneck hypothesis
+
+3. Retrieve
+   查詢論文、CUDA 文件、既有優化案例
+
+4. Plan
+   提出單一可驗證修改
+
+5. Human checkpoint
+   人類審查是否改變 benchmark 語意
+
+6. Execute
+   sbatch 執行，保存 raw output
+
+7. Validate
+   correctness、performance、variance、profiler 一起驗證
+
+8. Decide
+   accept / reject / rollback / stop
+```
+
+這個流程的重點是讓 AI 從 trial-and-error 轉為 evidence-driven optimization。
+
