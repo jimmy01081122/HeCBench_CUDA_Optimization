@@ -1,0 +1,26 @@
+benchmark,agent,case,baseline_metric,optimized_metric,metric_unit,speedup,correctness,best_strategy,source
+moe-cuda,CG,topk=1,311.860419,168.573779,us,1.850,PASS,dedicated top-k=1 softmax probability kernel,moe/CG/summary.md
+moe-cuda,CG,topk=2,395.990085,344.903119,us,1.148,PASS,fused softmax + top-k,moe/CG/summary.md
+moe-cuda,CG,topk=4,599.585193,561.396344,us,1.068,PASS,fused softmax + top-k,moe/CG/summary.md
+moe-cuda,CG,topk=8,1112.569775,949.431598,us,1.172,PASS,original two-kernel path,moe/CG/summary.md
+moe-align,CG_vs_GM_V1,all parameter combinations,GM mean latency,CG mean latency,ratio,1.300,not shown in comparison csv,"winner count: {'CG': 28, 'GM': 2}; mean CG advantage 29.95%",moe_align/cg_vs_gm_v1_comparison.csv
+moe-align,CG_vs_GM_V2,all parameter combinations,GM mean latency,CG mean latency,ratio,1.376,not shown in comparison csv,"winner count: {'GM': 11, 'CG': 19}; mean CG advantage 37.56%",moe_align/cg_vs_gm_v2_comparison.csv
+moe-align,CG_vs_GM_V3,all parameter combinations,GM mean latency,CG mean latency,ratio,1.087,not shown in comparison csv,"winner count: {'GM_V3': 14, 'CG_V3': 16}; mean CG advantage 8.74%",moe_align/cg_vs_gm_v3_comparison.csv
+pingpong-cuda,CODEX,2 ranks / 2 GPUs final sweep,NCCL 22.898 GB/s at 1073741824 bytes,MPI 24.248 GB/s at 1073741824 bytes,GB/s,1.059,MPI PASS; NCCL PASS,tuned CUDA-aware MPI/UCX path was fastest for two-rank ping-pong,pingppong/pingpong-cudaCODEX/result/pingpong_results_946595.csv
+prefetch-cuda,GM,"repeat=10, with_prefetch",6.695,6.682,ms,1.002,PASS,vectorized/tuned grid-stride loops; prefetch overhead dominates when prefetch is already used,prefetch-cuda/GM/result/prefetch_results_947420.csv
+prefetch-cuda,GM,"repeat=10, without_prefetch",12.850,8.398,ms,1.530,PASS,vectorized/tuned grid-stride loops; prefetch overhead dominates when prefetch is already used,prefetch-cuda/GM/result/prefetch_results_947420.csv
+prefetch-cuda,GM,"repeat=100, with_prefetch",1.751,1.697,ms,1.032,PASS,vectorized/tuned grid-stride loops; prefetch overhead dominates when prefetch is already used,prefetch-cuda/GM/result/prefetch_results_947420.csv
+prefetch-cuda,GM,"repeat=100, without_prefetch",2.181,1.729,ms,1.261,PASS,vectorized/tuned grid-stride loops; prefetch overhead dominates when prefetch is already used,prefetch-cuda/GM/result/prefetch_results_947420.csv
+softmax-cuda,GM,slice=128,4.535808,0.129300,ms,35.080,PASS,optimized (warp-level + SM cached expf),softmax-cuda/GM/result/softmax_results_947443.csv
+softmax-cuda,GM,slice=256,15.743037,0.306514,ms,51.362,PASS,optimized (block-level + SM cached expf),softmax-cuda/GM/result/softmax_results_947443.csv
+softmax-cuda,GM,slice=784,55.378628,0.929280,ms,59.593,PASS,optimized (block-level + SM cached expf),softmax-cuda/GM/result/softmax_results_947443.csv
+softmax-cuda,GM,slice=1024,65.308907,1.184686,ms,55.128,PASS,optimized (block-level + SM cached expf),softmax-cuda/GM/result/softmax_results_947443.csv
+softmax-cuda,GM,slice=2048,42.144474,1.679667,ms,25.091,PASS,optimized (block-level + SM cached expf),softmax-cuda/GM/result/softmax_results_947443.csv
+shmembench-cuda,CG,best block=256,baseline 13121.63 GB/s,13203.950032,GB/s,1.006,PASS,barriered float4 shared-memory swap microbenchmark,shmembench-cuda/CG/result/shmembench_results_946735.csv
+shmembench-cuda,GM,best block=512,original block 256,13917.41,GB/s,n/a,PASS,dynamic_shared_memory_volta_opt,shmembench-cuda/GM/shmembench-cuda/result/shmembench_results_947389.csv
+simpleMultiDevice-cuda,GM,2 GPUs vs 1 GPU,12552.438572,11185.031777,us,1.122,PASS,multi-GPU partitioned reduction; end-to-end limited by H2D copy,simpleMutiDevice/GM/simpleMultiDevice-cuda/result/simpleMultiDevice_results_947375.csv
+simpleMultiDevice-cuda,GM,4 GPUs vs 1 GPU,12552.438572,5623.295548,us,2.232,PASS,multi-GPU partitioned reduction; end-to-end limited by H2D copy,simpleMutiDevice/GM/simpleMultiDevice-cuda/result/simpleMultiDevice_results_947375.csv
+topk-cuda,GM,14 hidden_size/topk combinations,baseline radix selection,workspace_reuse_block512,us,1.442,PASS,reuse CUB workspace and tune block size to 512,topk-cuda/GM/topk-cuda/result/topk_results_947405.csv
+topk-cuda,CG,14 hidden_size/topk combinations,cuda_event_instrumented,cached_workspace_async,us,1.326,PASS,cache workspace and remove repeated allocation/synchronization,topk-cuda/CG/result/topk_cuda_result_946771.csv + topk-cuda/CG/result/topk_cuda_result_946783.csv
+p2p-cuda,CODEX,4-GPU all-pair sweep,48.24 GB/s previous best,48.4455 GB/s,GB/s,1.004,144 sweep points PASS; 12/12 pair checks PASS,topology-aware peer copy sweep; best gain is measurement-equivalent,p2p-cuda/codex/agent_summary.md
+allreduce-cuda,CODEX,2 ranks / 2 GPUs,baseline run failed after size 0,all tested nonzero sizes PASS,correctness/timing,n/a,PASS after tuned UCX launcher,"avoid broken GDRCopy path with UCX_TLS=self,shm,cuda_copy,cuda_ipc",allreduce/base/agent_summary.md
