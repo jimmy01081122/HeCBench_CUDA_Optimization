@@ -1,0 +1,6 @@
+case numSlice=100000 sliceSize=784 implementation=0 repeat=100
+Average kernel execution time: 54.683998 (ms)
+PASS
+case numSlice=100000 sliceSize=784 implementation=1 repeat=100
+Average kernel execution time: 1.372296 (ms)
+PASS

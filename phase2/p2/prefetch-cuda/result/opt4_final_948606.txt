@@ -1,0 +1,171 @@
+label=opt4_final
+job_id=948606
+node=gn1222
+date=2026-06-09T18:26:35+08:00
+cuda_visible_devices=0
+module_list_begin
+No modules loaded
+module_list_end
+--------------------------------
+loading CUDA 12.8 with cuDNN / NCCL
+based on cuda_12.8.0_570.86.10_linux.run
+--------------------------------
+
+nvcc_version_begin
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2025 NVIDIA Corporation
+Built on Wed_Jan_15_19:20:09_PST_2025
+Cuda compilation tools, release 12.8, V12.8.61
+Build cuda_12.8.r12.8/compiler.35404655_0
+nvcc_version_end
+rm -rf main main.o
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 -c main.cu -o main.o
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 main.o -o main 
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+run_repeat_10_begin
+info: set device to 0
+Concurrent managed access with prefetch
+Prefetch setup time: 49.162647 (ms)
+Average execution time: 1.054399 (ms)
+PASS
+Concurrent managed access with prefetch
+Prefetch setup time: 49.214592 (ms)
+Average execution time: 1.037018 (ms)
+PASS
+Concurrent managed access with prefetch
+Prefetch setup time: 49.673981 (ms)
+Average execution time: 1.037624 (ms)
+PASS
+Concurrent managed access with prefetch
+Prefetch setup time: 50.167225 (ms)
+Average execution time: 1.037064 (ms)
+PASS
+Concurrent managed access with prefetch
+Prefetch setup time: 50.110332 (ms)
+Average execution time: 1.037801 (ms)
+PASS
+Concurrent managed access with prefetch
+Prefetch setup time: 50.162785 (ms)
+Average execution time: 1.041642 (ms)
+PASS
+Concurrent managed access with prefetch
+Prefetch setup time: 50.191647 (ms)
+Average execution time: 1.035495 (ms)
+PASS
+Concurrent managed access with prefetch
+Prefetch setup time: 49.651676 (ms)
+Average execution time: 1.033089 (ms)
+PASS
+Concurrent managed access with prefetch
+Prefetch setup time: 51.122704 (ms)
+Average execution time: 1.036285 (ms)
+PASS
+Concurrent managed access with prefetch
+Prefetch setup time: 49.005028 (ms)
+Average execution time: 1.045000 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 9.540259 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 9.530454 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 9.603939 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 9.743987 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 9.574198 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 9.407570 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 9.315260 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 9.684738 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 9.454816 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 9.487943 (ms)
+PASS
+run_repeat_10_end
+run_repeat_100_begin
+info: set device to 0
+Concurrent managed access with prefetch
+Prefetch setup time: 49.166023 (ms)
+Average execution time: 1.040030 (ms)
+PASS
+Concurrent managed access with prefetch
+Prefetch setup time: 49.167809 (ms)
+Average execution time: 1.036003 (ms)
+PASS
+Concurrent managed access with prefetch
+Prefetch setup time: 49.129040 (ms)
+Average execution time: 1.034894 (ms)
+PASS
+Concurrent managed access with prefetch
+Prefetch setup time: 49.227814 (ms)
+Average execution time: 1.037094 (ms)
+PASS
+Concurrent managed access with prefetch
+Prefetch setup time: 49.255760 (ms)
+Average execution time: 1.038703 (ms)
+PASS
+Concurrent managed access with prefetch
+Prefetch setup time: 49.196476 (ms)
+Average execution time: 1.035443 (ms)
+PASS
+Concurrent managed access with prefetch
+Prefetch setup time: 49.145889 (ms)
+Average execution time: 1.033891 (ms)
+PASS
+Concurrent managed access with prefetch
+Prefetch setup time: 49.174057 (ms)
+Average execution time: 1.036155 (ms)
+PASS
+Concurrent managed access with prefetch
+Prefetch setup time: 49.140228 (ms)
+Average execution time: 1.035743 (ms)
+PASS
+Concurrent managed access with prefetch
+Prefetch setup time: 49.090183 (ms)
+Average execution time: 1.035717 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 1.898027 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 1.891355 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 1.890029 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 1.912811 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 1.877924 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 1.933888 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 1.887590 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 1.911649 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 1.855220 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 1.902805 (ms)
+PASS
+run_repeat_100_end

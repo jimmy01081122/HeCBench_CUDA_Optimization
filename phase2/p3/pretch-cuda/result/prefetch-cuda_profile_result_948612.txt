@@ -1,0 +1,121 @@
+job_id=948612
+node=gn1222
+CUDA_VISIBLE_DEVICES=0
+date=2026-06-09T18:37:59+08:00
+modules:
+
+Currently Loaded Modules:
+  1) cuda/12.8
+
+ 
+
+profilers:
+/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/cuda/cuda-12.8/bin/nsys
+/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/cuda/cuda-12.8/bin/nvprof
+/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/cuda/cuda-12.8/bin/ncu
+build_command=make clean || true && make ARCH=sm_70
+rm -rf main main.o
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 -c main.cu -o main.o
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 main.o -o main 
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+profile_command=nsys profile --trace=cuda --stats=true --force-overwrite=true --output=/home/r14525078/p3/HeCBench/src/prefetch-cuda/result/prefetch-cuda_nsys_948612 ./main 10
+info: set device to 0
+Concurrent managed access with prefetch
+Average execution time: 6.257258 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 6.208347 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 6.201052 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 6.207070 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 6.206406 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 6.205120 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 6.250090 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 6.252720 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 6.295773 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 6.255536 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 16.437429 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 16.018150 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 16.272617 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 16.121504 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 16.357441 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 16.263504 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 15.883982 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 16.125042 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 16.110100 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 16.230272 (ms)
+PASS
+Collecting data...
+Generating '/tmp/nsys-report-84c0.qdstrm'
+[1/6] [0%                          ] prefetch-cuda_nsys_948612.nsys-rep[1/6] [0%                          ] prefetch-cuda_nsys_948612.nsys-rep[1/6] [5%                          ] prefetch-cuda_nsys_948612.nsys-rep[1/6] [6%                          ] prefetch-cuda_nsys_948612.nsys-rep[1/6] [===23%                      ] prefetch-cuda_nsys_948612.nsys-rep[1/6] [===22%                      ] prefetch-cuda_nsys_948612.nsys-rep[1/6] [=====29%                    ] prefetch-cuda_nsys_948612.nsys-rep[1/6] [=====30%                    ] prefetch-cuda_nsys_948612.nsys-rep[1/6] [=====32%                    ] prefetch-cuda_nsys_948612.nsys-rep[1/6] [======34%                   ] prefetch-cuda_nsys_948612.nsys-rep[1/6] [=======36%                  ] prefetch-cuda_nsys_948612.nsys-rep[1/6] [=======38%                  ] prefetch-cuda_nsys_948612.nsys-rep[1/6] [========40%                 ] prefetch-cuda_nsys_948612.nsys-rep[1/6] [========41%                 ] prefetch-cuda_nsys_948612.nsys-rep[1/6] [========42%                 ] prefetch-cuda_nsys_948612.nsys-rep[1/6] [=========44%                ] prefetch-cuda_nsys_948612.nsys-rep[1/6] [=========45%                ] prefetch-cuda_nsys_948612.nsys-rep[1/6] [=========46%                ] prefetch-cuda_nsys_948612.nsys-rep[1/6] [==========47%               ] prefetch-cuda_nsys_948612.nsys-rep[1/6] [==========49%               ] prefetch-cuda_nsys_948612.nsys-rep[1/6] [===========50%              ] prefetch-cuda_nsys_948612.nsys-rep[1/6] [===========51%              ] prefetch-cuda_nsys_948612.nsys-rep[1/6] [===========53%              ] prefetch-cuda_nsys_948612.nsys-rep[1/6] [============54%             ] prefetch-cuda_nsys_948612.nsys-rep[1/6] [============55%             ] prefetch-cuda_nsys_948612.nsys-rep[1/6] [============57%             ] prefetch-cuda_nsys_948612.nsys-rep[1/6] [=============58%            ] prefetch-cuda_nsys_948612.nsys-rep[1/6] [=============59%            ] prefetch-cuda_nsys_948612.nsys-rep[1/6] [=============60%            ] prefetch-cuda_nsys_948612.nsys-rep[1/6] [==============61%           ] prefetch-cuda_nsys_948612.nsys-rep[1/6] [==============62%           ] prefetch-cuda_nsys_948612.nsys-rep[1/6] [==============63%           ] prefetch-cuda_nsys_948612.nsys-rep[1/6] [==============64%           ] prefetch-cuda_nsys_948612.nsys-rep[1/6] [===============65%          ] prefetch-cuda_nsys_948612.nsys-rep[1/6] [===============66%          ] prefetch-cuda_nsys_948612.nsys-rep[1/6] [===============67%          ] prefetch-cuda_nsys_948612.nsys-rep[1/6] [================68%         ] prefetch-cuda_nsys_948612.nsys-rep[1/6] [================69%         ] prefetch-cuda_nsys_948612.nsys-rep[1/6] [================70%         ] prefetch-cuda_nsys_948612.nsys-rep[1/6] [================71%         ] prefetch-cuda_nsys_948612.nsys-rep[1/6] [=================72%        ] prefetch-cuda_nsys_948612.nsys-rep[1/6] [=================73%        ] prefetch-cuda_nsys_948612.nsys-rep[1/6] [========================100%] prefetch-cuda_nsys_948612.nsys-rep[1/6] [========================100%] prefetch-cuda_nsys_948612.nsys-rep
+[2/6] [0%                          ] prefetch-cuda_nsys_948612.sqlite[2/6] [1%                          ] prefetch-cuda_nsys_948612.sqlite[2/6] [2%                          ] prefetch-cuda_nsys_948612.sqlite[2/6] [3%                          ] prefetch-cuda_nsys_948612.sqlite[2/6] [4%                          ] prefetch-cuda_nsys_948612.sqlite[2/6] [5%                          ] prefetch-cuda_nsys_948612.sqlite[2/6] [6%                          ] prefetch-cuda_nsys_948612.sqlite[2/6] [7%                          ] prefetch-cuda_nsys_948612.sqlite[2/6] [8%                          ] prefetch-cuda_nsys_948612.sqlite[2/6] [9%                          ] prefetch-cuda_nsys_948612.sqlite[2/6] [10%                         ] prefetch-cuda_nsys_948612.sqlite[2/6] [11%                         ] prefetch-cuda_nsys_948612.sqlite[2/6] [12%                         ] prefetch-cuda_nsys_948612.sqlite[2/6] [13%                         ] prefetch-cuda_nsys_948612.sqlite[2/6] [14%                         ] prefetch-cuda_nsys_948612.sqlite[2/6] [=15%                        ] prefetch-cuda_nsys_948612.sqlite[2/6] [=16%                        ] prefetch-cuda_nsys_948612.sqlite[2/6] [=17%                        ] prefetch-cuda_nsys_948612.sqlite[2/6] [==18%                       ] prefetch-cuda_nsys_948612.sqlite[2/6] [==19%                       ] prefetch-cuda_nsys_948612.sqlite[2/6] [==20%                       ] prefetch-cuda_nsys_948612.sqlite[2/6] [==21%                       ] prefetch-cuda_nsys_948612.sqlite[2/6] [===22%                      ] prefetch-cuda_nsys_948612.sqlite[2/6] [===23%                      ] prefetch-cuda_nsys_948612.sqlite[2/6] [===24%                      ] prefetch-cuda_nsys_948612.sqlite[2/6] [====25%                     ] prefetch-cuda_nsys_948612.sqlite[2/6] [====26%                     ] prefetch-cuda_nsys_948612.sqlite[2/6] [====27%                     ] prefetch-cuda_nsys_948612.sqlite[2/6] [====28%                     ] prefetch-cuda_nsys_948612.sqlite[2/6] [=====29%                    ] prefetch-cuda_nsys_948612.sqlite[2/6] [=====30%                    ] prefetch-cuda_nsys_948612.sqlite[2/6] [=====31%                    ] prefetch-cuda_nsys_948612.sqlite[2/6] [=====32%                    ] prefetch-cuda_nsys_948612.sqlite[2/6] [======33%                   ] prefetch-cuda_nsys_948612.sqlite[2/6] [======34%                   ] prefetch-cuda_nsys_948612.sqlite[2/6] [======35%                   ] prefetch-cuda_nsys_948612.sqlite[2/6] [=======36%                  ] prefetch-cuda_nsys_948612.sqlite[2/6] [=======37%                  ] prefetch-cuda_nsys_948612.sqlite[2/6] [=======38%                  ] prefetch-cuda_nsys_948612.sqlite[2/6] [=======39%                  ] prefetch-cuda_nsys_948612.sqlite[2/6] [========40%                 ] prefetch-cuda_nsys_948612.sqlite[2/6] [========41%                 ] prefetch-cuda_nsys_948612.sqlite[2/6] [========42%                 ] prefetch-cuda_nsys_948612.sqlite[2/6] [=========43%                ] prefetch-cuda_nsys_948612.sqlite[2/6] [=========44%                ] prefetch-cuda_nsys_948612.sqlite[2/6] [=========45%                ] prefetch-cuda_nsys_948612.sqlite[2/6] [=========46%                ] prefetch-cuda_nsys_948612.sqlite[2/6] [==========47%               ] prefetch-cuda_nsys_948612.sqlite[2/6] [==========48%               ] prefetch-cuda_nsys_948612.sqlite[2/6] [==========49%               ] prefetch-cuda_nsys_948612.sqlite[2/6] [===========50%              ] prefetch-cuda_nsys_948612.sqlite[2/6] [===========51%              ] prefetch-cuda_nsys_948612.sqlite[2/6] [===========52%              ] prefetch-cuda_nsys_948612.sqlite[2/6] [===========53%              ] prefetch-cuda_nsys_948612.sqlite[2/6] [============54%             ] prefetch-cuda_nsys_948612.sqlite[2/6] [============55%             ] prefetch-cuda_nsys_948612.sqlite[2/6] [============56%             ] prefetch-cuda_nsys_948612.sqlite[2/6] [============57%             ] prefetch-cuda_nsys_948612.sqlite[2/6] [=============58%            ] prefetch-cuda_nsys_948612.sqlite[2/6] [=============59%            ] prefetch-cuda_nsys_948612.sqlite[2/6] [=============60%            ] prefetch-cuda_nsys_948612.sqlite[2/6] [==============61%           ] prefetch-cuda_nsys_948612.sqlite[2/6] [==============62%           ] prefetch-cuda_nsys_948612.sqlite[2/6] [==============63%           ] prefetch-cuda_nsys_948612.sqlite[2/6] [==============64%           ] prefetch-cuda_nsys_948612.sqlite[2/6] [===============65%          ] prefetch-cuda_nsys_948612.sqlite[2/6] [===============66%          ] prefetch-cuda_nsys_948612.sqlite[2/6] [===============67%          ] prefetch-cuda_nsys_948612.sqlite[2/6] [================68%         ] prefetch-cuda_nsys_948612.sqlite[2/6] [================69%         ] prefetch-cuda_nsys_948612.sqlite[2/6] [================70%         ] prefetch-cuda_nsys_948612.sqlite[2/6] [================71%         ] prefetch-cuda_nsys_948612.sqlite[2/6] [=================72%        ] prefetch-cuda_nsys_948612.sqlite[2/6] [=================73%        ] prefetch-cuda_nsys_948612.sqlite[2/6] [=================74%        ] prefetch-cuda_nsys_948612.sqlite[2/6] [==================75%       ] prefetch-cuda_nsys_948612.sqlite[2/6] [==================76%       ] prefetch-cuda_nsys_948612.sqlite[2/6] [==================77%       ] prefetch-cuda_nsys_948612.sqlite[2/6] [==================78%       ] prefetch-cuda_nsys_948612.sqlite[2/6] [===================79%      ] prefetch-cuda_nsys_948612.sqlite[2/6] [===================80%      ] prefetch-cuda_nsys_948612.sqlite[2/6] [===================81%      ] prefetch-cuda_nsys_948612.sqlite[2/6] [===================82%      ] prefetch-cuda_nsys_948612.sqlite[2/6] [====================83%     ] prefetch-cuda_nsys_948612.sqlite[2/6] [====================84%     ] prefetch-cuda_nsys_948612.sqlite[2/6] [====================85%     ] prefetch-cuda_nsys_948612.sqlite[2/6] [=====================86%    ] prefetch-cuda_nsys_948612.sqlite[2/6] [=====================87%    ] prefetch-cuda_nsys_948612.sqlite[2/6] [=====================88%    ] prefetch-cuda_nsys_948612.sqlite[2/6] [=====================89%    ] prefetch-cuda_nsys_948612.sqlite[2/6] [======================90%   ] prefetch-cuda_nsys_948612.sqlite[2/6] [======================91%   ] prefetch-cuda_nsys_948612.sqlite[2/6] [======================92%   ] prefetch-cuda_nsys_948612.sqlite[2/6] [=======================93%  ] prefetch-cuda_nsys_948612.sqlite[2/6] [=======================94%  ] prefetch-cuda_nsys_948612.sqlite[2/6] [=======================95%  ] prefetch-cuda_nsys_948612.sqlite[2/6] [=======================96%  ] prefetch-cuda_nsys_948612.sqlite[2/6] [========================97% ] prefetch-cuda_nsys_948612.sqlite[2/6] [========================98% ] prefetch-cuda_nsys_948612.sqlite[2/6] [========================99% ] prefetch-cuda_nsys_948612.sqlite[2/6] [========================100%] prefetch-cuda_nsys_948612.sqlite[2/6] [========================100%] prefetch-cuda_nsys_948612.sqlite
+[3/6] Executing 'cuda_api_sum' stats report
+
+ Time (%)  Total Time (ns)  Num Calls  Avg (ns)   Med (ns)   Min (ns)  Max (ns)   StdDev (ns)               Name             
+ --------  ---------------  ---------  ---------  ---------  --------  ---------  -----------  ------------------------------
+     82.6       2111497987        220  9597718.1  1017164.0     15734  155136417   32451126.0  cudaDeviceSynchronize         
+     11.5        293663808         40  7341595.2  7518122.0   5024158    9658187    1875045.5  cudaFree                      
+      3.3         85431347        200   427156.7    93183.0     20321    6775911    1442063.9  cudaMemPrefetchAsync_v2_v12020
+      1.7         44414893        200   222074.5     4440.0      2992   42762266    3023174.4  cudaLaunchKernel              
+      0.8         21707059         40   542676.5    39462.5     14098   20335545    3209831.2  cudaMallocManaged             
+      0.0              835          1      835.0      835.0       835        835          0.0  cuModuleGetLoadingMode        
+
+[4/6] Executing 'cuda_gpu_kern_sum' stats report
+
+ Time (%)  Total Time (ns)  Instances  Avg (ns)   Med (ns)   Min (ns)  Max (ns)   StdDev (ns)                Name              
+ --------  ---------------  ---------  ---------  ---------  --------  ---------  -----------  --------------------------------
+    100.0       1718241411        200  8591207.1  1013591.5   1009784  155129227   33114906.2  add(int, const float *, float *)
+
+[5/6] Executing 'cuda_gpu_mem_time_sum' stats report
+
+ Time (%)  Total Time (ns)  Count   Avg (ns)  Med (ns)  Min (ns)  Max (ns)  StdDev (ns)               Operation              
+ --------  ---------------  ------  --------  --------  --------  --------  -----------  ------------------------------------
+     77.6       1572005253  209744    7494.9    3615.0      2654    303998      22187.9  [CUDA memcpy Unified Host-to-Device]
+     22.4        453258851   30720   14754.5    4239.0      1790    125695      23117.9  [CUDA memcpy Unified Device-to-Host]
+
+[6/6] Executing 'cuda_gpu_mem_size_sum' stats report
+
+ Total (MB)  Count   Avg (MB)  Med (MB)  Min (MB)  Max (MB)  StdDev (MB)               Operation              
+ ----------  ------  --------  --------  --------  --------  -----------  ------------------------------------
+  10719.371  209744     0.051     0.008     0.004     2.097        0.246  [CUDA memcpy Unified Host-to-Device]
+   5368.709   30720     0.175     0.033     0.004     1.044        0.301  [CUDA memcpy Unified Device-to-Host]
+
+Generated:
+    /home/r14525078/p3/HeCBench/src/prefetch-cuda/result/prefetch-cuda_nsys_948612.nsys-rep
+    /home/r14525078/p3/HeCBench/src/prefetch-cuda/result/prefetch-cuda_nsys_948612.sqlite

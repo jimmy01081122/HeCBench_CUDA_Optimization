@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="820" height="420" viewBox="0 0 820 420">
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#111827}.axis{stroke:#6b7280;stroke-width:1}.grid{stroke:#e5e7eb;stroke-width:1}.label{font-size:12px}.title{font-size:18px;font-weight:700}.note{font-size:11px;fill:#4b5563}</style>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="90" y="30" class="title">Figure 3. Result Type Distribution</text>
+<text x="90" y="48" class="note">Counts final result family per prompt level.</text>
+<rect x="135" y="136.0" width="120" height="182.0" fill="#7c3aed"/>
+<text x="195.0" y="231.0" text-anchor="middle" class="label" fill="#fff">7</text>
+<rect x="135" y="110.0" width="120" height="26.0" fill="#0891b2"/>
+<text x="195.0" y="127.0" text-anchor="middle" class="label" fill="#fff">1</text>
+<rect x="135" y="58.0" width="120" height="52.0" fill="#ea580c"/>
+<text x="195.0" y="88.0" text-anchor="middle" class="label" fill="#fff">2</text>
+<text x="195.0" y="346" text-anchor="middle" class="label">P1</text>
+<rect x="305" y="162.0" width="120" height="156.0" fill="#7c3aed"/>
+<text x="365.0" y="244.0" text-anchor="middle" class="label" fill="#fff">6</text>
+<rect x="305" y="136.0" width="120" height="26.0" fill="#0891b2"/>
+<text x="365.0" y="153.0" text-anchor="middle" class="label" fill="#fff">1</text>
+<rect x="305" y="58.0" width="120" height="78.0" fill="#ea580c"/>
+<text x="365.0" y="101.0" text-anchor="middle" class="label" fill="#fff">3</text>
+<text x="365.0" y="346" text-anchor="middle" class="label">P2</text>
+<rect x="475" y="188.0" width="120" height="130.0" fill="#7c3aed"/>
+<text x="535.0" y="257.0" text-anchor="middle" class="label" fill="#fff">5</text>
+<rect x="475" y="136.0" width="120" height="52.0" fill="#0891b2"/>
+<text x="535.0" y="166.0" text-anchor="middle" class="label" fill="#fff">2</text>
+<rect x="475" y="110.0" width="120" height="26.0" fill="#ea580c"/>
+<text x="535.0" y="127.0" text-anchor="middle" class="label" fill="#fff">1</text>
+<rect x="475" y="84.0" width="120" height="26.0" fill="#16a34a"/>
+<text x="535.0" y="101.0" text-anchor="middle" class="label" fill="#fff">1</text>
+<rect x="475" y="58.0" width="120" height="26.0" fill="#64748b"/>
+<text x="535.0" y="75.0" text-anchor="middle" class="label" fill="#fff">1</text>
+<text x="535.0" y="346" text-anchor="middle" class="label">P3</text>
+<rect x="690" y="58" width="14" height="14" fill="#7c3aed"/>
+<text x="712" y="70" class="label">KERNEL_OPT</text>
+<rect x="690" y="84" width="14" height="14" fill="#0891b2"/>
+<text x="712" y="96" class="label">PARAM_TUNE</text>
+<rect x="690" y="110" width="14" height="14" fill="#ea580c"/>
+<text x="712" y="122" class="label">MEASURE_FIX</text>
+<rect x="690" y="136" width="14" height="14" fill="#16a34a"/>
+<text x="712" y="148" class="label">ENV_FIX</text>
+<rect x="690" y="162" width="14" height="14" fill="#64748b"/>
+<text x="712" y="174" class="label">TOPOLOGY_MEASURE</text>
+<line x1="90" y1="318" x2="660" y2="318" class="axis"/>
+</svg>

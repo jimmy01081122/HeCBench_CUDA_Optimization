@@ -47,6 +47,11 @@ def mean(vals):
     return sum(vals) / len(vals) if vals else float("nan")
 
 
+def last_match_float(pattern, text):
+    vals = re.findall(pattern, text, re.S)
+    return float(vals[-1]) if vals else float("nan")
+
+
 def speedup(old, new):
     old, new = fnum(old), fnum(new)
     if math.isnan(old) or math.isnan(new) or new == 0:
@@ -113,6 +118,44 @@ def parse_p1():
     if m:
         rows.append(add("P1", "pingpong-cuda", float(m.group(1)), float(m.group(2)), "GB/s NCCL at 1GiB", "no correctness errors printed", "KERNEL_OPT/MEASURE_FIX", "valid_with_caution", "NCCL grouping doubles reported 1GiB bandwidth; P1 lacks CSV/variance and has earlier invalid attempts.", "p1/pingpong-cuda/result/summary.md"))
 
+    # Additional Phase 2 benchmarks. P1 often lacks structured summaries, so these
+    # rows use raw outputs and intentionally mark weak auditability where baseline
+    # or measurement scope cannot be proven equivalent.
+    soft_base = read(ROOT / "p1/softmax-cuda/result/softmax_cuda_result_948543.txt")
+    soft_final = read(ROOT / "p1/softmax-cuda/result/softmax_cuda_result_948546.txt")
+    mb = re.search(r"^784,1,([0-9.]+),PASS$", soft_base, re.M)
+    mf = re.search(r"^784,1,([0-9.]+),PASS$", soft_final, re.M)
+    if mb and mf:
+        rows.append(add("P1", "softmax-cuda", float(mb.group(1)), float(mf.group(1)), "ms avg latency for slice=784 impl=1", "PASS reported", "KERNEL_OPT", "valid_with_caution", "Raw logs show slice=784 impl=1 improved, but P1 has no structured summary, rejected-attempt table, or variance.", "p1/softmax-cuda/result/softmax_cuda_result_948546.txt"))
+
+    def topk_mean(path):
+        vals = [float(x) for x in re.findall(r"Average execution time of topk\s*:\s*([0-9.]+)", read(path))]
+        return mean(vals)
+
+    p1_topk_base = topk_mean(ROOT / "p1/topk-cuda/result/topk_cuda_result_948615.txt")
+    p1_topk_final = topk_mean(ROOT / "p1/topk-cuda/result/topk_cuda_result_948618.txt")
+    if not math.isnan(p1_topk_base) and not math.isnan(p1_topk_final):
+        rows.append(add("P1", "topk-cuda", p1_topk_base, p1_topk_final, "us mean over reported hidden_size/topk cases", "PASS reported", "KERNEL_OPT", "valid_with_caution", "Raw outputs report PASS and lower mean than first run, but P1 lacks accepted/rejected rationale and variance.", "p1/topk-cuda/result/topk_cuda_result_948618.txt"))
+
+    prefetch_text = read(ROOT / "p1/prefetch-cuda/result/prefetch_cuda_result_948600.txt")
+    prefetch_vals = [float(x) for x in re.findall(r"Average execution time:\s*([0-9.]+)\s*\(ms\)", prefetch_text)]
+    if prefetch_vals:
+        rows.append(add("P1", "prefetch-cuda", "n/a", mean(prefetch_vals[:10]), "ms mean with_prefetch raw samples", "PASS reported", "MEASURE_FIX/PARAM_TUNE", "valid_no_baseline", "Only one P1 result file was available; final timing can be summarized but speedup cannot be audited against measured baseline.", "p1/prefetch-cuda/result/prefetch_cuda_result_948600.txt"))
+
+    smd_base = read(ROOT / "p1/simpleMultiDevice-cuda/result/simpleMultiDevice_cuda_result_948642.txt")
+    smd_final = read(ROOT / "p1/simpleMultiDevice-cuda/result/simpleMultiDevice_cuda_result_948646.txt")
+    smd_base_total = last_match_float(r"total_us=([0-9.]+)", smd_base)
+    smd_final_total = last_match_float(r"total_us=([0-9.]+)", smd_final)
+    if not math.isnan(smd_base_total) and not math.isnan(smd_final_total):
+        rows.append(add("P1", "simpleMultiDevice-cuda", "measurement scope changed", smd_final_total, "us total_us raw final", "PASS reported", "MEASURE_FIX/KERNEL_OPT", "success_no_speedup_claim", "Raw P1 logs show a dramatic total_us drop, but H2D/D2H timing scope appears changed; no speedup claim is counted.", "p1/simpleMultiDevice-cuda/result/simpleMultiDevice_cuda_result_948646.txt"))
+
+    shmem_base = read(ROOT / "p1/shmembench-cuda/result/shmembench_cuda_result_948665.txt")
+    shmem_final = read(ROOT / "p1/shmembench-cuda/result/shmembench_cuda_result_948670.txt")
+    shmem_base_ms = last_match_float(r"Average kernel execution time\s*:\s*([0-9.]+)", shmem_base)
+    shmem_final_ms = last_match_float(r"Average kernel execution time\s*:\s*([0-9.]+)", shmem_final)
+    if not math.isnan(shmem_base_ms) and not math.isnan(shmem_final_ms):
+        rows.append(add("P1", "shmembench-cuda", shmem_base_ms, shmem_final_ms, "ms avg kernel time", "PASS/no checksum failed in final", "KERNEL_OPT", "valid_with_caution", "Best valid raw run improved modestly; one faster P1 attempt had checksum failure and is excluded.", "p1/shmembench-cuda/result/shmembench_cuda_result_948670.txt"))
+
     return rows
 
 
@@ -143,6 +186,31 @@ def parse_p2():
     m = re.search(r"Baseline 1 GiB metric:.*?NCCL:.*?([0-9.]+) GB/s.*?Final 1 GiB metric:.*?NCCL:.*?([0-9.]+) GB/s", text, re.S)
     if m:
         rows.append(add("P2", "pingpong-cuda", float(m.group(1)), float(m.group(2)), "GB/s NCCL at 1GiB", "PASS full sweep", "PARAM_TUNE/MEASURE_FIX", "measurement_equivalent", "Five optimizations tried; final improvement is noise-level but invalid setup attempts are clearly rejected.", "p2/pingpong-cuda/result/agent_summary.md"))
+
+    text = read(ROOT / "p2/softmax-cuda/result/agent_summary.md")
+    m = re.search(r"Baseline metric, implementation 1:\s*([0-9.]+) ms.*?Final metric, implementation 1:\s*([0-9.]+) ms", text, re.S)
+    if m:
+        rows.append(add("P2", "softmax-cuda", float(m.group(1)), float(m.group(2)), "ms slice=784 implementation 1", "PASS impl 0/1", "KERNEL_OPT", "valid", "Manual warp reductions plus slice=784 specialization produce a clear implementation-1 speedup; slower attempts are documented.", "p2/softmax-cuda/result/agent_summary.md"))
+
+    text = read(ROOT / "p2/topk-cuda/result/agent_summary.md")
+    m = re.search(r"Metric:\s*([0-9.]+) us average.*?Final metric:\s*([0-9.]+) us", text, re.S)
+    if m:
+        rows.append(add("P2", "topk-cuda", float(m.group(1)), float(m.group(2)), "us mean over 14 hidden_size/topk cases", "PASS 14/14", "KERNEL_OPT", "valid", "Cached radix workspace removes timed cudaMalloc/cudaFree overhead; rejected block-size variants are recorded.", "p2/topk-cuda/result/agent_summary.md"))
+
+    text = read(ROOT / "p2/prefetch-cuda/result/agent_summary.md")
+    m = re.search(r"repeat=100 with_prefetch:\s*([0-9.]+) ms.*?with_prefetch:\s*([0-9.]+) ms,\s*([0-9.]+)x speedup", text, re.S)
+    if m:
+        rows.append(add("P2", "prefetch-cuda", float(m.group(1)), float(m.group(2)), "ms repeat=100 with_prefetch", "PASS all trials", "PARAM_TUNE/MEASURE_FIX", "valid", "Separates prefetch setup from timed kernel execution; primary repeat=100 with_prefetch improves while no-prefetch also improves.", "p2/prefetch-cuda/result/agent_summary.md"))
+
+    text = read(ROOT / "p2/simpleMultiDevice-cuda/result/agent_summary.md")
+    m = re.search(r"Average total_us:\s*([0-9.]+).*?Final total_us:\s*([0-9.]+)", text, re.S)
+    if m:
+        rows.append(add("P2", "simpleMultiDevice-cuda", float(m.group(1)), float(m.group(2)), "us total time over 4 GPUs", "PASS", "KERNEL_OPT", "measurement_equivalent", "Block-level reduction improves kernel/D2H components, but total time remains H2D-copy-limited with about 1% speedup.", "p2/simpleMultiDevice-cuda/result/agent_summary.md"))
+
+    text = read(ROOT / "p2/shmembench-cuda/result/agent_summary.md")
+    m = re.search(r"Average kernel execution time:\s*([0-9.]+) ms.*?Final average kernel execution time:\s*([0-9.]+) ms", text, re.S)
+    if m:
+        rows.append(add("P2", "shmembench-cuda", float(m.group(1)), float(m.group(2)), "ms avg kernel time", "PASS final", "KERNEL_OPT", "measurement_equivalent", "Valid final optimization is only about 0.13% faster; checksum-failing faster attempt is rejected.", "p2/shmembench-cuda/result/agent_summary.md"))
 
     return rows
 
@@ -184,6 +252,33 @@ def parse_p3_csv_level():
         ]
         rows.append(add("P3", "pingpong-cuda", "invalid baseline", mean(vals), "GB/s MPI at 1GiB", "PASS MPI/NCCL full sweep after fix", "MEASURE_FIX", "success_no_speedup_claim", "Baseline NCCL executable missing; P3 correctly reports measurement recovery and avoids speedup claim.", "p3/pingpong-cuda/result/pingpong-cuda_results.csv"))
 
+    text = read(ROOT / "p3/softmax-cuda/result/agent_summary.md")
+    m = re.search(r"slice 784 implementation 1:\s*([0-9.]+) ms.*?slice 784.*?improved from [0-9.]+ ms to .*?([0-9.]+) ms", text, re.S)
+    if m:
+        rows.append(add("P3", "softmax-cuda", float(m.group(1)), float(m.group(2)), "ms slice=784 implementation 1, 3-trial mean", "PASS 42/42 final", "KERNEL_OPT", "valid_with_variance_profiler", "Block-per-slice kernel improves large-slice implementation 1; final result includes 3 trials and contradiction check.", "p3/softmax-cuda/result/softmax-cuda_results.csv"))
+
+    text = read(ROOT / "p3/topk-cuda/result/agent_summary.md")
+    m = re.search(r"Baseline mean:\s*([0-9.]+) us.*?Final speedup:\s*[0-9.]+x.*?improves the measured mean from [0-9.]+ us to ([0-9.]+) us", text, re.S)
+    if m:
+        rows.append(add("P3", "topk-cuda", float(m.group(1)), float(m.group(2)), "us mean over 14 cases, 3 final trials", "PASS all final trials", "KERNEL_OPT", "valid_with_variance", "Hybrid workspace/block-size strategy improves mean top-k time with low trial variance; rejected block512 regression excluded.", "p3/topk-cuda/result/topk-cuda_results.csv"))
+
+    text = read(ROOT / "p3/pretch-cuda/result/agent_summary.md")
+    final_section = text.split("## Final Candidate", 1)[-1]
+    m = re.search(r"repeat=100 \| without_prefetch \|\s*([0-9.]+)\s*\|\s*([0-9.]+)", final_section)
+    if m:
+        rows.append(add("P3", "prefetch-cuda", float(m.group(1)), float(m.group(2)), "ms repeat=100 without_prefetch", "PASS 40/40 final", "PARAM_TUNE", "valid_with_variance_profiler", "No-prefetch block-size tuning improves demand-paging path; repeat=100 with_prefetch is explicitly measurement-equivalent.", "p3/pretch-cuda/result/prefetch-cuda_results.csv"))
+
+    text = read(ROOT / "p3/simpleMultiDevice-cuda/result/agent_summary.md")
+    base_m = re.search(r"Baseline total_us:\s*([0-9.]+)", text)
+    final_m = re.search(r"Final accepted candidate total_us.*?- mean:\s*([0-9.]+) us", text, re.S)
+    if base_m and final_m:
+        rows.append(add("P3", "simpleMultiDevice-cuda", float(base_m.group(1)), float(final_m.group(1)), "us total time over 4 GPUs, 3-trial mean", "PASS all final trials", "KERNEL_OPT", "measurement_equivalent", "Final kernel optimization is real but total-time speedup is only about 1.2% because H2D copy dominates.", "p3/simpleMultiDevice-cuda/result/simpleMultiDevice-cuda_results.csv"))
+
+    text = read(ROOT / "p3/shmembench-cuda/result/agent_summary.md")
+    m = re.search(r"avg kernel time \(ms\) \|\s*([0-9.]+)\s*\|\s*([0-9.]+)", text)
+    if m:
+        rows.append(add("P3", "shmembench-cuda", float(m.group(1)), float(m.group(2)), "ms avg kernel time, 3-trial mean", "PASS final; failed attempt rejected", "KERNEL_OPT", "valid_with_variance", "Removing unneeded synchronization gives a modest 2.85% time improvement; checksum-failing block-size sweep is rejected.", "p3/shmembench-cuda/result/shmembench-cuda_results.csv"))
+
     return rows
 
 
@@ -220,8 +315,13 @@ def write_report(rows):
     lines.append("")
     lines.append("## 資料範圍")
     lines.append("")
-    lines.append("- 已有三層結果的 benchmark：`allreduce-cuda`、`moe-align-cuda`、`moe-cuda`、`p2p-cuda`、`pingpong-cuda`。")
-    lines.append("- 尚未看到 p1/p2/p3 結果的 benchmark：`softmax-cuda`、`topk-cuda`、`shmembench-cuda`、`simpleMultiDevice-cuda`、`prefetch-cuda`。")
+    complete = [b for b in sorted(by_bench) if len(by_bench[b]) == 3]
+    incomplete = [b for b in sorted(by_bench) if len(by_bench[b]) != 3]
+    lines.append("- 已有三層結果的 benchmark：" + "、".join(f"`{b}`" for b in complete) + "。")
+    if incomplete:
+        lines.append("- 尚未形成完整 P1/P2/P3 三層結果的 benchmark：" + "、".join(f"`{b}`" for b in incomplete) + "。")
+    else:
+        lines.append("- 目前摘要表中的 benchmark 均已形成 P1/P2/P3 三層結果。")
     lines.append(f"- 統一摘要表：`reports/{OUT_CSV.name}`，共 {len(rows)} 筆。")
     lines.append("")
     lines.append("## 層級統計")
@@ -259,7 +359,7 @@ def write_report(rows):
     lines.append("")
     lines.append("## 後續建議")
     lines.append("")
-    lines.append("- 補齊尚未跑的 5 個 benchmark，尤其 `softmax-cuda`、`topk-cuda` 這類純 kernel optimization 案例，才能更公平評估 P1/P2/P3 對效能探索的影響。")
+    lines.append("- 後續若新增 benchmark，應維持目前的三層摘要格式，並優先補上 P3 CSV、accepted/rejected attempts、variance 與 contradiction check。")
     lines.append("- 之後每層都要求最少輸出一份統一 schema CSV；P1 可以保持弱約束，但實驗紀錄端仍應另外保存 raw log。")
     lines.append("- 統計分析時應分開計算 `KERNEL_OPT` 與 `ENV_FIX/MEASURE_FIX`，否則環境修復會稀釋或誇大 prompt 對 kernel optimization 的影響。")
     lines.append("- 對 P1 的高 speedup 案例進行 P3 重跑驗證，確認是否為真實加速、測量差異或語意改變。")

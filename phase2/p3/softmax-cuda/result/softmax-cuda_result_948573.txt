@@ -1,0 +1,182 @@
+job_id=948573
+node=gn1222
+CUDA_VISIBLE_DEVICES=0
+date=2026-06-09T17:17:05+08:00
+pwd=/home/r14525078/p3/HeCBench/src/softmax-cuda
+module purge
+module load cuda/12.8
+--------------------------------
+loading CUDA 12.8 with cuDNN / NCCL
+based on cuda_12.8.0_570.86.10_linux.run
+--------------------------------
+
+trials=3
+loaded_modules:
+
+Currently Loaded Modules:
+  1) cuda/12.8
+
+ 
+
+nvcc_version:
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2025 NVIDIA Corporation
+Built on Wed_Jan_15_19:20:09_PST_2025
+Cuda compilation tools, release 12.8, V12.8.61
+Build cuda_12.8.r12.8/compiler.35404655_0
+nvidia_smi:
+Tue Jun  9 17:17:06 2026       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 535.161.08             Driver Version: 535.161.08   CUDA Version: 12.8     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  Tesla V100-SXM2-32GB           On  | 00000000:DB:00.0 Off |                    0 |
+| N/A   29C    P0              42W / 300W |      0MiB / 32768MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|  No running processes found                                                           |
++---------------------------------------------------------------------------------------+
+build_command=make clean || true && make ARCH=sm_70
+rm -rf main main.o
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 --use_fast_math -c main.cu -o main.o
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 --use_fast_math main.o -o main 
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+trial=1
+benchmark_command=./main 100000 64 0 100
+Average kernel execution time: 1.576444 (ms)
+PASS
+benchmark_command=./main 100000 64 1 100
+Average kernel execution time: 0.073481 (ms)
+PASS
+benchmark_command=./main 100000 128 0 100
+Average kernel execution time: 4.389662 (ms)
+PASS
+benchmark_command=./main 100000 128 1 100
+Average kernel execution time: 0.136864 (ms)
+PASS
+benchmark_command=./main 100000 256 0 100
+Average kernel execution time: 15.616708 (ms)
+PASS
+benchmark_command=./main 100000 256 1 100
+Average kernel execution time: 0.306587 (ms)
+PASS
+benchmark_command=./main 100000 512 0 100
+Average kernel execution time: 32.788342 (ms)
+PASS
+benchmark_command=./main 100000 512 1 100
+Average kernel execution time: 0.634553 (ms)
+PASS
+benchmark_command=./main 100000 784 0 100
+Average kernel execution time: 54.790619 (ms)
+PASS
+benchmark_command=./main 100000 784 1 100
+Average kernel execution time: 0.995072 (ms)
+PASS
+benchmark_command=./main 100000 1024 0 100
+Average kernel execution time: 64.674850 (ms)
+PASS
+benchmark_command=./main 100000 1024 1 100
+Average kernel execution time: 1.209758 (ms)
+PASS
+benchmark_command=./main 100000 2048 0 100
+Average kernel execution time: 137.702271 (ms)
+PASS
+benchmark_command=./main 100000 2048 1 100
+Average kernel execution time: 3.532282 (ms)
+PASS
+trial=2
+benchmark_command=./main 100000 64 0 100
+Average kernel execution time: 1.734823 (ms)
+PASS
+benchmark_command=./main 100000 64 1 100
+Average kernel execution time: 0.072757 (ms)
+PASS
+benchmark_command=./main 100000 128 0 100
+Average kernel execution time: 4.404030 (ms)
+PASS
+benchmark_command=./main 100000 128 1 100
+Average kernel execution time: 0.137127 (ms)
+PASS
+benchmark_command=./main 100000 256 0 100
+Average kernel execution time: 15.637608 (ms)
+PASS
+benchmark_command=./main 100000 256 1 100
+Average kernel execution time: 0.306209 (ms)
+PASS
+benchmark_command=./main 100000 512 0 100
+Average kernel execution time: 32.770187 (ms)
+PASS
+benchmark_command=./main 100000 512 1 100
+Average kernel execution time: 0.634551 (ms)
+PASS
+benchmark_command=./main 100000 784 0 100
+Average kernel execution time: 54.718887 (ms)
+PASS
+benchmark_command=./main 100000 784 1 100
+Average kernel execution time: 0.995810 (ms)
+PASS
+benchmark_command=./main 100000 1024 0 100
+Average kernel execution time: 64.596954 (ms)
+PASS
+benchmark_command=./main 100000 1024 1 100
+Average kernel execution time: 1.209448 (ms)
+PASS
+benchmark_command=./main 100000 2048 0 100
+Average kernel execution time: 138.373276 (ms)
+PASS
+benchmark_command=./main 100000 2048 1 100
+Average kernel execution time: 3.553319 (ms)
+PASS
+trial=3
+benchmark_command=./main 100000 64 0 100
+Average kernel execution time: 1.699988 (ms)
+PASS
+benchmark_command=./main 100000 64 1 100
+Average kernel execution time: 0.073259 (ms)
+PASS
+benchmark_command=./main 100000 128 0 100
+Average kernel execution time: 4.403379 (ms)
+PASS
+benchmark_command=./main 100000 128 1 100
+Average kernel execution time: 0.136631 (ms)
+PASS
+benchmark_command=./main 100000 256 0 100
+Average kernel execution time: 15.600123 (ms)
+PASS
+benchmark_command=./main 100000 256 1 100
+Average kernel execution time: 0.305878 (ms)
+PASS
+benchmark_command=./main 100000 512 0 100
+Average kernel execution time: 32.772694 (ms)
+PASS
+benchmark_command=./main 100000 512 1 100
+Average kernel execution time: 0.634294 (ms)
+PASS
+benchmark_command=./main 100000 784 0 100
+Average kernel execution time: 54.714527 (ms)
+PASS
+benchmark_command=./main 100000 784 1 100
+Average kernel execution time: 0.994848 (ms)
+PASS
+benchmark_command=./main 100000 1024 0 100
+Average kernel execution time: 64.638908 (ms)
+PASS
+benchmark_command=./main 100000 1024 1 100
+Average kernel execution time: 1.209506 (ms)
+PASS
+benchmark_command=./main 100000 2048 0 100
+Average kernel execution time: 138.680191 (ms)
+PASS
+benchmark_command=./main 100000 2048 1 100
+Average kernel execution time: 3.581077 (ms)
+PASS

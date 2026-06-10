@@ -1,0 +1,184 @@
+job_id=948608
+node=gn1222
+CUDA_VISIBLE_DEVICES=0
+date=2026-06-09T18:31:49+08:00
+pwd=/home/r14525078/p3/HeCBench/src/prefetch-cuda
+benchmark_commands=make clean || true && make ARCH=sm_70; ./main 10; ./main 100
+
+=== Modules ===
+--------------------------------
+loading CUDA 12.8 with cuDNN / NCCL
+based on cuda_12.8.0_570.86.10_linux.run
+--------------------------------
+
+
+Currently Loaded Modules:
+  1) cuda/12.8
+
+ 
+
+
+=== nvcc --version ===
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2025 NVIDIA Corporation
+Built on Wed_Jan_15_19:20:09_PST_2025
+Cuda compilation tools, release 12.8, V12.8.61
+Build cuda_12.8.r12.8/compiler.35404655_0
+
+=== nvidia-smi ===
+Tue Jun  9 18:31:50 2026       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 535.161.08             Driver Version: 535.161.08   CUDA Version: 12.8     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  Tesla V100-SXM2-32GB           On  | 00000000:1B:00.0 Off |                    0 |
+| N/A   31C    P0              57W / 300W |      0MiB / 32768MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|  No running processes found                                                           |
++---------------------------------------------------------------------------------------+
+
+=== Build ===
+rm -rf main main.o
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 -c main.cu -o main.o
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 main.o -o main 
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+build_status=0
+
+=== Run ./main 10 ===
+info: set device to 0
+Concurrent managed access with prefetch
+Average execution time: 6.161633 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 6.098832 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 6.159066 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 6.159069 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 6.162250 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 6.152126 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 6.102864 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 6.309751 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 6.310051 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 6.304602 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 12.458631 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 12.217469 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 12.372854 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 12.277277 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 12.353153 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 12.310176 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 12.345190 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 12.327682 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 12.489559 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 12.504829 (ms)
+PASS
+run10_status=0
+
+=== Run ./main 100 ===
+info: set device to 0
+Concurrent managed access with prefetch
+Average execution time: 1.682361 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 1.681688 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 1.681700 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 1.682170 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 1.680878 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 1.681642 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 1.681865 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 1.682369 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 1.682529 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 1.681930 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 2.129467 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 2.130093 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 2.135080 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 2.106580 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 2.155345 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 2.159644 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 2.164934 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 2.155915 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 2.157645 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 2.158849 (ms)
+PASS
+run100_status=0

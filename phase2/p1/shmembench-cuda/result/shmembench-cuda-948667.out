@@ -1,0 +1,40 @@
+benchmark=shmembench-cuda
+job_id=948667
+node=gn1222.twcc.ai
+bench_dir=/home/r14525078/p1/HeCBench/src/shmembench-cuda
+arch=sm_70
+repeat=1000
+CUDA_VISIBLE_DEVICES=0
+
+=== Environment ===
+
+Currently Loaded Modules:
+  1) cuda/12.8
+
+ 
+
+/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/cuda/cuda-12.8/bin/nvcc
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2025 NVIDIA Corporation
+Built on Wed_Jan_15_19:20:09_PST_2025
+Cuda compilation tools, release 12.8, V12.8.61
+Build cuda_12.8.r12.8/compiler.35404655_0
+GPU 0: Tesla V100-SXM2-32GB (UUID: GPU-65942808-87c1-bb1a-b954-a8316a2b8871)
+
+=== Build ===
+rm -rf main main.o shmem_kernels.o
+nvcc -c  -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 main.cu
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+nvcc -c  -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 shmem_kernels.cu
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 main.o shmem_kernels.o -o main 
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+
+=== Run ===
+Shared memory bandwidth microbenchmark
+Buffer sizes: 8MB
+Average kernel execution time : 7.299013 (ms)
+Kernel execution time us avg/min/max : 7299.013 / 6880.256 / 8728.576
+Memory throughput
+	using 128bit operations : 11775.52 GB/sec (735.97 billion accesses/sec)
+Result file: /home/r14525078/p1/HeCBench/src/shmembench-cuda/result/shmembench_cuda_result_948667.txt

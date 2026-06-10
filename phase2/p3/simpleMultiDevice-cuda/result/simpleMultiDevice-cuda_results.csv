@@ -1,0 +1,22 @@
+benchmark,job_id,node,prompt_level,submission_index,variant,case,metric_name,metric_value,metric_unit,correctness,status,result_type,accepted,reject_reason,notes
+simpleMultiDevice-cuda,948658,gn1228,P3,0,baseline,num_gpus=4,total_us,5622.520996,us,PASS,baseline,KERNEL_OPT,false,,baseline; no copy/kernel split in original source
+simpleMultiDevice-cuda,948659,gn1228,P3,1,block_reduce_events_per_repeat,num_gpus=4,total_us,5662.374023,us,PASS,rejected,REGRESSION,false,total slower than baseline,per-repeat CUDA event instrumentation added overhead
+simpleMultiDevice-cuda,948659,gn1228,P3,1,block_reduce_events_per_repeat,num_gpus=4,h2d_us,5443.032472,us,PASS,rejected,REGRESSION,false,total slower than baseline,
+simpleMultiDevice-cuda,948659,gn1228,P3,1,block_reduce_events_per_repeat,num_gpus=4,kernel_us,152.718944,us,PASS,rejected,REGRESSION,false,total slower than baseline,
+simpleMultiDevice-cuda,948659,gn1228,P3,1,block_reduce_events_per_repeat,num_gpus=4,d2h_us,9.517888,us,PASS,rejected,REGRESSION,false,total slower than baseline,
+simpleMultiDevice-cuda,948660,gn1228,P3,2,block_reduce_representative_split,num_gpus=4,total_us,5622.708984,us,PASS,rejected,MEASUREMENT_EQUIVALENT,false,improvement below 1%; slight slowdown,representative split moved outside repeated loop
+simpleMultiDevice-cuda,948660,gn1228,P3,2,block_reduce_representative_split,num_gpus=4,h2d_us,5444.191933,us,PASS,rejected,MEASUREMENT_EQUIVALENT,false,improvement below 1%; slight slowdown,
+simpleMultiDevice-cuda,948660,gn1228,P3,2,block_reduce_representative_split,num_gpus=4,kernel_us,154.175997,us,PASS,rejected,MEASUREMENT_EQUIVALENT,false,improvement below 1%; slight slowdown,
+simpleMultiDevice-cuda,948660,gn1228,P3,2,block_reduce_representative_split,num_gpus=4,d2h_us,8.192000,us,PASS,rejected,MEASUREMENT_EQUIVALENT,false,improvement below 1%; slight slowdown,
+simpleMultiDevice-cuda,948661,gn1228,P3,3,block128_original_partial,num_gpus=4,total_us,5555.386230,us,PASS,accepted,KERNEL_OPT,true,,trial 1 of final candidate
+simpleMultiDevice-cuda,948661,gn1228,P3,3,block128_original_partial,num_gpus=4,h2d_us,5443.552017,us,PASS,accepted,KERNEL_OPT,true,,representative split; trial 1
+simpleMultiDevice-cuda,948661,gn1228,P3,3,block128_original_partial,num_gpus=4,kernel_us,69.728002,us,PASS,accepted,KERNEL_OPT,true,,representative split; trial 1
+simpleMultiDevice-cuda,948661,gn1228,P3,3,block128_original_partial,num_gpus=4,d2h_us,19.455999,us,PASS,accepted,KERNEL_OPT,true,,representative split; trial 1
+simpleMultiDevice-cuda,948662,gn1228,P3,4,block128_original_partial,num_gpus=4,total_us,5556.236328,us,PASS,accepted,KERNEL_OPT,true,,trial 2 of final candidate
+simpleMultiDevice-cuda,948662,gn1228,P3,4,block128_original_partial,num_gpus=4,h2d_us,5444.384098,us,PASS,accepted,KERNEL_OPT,true,,representative split; trial 2
+simpleMultiDevice-cuda,948662,gn1228,P3,4,block128_original_partial,num_gpus=4,kernel_us,69.215998,us,PASS,accepted,KERNEL_OPT,true,,representative split; trial 2
+simpleMultiDevice-cuda,948662,gn1228,P3,4,block128_original_partial,num_gpus=4,d2h_us,18.848000,us,PASS,accepted,KERNEL_OPT,true,,representative split; trial 2
+simpleMultiDevice-cuda,948663,gn1228,P3,5,block128_original_partial,num_gpus=4,total_us,5554.063477,us,PASS,accepted,KERNEL_OPT,true,,trial 3 of final candidate
+simpleMultiDevice-cuda,948663,gn1228,P3,5,block128_original_partial,num_gpus=4,h2d_us,5444.928169,us,PASS,accepted,KERNEL_OPT,true,,representative split; trial 3
+simpleMultiDevice-cuda,948663,gn1228,P3,5,block128_original_partial,num_gpus=4,kernel_us,71.456000,us,PASS,accepted,KERNEL_OPT,true,,representative split; trial 3
+simpleMultiDevice-cuda,948663,gn1228,P3,5,block128_original_partial,num_gpus=4,d2h_us,19.584000,us,PASS,accepted,KERNEL_OPT,true,,representative split; trial 3

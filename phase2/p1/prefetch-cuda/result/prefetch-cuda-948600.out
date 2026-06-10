@@ -1,0 +1,97 @@
+benchmark=prefetch-cuda
+job_id=948600
+node=gn1222.twcc.ai
+bench_dir=/home/r14525078/p1/HeCBench/src/prefetch-cuda
+arch=sm_70
+repeat=100
+CUDA_VISIBLE_DEVICES=0
+
+=== Environment ===
+
+Currently Loaded Modules:
+  1) cuda/12.8
+
+ 
+
+/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/cuda/cuda-12.8/bin/nvcc
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2025 NVIDIA Corporation
+Built on Wed_Jan_15_19:20:09_PST_2025
+Cuda compilation tools, release 12.8, V12.8.61
+Build cuda_12.8.r12.8/compiler.35404655_0
+GPU 0: Tesla V100-SXM2-32GB (UUID: GPU-3dabb4ac-8380-8dba-60ba-e99ca966b0be)
+
+=== Build ===
+rm -rf main main.o
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 -c main.cu -o main.o
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 main.o -o main 
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+
+=== Run ===
+info: set device to 0
+Concurrent managed access with prefetch
+Average execution time: 0.504266 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 0.508100 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 0.508859 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 0.513285 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 0.513087 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 0.517913 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 0.522949 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 0.513780 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 0.518882 (ms)
+PASS
+Concurrent managed access with prefetch
+Average execution time: 0.503353 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 0.842464 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 0.830853 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 0.827174 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 0.843779 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 0.829577 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 0.858028 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 0.829868 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 0.857006 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 0.840122 (ms)
+PASS
+Concurrent managed access without prefetch
+Average execution time: 0.875496 (ms)
+PASS
+
+mode,avg_ms,passes
+with_prefetch,0.512447,10/10
+without_prefetch,0.843437,10/10
+Result file: /home/r14525078/p1/HeCBench/src/prefetch-cuda/result/prefetch_cuda_result_948600.txt
