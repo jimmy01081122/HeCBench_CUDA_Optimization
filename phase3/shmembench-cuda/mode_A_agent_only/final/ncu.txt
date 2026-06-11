@@ -1,0 +1,2009 @@
+==WARNING== No metrics to collect found in sections.
+==PROF== Connected to process 1988483 (/home/r14525078/HeCBench/src/shmembench-cuda/main)
+==PROF== Profiling "benchmark_shmem(float4 *)" - 0: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 1: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 2: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 3: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 4: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 5: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 6: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 7: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 8: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 9: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 10: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 11: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 12: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 13: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 14: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 15: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 16: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 17: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 18: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 19: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 20: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 21: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 22: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 23: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 24: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 25: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 26: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 27: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 28: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 29: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 30: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 31: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 32: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 33: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 34: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 35: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 36: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 37: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 38: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 39: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 40: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 41: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 42: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 43: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 44: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 45: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 46: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 47: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 48: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 49: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 50: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 51: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 52: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 53: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 54: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 55: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 56: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 57: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 58: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 59: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 60: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 61: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 62: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 63: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 64: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 65: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 66: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 67: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 68: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 69: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 70: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 71: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 72: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 73: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 74: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 75: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 76: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 77: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 78: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 79: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 80: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 81: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 82: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 83: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 84: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 85: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 86: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 87: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 88: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 89: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 90: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 91: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 92: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 93: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 94: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 95: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 96: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 97: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 98: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 99: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 100: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 101: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 102: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 103: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 104: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 105: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 106: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 107: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 108: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 109: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 110: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 111: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 112: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 113: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 114: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 115: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 116: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 117: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 118: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 119: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 120: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 121: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 122: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 123: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 124: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 125: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 126: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 127: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 128: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 129: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 130: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 131: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 132: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 133: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 134: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 135: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 136: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 137: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 138: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 139: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 140: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 141: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 142: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 143: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 144: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 145: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 146: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 147: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 148: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 149: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 150: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 151: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 152: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 153: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 154: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 155: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 156: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 157: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 158: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 159: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 160: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 161: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 162: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 163: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 164: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 165: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 166: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 167: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 168: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 169: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 170: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 171: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 172: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 173: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 174: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 175: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 176: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 177: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 178: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 179: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 180: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 181: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 182: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 183: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 184: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 185: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 186: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 187: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 188: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 189: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 190: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 191: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 192: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 193: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 194: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 195: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 196: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 197: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 198: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 199: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 200: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 201: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 202: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 203: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 204: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 205: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 206: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 207: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 208: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 209: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 210: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 211: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 212: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 213: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 214: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 215: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 216: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 217: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 218: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 219: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 220: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 221: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 222: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 223: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 224: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 225: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 226: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 227: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 228: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 229: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 230: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 231: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 232: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 233: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 234: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 235: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 236: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 237: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 238: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 239: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 240: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 241: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 242: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 243: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 244: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 245: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 246: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 247: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 248: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 249: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 250: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 251: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 252: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 253: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 254: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 255: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 256: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 257: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 258: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 259: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 260: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 261: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 262: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 263: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 264: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 265: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 266: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 267: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 268: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 269: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 270: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 271: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 272: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 273: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 274: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 275: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 276: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 277: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 278: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 279: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 280: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 281: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 282: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 283: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 284: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 285: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 286: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 287: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 288: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 289: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 290: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 291: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 292: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 293: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 294: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 295: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 296: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 297: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 298: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 299: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 300: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 301: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 302: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 303: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 304: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 305: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 306: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 307: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 308: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 309: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 310: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 311: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 312: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 313: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 314: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 315: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 316: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 317: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 318: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 319: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 320: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 321: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 322: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 323: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 324: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 325: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 326: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 327: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 328: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 329: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 330: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 331: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 332: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 333: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 334: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 335: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 336: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 337: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 338: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 339: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 340: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 341: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 342: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 343: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 344: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 345: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 346: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 347: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 348: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 349: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 350: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 351: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 352: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 353: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 354: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 355: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 356: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 357: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 358: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 359: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 360: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 361: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 362: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 363: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 364: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 365: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 366: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 367: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 368: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 369: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 370: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 371: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 372: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 373: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 374: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 375: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 376: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 377: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 378: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 379: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 380: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 381: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 382: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 383: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 384: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 385: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 386: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 387: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 388: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 389: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 390: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 391: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 392: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 393: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 394: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 395: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 396: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 397: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 398: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 399: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 400: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 401: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 402: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 403: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 404: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 405: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 406: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 407: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 408: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 409: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 410: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 411: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 412: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 413: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 414: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 415: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 416: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 417: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 418: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 419: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 420: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 421: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 422: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 423: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 424: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 425: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 426: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 427: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 428: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 429: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 430: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 431: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 432: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 433: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 434: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 435: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 436: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 437: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 438: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 439: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 440: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 441: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 442: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 443: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 444: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 445: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 446: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 447: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 448: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 449: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 450: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 451: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 452: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 453: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 454: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 455: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 456: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 457: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 458: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 459: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 460: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 461: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 462: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 463: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 464: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 465: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 466: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 467: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 468: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 469: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 470: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 471: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 472: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 473: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 474: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 475: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 476: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 477: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 478: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 479: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 480: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 481: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 482: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 483: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 484: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 485: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 486: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 487: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 488: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 489: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 490: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 491: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 492: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 493: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 494: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 495: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 496: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 497: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 498: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 499: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 500: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 501: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 502: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 503: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 504: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 505: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 506: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 507: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 508: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 509: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 510: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 511: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 512: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 513: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 514: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 515: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 516: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 517: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 518: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 519: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 520: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 521: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 522: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 523: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 524: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 525: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 526: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 527: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 528: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 529: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 530: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 531: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 532: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 533: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 534: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 535: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 536: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 537: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 538: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 539: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 540: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 541: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 542: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 543: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 544: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 545: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 546: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 547: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 548: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 549: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 550: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 551: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 552: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 553: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 554: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 555: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 556: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 557: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 558: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 559: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 560: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 561: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 562: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 563: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 564: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 565: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 566: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 567: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 568: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 569: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 570: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 571: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 572: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 573: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 574: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 575: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 576: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 577: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 578: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 579: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 580: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 581: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 582: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 583: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 584: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 585: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 586: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 587: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 588: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 589: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 590: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 591: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 592: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 593: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 594: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 595: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 596: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 597: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 598: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 599: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 600: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 601: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 602: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 603: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 604: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 605: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 606: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 607: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 608: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 609: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 610: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 611: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 612: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 613: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 614: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 615: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 616: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 617: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 618: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 619: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 620: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 621: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 622: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 623: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 624: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 625: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 626: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 627: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 628: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 629: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 630: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 631: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 632: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 633: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 634: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 635: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 636: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 637: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 638: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 639: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 640: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 641: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 642: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 643: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 644: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 645: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 646: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 647: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 648: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 649: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 650: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 651: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 652: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 653: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 654: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 655: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 656: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 657: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 658: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 659: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 660: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 661: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 662: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 663: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 664: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 665: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 666: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 667: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 668: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 669: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 670: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 671: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 672: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 673: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 674: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 675: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 676: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 677: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 678: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 679: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 680: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 681: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 682: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 683: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 684: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 685: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 686: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 687: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 688: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 689: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 690: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 691: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 692: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 693: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 694: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 695: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 696: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 697: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 698: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 699: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 700: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 701: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 702: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 703: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 704: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 705: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 706: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 707: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 708: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 709: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 710: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 711: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 712: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 713: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 714: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 715: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 716: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 717: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 718: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 719: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 720: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 721: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 722: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 723: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 724: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 725: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 726: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 727: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 728: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 729: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 730: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 731: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 732: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 733: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 734: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 735: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 736: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 737: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 738: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 739: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 740: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 741: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 742: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 743: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 744: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 745: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 746: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 747: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 748: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 749: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 750: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 751: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 752: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 753: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 754: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 755: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 756: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 757: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 758: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 759: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 760: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 761: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 762: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 763: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 764: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 765: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 766: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 767: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 768: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 769: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 770: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 771: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 772: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 773: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 774: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 775: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 776: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 777: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 778: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 779: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 780: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 781: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 782: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 783: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 784: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 785: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 786: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 787: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 788: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 789: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 790: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 791: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 792: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 793: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 794: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 795: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 796: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 797: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 798: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 799: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 800: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 801: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 802: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 803: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 804: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 805: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 806: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 807: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 808: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 809: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 810: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 811: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 812: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 813: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 814: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 815: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 816: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 817: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 818: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 819: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 820: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 821: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 822: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 823: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 824: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 825: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 826: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 827: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 828: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 829: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 830: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 831: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 832: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 833: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 834: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 835: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 836: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 837: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 838: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 839: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 840: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 841: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 842: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 843: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 844: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 845: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 846: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 847: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 848: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 849: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 850: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 851: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 852: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 853: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 854: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 855: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 856: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 857: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 858: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 859: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 860: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 861: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 862: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 863: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 864: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 865: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 866: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 867: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 868: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 869: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 870: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 871: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 872: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 873: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 874: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 875: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 876: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 877: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 878: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 879: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 880: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 881: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 882: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 883: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 884: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 885: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 886: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 887: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 888: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 889: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 890: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 891: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 892: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 893: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 894: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 895: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 896: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 897: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 898: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 899: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 900: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 901: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 902: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 903: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 904: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 905: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 906: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 907: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 908: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 909: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 910: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 911: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 912: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 913: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 914: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 915: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 916: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 917: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 918: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 919: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 920: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 921: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 922: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 923: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 924: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 925: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 926: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 927: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 928: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 929: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 930: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 931: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 932: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 933: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 934: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 935: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 936: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 937: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 938: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 939: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 940: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 941: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 942: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 943: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 944: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 945: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 946: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 947: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 948: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 949: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 950: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 951: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 952: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 953: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 954: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 955: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 956: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 957: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 958: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 959: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 960: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 961: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 962: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 963: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 964: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 965: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 966: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 967: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 968: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 969: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 970: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 971: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 972: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 973: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 974: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 975: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 976: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 977: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 978: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 979: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 980: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 981: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 982: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 983: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 984: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 985: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 986: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 987: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 988: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 989: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 990: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 991: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 992: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 993: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 994: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 995: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 996: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 997: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 998: 0%....50%....100% - 1 pass
+==PROF== Profiling "benchmark_shmem(float4 *)" - 999: 0%....50%....100% - 1 pass
+Shared memory bandwidth microbenchmark
+Buffer sizes: 8MB
+Average kernel execution time : 19.154560 (ms)
+Memory throughput
+	using 128bit operations :  4487.17 GB/sec (280.45 billion accesses/sec)
+==PROF== Disconnected from process 1988483
+[1988483] main@127.0.0.1
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  benchmark_shmem(float4 *) (1024, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0

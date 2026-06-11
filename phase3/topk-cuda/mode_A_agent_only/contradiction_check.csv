@@ -1,0 +1,4 @@
+check,status,notes
+missing_official_cases,PASS,official 14-case sweep present
+correctness_success_consistency,PASS,SUCCESS requires PASS
+human_decision,PASS,Mode A only

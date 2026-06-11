@@ -254,6 +254,13 @@ INVALID
    
 5. **執行一致性審計 (Self-Consistency Auditor)**：每個 Mode 完成後，必須自動執行一致性檢查。
    若偵測到矛盾，在修正前該結果不得晉升為最終報告，且不得手動覆寫 `contradiction_check.csv`。
+   審計器應強制執行以下細部檢驗規則：
+   - **Rule V1**：若變異數 `CV > 15%`，將 `measurement_validity` 設為 `NOISY`。
+   - **Rule V2**：若 `CV > 15%` 且加速比 `speedup > 1.05`，將 `speedup_claim_valid` 設為 `false`。
+   - **Rule V3**：若 `benchmark=softmax-cuda` 且比較組為 `impl0_to_impl1`，應將 `result_type` 設為 `BASELINE_COMPARISON`，而非 `AGENT_OPT`。
+   - **Rule V4**：若 `benchmark=shmembench-cuda`、`block_size != 256` 且 `correctness != PASS`，標記為 `DIAGNOSTIC_FAIL`，而非判定整題失敗。
+   - **Rule V5**：若官方驗證的 baseline 缺失，`speedup` 必須設為 `n/a`。
+   - **Rule V6**：若可選的變體取代了原始 Naive Baseline 行，則判定該行結果 `INVALID`。
    
 6. **無效 Baseline 處理**：若 baseline 無效，則 `speedup` 必須填為 `n/a`。
    
@@ -551,7 +558,7 @@ phase3/metadata/result_schema.csv
 欄位：
 
 ```csv
-benchmark,mode,round,job_id,node,case,variant,metric_name,metric_value,unit,baseline_metric,speedup,correctness,status,result_type,mean,min,max,stddev,cv,profiler_available,human_decision,notes
+benchmark,mode,round,job_id,node,case,variant,metric_name,metric_value,unit,baseline_metric,speedup,correctness,status,result_type,mean,min,max,stddev,cv,profiler_available,human_decision,correctness_status,measurement_validity,speedup_claim_valid,notes
 ```
 
 ## 8.1 Mode A 固定填值規則

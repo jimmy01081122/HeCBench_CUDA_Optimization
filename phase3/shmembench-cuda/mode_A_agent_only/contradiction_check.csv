@@ -1,0 +1,5 @@
+check,status,notes
+missing_official_cases,PASS,official block-size sweep present
+correctness_success_consistency,PASS,SUCCESS rows require PASS
+missing_metric_success_consistency,PASS,SUCCESS rows require parseable metrics
+human_decision,PASS,Mode A only

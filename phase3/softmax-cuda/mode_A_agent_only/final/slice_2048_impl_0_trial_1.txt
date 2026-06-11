@@ -1,0 +1,2 @@
+Average kernel execution time: 43.221004 (ms)
+PASS

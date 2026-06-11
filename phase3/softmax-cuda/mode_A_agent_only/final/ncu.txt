@@ -1,0 +1,206 @@
+==WARNING== No metrics to collect found in sections.
+==PROF== Connected to process 344810 (/home/r14525078/HeCBench/src/softmax-cuda/main)
+==PROF== Profiling "softMax2" - 0: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 1: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 2: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 3: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 4: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 5: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 6: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 7: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 8: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 9: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 10: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 11: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 12: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 13: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 14: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 15: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 16: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 17: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 18: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 19: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 20: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 21: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 22: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 23: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 24: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 25: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 26: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 27: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 28: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 29: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 30: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 31: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 32: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 33: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 34: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 35: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 36: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 37: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 38: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 39: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 40: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 41: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 42: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 43: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 44: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 45: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 46: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 47: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 48: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 49: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 50: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 51: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 52: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 53: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 54: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 55: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 56: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 57: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 58: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 59: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 60: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 61: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 62: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 63: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 64: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 65: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 66: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 67: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 68: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 69: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 70: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 71: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 72: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 73: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 74: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 75: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 76: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 77: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 78: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 79: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 80: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 81: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 82: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 83: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 84: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 85: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 86: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 87: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 88: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 89: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 90: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 91: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 92: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 93: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 94: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 95: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 96: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 97: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 98: 0%....50%....100% - 1 pass
+==PROF== Profiling "softMax2" - 99: 0%....50%....100% - 1 pass
+Average kernel execution time: 18.011980 (ms)
+PASS
+==PROF== Disconnected from process 344810
+[344810] main@127.0.0.1
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+  softMax2(int, int, const float *, float *) (12500, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
