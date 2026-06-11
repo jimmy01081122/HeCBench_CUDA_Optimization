@@ -1,0 +1,118 @@
+## Result Audit
+
+以下審查只根據你貼出的 Round 2 summary 與 patch summary。尚未看到 `results.csv`、raw stdout/stderr、`auditor_report.csv`，所以 raw-level consistency 仍需補檢。
+
+| item                 | status                     | reason                                                                                                                                          | required action                                                                                     |
+| -------------------- | -------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| execution mode       | PASS                       | Slurm job `949703`，符合 sbatch 執行規則。                                                                                                              | 保留 Slurm stdout/stderr。                                                                             |
+| baseline             | PASS                       | paired baseline 使用 `impl=1`，未使用 `impl=0 -> impl=1`。                                                                                             | 確認 CSV 中 baseline rows 完整。                                                                          |
+| candidate definition | PASS                       | `impl=3` 是 shape-aware dispatch，非 universal kernel。                                                                                             | 論文中固定稱為 dispatch / `PARAM_TUNE`。                                                                    |
+| dispatch map         | PASS                       | 128/256 -> `impl=1`；784/1024/2048 -> `impl=2`。符合 Round 1 evidence。                                                                              | 檢查 CSV 的 `dispatch_selected_impl` 與 raw/runner log 是否一致。                                            |
+| correctness          | PASS                       | 所有 official slices `3/3 PASS`。                                                                                                                  | raw stdout 必須逐 trial 可追溯 PASS。                                                                      |
+| profiler             | PASS                       | `profiler_status=NOT_RUN`，且未宣稱 profiler-supported conclusion。                                                                                   | 報告中列為 limitation。                                                                                   |
+| slice 128            | CAUTION                    | candidate 與 baseline 都走 `impl=1`，但顯示 1.066763x。這不能解釋為 kernel optimization，應視為 paired timing variation 或 measurement-equivalent dispatch result。 | 保持 `MEASUREMENT_EQUIVALENT`，`speedup_claim_valid=false`。不可宣稱 128 加速。                                |
+| slice 256            | PASS                       | candidate dispatch 到 `impl=1`，0.996224x，符合 measurement-equivalent。                                                                              | `speedup_claim_valid=false`。                                                                        |
+| slice 784            | PASS                       | dispatch 到 `impl=2`，correctness PASS，speedup 約 1.297x。                                                                                          | 可報 per-slice large-shape improvement，但 result\_type 建議仍寫 `PARAM_TUNE` 或 notes 說明 selected `impl=2`。 |
+| slice 1024           | PASS                       | dispatch 到 `impl=2`，correctness PASS，speedup 約 1.601x。                                                                                          | 可報 per-slice large-shape improvement。                                                               |
+| slice 2048           | PASS                       | dispatch 到 `impl=2`，correctness PASS，speedup 約 1.325x。                                                                                          | 可報 per-slice large-shape improvement。                                                               |
+| CV / variance        | NOT\_PROVIDED              | summary 沒列 mean/min/max/stddev/CV。雖然 validity 寫 VALID，但審查端無法從 summary 驗證。                                                                       | 從 `results.csv` 補列 CV；若 CV > threshold，需重判 validity。                                                |
+| raw artifacts        | NOT\_PROVIDED\_IN\_SUMMARY | summary 沒列 raw 路徑與 auditor 狀態。                                                                                                                  | 補 `results.csv`、raw paths、`auditor_report.csv`。                                                     |
+| overall candidate    | ACCEPT\_WITH\_LIMITATION   | 所有 official slices correctness PASS；shape-aware dispatch 避免 128 regression 與 256 invalid，並保留 large-slice improvement。不是 universal `KERNEL_OPT`。 | 可作為 Mode B Round 2 partial/shape-aware success。                                                     |
+
+***
+
+## Speedup sanity check
+
+根據你貼的 mean time 計算：
+
+| slice | dispatch | paired impl=1 ms | candidate ms | computed speedup | interpretation                            |
+| ----: | -------: | ---------------: | -----------: | ---------------: | ----------------------------------------- |
+|   128 |   impl=1 |         0.144732 |     0.135674 |        1.066763x | same-path variation；不可 claim optimization |
+|   256 |   impl=1 |         0.305251 |     0.306408 |        0.996224x | measurement-equivalent                    |
+|   784 |   impl=2 |         1.437362 |     1.107988 |        1.297272x | valid dispatch improvement if CV stable   |
+|  1024 |   impl=2 |         2.082344 |     1.300765 |        1.600861x | valid dispatch improvement if CV stable   |
+|  2048 |   impl=2 |         2.213330 |     1.670514 |        1.324940x | valid dispatch improvement if CV stable   |
+
+***
+
+## Contradictions Found
+
+1. **欄位名稱 `aggregate speedup` 不準確**  
+   表格中每列的數值其實是 per-slice `speedup_vs_impl1`，不是 aggregate speedup。  
+   建議改名為：
+
+   ```text
+   speedup_vs_impl1
+   ```
+
+2. **slice 128 顯示 1.066763x，但 result\_type 是 MEASUREMENT\_EQUIVALENT**  
+   這不是嚴重矛盾，因為 candidate 與 baseline 都 dispatch 到 `impl=1`，沒有 kernel 差異。  
+   正確解讀是：這個 6.26% 不是優化結果，而是 paired measurement variation、ordering effect 或 baseline timing variance。不能 claim speedup。
+
+3. **summary 宣稱 validity=VALID，但未提供 CV**  
+   如果 `results.csv` 內 CV 符合 threshold，則沒問題。  
+   但 summary 本身不足以讓審查端驗證 `VALID`。
+
+***
+
+## Invalid Claims
+
+以下說法不能寫入論文或報告：
+
+1. **「impl=3 是新的 universal optimized kernel。」**  
+   錯。`impl=3` 是 dispatch wrapper。
+
+2. **「slice=128 也加速 1.066x。」**  
+   不可。128 走的是 unchanged `impl=1`，不能 claim kernel optimization。
+
+3. **「impl=2 現在已經適用所有 official slices。」**  
+   錯。Round 2 避開了 128 與 256。
+
+4. **「Round 2 證明 cached exp 是加速來源。」**  
+   不可。large slices 使用的是 Round 1 compound `impl=2`，仍不能單獨歸因 cached exp。
+
+5. **「profiler 支持此 dispatch policy。」**  
+   不可。profiler 沒跑。
+
+***
+
+## Corrected Interpretation
+
+可寫入報告的說法：
+
+> Mode B Round 2 evaluated `impl3_shape_dispatch_impl1_small_impl2_large`, a shape-aware dispatch candidate. The candidate dispatches slices 128 and 256 to the unchanged `impl=1` path and dispatches slices 784, 1024, and 2048 to the unchanged `impl=2` path validated in Round 1 for large slices. All five official slices passed correctness in three trials. The small slices should be interpreted as measurement-equivalent baseline-preserving cases, not as kernel optimizations. The large slices retained valid per-slice improvements of approximately 1.297x, 1.601x, and 1.325x against the paired `impl=1` baseline, subject to CV verification from `results.csv`. Overall, Round 2 is best classified as a shape-aware dispatch / `PARAM_TUNE` result rather than a universal `KERNEL_OPT`.
+
+***
+
+## 主規劃器回饋
+
+### 簡短結論
+
+Round 2 可以接受為 **shape-aware dispatch success**，但不是 universal kernel optimization。它正確保留 `impl=1` 給 128/256，並只在 784/1024/2048 使用 Round 1 已通過的 large-slice candidate。
+
+### Blocking fixes before final write-up
+
+1. 將表格欄位 `aggregate speedup` 改為 `speedup_vs_impl1`。
+2. 補上 `results.csv` 中每個 slice 的 CV。
+3. 補 `auditor_report.csv` 狀態。
+4. 確認 raw stdout/stderr 可追溯：
+   * correctness PASS
+   * `dispatch_selected_impl`
+   * trial\_id
+5. 對 slice 128 明確標註：
+   * no optimization claim
+   * same-path measurement variation
+   * `speedup_claim_valid=false`
+
+### Non-blocking improvements
+
+1. 後續 Round 3 可修 `impl=2` 的 slice 256 correctness。
+2. 後續可做 ablation：
+   * block-per-slice only
+   * cached-exp only
+   * shape-aware dispatch only
+3. 若要報 aggregate speedup，必須明確說明 weighting：
+   * unweighted mean over official slices
+   * workload-weighted mean
+   * 或只報 per-slice，不報 aggregate
+
