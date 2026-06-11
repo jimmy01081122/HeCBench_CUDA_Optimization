@@ -1,0 +1,1 @@
+Auditor finished. contradiction_check.csv written to /home/r14525078/HeCBench/phase3/softmax-cuda/mode_B_human_guided/rounds/round_2/contradiction_check.csv
