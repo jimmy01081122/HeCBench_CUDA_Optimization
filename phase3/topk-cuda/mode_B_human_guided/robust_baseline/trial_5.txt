@@ -1,0 +1,56 @@
+
+batch size: 3072, hidden size: 3072, topk: 2048
+Average execution time of topk : 626.649353 (us)
+PASS
+
+batch size: 3072, hidden size: 3072, topk: 1024
+Average execution time of topk : 615.027893 (us)
+PASS
+
+batch size: 3072, hidden size: 4096, topk: 2048
+Average execution time of topk : 697.736694 (us)
+PASS
+
+batch size: 3072, hidden size: 4096, topk: 1024
+Average execution time of topk : 681.897705 (us)
+PASS
+
+batch size: 3072, hidden size: 8192, topk: 2048
+Average execution time of topk : 955.587524 (us)
+PASS
+
+batch size: 3072, hidden size: 8192, topk: 1024
+Average execution time of topk : 880.741577 (us)
+PASS
+
+batch size: 3072, hidden size: 16384, topk: 2048
+Average execution time of topk : 1521.121216 (us)
+PASS
+
+batch size: 3072, hidden size: 16384, topk: 1024
+Average execution time of topk : 1622.117920 (us)
+PASS
+
+batch size: 3072, hidden size: 32768, topk: 2048
+Average execution time of topk : 3490.957275 (us)
+PASS
+
+batch size: 3072, hidden size: 32768, topk: 1024
+Average execution time of topk : 3348.647217 (us)
+PASS
+
+batch size: 3072, hidden size: 65536, topk: 2048
+Average execution time of topk : 6317.775391 (us)
+PASS
+
+batch size: 3072, hidden size: 65536, topk: 1024
+Average execution time of topk : 6142.196777 (us)
+PASS
+
+batch size: 3072, hidden size: 131072, topk: 2048
+Average execution time of topk : 11918.019531 (us)
+PASS
+
+batch size: 3072, hidden size: 131072, topk: 1024
+Average execution time of topk : 11701.772461 (us)
+PASS

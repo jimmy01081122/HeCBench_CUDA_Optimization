@@ -1,0 +1,1 @@
+/var/spool/slurm/d/job949642/slurm_script: line 43: ./main: No such file or directory

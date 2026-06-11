@@ -1,0 +1,167 @@
+job_id=949642
+node=gn1102.twcc.ai
+date=2026-06-11T16:36:44+08:00
+Thu Jun 11 16:36:44 2026       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 535.161.08             Driver Version: 535.161.08   CUDA Version: 12.8     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  Tesla V100-SXM2-32GB           On  | 00000000:B1:00.0 Off |                    0 |
+| N/A   26C    P0              41W / 300W |      0MiB / 32768MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|  No running processes found                                                           |
++---------------------------------------------------------------------------------------+
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2025 NVIDIA Corporation
+Built on Wed_Jan_15_19:20:09_PST_2025
+Cuda compilation tools, release 12.8, V12.8.61
+Build cuda_12.8.r12.8/compiler.35404655_0
+rm -rf main main.o shmem_kernels.o
+nvcc -c -DBLOCK_SIZE=256 -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 main.cu
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+nvcc -c -DBLOCK_SIZE=256 -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 shmem_kernels.cu
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+nvcc -DBLOCK_SIZE=256 -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 main.o shmem_kernels.o -o main 
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Shared memory bandwidth microbenchmark
+Buffer sizes: 8MB
+Average kernel execution time : 6.528597 (ms)
+Memory throughput
+	using 128bit operations : 13165.11 GB/sec (822.82 billion accesses/sec)
+rm -rf main main.o shmem_kernels.o
+nvcc -c -DBLOCK_SIZE=256 -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 main.cu
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+nvcc -c -DBLOCK_SIZE=256 -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 shmem_kernels.cu
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+nvcc -DBLOCK_SIZE=256 -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 main.o shmem_kernels.o -o main 
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Shared memory bandwidth microbenchmark
+Buffer sizes: 8MB
+Average kernel execution time : 6.490595 (ms)
+Memory throughput
+	using 128bit operations : 13242.19 GB/sec (827.64 billion accesses/sec)
+rm -rf main main.o shmem_kernels.o
+nvcc -c -DBLOCK_SIZE=256 -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 main.cu
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+nvcc -c -DBLOCK_SIZE=256 -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 shmem_kernels.cu
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+nvcc -DBLOCK_SIZE=256 -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 main.o shmem_kernels.o -o main 
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Shared memory bandwidth microbenchmark
+Buffer sizes: 8MB
+Average kernel execution time : 6.475509 (ms)
+Memory throughput
+	using 128bit operations : 13273.04 GB/sec (829.56 billion accesses/sec)
+rm -rf main main.o shmem_kernels.o
+nvcc -c -DBLOCK_SIZE=128 -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 main.cu
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+nvcc -c -DBLOCK_SIZE=128 -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 shmem_kernels.cu
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+nvcc -DBLOCK_SIZE=128 -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 main.o shmem_kernels.o -o main 
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Shared memory bandwidth microbenchmark
+Buffer sizes: 8MB
+Average kernel execution time : 6.405008 (ms)
+checksum failed
+Memory throughput
+	using 128bit operations : 13419.14 GB/sec (838.70 billion accesses/sec)
+rm -rf main main.o shmem_kernels.o
+nvcc -c -DBLOCK_SIZE=128 -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 main.cu
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+nvcc -c -DBLOCK_SIZE=128 -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 shmem_kernels.cu
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+nvcc -DBLOCK_SIZE=128 -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 main.o shmem_kernels.o -o main 
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Shared memory bandwidth microbenchmark
+Buffer sizes: 8MB
+Average kernel execution time : 6.393370 (ms)
+checksum failed
+Memory throughput
+	using 128bit operations : 13443.56 GB/sec (840.22 billion accesses/sec)
+rm -rf main main.o shmem_kernels.o
+nvcc -c -DBLOCK_SIZE=128 -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 main.cu
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+nvcc -c -DBLOCK_SIZE=128 -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 shmem_kernels.cu
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+nvcc -DBLOCK_SIZE=128 -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 main.o shmem_kernels.o -o main 
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Shared memory bandwidth microbenchmark
+Buffer sizes: 8MB
+Average kernel execution time : 6.397309 (ms)
+checksum failed
+Memory throughput
+	using 128bit operations : 13435.29 GB/sec (839.71 billion accesses/sec)
+rm -rf main main.o shmem_kernels.o
+nvcc -c -DBLOCK_SIZE=512 -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 main.cu
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+nvcc -c -DBLOCK_SIZE=512 -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 shmem_kernels.cu
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+nvcc -DBLOCK_SIZE=512 -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 main.o shmem_kernels.o -o main 
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Shared memory bandwidth microbenchmark
+Buffer sizes: 8MB
+Average kernel execution time : 6.146631 (ms)
+checksum failed
+Memory throughput
+	using 128bit operations : 13983.22 GB/sec (873.95 billion accesses/sec)
+rm -rf main main.o shmem_kernels.o
+nvcc -c -DBLOCK_SIZE=512 -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 main.cu
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+nvcc -c -DBLOCK_SIZE=512 -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 shmem_kernels.cu
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+nvcc -DBLOCK_SIZE=512 -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 main.o shmem_kernels.o -o main 
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Shared memory bandwidth microbenchmark
+Buffer sizes: 8MB
+Average kernel execution time : 6.145473 (ms)
+checksum failed
+Memory throughput
+	using 128bit operations : 13985.85 GB/sec (874.12 billion accesses/sec)
+rm -rf main main.o shmem_kernels.o
+nvcc -c -DBLOCK_SIZE=512 -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 main.cu
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+nvcc -c -DBLOCK_SIZE=512 -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 shmem_kernels.cu
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+nvcc -DBLOCK_SIZE=512 -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 main.o shmem_kernels.o -o main 
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+Shared memory bandwidth microbenchmark
+Buffer sizes: 8MB
+Average kernel execution time : 6.146842 (ms)
+checksum failed
+Memory throughput
+	using 128bit operations : 13982.74 GB/sec (873.92 billion accesses/sec)
+rm -rf main main.o shmem_kernels.o
+nvcc -c -DBLOCK_SIZE=1024 -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 main.cu
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+nvcc -c -DBLOCK_SIZE=1024 -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 shmem_kernels.cu
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+ptxas error   : Entry function '_Z15benchmark_shmemP6float4' uses too much shared data (0x18000 bytes, 0xc000 max)
+make: *** [Makefile:54: shmem_kernels.o] Error 255
+/var/spool/slurm/d/job949642/slurm_script: line 43: ./main: No such file or directory
+rm -rf main main.o shmem_kernels.o
+nvcc -c -DBLOCK_SIZE=1024 -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 main.cu
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+nvcc -c -DBLOCK_SIZE=1024 -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 shmem_kernels.cu
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+ptxas error   : Entry function '_Z15benchmark_shmemP6float4' uses too much shared data (0x18000 bytes, 0xc000 max)
+make: *** [Makefile:54: shmem_kernels.o] Error 255
+/var/spool/slurm/d/job949642/slurm_script: line 43: ./main: No such file or directory
+rm -rf main main.o shmem_kernels.o
+nvcc -c -DBLOCK_SIZE=1024 -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 main.cu
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+nvcc -c -DBLOCK_SIZE=1024 -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 shmem_kernels.cu
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+ptxas error   : Entry function '_Z15benchmark_shmemP6float4' uses too much shared data (0x18000 bytes, 0xc000 max)
+make: *** [Makefile:54: shmem_kernels.o] Error 255
+/var/spool/slurm/d/job949642/slurm_script: line 43: ./main: No such file or directory
+Auditor finished. contradiction_check.csv written to /home/r14525078/HeCBench/phase3/shmembench-cuda/mode_B_human_guided/robust_baseline/contradiction_check.csv

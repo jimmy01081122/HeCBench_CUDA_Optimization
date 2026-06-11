@@ -1,0 +1,6 @@
+nvcc -c -DBLOCK_SIZE=1024 -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 main.cu
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+nvcc -c -DBLOCK_SIZE=1024 -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 shmem_kernels.cu
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+ptxas error   : Entry function '_Z15benchmark_shmemP6float4' uses too much shared data (0x18000 bytes, 0xc000 max)
+make: *** [Makefile:54: shmem_kernels.o] Error 255

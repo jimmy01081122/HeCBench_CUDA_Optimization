@@ -257,10 +257,18 @@ INVALID
    審計器應強制執行以下細部檢驗規則：
    - **Rule V1**：若變異數 `CV > 15%`，將 `measurement_validity` 設為 `NOISY`。
    - **Rule V2**：若 `CV > 15%` 且加速比 `speedup > 1.05`，將 `speedup_claim_valid` 設為 `false`。
+   - **Rule V2b**：若 `speedup < 1.01`，設定 `result_type = MEASUREMENT_EQUIVALENT` 且 `speedup_claim_valid = false`。
+   - **Rule V2c**：若該輪次未發生任何原始碼/程式修改，`speedup_claim_valid` 必須設為 `false`（除非明確標記為 `BASELINE_REMEASUREMENT` 或 `BASELINE_COMPARISON` 以供測量穩定性分析使用）。
    - **Rule V3**：若 `benchmark=softmax-cuda` 且比較組為 `impl0_to_impl1`，應將 `result_type` 設為 `BASELINE_COMPARISON`，而非 `AGENT_OPT`。
    - **Rule V4**：若 `benchmark=shmembench-cuda`、`block_size != 256` 且 `correctness != PASS`，標記為 `DIAGNOSTIC_FAIL`，而非判定整題失敗。
    - **Rule V5**：若官方驗證的 baseline 缺失，`speedup` 必須設為 `n/a`。
    - **Rule V6**：若可選的變體取代了原始 Naive Baseline 行，則判定該行結果 `INVALID`。
+   - **Rule V7**：若 `correctness_status != PASS`，則 `speedup` 必須設為 `n/a` 且 `speedup_claim_valid = false`。
+   - **Rule V8**：若為 Mode A 且無原始碼修改，則 `result_type` 必須被歸類為 `BASELINE_REMEASUREMENT`、`BASELINE_COMPARISON`、`MEASUREMENT_EQUIVALENT`、`REGRESSION` 或 `NOISY_MEASUREMENT`，不得歸類為 `KERNEL_OPT`。
+   - **Rule V9**：若加速比小於 1%（speedup < 1.01），設置 `result_type = MEASUREMENT_EQUIVALENT` 且 `speedup_claim_valid = false`。
+   - **Rule V10**：若加速比小於 1.0（speedup < 1.0），設置 `result_type = REGRESSION` 且 `speedup_claim_valid = false`。
+
+   **全域執行規則**：Mode B/C 不得直接沿用 Mode A 中由 repeated measurement 產生的 speedup 作為優化基準。Mode A 的加速比數值僅視為測量穩定性指標而非優化基準。Mode B/C 開始前，必須針對對應配置重新建立一次 correctness-gated 且重複測量的 Baseline，再以此計算後續的優化加速比。
    
 6. **無效 Baseline 處理**：若 baseline 無效，則 `speedup` 必須填為 `n/a`。
    
