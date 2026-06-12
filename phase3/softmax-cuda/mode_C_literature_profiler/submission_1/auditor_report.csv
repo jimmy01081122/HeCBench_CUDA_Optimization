@@ -1,0 +1,8 @@
+check,status,notes
+all_official_cases_present,PASS,rows=45
+correctness_before_speedup_claim,PASS,bad_rows=0
+impl4_speedup_vs_impl3_present,PASS,bad_rows=0
+small_slices_no_kernel_improvement_claim,PASS,bad_rows=0
+no_profiler_claim_without_data,PASS,bad_rows=0
+no_cached_exp_causality_without_ablation,PASS,bad_rows=0
+no_aggregate_only_hidden_regression,PASS,large_regressions=[]

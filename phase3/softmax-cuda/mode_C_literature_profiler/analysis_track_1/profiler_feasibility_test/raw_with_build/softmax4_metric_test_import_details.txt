@@ -1,0 +1,12 @@
+[3114004] main@127.0.0.1
+  softMax4(int, int, const float *, float *) (1000, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+    Section: Command line profiler metrics
+    ------------------------------------ --------------- ------------
+    Metric Name                              Metric Unit Metric Value
+    ------------------------------------ --------------- ------------
+    launch__registers_per_thread         register/thread           18
+    launch__shared_mem_per_block_dynamic     Kbyte/block         3.26
+    launch__shared_mem_per_block_static       byte/block            0
+    sm__cycles_elapsed.avg                         cycle     15663.38
+    ------------------------------------ --------------- ------------
+

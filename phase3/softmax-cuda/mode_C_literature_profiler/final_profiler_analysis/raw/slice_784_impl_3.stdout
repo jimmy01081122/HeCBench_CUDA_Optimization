@@ -1,0 +1,6 @@
+==PROF== Connected to process 3271969 (/home/r14525078/HeCBench/src/softmax-cuda/main)
+==PROF== Profiling "softMax3": 0%....50%....100% - 1 pass
+Average kernel execution time: 55.058662 (ms)
+PASS
+==PROF== Disconnected from process 3271969
+==PROF== Report: /home/r14525078/HeCBench/phase3/softmax-cuda/mode_C_literature_profiler/final_profiler_analysis/ncu_reports/slice_784_impl_3.ncu-rep

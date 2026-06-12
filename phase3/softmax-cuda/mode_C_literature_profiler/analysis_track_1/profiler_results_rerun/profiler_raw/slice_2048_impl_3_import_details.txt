@@ -1,0 +1,17 @@
+[3131466] main@127.0.0.1
+  softMax3(int, int, const float *, float *) (50000, 1, 1)x(256, 1, 1), Context 1, Stream 7, Device 0, CC 7.0
+    Section: Command line profiler metrics
+    ------------------------------------ --------------- ------------
+    Metric Name                              Metric Unit Metric Value
+    ------------------------------------ --------------- ------------
+    gpu__time_duration.sum                            ms         1.66
+    launch__occupancy_limit_registers              block           10
+    launch__occupancy_limit_shared_mem             block           10
+    launch__occupancy_limit_warps                  block            8
+    launch__registers_per_thread         register/thread           18
+    launch__shared_mem_per_block_dynamic     Kbyte/block         9.22
+    launch__shared_mem_per_block_static       byte/block            0
+    launch__waves_per_multiprocessor                            78.12
+    sm__cycles_elapsed.avg                         cycle   2152418.15
+    ------------------------------------ --------------- ------------
+
