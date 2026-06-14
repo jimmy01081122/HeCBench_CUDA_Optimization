@@ -14,6 +14,7 @@
 - `output.md`
 - `agent_changes.md`
 
+## 防呆機制(實驗中確認有實施，後續檔案被誤刪故補)
 若原始資料夾中沒有 `prompt.md`，該 benchmark 的 `input_prompt.md` 會填入指定的預設 prompt：
 
 ```text
