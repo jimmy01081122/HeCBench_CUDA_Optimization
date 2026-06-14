@@ -1,0 +1,11 @@
+benchmark,prompt_level,case,reason,source_file,notes
+moe-align-cuda,P1,final_result,baseline missing or invalid,p1/moe-align-cuda/result/summary.md,"Summary reports final mean but no measured baseline, so speedup cannot be audited."
+p2p-cuda,P1,final_result,baseline missing or invalid,p1/p2p-cuda/result/p2p_cuda_result_948439.txt,"No summary.md; final file reports only 2 GPUs/2 directions, not the full 4-GPU topology matrix."
+prefetch-cuda,P1,final_result,baseline missing or invalid,p1/prefetch-cuda/result/prefetch_cuda_result_948600.txt,Only one P1 result file was available; final timing can be summarized but speedup cannot be audited against measured baseline.
+simpleMultiDevice-cuda,P1,final_result,baseline missing or invalid,p1/simpleMultiDevice-cuda/result/simpleMultiDevice_cuda_result_948646.txt,"Raw P1 logs show a dramatic total_us drop, but H2D/D2H timing scope appears changed; no speedup claim is counted."
+allreduce-cuda,P3,final_result,baseline missing or invalid,p3/allreduce-cuda/result/allreduce-cuda_results.csv,P3 correctly treats this as launcher/environment repair with three reproducibility runs.
+pingpong-cuda,P3,final_result,baseline missing or invalid,p3/pingpong-cuda/result/pingpong-cuda_results.csv,Baseline NCCL executable missing; P3 correctly reports measurement recovery and avoids speedup claim.
+moe-align,BASIC,all parameter combinations,correctness status: not shown in comparison csv,moe_align/cg_vs_gm_v1_comparison.csv,"winner count: {'CG': 28, 'GM': 2}; mean CG advantage 29.95%"
+moe-align,BASIC,all parameter combinations,correctness status: not shown in comparison csv,moe_align/cg_vs_gm_v2_comparison.csv,"winner count: {'GM': 11, 'CG': 19}; mean CG advantage 37.56%"
+moe-align,BASIC,all parameter combinations,correctness status: not shown in comparison csv,moe_align/cg_vs_gm_v3_comparison.csv,"winner count: {'GM_V3': 14, 'CG_V3': 16}; mean CG advantage 8.74%"
+allreduce-cuda,BASIC,2 ranks / 2 GPUs,baseline run failed,allreduce/base/agent_summary.md,"avoid broken GDRCopy path with UCX_TLS=self,shm,cuda_copy,cuda_ipc"

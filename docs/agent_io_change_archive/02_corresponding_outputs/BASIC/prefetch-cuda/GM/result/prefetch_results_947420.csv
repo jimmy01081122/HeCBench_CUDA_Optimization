@@ -1,0 +1,9 @@
+job_id,node,variant,repeat,prefetch_mode,avg_ms,correctness,status,notes
+947420,gn1221,baseline,10,with_prefetch,6.695,PASS,PASS,Dominated by prefetch API call driver overhead
+947420,gn1221,optimized,10,with_prefetch,6.682,PASS,PASS,Vectorized + Tuned grid-stride loops
+947420,gn1221,baseline,10,without_prefetch,12.850,PASS,PASS,High page fault penalty
+947420,gn1221,optimized,10,without_prefetch,8.398,PASS,PASS,1.53x speedup via vectorization and optimal occupancy
+947420,gn1221,baseline,100,with_prefetch,1.751,PASS,PASS,-
+947420,gn1221,optimized,100,with_prefetch,1.697,PASS,PASS,1.03x speedup
+947420,gn1221,baseline,100,without_prefetch,2.181,PASS,PASS,-
+947420,gn1221,optimized,100,without_prefetch,1.729,PASS,PASS,1.26x speedup

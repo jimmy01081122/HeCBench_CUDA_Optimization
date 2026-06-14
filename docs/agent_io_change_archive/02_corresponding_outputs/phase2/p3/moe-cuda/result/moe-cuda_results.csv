@@ -1,0 +1,17 @@
+benchmark,job_id,node,prompt_level,submission_index,variant,case,metric_name,metric_value,metric_unit,correctness,status,result_type,accepted,reject_reason,notes
+moe-cuda,948395,gn1226.twcc.ai,P3,0,baseline,topk=1,Average execution time of kernels,285.113678,us,PASS,valid,KERNEL_OPT,true,,baseline single trial
+moe-cuda,948395,gn1226.twcc.ai,P3,0,baseline,topk=2,Average execution time of kernels,347.580872,us,PASS,valid,KERNEL_OPT,true,,baseline single trial
+moe-cuda,948395,gn1226.twcc.ai,P3,0,baseline,topk=4,Average execution time of kernels,519.113708,us,PASS,valid,KERNEL_OPT,true,,baseline single trial
+moe-cuda,948395,gn1226.twcc.ai,P3,0,baseline,topk=8,Average execution time of kernels,949.848694,us,PASS,valid,KERNEL_OPT,true,,baseline single trial
+moe-cuda,948399,gn1226.twcc.ai,P3,1,fused_smallk,topk=1 trial=1,Average execution time of kernels,235.898926,us,PASS,valid,KERNEL_OPT,true,,fused softmax+topk for topk<=4
+moe-cuda,948399,gn1226.twcc.ai,P3,1,fused_smallk,topk=2 trial=1,Average execution time of kernels,293.328003,us,PASS,valid,KERNEL_OPT,true,,fused softmax+topk for topk<=4
+moe-cuda,948399,gn1226.twcc.ai,P3,1,fused_smallk,topk=4 trial=1,Average execution time of kernels,490.092834,us,PASS,valid,KERNEL_OPT,true,,fused softmax+topk for topk<=4
+moe-cuda,948399,gn1226.twcc.ai,P3,1,fused_smallk,topk=8 trial=1,Average execution time of kernels,949.975342,us,PASS,measurement_equivalent,MEASUREMENT_EQUIVALENT,true,,original two-kernel path retained for topk=8
+moe-cuda,948399,gn1226.twcc.ai,P3,1,fused_smallk,topk=1 trial=2,Average execution time of kernels,206.488419,us,PASS,valid,KERNEL_OPT,true,,fused softmax+topk for topk<=4
+moe-cuda,948399,gn1226.twcc.ai,P3,1,fused_smallk,topk=2 trial=2,Average execution time of kernels,293.377655,us,PASS,valid,KERNEL_OPT,true,,fused softmax+topk for topk<=4
+moe-cuda,948399,gn1226.twcc.ai,P3,1,fused_smallk,topk=4 trial=2,Average execution time of kernels,490.278442,us,PASS,valid,KERNEL_OPT,true,,fused softmax+topk for topk<=4
+moe-cuda,948399,gn1226.twcc.ai,P3,1,fused_smallk,topk=8 trial=2,Average execution time of kernels,950.289673,us,PASS,measurement_equivalent,MEASUREMENT_EQUIVALENT,true,,original two-kernel path retained for topk=8
+moe-cuda,948399,gn1226.twcc.ai,P3,1,fused_smallk,topk=1 trial=3,Average execution time of kernels,206.436874,us,PASS,valid,KERNEL_OPT,true,,fused softmax+topk for topk<=4
+moe-cuda,948399,gn1226.twcc.ai,P3,1,fused_smallk,topk=2 trial=3,Average execution time of kernels,293.326904,us,PASS,valid,KERNEL_OPT,true,,fused softmax+topk for topk<=4
+moe-cuda,948399,gn1226.twcc.ai,P3,1,fused_smallk,topk=4 trial=3,Average execution time of kernels,490.042969,us,PASS,valid,KERNEL_OPT,true,,fused softmax+topk for topk<=4
+moe-cuda,948399,gn1226.twcc.ai,P3,1,fused_smallk,topk=8 trial=3,Average execution time of kernels,950.475342,us,PASS,measurement_equivalent,MEASUREMENT_EQUIVALENT,true,,original two-kernel path retained for topk=8

@@ -1,0 +1,2 @@
+job_id,node,test_name,repeat,block_size,grid_size,shared_bytes,avg_us,min_us,max_us,bandwidth_GBps,correctness,status,notes
+946735,gn1222.twcc.ai,barriered_float4_swaps,1000,256,1024,24576,6509.391308,6493.736744,6537.559986,13203.950032,PASS,PASS,barriered float4 shared-memory swap microbenchmark

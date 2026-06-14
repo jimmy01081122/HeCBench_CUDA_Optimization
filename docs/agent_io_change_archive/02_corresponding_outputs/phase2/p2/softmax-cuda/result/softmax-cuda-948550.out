@@ -1,0 +1,38 @@
+job_id=948550
+node=gn1222
+date=2026-06-09T16:49:03+08:00
+cuda_visible_devices=0
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2025 NVIDIA Corporation
+Built on Wed_Jan_15_19:20:09_PST_2025
+Cuda compilation tools, release 12.8, V12.8.61
+Build cuda_12.8.r12.8/compiler.35404655_0
+Tue Jun  9 16:49:03 2026       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 535.161.08             Driver Version: 535.161.08   CUDA Version: 12.8     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  Tesla V100-SXM2-32GB           On  | 00000000:1B:00.0 Off |                    0 |
+| N/A   30C    P0              43W / 300W |      0MiB / 32768MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|  No running processes found                                                           |
++---------------------------------------------------------------------------------------+
+rm -rf main main.o
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 --use_fast_math -c main.cu -o main.o
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 --use_fast_math main.o -o main 
+case numSlice=100000 sliceSize=784 implementation=0 repeat=100
+Average kernel execution time: 54.693604 (ms)
+PASS
+case numSlice=100000 sliceSize=784 implementation=1 repeat=100
+Average kernel execution time: 1.449279 (ms)
+PASS

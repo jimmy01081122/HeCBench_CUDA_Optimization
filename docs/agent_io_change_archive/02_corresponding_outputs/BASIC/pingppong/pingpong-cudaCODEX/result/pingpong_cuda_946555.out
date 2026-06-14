@@ -1,0 +1,81 @@
+=== Environment ===
+
+Currently Loaded Modules:
+  1) hpcx-ompi   2) nvhpc-24.11_hpcx-2.20_cuda-12.6
+
+ 
+
+which nvcc: /work/HPC_SYS/twnia2/pkg-rocky8/nvidia/hpc_sdk/Linux_x86_64/24.11/compilers/bin/nvcc
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2024 NVIDIA Corporation
+Built on Thu_Sep_12_02:18:05_PDT_2024
+Cuda compilation tools, release 12.6, V12.6.77
+Build cuda_12.6.r12.6/compiler.34841621_0
+which mpicc: /work/HPC_SYS/twnia2/pkg-rocky8/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/hpcx/hpcx-2.20/ompi/bin/mpicc
+which mpirun: /work/HPC_SYS/twnia2/pkg-rocky8/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/hpcx/hpcx-2.20/ompi/bin/mpirun
+mpirun (Open MPI) 4.1.7a1
+
+Report bugs to http://www.open-mpi.org/community/help/
+GPU 0: Tesla V100-SXM2-32GB (UUID: GPU-f19ea2fc-4fa5-b54a-8007-bc60b89e9c8b)
+GPU 1: Tesla V100-SXM2-32GB (UUID: GPU-bc07e200-ab98-39c4-6fe1-eb2f4bb33aea)
+CUDA_VISIBLE_DEVICES=0,1
+MPI_ROOT=/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/hpcx/hpcx-2.20/ompi
+UCX_TLS=self,shm,cuda_copy,cuda_ipc
+Launcher: mpirun -x UCX_TLS --mca coll ^hcoll,ucc --mca pml ucx -n 2
+=== Build ===
+rm -rf main-mpi main-mpi.o
+rm -rf main-nccl main-nccl.o
+nvcc  -std=c++17 -I/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/hpcx/hpcx-2.20/ompi/include -DOMPI_SKIP_MPICXX= -Xcompiler -Wall -arch=sm_70 -O3 -c main-mpi.cu -o main-mpi.o
+nvcc  -std=c++17 -I/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/hpcx/hpcx-2.20/ompi/include -DOMPI_SKIP_MPICXX= -Xcompiler -Wall -arch=sm_70 -O3 main-mpi.o -o main-mpi -L/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/hpcx/hpcx-2.20/ompi/lib -lmpi -lnccl
+nvcc  -std=c++17 -I/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/hpcx/hpcx-2.20/ompi/include -DOMPI_SKIP_MPICXX= -Xcompiler -Wall -arch=sm_70 -O3 -c main-nccl.cu -o main-nccl.o
+nvcc  -std=c++17 -I/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/hpcx/hpcx-2.20/ompi/include -DOMPI_SKIP_MPICXX= -Xcompiler -Wall -arch=sm_70 -O3 main-nccl.o -o main-nccl -L/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/hpcx/hpcx-2.20/ompi/lib -lmpi -lnccl
+=== MPI baseline ===
+MPI : Transfer size (B):     524288, Transfer Time (s):     0.000096459, Bandwidth (GB/s):     5.435351786
+MPI : Transfer size (B):    1048576, Transfer Time (s):     0.000250837, Bandwidth (GB/s):     4.180301495
+MPI : Transfer size (B):    2097152, Transfer Time (s):     0.000408054, Bandwidth (GB/s):     5.139397839
+MPI : Transfer size (B):    4194304, Transfer Time (s):     0.000759183, Bandwidth (GB/s):     5.524763226
+MPI : Transfer size (B):    8388608, Transfer Time (s):     0.001557188, Bandwidth (GB/s):     5.387022895
+MPI : Transfer size (B):   16777216, Transfer Time (s):     0.003523447, Bandwidth (GB/s):     4.761592027
+MPI : Transfer size (B):   33554432, Transfer Time (s):     0.006496330, Bandwidth (GB/s):     5.165136933
+MPI : Transfer size (B):   67108864, Transfer Time (s):     0.013097604, Bandwidth (GB/s):     5.123751109
+MPI : Transfer size (B):  134217728, Transfer Time (s):     0.026918400, Bandwidth (GB/s):     4.986096081
+MPI : Transfer size (B):  268435456, Transfer Time (s):     0.056754788, Bandwidth (GB/s):     4.729741155
+MPI : Transfer size (B):  536870912, Transfer Time (s):     0.113624566, Bandwidth (GB/s):     4.724954567
+MPI : Transfer size (B): 1073741824, Transfer Time (s):     0.222098240, Bandwidth (GB/s):     4.834535501
+RESULT,backend=MPI,size_bytes=524288,time_s=0.000096459,gbps=5.435351786
+RESULT,backend=MPI,size_bytes=1048576,time_s=0.000250837,gbps=4.180301495
+RESULT,backend=MPI,size_bytes=2097152,time_s=0.000408054,gbps=5.139397839
+RESULT,backend=MPI,size_bytes=4194304,time_s=0.000759183,gbps=5.524763226
+RESULT,backend=MPI,size_bytes=8388608,time_s=0.001557188,gbps=5.387022895
+RESULT,backend=MPI,size_bytes=16777216,time_s=0.003523447,gbps=4.761592027
+RESULT,backend=MPI,size_bytes=33554432,time_s=0.006496330,gbps=5.165136933
+RESULT,backend=MPI,size_bytes=67108864,time_s=0.013097604,gbps=5.123751109
+RESULT,backend=MPI,size_bytes=134217728,time_s=0.026918400,gbps=4.986096081
+RESULT,backend=MPI,size_bytes=268435456,time_s=0.056754788,gbps=4.729741155
+RESULT,backend=MPI,size_bytes=536870912,time_s=0.113624566,gbps=4.724954567
+RESULT,backend=MPI,size_bytes=1073741824,time_s=0.222098240,gbps=4.834535501
+=== NCCL baseline ===
+NCCL: Transfer size (B):     524288, Transfer Time (s):     0.000422285, Bandwidth (GB/s):     1.241550991
+NCCL: Transfer size (B):    1048576, Transfer Time (s):     0.000694329, Bandwidth (GB/s):     1.510199800
+NCCL: Transfer size (B):    2097152, Transfer Time (s):     0.001084491, Bandwidth (GB/s):     1.933765664
+NCCL: Transfer size (B):    4194304, Transfer Time (s):     0.001366401, Bandwidth (GB/s):     3.069599560
+NCCL: Transfer size (B):    8388608, Transfer Time (s):     0.004325495, Bandwidth (GB/s):     1.939340737
+NCCL: Transfer size (B):   16777216, Transfer Time (s):     0.006550928, Bandwidth (GB/s):     2.561044332
+NCCL: Transfer size (B):   33554432, Transfer Time (s):     0.015838948, Bandwidth (GB/s):     2.118475993
+NCCL: Transfer size (B):   67108864, Transfer Time (s):     0.033077184, Bandwidth (GB/s):     2.028856655
+NCCL: Transfer size (B):  134217728, Transfer Time (s):     0.053783214, Bandwidth (GB/s):     2.495531944
+NCCL: Transfer size (B):  268435456, Transfer Time (s):     0.117869593, Bandwidth (GB/s):     2.277393587
+NCCL: Transfer size (B):  536870912, Transfer Time (s):     0.235781356, Bandwidth (GB/s):     2.276986281
+NCCL: Transfer size (B): 1073741824, Transfer Time (s):     0.466216159, Bandwidth (GB/s):     2.303098690
+RESULT,backend=NCCL,size_bytes=524288,time_s=0.000422285,gbps=1.241550991
+RESULT,backend=NCCL,size_bytes=1048576,time_s=0.000694329,gbps=1.510199800
+RESULT,backend=NCCL,size_bytes=2097152,time_s=0.001084491,gbps=1.933765664
+RESULT,backend=NCCL,size_bytes=4194304,time_s=0.001366401,gbps=3.069599560
+RESULT,backend=NCCL,size_bytes=8388608,time_s=0.004325495,gbps=1.939340737
+RESULT,backend=NCCL,size_bytes=16777216,time_s=0.006550928,gbps=2.561044332
+RESULT,backend=NCCL,size_bytes=33554432,time_s=0.015838948,gbps=2.118475993
+RESULT,backend=NCCL,size_bytes=67108864,time_s=0.033077184,gbps=2.028856655
+RESULT,backend=NCCL,size_bytes=134217728,time_s=0.053783214,gbps=2.495531944
+RESULT,backend=NCCL,size_bytes=268435456,time_s=0.117869593,gbps=2.277393587
+RESULT,backend=NCCL,size_bytes=536870912,time_s=0.235781356,gbps=2.276986281
+RESULT,backend=NCCL,size_bytes=1073741824,time_s=0.466216159,gbps=2.303098690

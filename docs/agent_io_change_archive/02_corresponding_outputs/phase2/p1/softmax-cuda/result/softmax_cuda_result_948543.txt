@@ -1,0 +1,49 @@
+benchmark=softmax-cuda
+job_id=948543
+node=gn1225.twcc.ai
+bench_dir=/home/r14525078/p1/HeCBench/src/softmax-cuda
+arch=sm_70
+num_slice=100000
+repeat=100
+CUDA_VISIBLE_DEVICES=0
+
+=== Environment ===
+
+Currently Loaded Modules:
+  1) cuda/12.8
+
+ 
+
+/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/cuda/cuda-12.8/bin/nvcc
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2025 NVIDIA Corporation
+Built on Wed_Jan_15_19:20:09_PST_2025
+Cuda compilation tools, release 12.8, V12.8.61
+Build cuda_12.8.r12.8/compiler.35404655_0
+GPU 0: Tesla V100-SXM2-32GB (UUID: GPU-87081069-a493-487b-ed69-2d157ae1cbed)
+
+=== Build ===
+rm -rf main main.o
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 --use_fast_math -c main.cu -o main.o
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 --use_fast_math main.o -o main 
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+
+=== Run ===
+slice_size,implementation,avg_ms,status
+16,0,0.081000,PASS
+16,1,0.042113,PASS
+32,0,0.277238,PASS
+32,1,0.045961,PASS
+64,0,1.591065,PASS
+64,1,0.072318,PASS
+128,0,4.355953,PASS
+128,1,0.135326,PASS
+256,0,15.636883,PASS
+256,1,0.304916,PASS
+512,0,32.553513,PASS
+512,1,0.839992,PASS
+784,0,54.720036,PASS
+784,1,1.451723,PASS
+1024,0,64.578354,PASS
+1024,1,2.103679,PASS

@@ -1,0 +1,85 @@
+benchmark,job_id,node,prompt_level,submission_index,variant,case,metric_name,metric_value,metric_unit,correctness,status,result_type,accepted,reject_reason,notes
+topk-cuda,948627,gn1223,P3,0,baseline,batch_size=3072;hidden_size=3072;topk=2048,average_topk_execution_time,759.317505,us,PASS,accepted,KERNEL_OPT,true,,baseline
+topk-cuda,948627,gn1223,P3,0,baseline,batch_size=3072;hidden_size=3072;topk=1024,average_topk_execution_time,771.874817,us,PASS,accepted,KERNEL_OPT,true,,baseline
+topk-cuda,948627,gn1223,P3,0,baseline,batch_size=3072;hidden_size=4096;topk=2048,average_topk_execution_time,723.648804,us,PASS,accepted,KERNEL_OPT,true,,baseline
+topk-cuda,948627,gn1223,P3,0,baseline,batch_size=3072;hidden_size=4096;topk=1024,average_topk_execution_time,698.179504,us,PASS,accepted,KERNEL_OPT,true,,baseline
+topk-cuda,948627,gn1223,P3,0,baseline,batch_size=3072;hidden_size=8192;topk=2048,average_topk_execution_time,1129.265625,us,PASS,accepted,KERNEL_OPT,true,,baseline
+topk-cuda,948627,gn1223,P3,0,baseline,batch_size=3072;hidden_size=8192;topk=1024,average_topk_execution_time,888.295715,us,PASS,accepted,KERNEL_OPT,true,,baseline
+topk-cuda,948627,gn1223,P3,0,baseline,batch_size=3072;hidden_size=16384;topk=2048,average_topk_execution_time,1526.136719,us,PASS,accepted,KERNEL_OPT,true,,baseline
+topk-cuda,948627,gn1223,P3,0,baseline,batch_size=3072;hidden_size=16384;topk=1024,average_topk_execution_time,1636.261841,us,PASS,accepted,KERNEL_OPT,true,,baseline
+topk-cuda,948627,gn1223,P3,0,baseline,batch_size=3072;hidden_size=32768;topk=2048,average_topk_execution_time,3569.070557,us,PASS,accepted,KERNEL_OPT,true,,baseline
+topk-cuda,948627,gn1223,P3,0,baseline,batch_size=3072;hidden_size=32768;topk=1024,average_topk_execution_time,3420.527832,us,PASS,accepted,KERNEL_OPT,true,,baseline
+topk-cuda,948627,gn1223,P3,0,baseline,batch_size=3072;hidden_size=65536;topk=2048,average_topk_execution_time,6443.983887,us,PASS,accepted,KERNEL_OPT,true,,baseline
+topk-cuda,948627,gn1223,P3,0,baseline,batch_size=3072;hidden_size=65536;topk=1024,average_topk_execution_time,6393.727051,us,PASS,accepted,KERNEL_OPT,true,,baseline
+topk-cuda,948627,gn1223,P3,0,baseline,batch_size=3072;hidden_size=131072;topk=2048,average_topk_execution_time,11988.903320,us,PASS,accepted,KERNEL_OPT,true,,baseline
+topk-cuda,948627,gn1223,P3,0,baseline,batch_size=3072;hidden_size=131072;topk=1024,average_topk_execution_time,11881.122070,us,PASS,accepted,KERNEL_OPT,true,,baseline
+topk-cuda,948629,gn1223,P3,1,attempt1_cached_workspace,batch_size=3072;hidden_size=3072;topk=2048,average_topk_execution_time,415.478973,us,PASS,accepted,KERNEL_OPT,true,,cached workspace
+topk-cuda,948629,gn1223,P3,1,attempt1_cached_workspace,batch_size=3072;hidden_size=3072;topk=1024,average_topk_execution_time,368.898010,us,PASS,accepted,KERNEL_OPT,true,,cached workspace
+topk-cuda,948629,gn1223,P3,1,attempt1_cached_workspace,batch_size=3072;hidden_size=4096;topk=2048,average_topk_execution_time,420.489288,us,PASS,accepted,KERNEL_OPT,true,,cached workspace
+topk-cuda,948629,gn1223,P3,1,attempt1_cached_workspace,batch_size=3072;hidden_size=4096;topk=1024,average_topk_execution_time,407.956085,us,PASS,accepted,KERNEL_OPT,true,,cached workspace
+topk-cuda,948629,gn1223,P3,1,attempt1_cached_workspace,batch_size=3072;hidden_size=8192;topk=2048,average_topk_execution_time,661.634460,us,PASS,accepted,KERNEL_OPT,true,,cached workspace
+topk-cuda,948629,gn1223,P3,1,attempt1_cached_workspace,batch_size=3072;hidden_size=8192;topk=1024,average_topk_execution_time,584.254456,us,PASS,accepted,KERNEL_OPT,true,,cached workspace
+topk-cuda,948629,gn1223,P3,1,attempt1_cached_workspace,batch_size=3072;hidden_size=16384;topk=2048,average_topk_execution_time,1124.381958,us,PASS,accepted,KERNEL_OPT,true,,cached workspace
+topk-cuda,948629,gn1223,P3,1,attempt1_cached_workspace,batch_size=3072;hidden_size=16384;topk=1024,average_topk_execution_time,1231.946899,us,PASS,accepted,KERNEL_OPT,true,,cached workspace
+topk-cuda,948629,gn1223,P3,1,attempt1_cached_workspace,batch_size=3072;hidden_size=32768;topk=2048,average_topk_execution_time,3014.556641,us,PASS,accepted,KERNEL_OPT,true,,cached workspace
+topk-cuda,948629,gn1223,P3,1,attempt1_cached_workspace,batch_size=3072;hidden_size=32768;topk=1024,average_topk_execution_time,2878.518799,us,PASS,accepted,KERNEL_OPT,true,,cached workspace
+topk-cuda,948629,gn1223,P3,1,attempt1_cached_workspace,batch_size=3072;hidden_size=65536;topk=2048,average_topk_execution_time,5618.833984,us,PASS,accepted,KERNEL_OPT,true,,cached workspace
+topk-cuda,948629,gn1223,P3,1,attempt1_cached_workspace,batch_size=3072;hidden_size=65536;topk=1024,average_topk_execution_time,5430.580078,us,PASS,accepted,KERNEL_OPT,true,,cached workspace
+topk-cuda,948629,gn1223,P3,1,attempt1_cached_workspace,batch_size=3072;hidden_size=131072;topk=2048,average_topk_execution_time,10746.741211,us,PASS,accepted,KERNEL_OPT,true,,cached workspace
+topk-cuda,948629,gn1223,P3,1,attempt1_cached_workspace,batch_size=3072;hidden_size=131072;topk=1024,average_topk_execution_time,10516.866211,us,PASS,accepted,KERNEL_OPT,true,,cached workspace
+topk-cuda,948631,gn1223,P3,2,attempt2_cached_workspace_block512,batch_size=3072;hidden_size=3072;topk=2048,average_topk_execution_time,327.458252,us,PASS,rejected,REGRESSION,false,mean slower than attempt1,block size 512
+topk-cuda,948631,gn1223,P3,2,attempt2_cached_workspace_block512,batch_size=3072;hidden_size=3072;topk=1024,average_topk_execution_time,275.118378,us,PASS,rejected,REGRESSION,false,mean slower than attempt1,block size 512
+topk-cuda,948631,gn1223,P3,2,attempt2_cached_workspace_block512,batch_size=3072;hidden_size=4096;topk=2048,average_topk_execution_time,361.612885,us,PASS,rejected,REGRESSION,false,mean slower than attempt1,block size 512
+topk-cuda,948631,gn1223,P3,2,attempt2_cached_workspace_block512,batch_size=3072;hidden_size=4096;topk=1024,average_topk_execution_time,347.936432,us,PASS,rejected,REGRESSION,false,mean slower than attempt1,block size 512
+topk-cuda,948631,gn1223,P3,2,attempt2_cached_workspace_block512,batch_size=3072;hidden_size=8192;topk=2048,average_topk_execution_time,678.446655,us,PASS,rejected,REGRESSION,false,mean slower than attempt1,block size 512
+topk-cuda,948631,gn1223,P3,2,attempt2_cached_workspace_block512,batch_size=3072;hidden_size=8192;topk=1024,average_topk_execution_time,582.995544,us,PASS,rejected,REGRESSION,false,mean slower than attempt1,block size 512
+topk-cuda,948631,gn1223,P3,2,attempt2_cached_workspace_block512,batch_size=3072;hidden_size=16384;topk=2048,average_topk_execution_time,1165.190430,us,PASS,rejected,REGRESSION,false,mean slower than attempt1,block size 512
+topk-cuda,948631,gn1223,P3,2,attempt2_cached_workspace_block512,batch_size=3072;hidden_size=16384;topk=1024,average_topk_execution_time,1487.969116,us,PASS,rejected,REGRESSION,false,mean slower than attempt1,block size 512
+topk-cuda,948631,gn1223,P3,2,attempt2_cached_workspace_block512,batch_size=3072;hidden_size=32768;topk=2048,average_topk_execution_time,2951.828125,us,PASS,rejected,REGRESSION,false,mean slower than attempt1,block size 512
+topk-cuda,948631,gn1223,P3,2,attempt2_cached_workspace_block512,batch_size=3072;hidden_size=32768;topk=1024,average_topk_execution_time,2831.549805,us,PASS,rejected,REGRESSION,false,mean slower than attempt1,block size 512
+topk-cuda,948631,gn1223,P3,2,attempt2_cached_workspace_block512,batch_size=3072;hidden_size=65536;topk=2048,average_topk_execution_time,5615.006836,us,PASS,rejected,REGRESSION,false,mean slower than attempt1,block size 512
+topk-cuda,948631,gn1223,P3,2,attempt2_cached_workspace_block512,batch_size=3072;hidden_size=65536;topk=1024,average_topk_execution_time,5444.713867,us,PASS,rejected,REGRESSION,false,mean slower than attempt1,block size 512
+topk-cuda,948631,gn1223,P3,2,attempt2_cached_workspace_block512,batch_size=3072;hidden_size=131072;topk=2048,average_topk_execution_time,10943.717773,us,PASS,rejected,REGRESSION,false,mean slower than attempt1,block size 512
+topk-cuda,948631,gn1223,P3,2,attempt2_cached_workspace_block512,batch_size=3072;hidden_size=131072;topk=1024,average_topk_execution_time,10718.846680,us,PASS,rejected,REGRESSION,false,mean slower than attempt1,block size 512
+topk-cuda,948632,gn1223,P3,3,attempt3_cached_workspace_hybrid512_1024,batch_size=3072;hidden_size=3072;topk=2048,average_topk_execution_time,326.830750,us,PASS,accepted,KERNEL_OPT,true,,final trial 1
+topk-cuda,948632,gn1223,P3,3,attempt3_cached_workspace_hybrid512_1024,batch_size=3072;hidden_size=3072;topk=1024,average_topk_execution_time,273.042084,us,PASS,accepted,KERNEL_OPT,true,,final trial 1
+topk-cuda,948632,gn1223,P3,3,attempt3_cached_workspace_hybrid512_1024,batch_size=3072;hidden_size=4096;topk=2048,average_topk_execution_time,359.715942,us,PASS,accepted,KERNEL_OPT,true,,final trial 1
+topk-cuda,948632,gn1223,P3,3,attempt3_cached_workspace_hybrid512_1024,batch_size=3072;hidden_size=4096;topk=1024,average_topk_execution_time,347.845673,us,PASS,accepted,KERNEL_OPT,true,,final trial 1
+topk-cuda,948632,gn1223,P3,3,attempt3_cached_workspace_hybrid512_1024,batch_size=3072;hidden_size=8192;topk=2048,average_topk_execution_time,663.173096,us,PASS,accepted,KERNEL_OPT,true,,final trial 1
+topk-cuda,948632,gn1223,P3,3,attempt3_cached_workspace_hybrid512_1024,batch_size=3072;hidden_size=8192;topk=1024,average_topk_execution_time,584.021545,us,PASS,accepted,KERNEL_OPT,true,,final trial 1
+topk-cuda,948632,gn1223,P3,3,attempt3_cached_workspace_hybrid512_1024,batch_size=3072;hidden_size=16384;topk=2048,average_topk_execution_time,1138.005737,us,PASS,accepted,KERNEL_OPT,true,,final trial 1
+topk-cuda,948632,gn1223,P3,3,attempt3_cached_workspace_hybrid512_1024,batch_size=3072;hidden_size=16384;topk=1024,average_topk_execution_time,1233.848022,us,PASS,accepted,KERNEL_OPT,true,,final trial 1
+topk-cuda,948632,gn1223,P3,3,attempt3_cached_workspace_hybrid512_1024,batch_size=3072;hidden_size=32768;topk=2048,average_topk_execution_time,3025.091309,us,PASS,accepted,KERNEL_OPT,true,,final trial 1
+topk-cuda,948632,gn1223,P3,3,attempt3_cached_workspace_hybrid512_1024,batch_size=3072;hidden_size=32768;topk=1024,average_topk_execution_time,2870.177734,us,PASS,accepted,KERNEL_OPT,true,,final trial 1
+topk-cuda,948632,gn1223,P3,3,attempt3_cached_workspace_hybrid512_1024,batch_size=3072;hidden_size=65536;topk=2048,average_topk_execution_time,5628.338867,us,PASS,accepted,KERNEL_OPT,true,,final trial 1
+topk-cuda,948632,gn1223,P3,3,attempt3_cached_workspace_hybrid512_1024,batch_size=3072;hidden_size=65536;topk=1024,average_topk_execution_time,5436.023926,us,PASS,accepted,KERNEL_OPT,true,,final trial 1
+topk-cuda,948632,gn1223,P3,3,attempt3_cached_workspace_hybrid512_1024,batch_size=3072;hidden_size=131072;topk=2048,average_topk_execution_time,10759.732422,us,PASS,accepted,KERNEL_OPT,true,,final trial 1
+topk-cuda,948632,gn1223,P3,3,attempt3_cached_workspace_hybrid512_1024,batch_size=3072;hidden_size=131072;topk=1024,average_topk_execution_time,10520.880859,us,PASS,accepted,KERNEL_OPT,true,,final trial 1
+topk-cuda,948633,gn1223,P3,4,attempt4_final_repeat2,batch_size=3072;hidden_size=3072;topk=2048,average_topk_execution_time,327.228546,us,PASS,accepted,KERNEL_OPT,true,,final trial 2
+topk-cuda,948633,gn1223,P3,4,attempt4_final_repeat2,batch_size=3072;hidden_size=3072;topk=1024,average_topk_execution_time,279.034241,us,PASS,accepted,KERNEL_OPT,true,,final trial 2
+topk-cuda,948633,gn1223,P3,4,attempt4_final_repeat2,batch_size=3072;hidden_size=4096;topk=2048,average_topk_execution_time,366.414368,us,PASS,accepted,KERNEL_OPT,true,,final trial 2
+topk-cuda,948633,gn1223,P3,4,attempt4_final_repeat2,batch_size=3072;hidden_size=4096;topk=1024,average_topk_execution_time,348.054688,us,PASS,accepted,KERNEL_OPT,true,,final trial 2
+topk-cuda,948633,gn1223,P3,4,attempt4_final_repeat2,batch_size=3072;hidden_size=8192;topk=2048,average_topk_execution_time,663.695801,us,PASS,accepted,KERNEL_OPT,true,,final trial 2
+topk-cuda,948633,gn1223,P3,4,attempt4_final_repeat2,batch_size=3072;hidden_size=8192;topk=1024,average_topk_execution_time,584.310669,us,PASS,accepted,KERNEL_OPT,true,,final trial 2
+topk-cuda,948633,gn1223,P3,4,attempt4_final_repeat2,batch_size=3072;hidden_size=16384;topk=2048,average_topk_execution_time,1124.971802,us,PASS,accepted,KERNEL_OPT,true,,final trial 2
+topk-cuda,948633,gn1223,P3,4,attempt4_final_repeat2,batch_size=3072;hidden_size=16384;topk=1024,average_topk_execution_time,1232.828491,us,PASS,accepted,KERNEL_OPT,true,,final trial 2
+topk-cuda,948633,gn1223,P3,4,attempt4_final_repeat2,batch_size=3072;hidden_size=32768;topk=2048,average_topk_execution_time,3013.052246,us,PASS,accepted,KERNEL_OPT,true,,final trial 2
+topk-cuda,948633,gn1223,P3,4,attempt4_final_repeat2,batch_size=3072;hidden_size=32768;topk=1024,average_topk_execution_time,2878.014648,us,PASS,accepted,KERNEL_OPT,true,,final trial 2
+topk-cuda,948633,gn1223,P3,4,attempt4_final_repeat2,batch_size=3072;hidden_size=65536;topk=2048,average_topk_execution_time,5620.022949,us,PASS,accepted,KERNEL_OPT,true,,final trial 2
+topk-cuda,948633,gn1223,P3,4,attempt4_final_repeat2,batch_size=3072;hidden_size=65536;topk=1024,average_topk_execution_time,5433.016113,us,PASS,accepted,KERNEL_OPT,true,,final trial 2
+topk-cuda,948633,gn1223,P3,4,attempt4_final_repeat2,batch_size=3072;hidden_size=131072;topk=2048,average_topk_execution_time,10752.981445,us,PASS,accepted,KERNEL_OPT,true,,final trial 2
+topk-cuda,948633,gn1223,P3,4,attempt4_final_repeat2,batch_size=3072;hidden_size=131072;topk=1024,average_topk_execution_time,10515.726562,us,PASS,accepted,KERNEL_OPT,true,,final trial 2
+topk-cuda,948636,gn1223,P3,5,attempt5_final_repeat3,batch_size=3072;hidden_size=3072;topk=2048,average_topk_execution_time,327.257904,us,PASS,accepted,KERNEL_OPT,true,,final trial 3
+topk-cuda,948636,gn1223,P3,5,attempt5_final_repeat3,batch_size=3072;hidden_size=3072;topk=1024,average_topk_execution_time,312.234863,us,PASS,accepted,KERNEL_OPT,true,,final trial 3
+topk-cuda,948636,gn1223,P3,5,attempt5_final_repeat3,batch_size=3072;hidden_size=4096;topk=2048,average_topk_execution_time,405.741058,us,PASS,accepted,KERNEL_OPT,true,,final trial 3
+topk-cuda,948636,gn1223,P3,5,attempt5_final_repeat3,batch_size=3072;hidden_size=4096;topk=1024,average_topk_execution_time,386.488739,us,PASS,accepted,KERNEL_OPT,true,,final trial 3
+topk-cuda,948636,gn1223,P3,5,attempt5_final_repeat3,batch_size=3072;hidden_size=8192;topk=2048,average_topk_execution_time,703.813110,us,PASS,accepted,KERNEL_OPT,true,,final trial 3
+topk-cuda,948636,gn1223,P3,5,attempt5_final_repeat3,batch_size=3072;hidden_size=8192;topk=1024,average_topk_execution_time,584.970581,us,PASS,accepted,KERNEL_OPT,true,,final trial 3
+topk-cuda,948636,gn1223,P3,5,attempt5_final_repeat3,batch_size=3072;hidden_size=16384;topk=2048,average_topk_execution_time,1146.481567,us,PASS,accepted,KERNEL_OPT,true,,final trial 3
+topk-cuda,948636,gn1223,P3,5,attempt5_final_repeat3,batch_size=3072;hidden_size=16384;topk=1024,average_topk_execution_time,1233.814575,us,PASS,accepted,KERNEL_OPT,true,,final trial 3
+topk-cuda,948636,gn1223,P3,5,attempt5_final_repeat3,batch_size=3072;hidden_size=32768;topk=2048,average_topk_execution_time,3016.062500,us,PASS,accepted,KERNEL_OPT,true,,final trial 3
+topk-cuda,948636,gn1223,P3,5,attempt5_final_repeat3,batch_size=3072;hidden_size=32768;topk=1024,average_topk_execution_time,2880.440674,us,PASS,accepted,KERNEL_OPT,true,,final trial 3
+topk-cuda,948636,gn1223,P3,5,attempt5_final_repeat3,batch_size=3072;hidden_size=65536;topk=2048,average_topk_execution_time,5622.105469,us,PASS,accepted,KERNEL_OPT,true,,final trial 3
+topk-cuda,948636,gn1223,P3,5,attempt5_final_repeat3,batch_size=3072;hidden_size=65536;topk=1024,average_topk_execution_time,5434.334961,us,PASS,accepted,KERNEL_OPT,true,,final trial 3
+topk-cuda,948636,gn1223,P3,5,attempt5_final_repeat3,batch_size=3072;hidden_size=131072;topk=2048,average_topk_execution_time,10750.186523,us,PASS,accepted,KERNEL_OPT,true,,final trial 3
+topk-cuda,948636,gn1223,P3,5,attempt5_final_repeat3,batch_size=3072;hidden_size=131072;topk=1024,average_topk_execution_time,10516.855469,us,PASS,accepted,KERNEL_OPT,true,,final trial 3

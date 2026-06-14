@@ -1,0 +1,21 @@
+Starting simpleMultiDevice
+GPU device count: 2
+Generating input data of size 33554432 ...
+
+Computing with 2 GPUs...
+  Initialization/Allocation time: 722705.623000 (us)
+  Average GPU Processing time: 11146.249370 (us)
+  Average H2D copy time: 10852.857781 (us)
+  Average kernel time: 280.955664 (us)
+  Average D2H partial copy time: 12.380200 (us)
+
+Computing with Host CPU...
+
+Comparing GPU and Host CPU results...
+  GPU sum: 16777387.500000
+  CPU sum: 16777380.811828
+  Relative difference: 3.986422E-07 
+
+Status: PASS
+CORRECTNESS,num_gpus=2,gpu_sum=16777387.500000000,cpu_sum=16777380.811827715,relative_diff=3.986422171e-07,tolerance=1.0e-05,status=PASS
+RESULT,num_gpus=2,repeat=1000,total_us=11146.249370,h2d_us=10852.857781,kernel_us=280.955664,d2h_us=12.380200,diff=3.986422171e-07,status=PASS

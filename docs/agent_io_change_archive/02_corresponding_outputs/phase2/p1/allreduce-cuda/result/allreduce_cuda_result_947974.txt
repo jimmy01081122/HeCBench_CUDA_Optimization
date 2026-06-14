@@ -1,0 +1,51 @@
+benchmark=allreduce-cuda
+job_id=947974
+node=gn1224.twcc.ai
+bench_dir=/home/r14525078/p1/HeCBench/src/allreduce-cuda
+arch=sm_70
+CUDA_VISIBLE_DEVICES=0,1
+MPI_ROOT=/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/hpcx/hpcx-2.20/ompi
+NCCL_ROOT=/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/nccl
+UCX_TLS=self,shm,cuda_copy,cuda_ipc
+
+=== Environment ===
+
+Currently Loaded Modules:
+  1) hpcx-ompi   2) nvhpc-24.11_hpcx-2.20_cuda-12.6
+
+ 
+
+/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/hpc_sdk/Linux_x86_64/24.11/compilers/bin/nvcc
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2024 NVIDIA Corporation
+Built on Thu_Sep_12_02:18:05_PDT_2024
+Cuda compilation tools, release 12.6, V12.6.77
+Build cuda_12.6.r12.6/compiler.34841621_0
+/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/hpcx/hpcx-2.20/ompi/bin/mpicc
+/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/hpcx/hpcx-2.20/ompi/bin/mpirun
+mpirun (Open MPI) 4.1.7a1
+
+Report bugs to http://www.open-mpi.org/community/help/
+GPU 0: Tesla V100-SXM2-32GB (UUID: GPU-e4e6d927-799d-8359-f4ef-67b1888bcc69)
+GPU 1: Tesla V100-SXM2-32GB (UUID: GPU-75be1573-e616-7384-2c74-7de3c8a54bae)
+
+=== Build ===
+rm -rf main main.o collectives.o timer.o
+nvcc  -std=c++17 -I/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/hpcx/hpcx-2.20/ompi/include -I/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/nccl/include -DOMPI_SKIP_MPICXX= -Xcompiler -Wall -arch=sm_70 -O3 -c main.cu -o main.o
+nvcc  -std=c++17 -I/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/hpcx/hpcx-2.20/ompi/include -I/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/nccl/include -DOMPI_SKIP_MPICXX= -Xcompiler -Wall -arch=sm_70 -O3 -c collectives.cu -o collectives.o
+nvcc  -std=c++17 -I/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/hpcx/hpcx-2.20/ompi/include -I/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/nccl/include -DOMPI_SKIP_MPICXX= -Xcompiler -Wall -arch=sm_70 -O3 -c timer.cu -o timer.o
+nvcc  -std=c++17 -I/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/hpcx/hpcx-2.20/ompi/include -I/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/nccl/include -DOMPI_SKIP_MPICXX= -Xcompiler -Wall -arch=sm_70 -O3 main.o collectives.o timer.o -o main -L/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/hpcx/hpcx-2.20/ompi/lib -lmpi -L/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/nccl/lib -lnccl -DOMPI_SKIP_MPICXX=
+
+=== Run ===
+Verified allreduce for size 0 (11.7237 us per iteration)
+Verified allreduce for size 32 (17.6406 us per iteration)
+Verified allreduce for size 256 (18.1234 us per iteration)
+Verified allreduce for size 1024 (24.9866 us per iteration)
+Verified allreduce for size 4096 (28.8818 us per iteration)
+Verified allreduce for size 16384 (41.2352 us per iteration)
+Verified allreduce for size 65536 (84.861 us per iteration)
+Verified allreduce for size 262144 (495.848 us per iteration)
+Verified allreduce for size 1048576 (919.886 us per iteration)
+Verified allreduce for size 8388608 (3101.65 us per iteration)
+Verified allreduce for size 67108864 (18187.3 us per iteration)
+Verified allreduce for size 536870912 (111220 us per iteration)

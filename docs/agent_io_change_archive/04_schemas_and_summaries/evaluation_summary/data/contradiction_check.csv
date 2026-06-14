@@ -1,0 +1,6 @@
+benchmark,prompt_level,issue_type,description,severity,source_file
+allreduce-cuda,P1,env_fix_but_reported_as_kernel_speedup,"Tuned UCX launcher repair is an ENV_FIX, but reported speedup '1.1635x' as kernel optimization",CRITICAL,p1/allreduce-cuda/result/summary.md
+allreduce-cuda,P2,env_fix_but_reported_as_kernel_speedup,"Tuned UCX launcher repair is an ENV_FIX, but reported speedup '2.7280x' as kernel optimization",CRITICAL,p2/allreduce-cuda/result/agent_summary.md
+moe-align,BASIC,correctness_unclear_but_reported_as_pass,Correctness is 'not shown in comparison csv' but reported as PASS in summary tables,WARNING,moe_align/cg_vs_gm_v1_comparison.csv
+moe-align,BASIC,correctness_unclear_but_reported_as_pass,Correctness is 'not shown in comparison csv' but reported as PASS in summary tables,WARNING,moe_align/cg_vs_gm_v2_comparison.csv
+moe-align,BASIC,correctness_unclear_but_reported_as_pass,Correctness is 'not shown in comparison csv' but reported as PASS in summary tables,WARNING,moe_align/cg_vs_gm_v3_comparison.csv

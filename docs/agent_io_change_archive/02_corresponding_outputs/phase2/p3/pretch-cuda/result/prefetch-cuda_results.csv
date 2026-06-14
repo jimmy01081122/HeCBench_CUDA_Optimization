@@ -1,0 +1,17 @@
+benchmark,job_id,node,prompt_level,submission_index,variant,case,metric_name,metric_value,metric_unit,correctness,status,result_type,accepted,reject_reason,notes
+prefetch-cuda,948608,gn1222,P3,0,baseline,repeat=10 mode=with_prefetch,avg_ms,6.192024,ms,PASS,baseline_valid,PARAM_TUNE,true,,n=10 min=6.098832 max=6.310051 std=0.079166
+prefetch-cuda,948608,gn1222,P3,0,baseline,repeat=10 mode=without_prefetch,avg_ms,12.365682,ms,PASS,baseline_valid,PARAM_TUNE,true,,n=10 min=12.217469 max=12.504829 std=0.088478
+prefetch-cuda,948608,gn1222,P3,0,baseline,repeat=100 mode=with_prefetch,avg_ms,1.681913,ms,PASS,baseline_valid,PARAM_TUNE,true,,n=10 min=1.680878 max=1.682529 std=0.000458
+prefetch-cuda,948608,gn1222,P3,0,baseline,repeat=100 mode=without_prefetch,avg_ms,2.145355,ms,PASS,baseline_valid,PARAM_TUNE,true,,n=10 min=2.106580 max=2.164934 std=0.017962
+prefetch-cuda,948609,gn1222,P3,1,block512,repeat=10 mode=with_prefetch,avg_ms,6.151986,ms,PASS,accepted,PARAM_TUNE,true,,n=10 min=6.102087 max=6.222186 std=0.044427
+prefetch-cuda,948609,gn1222,P3,1,block512,repeat=10 mode=without_prefetch,avg_ms,10.396155,ms,PASS,accepted,PARAM_TUNE,true,,n=10 min=10.208413 max=10.837540 std=0.173817
+prefetch-cuda,948609,gn1222,P3,1,block512,repeat=100 mode=with_prefetch,avg_ms,1.688352,ms,PASS,measurement_equivalent,MEASUREMENT_EQUIVALENT,true,,n=10 min=1.687462 max=1.689241 std=0.000505
+prefetch-cuda,948609,gn1222,P3,1,block512,repeat=100 mode=without_prefetch,avg_ms,1.937392,ms,PASS,accepted,PARAM_TUNE,true,,n=10 min=1.904406 max=1.964540 std=0.017502
+prefetch-cuda,948610,gn1222,P3,2,block1024,repeat=10 mode=with_prefetch,avg_ms,6.132535,ms,PASS,accepted,PARAM_TUNE,false,prefetch repeat100 regressed by more than 1 percent,n=10 min=6.117187 max=6.178218 std=0.016394
+prefetch-cuda,948610,gn1222,P3,2,block1024,repeat=10 mode=without_prefetch,avg_ms,10.013303,ms,PASS,accepted,PARAM_TUNE,false,prefetch repeat100 regressed by more than 1 percent,n=10 min=9.837446 max=10.225326 std=0.133316
+prefetch-cuda,948610,gn1222,P3,2,block1024,repeat=100 mode=with_prefetch,avg_ms,1.718281,ms,PASS,rejected,REGRESSION,false,prefetch repeat100 regressed by more than 1 percent,n=10 min=1.709024 max=1.732283 std=0.008917
+prefetch-cuda,948610,gn1222,P3,2,block1024,repeat=100 mode=without_prefetch,avg_ms,1.921618,ms,PASS,accepted,PARAM_TUNE,false,prefetch repeat100 regressed by more than 1 percent,n=10 min=1.908774 max=1.936808 std=0.008977
+prefetch-cuda,948611,gn1222,P3,3,prefetch256_naive1024,repeat=10 mode=with_prefetch,avg_ms,6.109064,ms,PASS,accepted,PARAM_TUNE,true,,n=10 min=6.096423 max=6.153045 std=0.015511 speedup=1.34pct
+prefetch-cuda,948611,gn1222,P3,3,prefetch256_naive1024,repeat=10 mode=without_prefetch,avg_ms,10.187994,ms,PASS,accepted,PARAM_TUNE,true,,n=10 min=9.958567 max=10.381825 std=0.138326 speedup=17.61pct
+prefetch-cuda,948611,gn1222,P3,3,prefetch256_naive1024,repeat=100 mode=with_prefetch,avg_ms,1.684764,ms,PASS,measurement_equivalent,MEASUREMENT_EQUIVALENT,true,,n=10 min=1.682055 max=1.698291 std=0.004781 speedup=-0.17pct
+prefetch-cuda,948611,gn1222,P3,3,prefetch256_naive1024,repeat=100 mode=without_prefetch,avg_ms,1.921765,ms,PASS,accepted,PARAM_TUNE,true,,n=10 min=1.898970 max=1.940632 std=0.012673 speedup=10.42pct

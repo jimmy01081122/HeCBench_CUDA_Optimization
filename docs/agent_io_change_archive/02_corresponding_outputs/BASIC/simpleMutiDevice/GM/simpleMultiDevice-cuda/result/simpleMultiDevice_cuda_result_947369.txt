@@ -1,0 +1,16 @@
+Starting simpleMultiDevice
+GPU device count: 2
+Generating input data of size 33554432 ...
+
+Computing with 2 GPUs...
+  Average GPU Processing time: 11166.113281 (us)
+
+Computing with Host CPU...
+
+Comparing GPU and Host CPU results...
+  GPU sum: 16777387.500000
+  CPU sum: 16777380.811828
+  Relative difference: 3.986422E-07 
+
+Status: PASS
+CORRECTNESS,num_gpus=2,gpu_sum=16777387.500000000,cpu_sum=16777380.811827715,relative_diff=3.986422171e-07,tolerance=1.0e-05,status=PASS

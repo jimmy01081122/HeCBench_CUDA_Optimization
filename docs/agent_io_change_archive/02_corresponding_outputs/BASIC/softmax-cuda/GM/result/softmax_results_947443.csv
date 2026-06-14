@@ -1,0 +1,21 @@
+job_id,node,implementation,batch_size,slice_size,repeat,avg_ms,correctness,status,notes
+947443,gn1230,naive,100000,128,100,4.535808,PASS,PASS,-
+947443,gn1230,optimized (warp-level),100000,128,100,0.132229,PASS,PASS,-
+947443,gn1230,optimized (warp-level + SM cached expf),100000,128,100,0.129300,PASS,PASS,-
+947443,gn1230,optimized (block-level + SM cached expf),100000,128,100,0.252815,PASS,PASS,-
+947443,gn1230,naive,100000,256,100,15.743037,PASS,PASS,-
+947443,gn1230,optimized (warp-level),100000,256,100,0.319529,PASS,PASS,-
+947443,gn1230,optimized (warp-level + SM cached expf),100000,256,100,0.346481,PASS,PASS,-
+947443,gn1230,optimized (block-level + SM cached expf),100000,256,100,0.306514,PASS,PASS,-
+947443,gn1230,naive,100000,784,100,55.378628,PASS,PASS,-
+947443,gn1230,optimized (warp-level),100000,784,100,1.455944,PASS,PASS,-
+947443,gn1230,optimized (warp-level + SM cached expf),100000,784,100,1.237299,PASS,PASS,-
+947443,gn1230,optimized (block-level + SM cached expf),100000,784,100,0.929280,PASS,PASS,-
+947443,gn1230,naive,100000,1024,100,65.308907,PASS,PASS,-
+947443,gn1230,optimized (warp-level),100000,1024,100,2.108539,PASS,PASS,-
+947443,gn1230,optimized (warp-level + SM cached expf),100000,1024,100,1.583637,PASS,PASS,-
+947443,gn1230,optimized (block-level + SM cached expf),100000,1024,100,1.184686,PASS,PASS,-
+947443,gn1230,naive,50000,2048,100,42.144474,PASS,PASS,-
+947443,gn1230,optimized (warp-level),50000,2048,100,2.245407,PASS,PASS,-
+947443,gn1230,optimized (warp-level + SM cached expf),50000,2048,100,1.907896,PASS,PASS,-
+947443,gn1230,optimized (block-level + SM cached expf),50000,2048,100,1.679667,PASS,PASS,-

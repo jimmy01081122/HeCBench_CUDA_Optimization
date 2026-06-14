@@ -1,0 +1,27 @@
+job_id=948936
+node=gn1222.twcc.ai
+CUDA_VISIBLE_DEVICES=0
+date=2026-06-10T14:14:02+08:00
+loaded_modules:
+
+Currently Loaded Modules:
+  1) cuda/12.8
+
+ 
+
+nvcc_version:
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2025 NVIDIA Corporation
+Built on Wed_Jan_15_19:20:09_PST_2025
+Cuda compilation tools, release 12.8, V12.8.61
+Build cuda_12.8.r12.8/compiler.35404655_0
+benchmark_command=./main 1000
+rm -rf main main.o shmem_kernels.o
+nvcc -c  -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 main.cu
+nvcc -c  -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 shmem_kernels.cu
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 main.o shmem_kernels.o -o main 
+Shared memory bandwidth microbenchmark
+Buffer sizes: 8MB
+Average kernel execution time : 7.692324 (ms)
+Memory throughput
+	using 128bit operations : 11173.43 GB/sec (698.34 billion accesses/sec)

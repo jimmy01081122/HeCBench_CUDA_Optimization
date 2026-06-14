@@ -1,0 +1,1 @@
+benchmark,mode,round,job_id,node,case,variant,metric_name,metric_value,unit,baseline_metric,speedup,correctness,status,result_type,mean,min,max,stddev,cv,profiler_available,human_decision,correctness_status,measurement_validity,speedup_claim_valid,require_remeasurement,notes

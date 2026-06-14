@@ -1,0 +1,31 @@
+benchmark,prompt_level,prompt_file,lines,chars,mentions_correctness,mentions_baseline,mentions_sbatch,mentions_submission_limit,mentions_raw_output,mentions_csv,mentions_contradiction_check,mentions_variance,mentions_profiler,prompt_score,main_strength,main_gap
+p2p-cuda,P1,prompts/p2p-cuda/P1_prompt.md,27,775,True,False,True,False,False,False,False,False,False,10,weak prompt,missing one or more reproducibility controls
+p2p-cuda,P2,prompts/p2p-cuda/P2_prompt.md,83,2542,True,True,True,True,True,False,False,False,False,50,engineering prompt,missing one or more reproducibility controls
+p2p-cuda,P3,prompts/p2p-cuda/P3_prompt.md,225,6394,True,True,True,True,True,True,True,True,True,100,strong protocol,none
+shmembench-cuda,P1,prompts/shmembench-cuda/P1_prompt.md,27,810,True,False,True,False,False,False,False,False,False,10,weak prompt,missing one or more reproducibility controls
+shmembench-cuda,P2,prompts/shmembench-cuda/P2_prompt.md,83,2536,True,True,True,True,True,False,False,False,False,50,engineering prompt,missing one or more reproducibility controls
+shmembench-cuda,P3,prompts/shmembench-cuda/P3_prompt.md,225,6470,True,True,True,True,True,True,True,True,True,100,strong protocol,none
+topk-cuda,P1,prompts/topk-cuda/P1_prompt.md,27,787,True,False,True,False,False,False,False,False,False,10,weak prompt,missing one or more reproducibility controls
+topk-cuda,P2,prompts/topk-cuda/P2_prompt.md,83,2485,True,True,True,True,True,False,False,False,False,50,engineering prompt,missing one or more reproducibility controls
+topk-cuda,P3,prompts/topk-cuda/P3_prompt.md,225,6361,True,True,True,True,True,True,True,True,True,100,strong protocol,none
+allreduce-cuda,P1,prompts/allreduce-cuda/P1_prompt.md,27,809,True,False,True,False,False,False,False,False,False,10,weak prompt,missing one or more reproducibility controls
+allreduce-cuda,P2,prompts/allreduce-cuda/P2_prompt.md,83,2676,True,True,True,True,True,False,False,False,False,50,engineering prompt,missing one or more reproducibility controls
+allreduce-cuda,P3,prompts/allreduce-cuda/P3_prompt.md,225,6551,True,True,True,True,True,True,True,True,True,100,strong protocol,none
+moe-cuda,P1,prompts/moe-cuda/P1_prompt.md,27,767,True,False,True,False,False,False,False,False,False,10,weak prompt,missing one or more reproducibility controls
+moe-cuda,P2,prompts/moe-cuda/P2_prompt.md,86,2531,True,True,True,True,True,False,False,False,False,50,engineering prompt,missing one or more reproducibility controls
+moe-cuda,P3,prompts/moe-cuda/P3_prompt.md,228,6423,True,True,True,True,True,True,True,True,True,100,strong protocol,none
+pingpong-cuda,P1,prompts/pingpong-cuda/P1_prompt.md,27,817,True,False,True,False,False,False,False,False,False,10,weak prompt,missing one or more reproducibility controls
+pingpong-cuda,P2,prompts/pingpong-cuda/P2_prompt.md,84,2746,True,True,True,True,True,False,False,False,False,50,engineering prompt,missing one or more reproducibility controls
+pingpong-cuda,P3,prompts/pingpong-cuda/P3_prompt.md,226,6589,True,True,True,True,True,True,True,True,True,100,strong protocol,none
+simpleMultiDevice-cuda,P1,prompts/simpleMultiDevice-cuda/P1_prompt.md,27,851,True,False,True,False,False,False,False,False,False,10,weak prompt,missing one or more reproducibility controls
+simpleMultiDevice-cuda,P2,prompts/simpleMultiDevice-cuda/P2_prompt.md,83,2571,True,True,True,True,True,False,False,False,False,50,engineering prompt,missing one or more reproducibility controls
+simpleMultiDevice-cuda,P3,prompts/simpleMultiDevice-cuda/P3_prompt.md,225,6461,True,True,True,True,True,True,True,True,True,100,strong protocol,none
+moe-align,P1,prompts/moe-align/P1_prompt.md,27,791,True,False,True,False,False,False,False,False,False,10,weak prompt,missing one or more reproducibility controls
+moe-align,P2,prompts/moe-align/P2_prompt.md,83,2549,True,True,True,True,True,True,False,False,False,60,engineering prompt,missing one or more reproducibility controls
+moe-align,P3,prompts/moe-align/P3_prompt.md,225,6401,True,True,True,True,True,True,True,True,True,100,strong protocol,none
+prefetch-cuda,P1,prompts/prefetch-cuda/P1_prompt.md,27,785,True,False,True,False,False,False,False,False,False,10,weak prompt,missing one or more reproducibility controls
+prefetch-cuda,P2,prompts/prefetch-cuda/P2_prompt.md,84,2481,True,True,True,True,True,False,False,False,False,50,engineering prompt,missing one or more reproducibility controls
+prefetch-cuda,P3,prompts/prefetch-cuda/P3_prompt.md,226,6333,True,True,True,True,True,True,True,True,True,100,strong protocol,none
+softmax-cuda,P1,prompts/softmax-cuda/P1_prompt.md,27,777,True,False,True,False,False,False,False,False,False,10,weak prompt,missing one or more reproducibility controls
+softmax-cuda,P2,prompts/softmax-cuda/P2_prompt.md,84,2524,True,True,True,True,True,False,False,False,False,50,engineering prompt,missing one or more reproducibility controls
+softmax-cuda,P3,prompts/softmax-cuda/P3_prompt.md,226,6414,True,True,True,True,True,True,True,True,True,100,strong protocol,none

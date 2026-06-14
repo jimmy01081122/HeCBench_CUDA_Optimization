@@ -1,0 +1,692 @@
+benchmark=moe-align-cuda
+job_id=944565
+node=gn1225.twcc.ai
+submit_dir=/home/r14525078/HeCBench/src/moe-align-cuda
+bench_dir=/home/r14525078/HeCBench/src/moe-align-cuda
+arch=sm_70
+repeat=100
+runs=10
+note=main argument is repeat, not input size
+start_time=2026-06-04 18:17:36
+
+------------------------------------------------------------
+[RUN 1] start: 2026-06-04 18:17:36
+[RUN 1] command: timeout 120s ./main 100
+------------------------------------------------------------
+Average execution time of the kernels (tokens 1, topk: 2, expert: 32, block_size 32): 19.253160 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 3, expert: 32, block_size 32): 13.518511 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 4, expert: 32, block_size 32): 13.406251 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 2, expert: 128, block_size 32): 18.767740 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 3, expert: 128, block_size 32): 18.331030 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 4, expert: 128, block_size 32): 17.638191 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 2, expert: 32, block_size 32): 13.424011 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 3, expert: 32, block_size 32): 13.422761 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 4, expert: 32, block_size 32): 13.804260 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 2, expert: 128, block_size 32): 17.791241 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 3, expert: 128, block_size 32): 17.832722 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 4, expert: 128, block_size 32): 18.518171 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 2, expert: 32, block_size 32): 15.577401 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 3, expert: 32, block_size 32): 16.559050 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 4, expert: 32, block_size 32): 18.358091 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 2, expert: 128, block_size 32): 18.194880 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 3, expert: 128, block_size 32): 18.249660 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 4, expert: 128, block_size 32): 18.250971 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 2, expert: 32, block_size 32): 23.519260 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 3, expert: 32, block_size 32): 26.694221 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 4, expert: 32, block_size 32): 29.059361 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 2, expert: 128, block_size 32): 23.016430 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 3, expert: 128, block_size 32): 25.818371 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 4, expert: 128, block_size 32): 28.193821 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 2, expert: 32, block_size 32): 29.216860 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 3, expert: 32, block_size 32): 35.126820 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 4, expert: 32, block_size 32): 41.345684 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 2, expert: 128, block_size 32): 28.402212 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 3, expert: 128, block_size 32): 34.251694 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 4, expert: 128, block_size 32): 39.562469 (us)
+PASS
+------------------------------------------------------------
+[RUN 1] end: 2026-06-04 18:17:36
+------------------------------------------------------------
+
+------------------------------------------------------------
+[RUN 2] start: 2026-06-04 18:17:36
+[RUN 2] command: timeout 120s ./main 100
+------------------------------------------------------------
+Average execution time of the kernels (tokens 1, topk: 2, expert: 32, block_size 32): 18.415260 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 3, expert: 32, block_size 32): 13.816710 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 4, expert: 32, block_size 32): 13.763250 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 2, expert: 128, block_size 32): 18.763021 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 3, expert: 128, block_size 32): 18.493320 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 4, expert: 128, block_size 32): 17.685860 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 2, expert: 32, block_size 32): 13.468151 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 3, expert: 32, block_size 32): 13.587050 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 4, expert: 32, block_size 32): 13.523341 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 2, expert: 128, block_size 32): 17.792711 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 3, expert: 128, block_size 32): 17.985531 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 4, expert: 128, block_size 32): 18.192261 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 2, expert: 32, block_size 32): 15.858570 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 3, expert: 32, block_size 32): 16.580481 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 4, expert: 32, block_size 32): 18.418402 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 2, expert: 128, block_size 32): 18.160650 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 3, expert: 128, block_size 32): 18.258251 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 4, expert: 128, block_size 32): 18.094141 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 2, expert: 32, block_size 32): 23.291010 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 3, expert: 32, block_size 32): 26.475811 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 4, expert: 32, block_size 32): 29.277222 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 2, expert: 128, block_size 32): 22.894842 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 3, expert: 128, block_size 32): 26.035652 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 4, expert: 128, block_size 32): 28.242170 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 2, expert: 32, block_size 32): 29.201731 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 3, expert: 32, block_size 32): 35.494553 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 4, expert: 32, block_size 32): 41.362080 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 2, expert: 128, block_size 32): 28.089991 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 3, expert: 128, block_size 32): 33.621384 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 4, expert: 128, block_size 32): 39.481335 (us)
+PASS
+------------------------------------------------------------
+[RUN 2] end: 2026-06-04 18:17:36
+------------------------------------------------------------
+
+------------------------------------------------------------
+[RUN 3] start: 2026-06-04 18:17:36
+[RUN 3] command: timeout 120s ./main 100
+------------------------------------------------------------
+Average execution time of the kernels (tokens 1, topk: 2, expert: 32, block_size 32): 18.298620 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 3, expert: 32, block_size 32): 13.473841 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 4, expert: 32, block_size 32): 13.598270 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 2, expert: 128, block_size 32): 18.829481 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 3, expert: 128, block_size 32): 17.996111 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 4, expert: 128, block_size 32): 17.992981 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 2, expert: 32, block_size 32): 13.308331 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 3, expert: 32, block_size 32): 13.509470 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 4, expert: 32, block_size 32): 13.410992 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 2, expert: 128, block_size 32): 17.825350 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 3, expert: 128, block_size 32): 18.138952 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 4, expert: 128, block_size 32): 18.014360 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 2, expert: 32, block_size 32): 15.454861 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 3, expert: 32, block_size 32): 16.458382 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 4, expert: 32, block_size 32): 18.389502 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 2, expert: 128, block_size 32): 18.103151 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 3, expert: 128, block_size 32): 18.426271 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 4, expert: 128, block_size 32): 18.263432 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 2, expert: 32, block_size 32): 23.286650 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 3, expert: 32, block_size 32): 26.166931 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 4, expert: 32, block_size 32): 28.962681 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 2, expert: 128, block_size 32): 23.037752 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 3, expert: 128, block_size 32): 25.637522 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 4, expert: 128, block_size 32): 28.144932 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 2, expert: 32, block_size 32): 29.141373 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 3, expert: 32, block_size 32): 35.911873 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 4, expert: 32, block_size 32): 41.276112 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 2, expert: 128, block_size 32): 28.165752 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 3, expert: 128, block_size 32): 33.678673 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 4, expert: 128, block_size 32): 39.662643 (us)
+PASS
+------------------------------------------------------------
+[RUN 3] end: 2026-06-04 18:17:37
+------------------------------------------------------------
+
+------------------------------------------------------------
+[RUN 4] start: 2026-06-04 18:17:37
+[RUN 4] command: timeout 120s ./main 100
+------------------------------------------------------------
+Average execution time of the kernels (tokens 1, topk: 2, expert: 32, block_size 32): 18.866991 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 3, expert: 32, block_size 32): 13.567831 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 4, expert: 32, block_size 32): 13.582761 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 2, expert: 128, block_size 32): 18.629150 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 3, expert: 128, block_size 32): 18.021320 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 4, expert: 128, block_size 32): 17.762932 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 2, expert: 32, block_size 32): 13.574961 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 3, expert: 32, block_size 32): 13.427700 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 4, expert: 32, block_size 32): 13.760981 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 2, expert: 128, block_size 32): 17.829632 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 3, expert: 128, block_size 32): 17.896980 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 4, expert: 128, block_size 32): 17.879761 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 2, expert: 32, block_size 32): 15.420960 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 3, expert: 32, block_size 32): 16.401932 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 4, expert: 32, block_size 32): 18.438551 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 2, expert: 128, block_size 32): 18.124071 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 3, expert: 128, block_size 32): 18.419241 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 4, expert: 128, block_size 32): 18.327530 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 2, expert: 32, block_size 32): 23.428272 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 3, expert: 32, block_size 32): 26.671532 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 4, expert: 32, block_size 32): 29.054913 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 2, expert: 128, block_size 32): 22.936550 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 3, expert: 128, block_size 32): 25.676373 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 4, expert: 128, block_size 32): 28.175091 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 2, expert: 32, block_size 32): 29.349892 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 3, expert: 32, block_size 32): 35.278183 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 4, expert: 32, block_size 32): 41.325085 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 2, expert: 128, block_size 32): 28.188972 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 3, expert: 128, block_size 32): 33.782780 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 4, expert: 128, block_size 32): 39.537220 (us)
+PASS
+------------------------------------------------------------
+[RUN 4] end: 2026-06-04 18:17:37
+------------------------------------------------------------
+
+------------------------------------------------------------
+[RUN 5] start: 2026-06-04 18:17:37
+[RUN 5] command: timeout 120s ./main 100
+------------------------------------------------------------
+Average execution time of the kernels (tokens 1, topk: 2, expert: 32, block_size 32): 18.675041 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 3, expert: 32, block_size 32): 13.478671 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 4, expert: 32, block_size 32): 13.493940 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 2, expert: 128, block_size 32): 19.100571 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 3, expert: 128, block_size 32): 18.080061 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 4, expert: 128, block_size 32): 17.970211 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 2, expert: 32, block_size 32): 13.572871 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 3, expert: 32, block_size 32): 13.636710 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 4, expert: 32, block_size 32): 13.604661 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 2, expert: 128, block_size 32): 17.783300 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 3, expert: 128, block_size 32): 18.030201 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 4, expert: 128, block_size 32): 17.851671 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 2, expert: 32, block_size 32): 15.691991 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 3, expert: 32, block_size 32): 16.465340 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 4, expert: 32, block_size 32): 18.604980 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 2, expert: 128, block_size 32): 18.216402 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 3, expert: 128, block_size 32): 18.415590 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 4, expert: 128, block_size 32): 18.517950 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 2, expert: 32, block_size 32): 23.478971 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 3, expert: 32, block_size 32): 26.290213 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 4, expert: 32, block_size 32): 29.094301 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 2, expert: 128, block_size 32): 22.814713 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 3, expert: 128, block_size 32): 25.917822 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 4, expert: 128, block_size 32): 28.124352 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 2, expert: 32, block_size 32): 29.295961 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 3, expert: 32, block_size 32): 35.452671 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 4, expert: 32, block_size 32): 41.320160 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 2, expert: 128, block_size 32): 28.076441 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 3, expert: 128, block_size 32): 34.203224 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 4, expert: 128, block_size 32): 39.457901 (us)
+PASS
+------------------------------------------------------------
+[RUN 5] end: 2026-06-04 18:17:38
+------------------------------------------------------------
+
+------------------------------------------------------------
+[RUN 6] start: 2026-06-04 18:17:38
+[RUN 6] command: timeout 120s ./main 100
+------------------------------------------------------------
+Average execution time of the kernels (tokens 1, topk: 2, expert: 32, block_size 32): 18.637451 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 3, expert: 32, block_size 32): 13.527361 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 4, expert: 32, block_size 32): 13.829951 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 2, expert: 128, block_size 32): 18.896091 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 3, expert: 128, block_size 32): 18.632570 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 4, expert: 128, block_size 32): 17.837831 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 2, expert: 32, block_size 32): 13.542251 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 3, expert: 32, block_size 32): 13.390841 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 4, expert: 32, block_size 32): 13.604851 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 2, expert: 128, block_size 32): 17.870831 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 3, expert: 128, block_size 32): 17.889341 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 4, expert: 128, block_size 32): 17.856260 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 2, expert: 32, block_size 32): 15.410111 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 3, expert: 32, block_size 32): 16.503542 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 4, expert: 32, block_size 32): 19.272631 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 2, expert: 128, block_size 32): 18.187841 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 3, expert: 128, block_size 32): 18.266861 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 4, expert: 128, block_size 32): 18.599112 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 2, expert: 32, block_size 32): 23.494211 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 3, expert: 32, block_size 32): 26.482641 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 4, expert: 32, block_size 32): 29.073830 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 2, expert: 128, block_size 32): 22.948912 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 3, expert: 128, block_size 32): 25.917522 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 4, expert: 128, block_size 32): 28.189512 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 2, expert: 32, block_size 32): 29.492203 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 3, expert: 32, block_size 32): 35.306374 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 4, expert: 32, block_size 32): 41.388424 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 2, expert: 128, block_size 32): 28.186722 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 3, expert: 128, block_size 32): 34.016960 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 4, expert: 128, block_size 32): 39.610611 (us)
+PASS
+------------------------------------------------------------
+[RUN 6] end: 2026-06-04 18:17:38
+------------------------------------------------------------
+
+------------------------------------------------------------
+[RUN 7] start: 2026-06-04 18:17:38
+[RUN 7] command: timeout 120s ./main 100
+------------------------------------------------------------
+Average execution time of the kernels (tokens 1, topk: 2, expert: 32, block_size 32): 18.334681 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 3, expert: 32, block_size 32): 13.475711 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 4, expert: 32, block_size 32): 13.440941 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 2, expert: 128, block_size 32): 18.134892 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 3, expert: 128, block_size 32): 17.853340 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 4, expert: 128, block_size 32): 17.680910 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 2, expert: 32, block_size 32): 13.259200 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 3, expert: 32, block_size 32): 13.839730 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 4, expert: 32, block_size 32): 13.560841 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 2, expert: 128, block_size 32): 17.892170 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 3, expert: 128, block_size 32): 18.537371 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 4, expert: 128, block_size 32): 17.923401 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 2, expert: 32, block_size 32): 15.382430 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 3, expert: 32, block_size 32): 16.462740 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 4, expert: 32, block_size 32): 18.365711 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 2, expert: 128, block_size 32): 18.254761 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 3, expert: 128, block_size 32): 18.214090 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 4, expert: 128, block_size 32): 18.488821 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 2, expert: 32, block_size 32): 23.284880 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 3, expert: 32, block_size 32): 26.379183 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 4, expert: 32, block_size 32): 28.866121 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 2, expert: 128, block_size 32): 23.439302 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 3, expert: 128, block_size 32): 25.719891 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 4, expert: 128, block_size 32): 28.355522 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 2, expert: 32, block_size 32): 29.879091 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 3, expert: 32, block_size 32): 35.277943 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 4, expert: 32, block_size 32): 41.399990 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 2, expert: 128, block_size 32): 28.325251 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 3, expert: 128, block_size 32): 33.883533 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 4, expert: 128, block_size 32): 39.580502 (us)
+PASS
+------------------------------------------------------------
+[RUN 7] end: 2026-06-04 18:17:39
+------------------------------------------------------------
+
+------------------------------------------------------------
+[RUN 8] start: 2026-06-04 18:17:39
+[RUN 8] command: timeout 120s ./main 100
+------------------------------------------------------------
+Average execution time of the kernels (tokens 1, topk: 2, expert: 32, block_size 32): 20.033401 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 3, expert: 32, block_size 32): 13.502960 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 4, expert: 32, block_size 32): 13.878761 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 2, expert: 128, block_size 32): 18.539291 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 3, expert: 128, block_size 32): 18.454641 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 4, expert: 128, block_size 32): 17.776711 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 2, expert: 32, block_size 32): 13.400891 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 3, expert: 32, block_size 32): 13.463911 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 4, expert: 32, block_size 32): 13.511710 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 2, expert: 128, block_size 32): 18.071461 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 3, expert: 128, block_size 32): 18.205860 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 4, expert: 128, block_size 32): 17.856380 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 2, expert: 32, block_size 32): 15.381521 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 3, expert: 32, block_size 32): 16.644751 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 4, expert: 32, block_size 32): 18.714331 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 2, expert: 128, block_size 32): 18.124300 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 3, expert: 128, block_size 32): 18.512171 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 4, expert: 128, block_size 32): 18.304581 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 2, expert: 32, block_size 32): 23.461802 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 3, expert: 32, block_size 32): 26.821840 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 4, expert: 32, block_size 32): 31.260422 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 2, expert: 128, block_size 32): 23.124571 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 3, expert: 128, block_size 32): 25.709723 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 4, expert: 128, block_size 32): 28.200571 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 2, expert: 32, block_size 32): 29.381922 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 3, expert: 32, block_size 32): 35.153683 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 4, expert: 32, block_size 32): 41.728172 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 2, expert: 128, block_size 32): 28.428391 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 3, expert: 128, block_size 32): 33.920700 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 4, expert: 128, block_size 32): 39.605194 (us)
+PASS
+------------------------------------------------------------
+[RUN 8] end: 2026-06-04 18:17:39
+------------------------------------------------------------
+
+------------------------------------------------------------
+[RUN 9] start: 2026-06-04 18:17:39
+[RUN 9] command: timeout 120s ./main 100
+------------------------------------------------------------
+Average execution time of the kernels (tokens 1, topk: 2, expert: 32, block_size 32): 18.855171 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 3, expert: 32, block_size 32): 13.458900 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 4, expert: 32, block_size 32): 14.027291 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 2, expert: 128, block_size 32): 18.964180 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 3, expert: 128, block_size 32): 18.303190 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 4, expert: 128, block_size 32): 18.177052 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 2, expert: 32, block_size 32): 13.589221 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 3, expert: 32, block_size 32): 13.636140 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 4, expert: 32, block_size 32): 13.601971 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 2, expert: 128, block_size 32): 18.425140 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 3, expert: 128, block_size 32): 18.030041 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 4, expert: 128, block_size 32): 18.036131 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 2, expert: 32, block_size 32): 15.602971 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 3, expert: 32, block_size 32): 16.562181 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 4, expert: 32, block_size 32): 18.803511 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 2, expert: 128, block_size 32): 18.291330 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 3, expert: 128, block_size 32): 18.473341 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 4, expert: 128, block_size 32): 18.794550 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 2, expert: 32, block_size 32): 23.786572 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 3, expert: 32, block_size 32): 26.511660 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 4, expert: 32, block_size 32): 29.542051 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 2, expert: 128, block_size 32): 23.438622 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 3, expert: 128, block_size 32): 26.001053 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 4, expert: 128, block_size 32): 28.732761 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 2, expert: 32, block_size 32): 29.871120 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 3, expert: 32, block_size 32): 35.768162 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 4, expert: 32, block_size 32): 41.489883 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 2, expert: 128, block_size 32): 28.788462 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 3, expert: 128, block_size 32): 33.983829 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 4, expert: 128, block_size 32): 39.854641 (us)
+PASS
+------------------------------------------------------------
+[RUN 9] end: 2026-06-04 18:17:39
+------------------------------------------------------------
+
+------------------------------------------------------------
+[RUN 10] start: 2026-06-04 18:17:39
+[RUN 10] command: timeout 120s ./main 100
+------------------------------------------------------------
+Average execution time of the kernels (tokens 1, topk: 2, expert: 32, block_size 32): 18.914902 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 3, expert: 32, block_size 32): 13.567571 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 4, expert: 32, block_size 32): 13.896180 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 2, expert: 128, block_size 32): 19.000622 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 3, expert: 128, block_size 32): 18.241840 (us)
+PASS
+Average execution time of the kernels (tokens 1, topk: 4, expert: 128, block_size 32): 18.247400 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 2, expert: 32, block_size 32): 13.489571 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 3, expert: 32, block_size 32): 13.497091 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 4, expert: 32, block_size 32): 13.486151 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 2, expert: 128, block_size 32): 17.850601 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 3, expert: 128, block_size 32): 17.944962 (us)
+PASS
+Average execution time of the kernels (tokens 3, topk: 4, expert: 128, block_size 32): 17.911451 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 2, expert: 32, block_size 32): 15.746781 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 3, expert: 32, block_size 32): 16.563560 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 4, expert: 32, block_size 32): 18.651430 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 2, expert: 128, block_size 32): 18.340761 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 3, expert: 128, block_size 32): 18.568481 (us)
+PASS
+Average execution time of the kernels (tokens 256, topk: 4, expert: 128, block_size 32): 18.477470 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 2, expert: 32, block_size 32): 23.719501 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 3, expert: 32, block_size 32): 26.800282 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 4, expert: 32, block_size 32): 29.269402 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 2, expert: 128, block_size 32): 23.208530 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 3, expert: 128, block_size 32): 25.885862 (us)
+PASS
+Average execution time of the kernels (tokens 4096, topk: 4, expert: 128, block_size 32): 28.682899 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 2, expert: 32, block_size 32): 29.633701 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 3, expert: 32, block_size 32): 35.657772 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 4, expert: 32, block_size 32): 41.440620 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 2, expert: 128, block_size 32): 28.388992 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 3, expert: 128, block_size 32): 33.898670 (us)
+PASS
+Average execution time of the kernels (tokens 8192, topk: 4, expert: 128, block_size 32): 39.802521 (us)
+PASS
+------------------------------------------------------------
+[RUN 10] end: 2026-06-04 18:17:40
+------------------------------------------------------------
+
+end_time=2026-06-04 18:17:40

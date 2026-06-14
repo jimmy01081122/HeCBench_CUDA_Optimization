@@ -1,0 +1,15 @@
+check,status,notes
+all_official_cases_present,PASS,seen=15 expected=15
+impl_1_rows_exist_for_every_slice,PASS,required official slices checked
+impl_3_rows_exist_for_every_slice,PASS,required official slices checked
+impl_4_rows_exist_for_every_slice,PASS,required official slices checked
+raw_stdout_stderr_paths_exist,PASS,missing=0
+correctness_pass_before_speedup_claim,PASS,bad_rows=0
+speedup_vs_impl3_exists_for_impl4,PASS,bad_rows=0
+small_slices_128_256_not_claimed,PASS,bad_rows=0
+speedup_vs_impl1_not_main_mode_c_metric,PASS,bad_rows=0
+profiler_status_not_run,PASS,bad_rows=0
+official_timing_used_true,PASS,bad_rows=0
+no_impl5_promotion,PASS,bad_rows=0
+no_profiler_or_mechanism_causality_claim,PASS,bad_rows=0
+no_aggregate_only_success_hiding_per_slice_regression,PASS,any_valid_large=True

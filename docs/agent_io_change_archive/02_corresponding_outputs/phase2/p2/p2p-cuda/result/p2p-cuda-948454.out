@@ -1,0 +1,117 @@
+tag=opt2_multistream_directional
+job_id=948454
+node=gn1115
+date=2026-06-09T14:56:01+08:00
+repeat=2000
+cuda_visible_devices=0,1,2,3
+hostname=gn1115.twcc.ai
+nvcc=/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/cuda/cuda-12.8/bin/nvcc
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2025 NVIDIA Corporation
+Built on Wed_Jan_15_19:20:09_PST_2025
+Cuda compilation tools, release 12.8, V12.8.61
+Build cuda_12.8.r12.8/compiler.35404655_0
+Tue Jun  9 14:56:01 2026       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 535.161.08             Driver Version: 535.161.08   CUDA Version: 12.8     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  Tesla V100-SXM2-32GB           On  | 00000000:B1:00.0 Off |                    0 |
+| N/A   26C    P0              41W / 300W |      0MiB / 32768MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+|   1  Tesla V100-SXM2-32GB           On  | 00000000:B2:00.0 Off |                    0 |
+| N/A   27C    P0              42W / 300W |      0MiB / 32768MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+|   2  Tesla V100-SXM2-32GB           On  | 00000000:DB:00.0 Off |                    0 |
+| N/A   28C    P0              41W / 300W |      0MiB / 32768MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+|   3  Tesla V100-SXM2-32GB           On  | 00000000:DC:00.0 Off |                    0 |
+| N/A   26C    P0              42W / 300W |      0MiB / 32768MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|  No running processes found                                                           |
++---------------------------------------------------------------------------------------+
+rm -rf main main.o
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 -c main.cu -o main.o
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 main.o -o main 
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+[./main] - Starting...
+Checking for multiple GPUs...
+There are 4 GPUs
+
+Checking GPU(s) for support of peer to peer memory access...
+> Peer access from Tesla V100-SXM2-32GB (GPU0) -> Tesla V100-SXM2-32GB (GPU1) : Yes
+> Peer access from Tesla V100-SXM2-32GB (GPU0) -> Tesla V100-SXM2-32GB (GPU2) : Yes
+> Peer access from Tesla V100-SXM2-32GB (GPU0) -> Tesla V100-SXM2-32GB (GPU3) : Yes
+> Peer access from Tesla V100-SXM2-32GB (GPU1) -> Tesla V100-SXM2-32GB (GPU0) : Yes
+> Peer access from Tesla V100-SXM2-32GB (GPU1) -> Tesla V100-SXM2-32GB (GPU2) : Yes
+> Peer access from Tesla V100-SXM2-32GB (GPU1) -> Tesla V100-SXM2-32GB (GPU3) : Yes
+> Peer access from Tesla V100-SXM2-32GB (GPU2) -> Tesla V100-SXM2-32GB (GPU0) : Yes
+> Peer access from Tesla V100-SXM2-32GB (GPU2) -> Tesla V100-SXM2-32GB (GPU1) : Yes
+> Peer access from Tesla V100-SXM2-32GB (GPU2) -> Tesla V100-SXM2-32GB (GPU3) : Yes
+> Peer access from Tesla V100-SXM2-32GB (GPU3) -> Tesla V100-SXM2-32GB (GPU0) : Yes
+> Peer access from Tesla V100-SXM2-32GB (GPU3) -> Tesla V100-SXM2-32GB (GPU1) : Yes
+> Peer access from Tesla V100-SXM2-32GB (GPU3) -> Tesla V100-SXM2-32GB (GPU2) : Yes
+
+Measuring the bandwidth of peer to peer memory access...
+> Peer access from Tesla V100-SXM2-32GB (GPU0) -> Tesla V100-SXM2-32GB (GPU1) : 
+Allocating buffers (64MB on GPU0, GPU1 and CPU Host)...
+Peer-to-peer copy GPU0 -> GPU1: 47.72 GB/s
+PASS
+> Peer access from Tesla V100-SXM2-32GB (GPU0) -> Tesla V100-SXM2-32GB (GPU2) : 
+Allocating buffers (64MB on GPU0, GPU2 and CPU Host)...
+Peer-to-peer copy GPU0 -> GPU2: 24.07 GB/s
+PASS
+> Peer access from Tesla V100-SXM2-32GB (GPU0) -> Tesla V100-SXM2-32GB (GPU3) : 
+Allocating buffers (64MB on GPU0, GPU3 and CPU Host)...
+Peer-to-peer copy GPU0 -> GPU3: 47.72 GB/s
+PASS
+> Peer access from Tesla V100-SXM2-32GB (GPU1) -> Tesla V100-SXM2-32GB (GPU0) : 
+Allocating buffers (64MB on GPU1, GPU0 and CPU Host)...
+Peer-to-peer copy GPU1 -> GPU0: 47.71 GB/s
+PASS
+> Peer access from Tesla V100-SXM2-32GB (GPU1) -> Tesla V100-SXM2-32GB (GPU2) : 
+Allocating buffers (64MB on GPU1, GPU2 and CPU Host)...
+Peer-to-peer copy GPU1 -> GPU2: 47.71 GB/s
+PASS
+> Peer access from Tesla V100-SXM2-32GB (GPU1) -> Tesla V100-SXM2-32GB (GPU3) : 
+Allocating buffers (64MB on GPU1, GPU3 and CPU Host)...
+Peer-to-peer copy GPU1 -> GPU3: 24.07 GB/s
+PASS
+> Peer access from Tesla V100-SXM2-32GB (GPU2) -> Tesla V100-SXM2-32GB (GPU0) : 
+Allocating buffers (64MB on GPU2, GPU0 and CPU Host)...
+Peer-to-peer copy GPU2 -> GPU0: 24.07 GB/s
+PASS
+> Peer access from Tesla V100-SXM2-32GB (GPU2) -> Tesla V100-SXM2-32GB (GPU1) : 
+Allocating buffers (64MB on GPU2, GPU1 and CPU Host)...
+Peer-to-peer copy GPU2 -> GPU1: 47.71 GB/s
+PASS
+> Peer access from Tesla V100-SXM2-32GB (GPU2) -> Tesla V100-SXM2-32GB (GPU3) : 
+Allocating buffers (64MB on GPU2, GPU3 and CPU Host)...
+Peer-to-peer copy GPU2 -> GPU3: 24.07 GB/s
+PASS
+> Peer access from Tesla V100-SXM2-32GB (GPU3) -> Tesla V100-SXM2-32GB (GPU0) : 
+Allocating buffers (64MB on GPU3, GPU0 and CPU Host)...
+Peer-to-peer copy GPU3 -> GPU0: 47.70 GB/s
+PASS
+> Peer access from Tesla V100-SXM2-32GB (GPU3) -> Tesla V100-SXM2-32GB (GPU1) : 
+Allocating buffers (64MB on GPU3, GPU1 and CPU Host)...
+Peer-to-peer copy GPU3 -> GPU1: 24.07 GB/s
+PASS
+> Peer access from Tesla V100-SXM2-32GB (GPU3) -> Tesla V100-SXM2-32GB (GPU2) : 
+Allocating buffers (64MB on GPU3, GPU2 and CPU Host)...
+Peer-to-peer copy GPU3 -> GPU2: 24.07 GB/s
+PASS

@@ -1,0 +1,134 @@
+--------------------------------
+loading CUDA 12.8 with cuDNN / NCCL
+based on cuda_12.8.0_570.86.10_linux.run
+--------------------------------
+
+=== Environment ===
+
+Currently Loaded Modules:
+  1) cuda/12.8
+
+ 
+
+which nvcc: /work/HPC_SYS/twnia2/pkg-rocky8/nvidia/cuda/cuda-12.8/bin/nvcc
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2025 NVIDIA Corporation
+Built on Wed_Jan_15_19:20:09_PST_2025
+Cuda compilation tools, release 12.8, V12.8.61
+Build cuda_12.8.r12.8/compiler.35404655_0
+hostname: gn1222.twcc.ai
+CUDA_VISIBLE_DEVICES=0
+GPU 0: Tesla V100-SXM2-32GB (UUID: GPU-145c9ce9-e63a-59f8-c6d7-cd0a7a73ba66)
+Sat Jun  6 23:46:02 2026       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 535.161.08             Driver Version: 535.161.08   CUDA Version: 12.8     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  Tesla V100-SXM2-32GB           On  | 00000000:B1:00.0 Off |                    0 |
+| N/A   25C    P0              40W / 300W |      0MiB / 32768MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|  No running processes found                                                           |
++---------------------------------------------------------------------------------------+
+=== Build ===
+rm -rf main main.o
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_70 --expt-relaxed-constexpr -O3 -c main.cu -o main.o
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_70 --expt-relaxed-constexpr -O3 main.o -o main 
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+=== Run ===
+Variant: cached_workspace_async
+Command: ./main 3072 100
+
+batch size: 3072, hidden size: 3072, topk: 2048
+Average execution time of topk : 453.876910 (us)
+CUDA event execution time of topk : 412.774391 (us)
+PASS
+RESULT,batch_size=3072,hidden_size=3072,topk=2048,repeat=100,warmup=10,avg_us=412.774391,cpu_chrono_us=453.876910,correctness=PASS,status=PASS
+
+batch size: 3072, hidden size: 3072, topk: 1024
+Average execution time of topk : 436.538550 (us)
+CUDA event execution time of topk : 397.117424 (us)
+PASS
+RESULT,batch_size=3072,hidden_size=3072,topk=1024,repeat=100,warmup=10,avg_us=397.117424,cpu_chrono_us=436.538550,correctness=PASS,status=PASS
+
+batch size: 3072, hidden size: 4096, topk: 2048
+Average execution time of topk : 526.422720 (us)
+CUDA event execution time of topk : 478.812141 (us)
+PASS
+RESULT,batch_size=3072,hidden_size=4096,topk=2048,repeat=100,warmup=10,avg_us=478.812141,cpu_chrono_us=526.422720,correctness=PASS,status=PASS
+
+batch size: 3072, hidden size: 4096, topk: 1024
+Average execution time of topk : 510.864790 (us)
+CUDA event execution time of topk : 464.691200 (us)
+PASS
+RESULT,batch_size=3072,hidden_size=4096,topk=1024,repeat=100,warmup=10,avg_us=464.691200,cpu_chrono_us=510.864790,correctness=PASS,status=PASS
+
+batch size: 3072, hidden size: 8192, topk: 2048
+Average execution time of topk : 826.980740 (us)
+CUDA event execution time of topk : 752.046051 (us)
+PASS
+RESULT,batch_size=3072,hidden_size=8192,topk=2048,repeat=100,warmup=10,avg_us=752.046051,cpu_chrono_us=826.980740,correctness=PASS,status=PASS
+
+batch size: 3072, hidden size: 8192, topk: 1024
+Average execution time of topk : 731.873020 (us)
+CUDA event execution time of topk : 665.651169 (us)
+PASS
+RESULT,batch_size=3072,hidden_size=8192,topk=1024,repeat=100,warmup=10,avg_us=665.651169,cpu_chrono_us=731.873020,correctness=PASS,status=PASS
+
+batch size: 3072, hidden size: 16384, topk: 2048
+Average execution time of topk : 1275.120620 (us)
+CUDA event execution time of topk : 1157.990417 (us)
+PASS
+RESULT,batch_size=3072,hidden_size=16384,topk=2048,repeat=100,warmup=10,avg_us=1157.990417,cpu_chrono_us=1275.120620,correctness=PASS,status=PASS
+
+batch size: 3072, hidden size: 16384, topk: 1024
+Average execution time of topk : 1350.023050 (us)
+CUDA event execution time of topk : 1227.622375 (us)
+PASS
+RESULT,batch_size=3072,hidden_size=16384,topk=1024,repeat=100,warmup=10,avg_us=1227.622375,cpu_chrono_us=1350.023050,correctness=PASS,status=PASS
+
+batch size: 3072, hidden size: 32768, topk: 2048
+Average execution time of topk : 3311.982390 (us)
+CUDA event execution time of topk : 3010.600891 (us)
+PASS
+RESULT,batch_size=3072,hidden_size=32768,topk=2048,repeat=100,warmup=10,avg_us=3010.600891,cpu_chrono_us=3311.982390,correctness=PASS,status=PASS
+
+batch size: 3072, hidden size: 32768, topk: 1024
+Average execution time of topk : 3161.821920 (us)
+CUDA event execution time of topk : 2874.685364 (us)
+PASS
+RESULT,batch_size=3072,hidden_size=32768,topk=1024,repeat=100,warmup=10,avg_us=2874.685364,cpu_chrono_us=3161.821920,correctness=PASS,status=PASS
+
+batch size: 3072, hidden size: 65536, topk: 2048
+Average execution time of topk : 6178.067990 (us)
+CUDA event execution time of topk : 5615.462646 (us)
+PASS
+RESULT,batch_size=3072,hidden_size=65536,topk=2048,repeat=100,warmup=10,avg_us=5615.462646,cpu_chrono_us=6178.067990,correctness=PASS,status=PASS
+
+batch size: 3072, hidden size: 65536, topk: 1024
+Average execution time of topk : 5969.338460 (us)
+CUDA event execution time of topk : 5426.913452 (us)
+PASS
+RESULT,batch_size=3072,hidden_size=65536,topk=1024,repeat=100,warmup=10,avg_us=5426.913452,cpu_chrono_us=5969.338460,correctness=PASS,status=PASS
+
+batch size: 3072, hidden size: 131072, topk: 2048
+Average execution time of topk : 11822.872490 (us)
+CUDA event execution time of topk : 10745.568848 (us)
+PASS
+RESULT,batch_size=3072,hidden_size=131072,topk=2048,repeat=100,warmup=10,avg_us=10745.568848,cpu_chrono_us=11822.872490,correctness=PASS,status=PASS
+
+batch size: 3072, hidden size: 131072, topk: 1024
+Average execution time of topk : 11557.516050 (us)
+CUDA event execution time of topk : 10506.403809 (us)
+PASS
+RESULT,batch_size=3072,hidden_size=131072,topk=1024,repeat=100,warmup=10,avg_us=10506.403809,cpu_chrono_us=11557.516050,correctness=PASS,status=PASS

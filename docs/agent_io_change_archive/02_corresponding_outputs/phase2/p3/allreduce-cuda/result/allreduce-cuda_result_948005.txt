@@ -1,0 +1,41 @@
+job_id=948005
+node=gn1222
+CUDA_VISIBLE_DEVICES=0,1
+benchmark_command=UCX_TLS=self,shm,cuda_copy,cuda_ipc mpirun -x UCX_TLS --mca coll ^hcoll,ucc --mca pml ucx -n 2 ./main
+date=2026-06-08T22:36:44+08:00
+nvcc_version_begin
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2024 NVIDIA Corporation
+Built on Thu_Sep_12_02:18:05_PDT_2024
+Cuda compilation tools, release 12.6, V12.6.77
+Build cuda_12.6.r12.6/compiler.34841621_0
+nvcc_version_end
+modules_begin
+
+Currently Loaded Modules:
+  1) hpcx-ompi   2) nvhpc-24.11_hpcx-2.20_cuda-12.6
+
+ 
+
+modules_end
+make_begin
+rm -rf main main.o collectives.o timer.o
+nvcc  -std=c++17 -I/opt/nvidia/hpc_sdk/Linux_x86_64/24.5/comm_libs/12.4/openmpi4/openmpi-4.1.5//include -DOMPI_SKIP_MPICXX= -Xcompiler -Wall -arch=sm_70 -O3 -c main.cu -o main.o
+nvcc  -std=c++17 -I/opt/nvidia/hpc_sdk/Linux_x86_64/24.5/comm_libs/12.4/openmpi4/openmpi-4.1.5//include -DOMPI_SKIP_MPICXX= -Xcompiler -Wall -arch=sm_70 -O3 -c collectives.cu -o collectives.o
+nvcc  -std=c++17 -I/opt/nvidia/hpc_sdk/Linux_x86_64/24.5/comm_libs/12.4/openmpi4/openmpi-4.1.5//include -DOMPI_SKIP_MPICXX= -Xcompiler -Wall -arch=sm_70 -O3 -c timer.cu -o timer.o
+nvcc  -std=c++17 -I/opt/nvidia/hpc_sdk/Linux_x86_64/24.5/comm_libs/12.4/openmpi4/openmpi-4.1.5//include -DOMPI_SKIP_MPICXX= -Xcompiler -Wall -arch=sm_70 -O3 main.o collectives.o timer.o -o main -L/opt/nvidia/hpc_sdk/Linux_x86_64/24.5/comm_libs/12.4/openmpi4/openmpi-4.1.5//lib -lmpi -DOMPI_SKIP_MPICXX=
+make_end
+benchmark_begin
+Verified allreduce for size 0 (9.45429 us per iteration)
+Verified allreduce for size 32 (59.8395 us per iteration)
+Verified allreduce for size 256 (58.5698 us per iteration)
+Verified allreduce for size 1024 (61.3232 us per iteration)
+Verified allreduce for size 4096 (67.1773 us per iteration)
+Verified allreduce for size 16384 (55.3169 us per iteration)
+Verified allreduce for size 65536 (98.6986 us per iteration)
+Verified allreduce for size 262144 (963.896 us per iteration)
+Verified allreduce for size 1048576 (2158.42 us per iteration)
+Verified allreduce for size 8388608 (3780.88 us per iteration)
+Verified allreduce for size 67108864 (17419.3 us per iteration)
+Verified allreduce for size 536870912 (128157 us per iteration)
+benchmark_end

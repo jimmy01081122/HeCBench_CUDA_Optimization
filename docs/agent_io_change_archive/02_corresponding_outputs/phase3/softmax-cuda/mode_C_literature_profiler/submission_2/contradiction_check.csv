@@ -1,0 +1,9 @@
+check,status,notes
+all_official_cases_and_impls_present,PASS,rows=60
+raw_paths_exist,PASS,missing=0
+correctness_before_speedup_claim,PASS,bad_rows=0
+impl5_speedups_present,PASS,bad_rows=0
+small_slices_guardrail_only,PASS,bad_rows=0
+impl5_promotion_rule,PASS,bad_rows=0
+profiler_timing_not_used,PASS,bad_rows=0
+no_overclaim_causality,PASS,bad_rows=0

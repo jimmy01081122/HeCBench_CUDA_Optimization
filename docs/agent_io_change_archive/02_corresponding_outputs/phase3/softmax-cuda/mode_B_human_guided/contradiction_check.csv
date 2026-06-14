@@ -1,0 +1,11 @@
+check,status,notes
+Rule_1_correctness_pass,PASS,no issues
+Rule_2_cv_noisy,PASS,no issues
+Rule_3_noisy_speedup_invalid,PASS,no issues
+Rule_4_cv_extreme_remeasure,PASS,no issues
+Rule_5_mode_a_no_kernel_opt,PASS,no issues
+Rule_6_softmax_baseline_comparison,PASS,no issues
+Rule_7_shmembench_diagnostic_fail,PASS,no issues
+Rule_8_variant_replace_baseline,PASS,no issues
+Rule_9_low_speedup_equivalent,PASS,no issues
+Rule_10_regression_status,PASS,no issues

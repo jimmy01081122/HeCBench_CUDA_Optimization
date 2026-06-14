@@ -1,0 +1,33 @@
+=== Loading modules ===
+=== Environment ===
+/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/cuda/cuda-12.8/bin/nvcc
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2025 NVIDIA Corporation
+Built on Wed_Jan_15_19:20:09_PST_2025
+Cuda compilation tools, release 12.8, V12.8.61
+Build cuda_12.8.r12.8/compiler.35404655_0
+gn1221.twcc.ai
+CUDA_VISIBLE_DEVICES: 0,1
+GPU 0: Tesla V100-SXM2-32GB (UUID: GPU-7b0b6d6a-ac08-324d-1a44-7565ed8a0a15)
+GPU 1: Tesla V100-SXM2-32GB (UUID: GPU-8df62e4f-ff93-2012-c8b0-356ac0c2203c)
+=== Build ===
+rm -rf main main.o
+nvcc  -std=c++17 -DMAX_GPU_COUNT=4 -Wno-deprecated-gpu-targets -Xcompiler -Wall -arch=sm_70 -O3 -c main.cu -o main.o
+nvcc  -std=c++17 -DMAX_GPU_COUNT=4 -Wno-deprecated-gpu-targets -Xcompiler -Wall -arch=sm_70 -O3 main.o -o main 
+=== Run ===
+Starting simpleMultiDevice
+GPU device count: 2
+Generating input data of size 33554432 ...
+
+Computing with 2 GPUs...
+  Average GPU Processing time: 11166.113281 (us)
+
+Computing with Host CPU...
+
+Comparing GPU and Host CPU results...
+  GPU sum: 16777387.500000
+  CPU sum: 16777380.811828
+  Relative difference: 3.986422E-07 
+
+Status: PASS
+CORRECTNESS,num_gpus=2,gpu_sum=16777387.500000000,cpu_sum=16777380.811827715,relative_diff=3.986422171e-07,tolerance=1.0e-05,status=PASS

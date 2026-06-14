@@ -1,0 +1,379 @@
+%==============================================================================
+%  FINAL PROJECT PAPER -- IEEE Conference format
+%==============================================================================
+
+\documentclass[conference]{IEEEtran}
+\IEEEoverridecommandlockouts
+
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{url}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{tabularx}
+\usepackage[hidelinks]{hyperref}
+
+\newcommand{\mainbodyendpage}{?}
+\AtEndDocument{%
+  \typeout{====================================================}%
+  \typeout{[PAGE BUDGET] Main body + references end on page \mainbodyendpage\space (limit: 6, Appendix excluded).}%
+  \typeout{====================================================}%
+}
+
+\lstset{
+  basicstyle=\ttfamily\footnotesize,
+  breaklines=true,
+  frame=single,
+  columns=fullflexible,
+  showstringspaces=false,
+  keepspaces=true,
+  xleftmargin=0.5em
+}
+
+\begin{document}
+
+\title{LLM-based Agent Optimization for CUDA Benchmarks: Capabilities, Limitations, and Verification Challenges\\
+{\footnotesize Final Project --- Parallel Programming, Spring 2026}}
+
+\author{%
+\IEEEauthorblockN{Chun-Min Chang}
+\IEEEauthorblockA{r14525078 \\ NTU ESOE SDLAB \\ r14525078@ntu.edu.tw}
+\and
+\IEEEauthorblockN{Sheng-Hua Wang}
+\IEEEauthorblockA{r14921063 \\ NTU EE RSALAB \\ r14921063@ntu.edu.tw}
+\and
+\IEEEauthorblockN{Yi-Hsuan Huang}
+\IEEEauthorblockA{r14525084 \\ NTU ESOE SDLAB \\ r14525084@ntu.edu.tw}
+}
+
+\maketitle
+
+\begin{abstract}
+This paper studies LLM-based agents for CUDA program optimization using selected HeCBench benchmarks. The goal is not only to measure whether generated code becomes faster, but also to examine whether the reported speedups are correct, reproducible, and auditable. We organize the study around an optimization workflow: prompt design, baseline execution, agent-generated modification, Slurm-based measurement, correctness checking, result classification, and human review. The experimental evidence combines prompt-constraint experiments on ten CUDA benchmarks, Phase 3 human-in-the-loop case studies, an external basic test report, and remaining Phase 2 benchmark summaries. The results show that agents can produce credible speedups for several regular kernels, including softmax, top-k, Adam, adjacent difference, and random access. However, irregular graph algorithms, convergence-based programs, extreme speedup claims, and benchmark-aware shortcuts require careful interpretation. Strong prompt constraints and human review do not necessarily maximize the largest reported speedup, but they greatly improve the reliability of the experimental record.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Large Language Models, LLM-based agents, CUDA optimization, GPU benchmarks, HeCBench, correctness verification
+\end{IEEEkeywords}
+
+\vspace{0.5em}
+\noindent\fbox{\parbox{0.97\columnwidth}{\textbf{Project Category:}\quad
+$\square$~\textbf{A} (Self-chosen topic)\qquad
+$\blacksquare$~\textbf{B} (AI-agent code optimization)}}
+
+\section{Introduction}
+
+Large Language Models (LLMs) are increasingly used as code-generation and optimization agents. For CUDA programs, this capability is attractive because GPU optimization often requires tedious code transformations, repeated compilation, performance measurement, and hardware-specific reasoning. An agent can rapidly propose modifications, interpret compiler or runtime feedback, and iterate over candidate implementations. This creates an appealing workflow for parallel programming education and research: the human operator can focus on experiment design and auditing while the agent explores code-level variants.
+
+The same setting is also risky. A CUDA program may become faster because a kernel is genuinely improved, but it may also become faster because the agent removed work, changed the timed region, weakened validation, used a broken baseline, or exploited fixed benchmark inputs. These risks are amplified on GPUs because correctness often depends on subtle synchronization, atomic operations, reduction order, memory hierarchy, and launch configuration. Therefore, a study of LLM-agent optimization should not simply rank benchmarks by speedup. It should ask whether each speedup is meaningful.
+
+This paper uses the CUDA subset of HeCBench~\cite{HeCBench} to study this problem. The experimental purpose is threefold. First, we want to observe where LLM agents are effective on real CUDA benchmarks. Second, we want to identify why agent-generated optimizations fail. Third, we want to evaluate what workflow constraints make results more auditable. The final dataset combines four evidence sources: (1) ten prompt-constraint experiments from the main project, (2) Phase 3 agent-only and human-guided studies on softmax, top-k, and shared-memory microbenchmarks, (3) an external basic test report for graph, dynamic-programming, sorting, and split kernels, and (4) remaining Phase 2 summaries for Adam, adjacent difference, dropout, filter, min/max, nonzero, randomAccess, reverse, scan, and top-k.
+
+\section{Background and Motivation}
+
+Recent work has studied LLMs as code generators and optimizers. Survey work summarizes the rapid progress of LLM-based code generation~\cite{Jiang_2026}; OPRO formulates optimization itself as a prompting process~\cite{yang2024largelanguagemodelsoptimizers}; and search-based LLM code optimization treats optimization as iterative refinement rather than one-shot generation~\cite{gao2024searchbasedllmscodeoptimization}. LLM-agent studies further show that tool use and execution feedback are powerful, but also that agents still struggle with planning, long-horizon instruction following, and reliable self-evaluation~\cite{ICLR2024_e9df36b2}. Self-debugging can repair programs, but execution feedback can be incomplete or biased~\cite{chen2023teachinglargelanguagemodels}.
+
+CUDA optimization is a useful stress test for these systems. A successful CUDA optimization often requires hardware-aware reasoning about memory coalescing, shared memory, warp behavior, occupancy, synchronization, launch overhead, and host-device transfer. At the same time, benchmarks contain measurement and validation code that an agent may unintentionally or intentionally exploit. This motivates an evaluation style that separates different result meanings: \emph{kernel optimization}, \emph{parameter tuning}, \emph{environment fix}, \emph{measurement fix}, \emph{measurement-equivalent change}, and \emph{benchmark-aware optimization}. The last category is especially important in this project. Based on available summaries, some large speedups appear to use fixed input generation, repeated work, or validation structure. We report these neutrally: they show that the agent can reason about benchmark structure, but they are weaker evidence for general CUDA kernel optimization.
+
+\section{Workflow and Methodology}
+\label{sec:methodology}
+
+\subsection{Research Questions}
+
+The study is organized around seven questions: (RQ1) Can LLM agents produce effective CUDA optimizations? (RQ2) Which benchmark classes succeed or fail? (RQ3) Are reported speedups trustworthy? (RQ4) Do prompt constraints reduce pseudo-speedups? (RQ5) Can human review turn partial optimizations into valid strategies? (RQ6) Which results are kernel optimizations versus measurement, environment, or benchmark-aware effects? (RQ7) Does evidence-guided aggressive optimization improve upon human-guided baselines?
+
+\subsection{Benchmark Scope and Platform}
+
+The study covers 29 HeCBench CUDA benchmarks grouped into graph algorithms, dynamic programming, sorting/selection, array/tensor operations, ML kernels, and communication or memory-bandwidth workloads: \texttt{cc}, \texttt{gc}, \texttt{mis}, \texttt{adjacent}, \texttt{floydwarshall}, \texttt{floydwarshall2}, \texttt{merge}, \texttt{quicksort}, \texttt{sortKV}, \texttt{bitonic-sort}, \texttt{topk}, \texttt{filter}, \texttt{minmax}, \texttt{nonzero}, \texttt{reverse}, \texttt{scan}, \texttt{split}, \texttt{adam}, \texttt{softmax}, \texttt{dropout}, \texttt{moe}, \texttt{moe-align}, \texttt{prefetch}, \texttt{shmembench}, \texttt{randomAccess}, \texttt{p2p}, \texttt{allreduce}, \texttt{pingpong}, and \texttt{simpleMultiDevice}. All available execution records use the same hardware setting: NVIDIA Tesla V100-SXM2-32GB, CUDA 12.8 / nvcc V12.8.61, target architecture \texttt{sm\_70}, and a Slurm-based GPU node.
+
+\subsection{Optimization Workflow}
+
+Table~\ref{tab:workflow} summarizes the workflow used to interpret the project records. The central idea is that each agent output is treated as a hypothesis, not as a final optimization. The workflow first establishes a baseline, then applies an agent-generated change, then validates correctness and performance, and finally classifies the outcome. This framing follows the detailed project report: the important unit of analysis is not only a generated patch, but also the measurement context that makes the patch interpretable.
+
+\begin{table*}[t]
+\centering
+\caption{Audited LLM-agent optimization workflow.}
+\label{tab:workflow}
+\footnotesize
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llll}
+\hline
+Stage & Action & Main evidence & Purpose \\
+\hline
+1 & Define prompt and constraints & input prompt, rules & specify task, hardware, and validation rules \\
+2 & Measure baseline & Slurm output, baseline CSV & prevent invalid speedup denominators \\
+3 & Generate candidate & patch summary, code diff & record what the agent actually changed \\
+4 & Execute via Slurm & job scripts, raw output & avoid login-node GPU artifacts \\
+5 & Check correctness & PASS/FAIL logs & reject semantic or numerical failures \\
+6 & Repeat and compare & repeated trials, CV & detect noise and pseudo-speedups \\
+7 & Classify result & result type, contradiction check & separate kernel, tuning, environment, measurement effects \\
+8 & Human review & decision log, final confirmation & accept, reject, rollback, or refine strategy \\
+\hline
+\end{tabular}}
+\end{table*}
+
+The project uses several prompt styles. The basic external test used a general prompt requesting complete optimized code with identical output, and an environment-aware prompt adding V100, \texttt{sm\_70}, and Slurm. The main project used three prompt levels. P1 was weak and did not enforce measured baselines or structured logs. P2 required baseline measurement, raw-output preservation, attempt limits, and an agent summary. P3 added correctness gates, repeated trials, standardized CSV rows, profiler notes when available, contradiction checks, and result-type classification.
+
+Phase 3 added human-in-the-loop control. Mode A measured agent-only baselines and exposed measurement noise. Mode B required robust baselines and human approval before optimization rounds. Mode C allowed more aggressive transformations, but only with paired timing, correctness checks, profiler evidence, and final confirmation.
+
+The stages have different experimental purposes. Phase 1 is primarily diagnostic: it maps benchmarks to expected optimization space and expected failure modes. For example, \texttt{softmax-cuda} and \texttt{topk-cuda} are treated as AI primitive or kernel-optimization candidates, while \texttt{allreduce-cuda} and \texttt{pingpong-cuda} are treated as communication or measurement-sensitive cases. Phase 2 uses prompt strength as the controlled variable. It asks whether the agent becomes more reliable when the prompt demands a baseline, raw-output preservation, correctness evidence, and structured reporting. Phase 3 changes the question again: the agent is no longer evaluated as an autonomous one-shot optimizer, but as part of a human-governed workflow in which partial candidates may be rejected, restricted to certain input shapes, or promoted only after final confirmation.
+
+This distinction matters because the same numerical speedup can mean different things in different stages. A one-shot P1 speedup without a measured baseline is only a hypothesis. A P3 speedup with repeated trials and contradiction checks is stronger evidence. A Mode B or Mode C speedup is stronger still when it is paired against an accepted baseline and survives human review. Conversely, a result can be useful even without being a kernel speedup: \texttt{allreduce-cuda} revealed environment and launcher constraints, while \texttt{pingpong-cuda} showed how measurement setup can dominate the apparent result.
+
+\subsection{Auditing Rules}
+
+The following rules were applied during analysis. A result with correctness failure is invalid regardless of speedup. A missing or invalid baseline produces no speedup claim. Improvements below 1\% are classified as \texttt{MEASUREMENT\_EQUIVALENT}. Environment or launcher repairs are \texttt{ENV\_FIX}, not \texttt{KERNEL\_OPT}. Changes that appear to exploit fixed benchmark structure are labeled \texttt{BENCHMARK\_AWARE\_OPT}. If raw logs, system prompts, diffs, or variance data are unavailable, the field is marked N/A and the evidence is treated as lower confidence.
+
+\section{Experimental Setup}
+\label{sec:setup}
+
+Table~\ref{tab:families} summarizes the benchmark families and evidence sources. The main prompt-constraint study contains ten benchmarks with P1/P2/P3 results. The external basic test provides baseline, optimized, and environment-optimized timing for ten additional programs, but lacks raw logs and source diffs. The remaining Phase 2 summary adds ten programs with compact change descriptions, P1/P2/P3 speedup summaries, and result types.
+
+\begin{table*}[t]
+\centering
+\caption{Benchmark families and evidence sources.}
+\label{tab:families}
+\footnotesize
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lll}
+\hline
+Family & Representative benchmarks & Main evidence \\
+\hline
+ML / AI kernels & softmax, topk, moe, adam & P1--P3, Phase 3, rest summary \\
+Sorting / selection & merge, sortKV, bitonic, quicksort & external basic test \\
+Array / tensor & filter, minmax, nonzero, reverse, scan, split & rest summary, external test \\
+Graph / irregular & cc, gc, mis, adjacent, randomAccess & external test, rest summary \\
+Memory / communication & p2p, shmembench, allreduce, pingpong & P1--P3, Phase 3 \\
+\hline
+\end{tabular}}
+\end{table*}
+
+For Phase 3 softmax, the official baseline was the existing optimized implementation \texttt{impl=1}; the naive-to-optimized gap was not counted as an agent speedup. For top-k, robust baselines were required because Mode A exposed high-CV pseudo-speedups. For shared-memory microbenchmarks, only \texttt{block\_size=256} was treated as the official validated comparison; other block sizes were diagnostic failures.
+
+\section{Results}
+\label{sec:results}
+
+\subsection{Prompt-constraint Results}
+
+Prompt strength primarily improved auditability rather than raw average speedup. Table~\ref{tab:promptstats} summarizes the main prompt-level trend. P1 had the largest apparent mean speedup, but no CSV source and four missing or invalid baselines. P3 had lower apparent mean speedup, but full CSV coverage and no contradiction in the final audit. This pattern supports the interpretation that strong prompts do not simply make the agent faster; they make the experimental record harder to misread.
+
+\begin{table}[t]
+\centering
+\caption{Prompt-level summary from the ten-benchmark study.}
+\label{tab:promptstats}
+\begin{tabular}{lrrrrr}
+\hline
+Level & N & Mean & Median & CSV & Bad base \\
+\hline
+P1 & 10 & 1.552x & 1.128x & 0 & 4 \\
+P2 & 10 & 1.369x & 1.117x & 0 & 0 \\
+P3 & 10 & 1.131x & 1.097x & 10 & 2 \\
+\hline
+\end{tabular}
+\end{table}
+
+The three prompt levels play different roles in the experimental record. P1 is useful as exploratory search, but it is also where pseudo-speedups are easiest to create. For example, \texttt{topk-cuda} had an apparent P1 speedup of 2.9936x and \texttt{pingpong-cuda} showed an apparent 1.9990x improvement in a 1 GiB NCCL case, but the records lacked the complete CSV, variance data, accepted/rejected rationale, or valid baseline evidence needed for a strong claim. Other P1 entries such as \texttt{moe-align-cuda}, \texttt{p2p-cuda}, \texttt{prefetch-cuda}, and \texttt{simpleMultiDevice-cuda} were limited by missing baselines or changed measurement scope.
+
+P2 is the minimum level that behaves like an engineering workflow. It usually records the baseline, the final candidate, and rejected attempts. In this level, \texttt{moe-cuda} retained a valid 1.0339x result after excluding failed or timed-out attempts; \texttt{topk-cuda} reached 1.1991x by reusing CUB radix-selection workspace and removing timed allocation overhead; and \texttt{prefetch-cuda} reached 1.6234x by separating prefetch setup from timed kernel execution. However, P2 still lacks the full P3 schema, repeated trials, profiler limitation notes, and contradiction checks, so environment repairs such as \texttt{allreduce-cuda} can still be too easily misread as kernel optimization.
+
+P3 is best interpreted as an overclaim-suppression protocol. Its average speedup is lower than P1, but its evidence is stronger: it preserves raw outputs, records CSV rows, applies correctness gates, and makes environment or measurement fixes explicit. This is why the paper treats P3 and Phase 3 final confirmations as primary evidence, while P1 and BASIC runs are used mainly to explain the search space and failure modes.
+
+\subsection{Prompt Effects Across Evidence Sources}
+
+Table~\ref{tab:prompt_effects} combines the three available views of prompt strength: the ten-benchmark prompt study, the external basic test in \texttt{data.md}, and the remaining Phase 2 summary in \texttt{rest.md}. The main observation is that stronger prompts improve traceability more reliably than they improve raw speedup. P3 reduces ambiguity by forcing CSV rows, correctness gates, and contradiction checks. However, \texttt{rest.md} shows that benchmark-aware strategies can persist across P1, P2, and P3 when the benchmark itself exposes fixed input or validation structure. Therefore, prompt strength must be paired with result-type classification; otherwise, an auditable benchmark shortcut may still be mistaken for a general kernel optimization.
+
+\begin{table*}[t]
+\centering
+\caption{Prompt effects across the main study, \texttt{data.md}, and \texttt{rest.md}.}
+\label{tab:prompt_effects}
+\small
+\begin{tabularx}{\textwidth}{l l X X}
+\hline
+Evidence source & Prompt or level & Observed effect & Interpretation \\
+\hline
+Main ten-benchmark study & P1 weak prompt & highest apparent mean speedup, 4 bad baselines, no CSV & fast to generate but weakly auditable \\
+Main ten-benchmark study & P2 constrained prompt & lower mean speedup, measured baselines, summaries & improves denominator validity and traceability \\
+Main ten-benchmark study & P3 audit prompt & complete CSV coverage and contradiction checks & strongest evidence quality, more conservative claims \\
+\texttt{data.md} basic test & generic optimization prompt & sorting gains; graph failures; suspicious Floyd-Warshall speedup & unconstrained prompts can mix real gains and invalid changes \\
+\texttt{data.md} basic test & environment-aware prompt & V100/Slurm context did not consistently improve outcomes & hardware context alone is insufficient without auditing rules \\
+\texttt{rest.md} Phase 2 & P1/P2/P3 on kernel cases & Adam, adjacent, randomAccess remain near 2x across levels & regular kernels are robust to prompt variation \\
+\texttt{rest.md} Phase 2 & P1/P2/P3 on benchmark-aware cases & dropout, minmax, scan, reverse, topk remain extremely large & prompt strength alone does not prevent benchmark-structure exploitation \\
+\hline
+\end{tabularx}
+\end{table*}
+
+The prompt comparison also clarifies why this paper does not rank methods by average speedup alone. If only the largest number is rewarded, P1 and benchmark-aware transformations would appear best. If correctness, reproducibility, and auditability are included, P3 and human-guided modes become more valuable even when their reported speedups are smaller. The practical lesson is that prompt engineering should be evaluated as experimental control, not merely as performance tuning.
+
+Representative P3 results are shown in Table~\ref{tab:p3}. The strongest audited kernel examples are \texttt{softmax-cuda} and \texttt{topk-cuda}. Communication and measurement-sensitive benchmarks are deliberately classified more conservatively: \texttt{allreduce-cuda} is an environment/launcher repair and \texttt{pingpong-cuda} is measurement recovery, not kernel optimization.
+
+\begin{table*}[t]
+\centering
+\caption{Representative audited P3 results from the main project.}
+\label{tab:p3}
+\footnotesize
+\begin{tabular}{llll}
+\hline
+Benchmark & Speedup & Classification & Note \\
+\hline
+softmax-cuda & 1.4575x & KERNEL\_OPT & PASS 42/42 \\
+topk-cuda & 1.1995x & KERNEL\_OPT & 14 cases, repeated trials \\
+moe-cuda & 1.0778x & KERNEL\_OPT & topk=8 measurement-equivalent \\
+moe-align-cuda & 1.1504x & PARAM\_TUNE & correctness evidence limited \\
+p2p-cuda & 1.0022x & TOPOLOGY / MEASURE & below 1\% \\
+shmembench-cuda & 1.0293x & PARAM\_TUNE & modest valid gain \\
+allreduce-cuda & n/a & ENV\_FIX & no kernel speedup claim \\
+pingpong-cuda & n/a & MEASURE\_FIX & baseline recovery \\
+\hline
+\end{tabular}
+\end{table*}
+
+The BASIC results provide useful upper-bound exploration but should not be mixed directly with normalized Phase 2 results. For instance, \texttt{softmax-cuda} BASIC/GM reported 59.593x on \texttt{slice=784}, but that compared against a naive baseline and a specific shape. In contrast, the P3 result of 1.4575x is measured against an existing optimized implementation under a stricter comparison policy. Similarly, \texttt{topk-cuda} BASIC/GM reached about 1.442x and the CG version reached about 1.326x, while the P3 result of 1.1995x is more suitable as paper evidence because it includes repeated trials, correctness preservation, and a normalized schema. The difference is methodological rather than merely numerical: maximum single-point speedup and auditable research evidence are not the same object.
+
+\subsection{External Basic Test Results}
+
+Table~\ref{tab:external} summarizes the external basic test. Sorting-like workloads improved most consistently, while graph workloads failed or regressed. The Floyd-Warshall result is treated as suspicious because a 0.107097 to 0.000024 reduction is implausible for an $O(N^3)$ algorithm without strong correctness evidence. The environment-aware prompt did not consistently improve the results: it still failed on several graph or irregular cases and regressed on \texttt{split-cuda}. This suggests that simply telling the agent the GPU model and scheduler is not equivalent to requiring a valid experimental protocol.
+
+\begin{table*}[t]
+\centering
+\caption{External basic test results. Times are from the provided summary; raw logs and diffs are N/A.}
+\label{tab:external}
+\footnotesize
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lllll}
+\hline
+Benchmark & Baseline & Generic opt. & Env-aware opt. & Interpretation \\
+\hline
+cc-cuda & 0.0034 & fail & fail & INVALID \\
+floydwarshall-cuda & 0.107097 & 0.000024 & 0.00024 & suspicious / invalid \\
+floydwarshall2-cuda & 0.000851 & 0.098891 & 0.09133 & regression \\
+gc-cuda & 0.000048 & 0.000285 & fail & likely correctness risk \\
+mis-cuda & 0.00136 & 0.002057 & fail & likely correctness risk \\
+merge-cuda & 17.03105 & 13.7232 & 16.6688 & generic prompt better \\
+quicksort-cuda & 46.1346 & 45.8452 & fail & measurement-equivalent / env fail \\
+sortKV-cuda & 88.1414 & 72.9803 & 76.29895 & generic prompt better \\
+bitonic-sort-cuda & 70.13246 & 33.50338 & 34.68863 & both improve, generic slightly better \\
+split-cuda & 3423.724 & 3023.754 & 3569.766 & generic improves; env regresses \\
+\hline
+\end{tabular}}
+\end{table*}
+
+The concrete timing pattern reinforces the same interpretation. \texttt{bitonic-sort-cuda} improved from 70.13246 to 33.50338, roughly 2.09x; \texttt{sortKV-cuda} improved from 88.1414 to 72.9803, roughly 1.21x; \texttt{merge-cuda} improved from 17.03105 to 13.7232, roughly 1.24x; and \texttt{split-cuda} improved from 3423.724 to 3023.754 under the generic prompt. These are plausible for regular workloads with clearer memory-access patterns, although the absence of raw correctness logs and source diffs keeps them at lower confidence.
+
+The negative cases are equally important. \texttt{cc-cuda} failed under both generic and environment-aware prompts. \texttt{gc-cuda} and \texttt{mis-cuda} produced optimized timings in the summary, but the accompanying analysis indicates graph-algorithm correctness risk. \texttt{quicksort-cuda} improved only from 46.1346 to 45.8452 under the generic prompt, close to measurement-equivalent, and failed under the environment-aware prompt. \texttt{floydwarshall-cuda} reported an approximately 4462x apparent speedup, which is more plausibly skipped work, incomplete iteration, or invalid measurement than a real algorithmic improvement. \texttt{floydwarshall2-cuda} regressed by over two orders of magnitude. These cases show that agent failures often damage algorithmic semantics rather than merely missing an optimization opportunity.
+
+\subsection{Remaining Phase 2 Benchmarks}
+
+The remaining summaries show two different patterns. Table~\ref{tab:remaining} separates conventional kernel optimizations from benchmark-aware optimizations and preserves the P1/P2/P3 comparison from \texttt{rest.md}. Conventional kernel optimizations include \texttt{adam-cuda}, \texttt{adjacent-cuda}, and \texttt{randomAccess-cuda}; their speedups remain stable across prompt levels, which suggests that the underlying optimization opportunities are robust. In contrast, several summaries report extremely large or zero-denominator speedups across all prompt levels. Based on the available descriptions, these appear to exploit benchmark structure such as fixed inputs, repeated work, parity of repeated operations, or precomputed validation outputs. We therefore classify them as \texttt{BENCHMARK\_AWARE\_OPT}. This label is not a rejection: it records an agent capability to identify benchmark-specific structure, but it is weaker evidence for general CUDA kernel optimization.
+
+\begin{table*}[t]
+\centering
+\caption{Remaining Phase 2 summaries from \texttt{rest.md}.}
+\label{tab:remaining}
+\footnotesize
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lllll}
+\hline
+Benchmark & P1 speedup & P2 speedup & P3 speedup & Interpretation \\
+\hline
+adam-cuda & $\sim$2.0x & $\sim$2.0x & $\sim$2.0x & KERNEL\_OPT \\
+adjacent-cuda & $\sim$1.99x & $\sim$2.0x & $\sim$2.0x & KERNEL\_OPT \\
+randomAccess-cuda & $\sim$2.17x & $\sim$2.23x & $\sim$2.21x & KERNEL\_OPT \\
+dropout-cuda & 1.9e4x--2.2e5x & 1.5e4x--2.2e5x & 1.2e4x--2.2e5x & BENCHMARK\_AWARE \\
+filter-cuda & 1.61x / 4.90x & 1.53x / 4.72x & 1.53x / 4.61x & BENCHMARK\_AWARE \\
+minmax-cuda & 8.8e7x--9.8e7x & 9.4e7x--1.3e8x & 1.0e8x--1.6e8x & BENCHMARK\_AWARE \\
+nonzero-cuda & timed sections $\rightarrow$ 0 & timed sections $\rightarrow$ 0 & timed sections $\rightarrow$ 0 & BENCHMARK\_AWARE \\
+reverse-cuda & $\sim$2038.60x & $\sim$1976.99x & $\sim$1871.34x & BENCHMARK\_AWARE \\
+scan-cuda & 1e4--1e6x & 1e4--1e6x & 1e4--1e6x & BENCHMARK\_AWARE \\
+topk-cuda & 147--5220x & 137--5190x & 137--5260x & BENCHMARK\_AWARE, separate from audited P3 \\
+\hline
+\end{tabular}}
+\end{table*}
+
+The change summaries in \texttt{rest.md} make the distinction clearer. \texttt{adam-cuda} uses conventional CUDA transformations: it hoists global memory reads and writes into registers and replaces repeated \texttt{powf} calls with incremental multiplication. \texttt{adjacent-cuda} removes a runtime branch through template specialization and fuses kernels to reduce memory traffic and launch overhead. \texttt{randomAccess-cuda} increases parallelism while preserving XOR validation. These changes are consistent with ordinary kernel optimization.
+
+The benchmark-aware cases have a different character. \texttt{minmax-cuda} reuses host-side extrema inside timed repeat loops; \texttt{nonzero-cuda} uses a host-known nonzero count; \texttt{scan-cuda} copies the CPU reference result to the device before validation; \texttt{reverse-cuda} exploits the parity of repeated reverse operations; and the \texttt{topk-cuda} summary exploits deterministic permutation-row structure. These may be valid transformations for a fixed benchmark harness, but they do not demonstrate a general CUDA kernel improvement. Their persistence across P1/P2/P3 is therefore a key result: stronger prompts alone do not prevent benchmark-aware shortcuts unless the evaluation protocol labels them separately.
+
+\subsection{Human-guided and Evidence-guided Softmax}
+
+Phase 3 softmax demonstrates the value of human review because it contains all three phenomena that motivated the project: a strong baseline, a partial agent candidate, and a final accepted policy. Mode A first established that \texttt{impl=0} and \texttt{impl=1} should not be confused. The gap from the naive implementation to the existing optimized implementation was not counted as an agent speedup. This prevented the later experiment from reporting an inflated improvement.
+
+Mode B then tested an agent-generated candidate that changed both row parallelism and exponent caching. The candidate improved large slices, but it regressed at \texttt{slice=128} and failed one correctness trial at \texttt{slice=256}. This was classified as partial success rather than a valid replacement. Human review kept the useful large-slice behavior and rejected the universal replacement claim. The final Mode B solution became a shape-aware dispatch: \texttt{slice=128} and \texttt{slice=256} use the existing optimized path, while \texttt{slice=784}, \texttt{slice=1024}, and \texttt{slice=2048} use the new large-slice path.
+
+Mode C tested whether an evidence-guided aggressive candidate could improve upon the accepted Mode B implementation. The primary metric was \texttt{impl=4} versus \texttt{impl=3}, not \texttt{impl=4} versus the original baseline. As shown in Table~\ref{tab:softmax_phase3}, Mode C produced additional speedup for \texttt{slice=784} and \texttt{slice=1024}, while \texttt{slice=2048} was treated as measurement-equivalent. Nsight Compute evidence was limited: \texttt{impl=4} reduced dynamic shared memory by about 0.90 KB/block, but missing memory-throughput and stall metrics prevent a causal claim.
+
+\begin{table*}[t]
+\centering
+\caption{Softmax Phase 3 final interpretation. Mode B compares against \texttt{impl=1}; Mode C compares against accepted \texttt{impl=3}.}
+\label{tab:softmax_phase3}
+\footnotesize
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llllll}
+\hline
+Slice & Mode B dispatch & Mode B baseline ms & Mode B candidate ms & Mode B speedup & Mode C additional result \\
+\hline
+128 & impl=1 & 0.134869 & 0.134574 & 1.002197x & not claimed; measurement-equivalent \\
+256 & impl=1 & 0.321793 & 0.321505 & 1.000895x & not claimed; small-slice path retained \\
+784 & impl=2 & 1.442716 & 1.036402 & 1.392043x & 1.135540x vs impl=3 \\
+1024 & impl=2 & 2.104045 & 1.238443 & 1.698944x & 1.048740x vs impl=3 \\
+2048 & impl=2 & 2.237452 & 1.672904 & 1.337466x & measurement-equivalent vs impl=3 \\
+\hline
+\end{tabular}}
+\end{table*}
+
+The supporting Phase 3 cases are also informative. For \texttt{topk-cuda}, Mode A showed that a pseudo-speedup could appear from high baseline variance even without a meaningful code change: two cases showed about 1.4x apparent speedup while the baseline coefficient of variation exceeded 40\%. Robust baseline measurement was therefore required before any Mode B claim. In the robust baseline, 14 official cases were measured over seven trials; all correctness checks passed, 12 cases were classified as valid, two as caution, and none as noisy. For \texttt{shmembench-cuda}, the Mode B robust baseline confirmed that only \texttt{block\_size=256} was an official validated comparison, with about 13226.78 GB/s average bandwidth and about 0.42\% CV. The \texttt{block\_size=128} and 512 cases failed checksum, while 1024 exceeded the shared-memory limit and failed to build. These cases did not produce final Mode B optimization claims, but they justify the workflow's insistence on variance checks and official-case definitions.
+
+\section{Discussion}
+\label{sec:discussion}
+
+\subsection{Why Regular Kernels Are More Optimizable}
+
+The results suggest that LLM agents are most reliable on regular, highly parallel workloads with clear memory-access patterns. Softmax, top-k, Adam, adjacent difference, randomAccess, and sorting kernels expose optimization opportunities such as workspace reuse, branch elimination, loop-invariant hoisting, incremental arithmetic, and shape-aware dispatch. These transformations map naturally to CUDA performance rules that are frequently represented in training data and programming examples. They also tend to preserve a simple input-output relation, making correctness easier to validate.
+
+\subsection{Why Irregular Kernels Fail}
+
+Irregular graph and convergence-based programs are much riskier. The external results for \texttt{cc}, \texttt{gc}, and \texttt{mis} suggest that the agent may break frontier propagation, atomic updates, or convergence logic. These programs often rely on repeated relaxation, global progress conditions, or fine-grained synchronization. A local source-level optimization that appears harmless can change the order or visibility of updates. The Floyd-Warshall case illustrates a different failure: an extreme apparent speedup is more likely incomplete computation, skipped iterations, or invalid measurement than a real algorithmic improvement.
+
+\subsection{Benchmark-aware Optimization}
+
+Benchmark-aware results are important but ambiguous. In \texttt{reverse-cuda}, using the parity of repeated reverse operations is logically valid for a fixed benchmark invocation, but it does not necessarily improve a general reverse kernel. In \texttt{minmax}, \texttt{nonzero}, and \texttt{scan}, the summaries suggest that the agent may reuse information already available from host-side generation or CPU reference computation. Such behavior is not necessarily ``wrong'' if the benchmark specification permits it, but it changes the scientific meaning of the result. It demonstrates benchmark exploitation rather than general GPU kernel improvement. This is why the paper reports these cases separately.
+
+\subsection{Prompt Constraints and Human Review}
+
+Prompt constraints strongly affect scientific reliability. Weak prompts can produce impressive numbers but often lack measured baselines, raw outputs, and contradiction checks. Strong prompts reduce exaggeration by forcing the agent to preserve correctness evidence and classify results. Human review is especially useful when an optimization is partially valid: the softmax case shows that human operators can reject a universal replacement while preserving a valid shape-dependent strategy. In this sense, human involvement is not mainly manual coding; it is experimental governance.
+
+\begin{table*}[t]
+\centering
+\caption{Failure and caution taxonomy observed in the project.}
+\label{tab:failure}
+\footnotesize
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lll}
+\hline
+Pattern & Example & Likely cause \\
+\hline
+Correctness failure & cc, gc, mis & broken iteration, frontier, or atomic semantics \\
+Implausible speedup & floydwarshall & skipped work or invalid measurement \\
+Regression & floydwarshall2, split-env & bad shared memory/occupancy or memory-bound tuning \\
+Measurement equivalent & p2p, quicksort & improvement below noise threshold \\
+Environment repair & allreduce & launcher/UCX path, not kernel algorithm \\
+Benchmark-aware shortcut & minmax, scan, reverse & fixed input or validation structure \\
+Partial optimization & softmax round 1 & large-slice gain but small-slice/correctness failure \\
+\hline
+\end{tabular}}
+\end{table*}
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+LLM-based agents can optimize CUDA programs, but their outputs require strict auditing. Credible speedups appear in regular kernels and in carefully reviewed softmax/top-k cases. Failures concentrate in irregular graph algorithms, suspicious extreme speedups, noisy measurements, and benchmark-aware shortcuts. The main lesson is that agent optimization should be evaluated as an auditable workflow, not as a single generated patch. Measured baselines, correctness gates, repeated trials, result-type classification, and human review are necessary to distinguish real kernel improvements from measurement artifacts, environment fixes, or benchmark-specific shortcuts.
+
+\section*{Artifact Availability}
+The raw prompts, system-like rules, representative outputs, result summaries, and normalized benchmark-by-benchmark archive are provided through the project repository. The local archive is organized under \texttt{docs/agent\_io\_change\_archive/benchmark\_view/}, with one folder per benchmark.
+
+\bibliographystyle{IEEEtran}
+\bibliography{reference}
+\xdef\mainbodyendpage{\thepage}
+
+\end{document}

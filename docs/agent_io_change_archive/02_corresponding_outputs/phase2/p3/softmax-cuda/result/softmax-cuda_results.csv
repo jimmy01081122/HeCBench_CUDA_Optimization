@@ -1,0 +1,100 @@
+benchmark,job_id,node,prompt_level,submission_index,variant,case,metric_name,metric_value,metric_unit,correctness,status,result_type,accepted,reject_reason,notes
+softmax-cuda,948563,gn1222,P3,0,baseline,numSlice=100000;slice=64;impl=0;repeat=100;trial=1,avg_ms,1.562978,ms,PASS,accepted baseline,KERNEL_OPT,true,,baseline does not count as submission
+softmax-cuda,948563,gn1222,P3,0,baseline,numSlice=100000;slice=64;impl=1;repeat=100;trial=1,avg_ms,0.073627,ms,PASS,accepted baseline,KERNEL_OPT,true,,baseline does not count as submission
+softmax-cuda,948563,gn1222,P3,0,baseline,numSlice=100000;slice=128;impl=0;repeat=100;trial=1,avg_ms,4.371422,ms,PASS,accepted baseline,KERNEL_OPT,true,,baseline does not count as submission
+softmax-cuda,948563,gn1222,P3,0,baseline,numSlice=100000;slice=128;impl=1;repeat=100;trial=1,avg_ms,0.136389,ms,PASS,accepted baseline,KERNEL_OPT,true,,baseline does not count as submission
+softmax-cuda,948563,gn1222,P3,0,baseline,numSlice=100000;slice=256;impl=0;repeat=100;trial=1,avg_ms,15.592968,ms,PASS,accepted baseline,KERNEL_OPT,true,,baseline does not count as submission
+softmax-cuda,948563,gn1222,P3,0,baseline,numSlice=100000;slice=256;impl=1;repeat=100;trial=1,avg_ms,0.305836,ms,PASS,accepted baseline,KERNEL_OPT,true,,baseline does not count as submission
+softmax-cuda,948563,gn1222,P3,0,baseline,numSlice=100000;slice=512;impl=0;repeat=100;trial=1,avg_ms,32.658607,ms,PASS,accepted baseline,KERNEL_OPT,true,,baseline does not count as submission
+softmax-cuda,948563,gn1222,P3,0,baseline,numSlice=100000;slice=512;impl=1;repeat=100;trial=1,avg_ms,0.841365,ms,PASS,accepted baseline,KERNEL_OPT,true,,baseline does not count as submission
+softmax-cuda,948563,gn1222,P3,0,baseline,numSlice=100000;slice=784;impl=0;repeat=100;trial=1,avg_ms,54.675507,ms,PASS,accepted baseline,KERNEL_OPT,true,,baseline does not count as submission
+softmax-cuda,948563,gn1222,P3,0,baseline,numSlice=100000;slice=784;impl=1;repeat=100;trial=1,avg_ms,1.450565,ms,PASS,accepted baseline,KERNEL_OPT,true,,baseline does not count as submission
+softmax-cuda,948563,gn1222,P3,0,baseline,numSlice=100000;slice=1024;impl=0;repeat=100;trial=1,avg_ms,64.667046,ms,PASS,accepted baseline,KERNEL_OPT,true,,baseline does not count as submission
+softmax-cuda,948563,gn1222,P3,0,baseline,numSlice=100000;slice=1024;impl=1;repeat=100;trial=1,avg_ms,2.109552,ms,PASS,accepted baseline,KERNEL_OPT,true,,baseline does not count as submission
+softmax-cuda,948563,gn1222,P3,0,baseline,numSlice=100000;slice=2048;impl=0;repeat=100;trial=1,avg_ms,137.948685,ms,PASS,accepted baseline,KERNEL_OPT,true,,baseline does not count as submission
+softmax-cuda,948563,gn1222,P3,0,baseline,numSlice=100000;slice=2048;impl=1;repeat=100;trial=1,avg_ms,4.417161,ms,PASS,accepted baseline,KERNEL_OPT,true,,baseline does not count as submission
+softmax-cuda,948565,gn1222,P3,1,one_exp_cache,numSlice=100000;slice=64;impl=0;repeat=100;trial=1,avg_ms,1.594828,ms,PASS,rejected,REGRESSION,false,regressed optimized timings despite PASS,regressed optimized timings despite PASS
+softmax-cuda,948565,gn1222,P3,1,one_exp_cache,numSlice=100000;slice=64;impl=1;repeat=100;trial=1,avg_ms,0.071499,ms,PASS,rejected,REGRESSION,false,regressed optimized timings despite PASS,regressed optimized timings despite PASS
+softmax-cuda,948565,gn1222,P3,1,one_exp_cache,numSlice=100000;slice=128;impl=0;repeat=100;trial=1,avg_ms,4.369504,ms,PASS,rejected,REGRESSION,false,regressed optimized timings despite PASS,regressed optimized timings despite PASS
+softmax-cuda,948565,gn1222,P3,1,one_exp_cache,numSlice=100000;slice=128;impl=1;repeat=100;trial=1,avg_ms,0.144680,ms,PASS,rejected,REGRESSION,false,regressed optimized timings despite PASS,regressed optimized timings despite PASS
+softmax-cuda,948565,gn1222,P3,1,one_exp_cache,numSlice=100000;slice=256;impl=0;repeat=100;trial=1,avg_ms,15.636101,ms,PASS,rejected,REGRESSION,false,regressed optimized timings despite PASS,regressed optimized timings despite PASS
+softmax-cuda,948565,gn1222,P3,1,one_exp_cache,numSlice=100000;slice=256;impl=1;repeat=100;trial=1,avg_ms,0.393017,ms,PASS,rejected,REGRESSION,false,regressed optimized timings despite PASS,regressed optimized timings despite PASS
+softmax-cuda,948565,gn1222,P3,1,one_exp_cache,numSlice=100000;slice=512;impl=0;repeat=100;trial=1,avg_ms,32.623501,ms,PASS,rejected,REGRESSION,false,regressed optimized timings despite PASS,regressed optimized timings despite PASS
+softmax-cuda,948565,gn1222,P3,1,one_exp_cache,numSlice=100000;slice=512;impl=1;repeat=100;trial=1,avg_ms,1.228667,ms,PASS,rejected,REGRESSION,false,regressed optimized timings despite PASS,regressed optimized timings despite PASS
+softmax-cuda,948565,gn1222,P3,1,one_exp_cache,numSlice=100000;slice=784;impl=0;repeat=100;trial=1,avg_ms,54.756805,ms,PASS,rejected,REGRESSION,false,regressed optimized timings despite PASS,regressed optimized timings despite PASS
+softmax-cuda,948565,gn1222,P3,1,one_exp_cache,numSlice=100000;slice=784;impl=1;repeat=100;trial=1,avg_ms,1.946689,ms,PASS,rejected,REGRESSION,false,regressed optimized timings despite PASS,regressed optimized timings despite PASS
+softmax-cuda,948565,gn1222,P3,1,one_exp_cache,numSlice=100000;slice=1024;impl=0;repeat=100;trial=1,avg_ms,64.636940,ms,PASS,rejected,REGRESSION,false,regressed optimized timings despite PASS,regressed optimized timings despite PASS
+softmax-cuda,948565,gn1222,P3,1,one_exp_cache,numSlice=100000;slice=1024;impl=1;repeat=100;trial=1,avg_ms,2.623116,ms,PASS,rejected,REGRESSION,false,regressed optimized timings despite PASS,regressed optimized timings despite PASS
+softmax-cuda,948565,gn1222,P3,1,one_exp_cache,numSlice=100000;slice=2048;impl=0;repeat=100;trial=1,avg_ms,138.201172,ms,PASS,rejected,REGRESSION,false,regressed optimized timings despite PASS,regressed optimized timings despite PASS
+softmax-cuda,948565,gn1222,P3,1,one_exp_cache,numSlice=100000;slice=2048;impl=1;repeat=100;trial=1,avg_ms,5.498326,ms,PASS,rejected,REGRESSION,false,regressed optimized timings despite PASS,regressed optimized timings despite PASS
+softmax-cuda,948568,gn1222,P3,3,block_per_slice_ge512,numSlice=100000;slice=64;impl=0;repeat=100;trial=1,avg_ms,1.588935,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948568,gn1222,P3,3,block_per_slice_ge512,numSlice=100000;slice=64;impl=1;repeat=100;trial=1,avg_ms,0.074020,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948568,gn1222,P3,3,block_per_slice_ge512,numSlice=100000;slice=128;impl=0;repeat=100;trial=1,avg_ms,4.365724,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948568,gn1222,P3,3,block_per_slice_ge512,numSlice=100000;slice=128;impl=1;repeat=100;trial=1,avg_ms,0.137036,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948568,gn1222,P3,3,block_per_slice_ge512,numSlice=100000;slice=256;impl=0;repeat=100;trial=1,avg_ms,15.613117,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948568,gn1222,P3,3,block_per_slice_ge512,numSlice=100000;slice=256;impl=1;repeat=100;trial=1,avg_ms,0.306421,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948568,gn1222,P3,3,block_per_slice_ge512,numSlice=100000;slice=512;impl=0;repeat=100;trial=1,avg_ms,32.700329,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948568,gn1222,P3,3,block_per_slice_ge512,numSlice=100000;slice=512;impl=1;repeat=100;trial=1,avg_ms,0.634504,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948568,gn1222,P3,3,block_per_slice_ge512,numSlice=100000;slice=784;impl=0;repeat=100;trial=1,avg_ms,54.691463,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948568,gn1222,P3,3,block_per_slice_ge512,numSlice=100000;slice=784;impl=1;repeat=100;trial=1,avg_ms,0.995674,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948568,gn1222,P3,3,block_per_slice_ge512,numSlice=100000;slice=1024;impl=0;repeat=100;trial=1,avg_ms,64.521667,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948568,gn1222,P3,3,block_per_slice_ge512,numSlice=100000;slice=1024;impl=1;repeat=100;trial=1,avg_ms,1.209852,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948568,gn1222,P3,3,block_per_slice_ge512,numSlice=100000;slice=2048;impl=0;repeat=100;trial=1,avg_ms,137.998917,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948568,gn1222,P3,3,block_per_slice_ge512,numSlice=100000;slice=2048;impl=1;repeat=100;trial=1,avg_ms,3.576712,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948571,gn1222,P3,4,block_per_slice_ge256,numSlice=100000;slice=64;impl=0;repeat=100;trial=1,avg_ms,1.591393,ms,PASS,rejected,PARAM_TUNE,false,slice 256 regression,slice 256 regression
+softmax-cuda,948571,gn1222,P3,4,block_per_slice_ge256,numSlice=100000;slice=64;impl=1;repeat=100;trial=1,avg_ms,0.073674,ms,PASS,rejected,PARAM_TUNE,false,slice 256 regression,slice 256 regression
+softmax-cuda,948571,gn1222,P3,4,block_per_slice_ge256,numSlice=100000;slice=128;impl=0;repeat=100;trial=1,avg_ms,4.364097,ms,PASS,rejected,PARAM_TUNE,false,slice 256 regression,slice 256 regression
+softmax-cuda,948571,gn1222,P3,4,block_per_slice_ge256,numSlice=100000;slice=128;impl=1;repeat=100;trial=1,avg_ms,0.136925,ms,PASS,rejected,PARAM_TUNE,false,slice 256 regression,slice 256 regression
+softmax-cuda,948571,gn1222,P3,4,block_per_slice_ge256,numSlice=100000;slice=256;impl=0;repeat=100;trial=1,avg_ms,15.624376,ms,PASS,rejected,PARAM_TUNE,false,slice 256 regression,slice 256 regression
+softmax-cuda,948571,gn1222,P3,4,block_per_slice_ge256,numSlice=100000;slice=256;impl=1;repeat=100;trial=1,avg_ms,0.503766,ms,PASS,rejected,PARAM_TUNE,false,slice 256 regression,slice 256 regression
+softmax-cuda,948571,gn1222,P3,4,block_per_slice_ge256,numSlice=100000;slice=512;impl=0;repeat=100;trial=1,avg_ms,32.779568,ms,PASS,rejected,PARAM_TUNE,false,slice 256 regression,slice 256 regression
+softmax-cuda,948571,gn1222,P3,4,block_per_slice_ge256,numSlice=100000;slice=512;impl=1;repeat=100;trial=1,avg_ms,0.634654,ms,PASS,rejected,PARAM_TUNE,false,slice 256 regression,slice 256 regression
+softmax-cuda,948571,gn1222,P3,4,block_per_slice_ge256,numSlice=100000;slice=784;impl=0;repeat=100;trial=1,avg_ms,54.733837,ms,PASS,rejected,PARAM_TUNE,false,slice 256 regression,slice 256 regression
+softmax-cuda,948571,gn1222,P3,4,block_per_slice_ge256,numSlice=100000;slice=784;impl=1;repeat=100;trial=1,avg_ms,0.994452,ms,PASS,rejected,PARAM_TUNE,false,slice 256 regression,slice 256 regression
+softmax-cuda,948571,gn1222,P3,4,block_per_slice_ge256,numSlice=100000;slice=1024;impl=0;repeat=100;trial=1,avg_ms,64.550858,ms,PASS,rejected,PARAM_TUNE,false,slice 256 regression,slice 256 regression
+softmax-cuda,948571,gn1222,P3,4,block_per_slice_ge256,numSlice=100000;slice=1024;impl=1;repeat=100;trial=1,avg_ms,1.256465,ms,PASS,rejected,PARAM_TUNE,false,slice 256 regression,slice 256 regression
+softmax-cuda,948571,gn1222,P3,4,block_per_slice_ge256,numSlice=100000;slice=2048;impl=0;repeat=100;trial=1,avg_ms,138.147934,ms,PASS,rejected,PARAM_TUNE,false,slice 256 regression,slice 256 regression
+softmax-cuda,948571,gn1222,P3,4,block_per_slice_ge256,numSlice=100000;slice=2048;impl=1;repeat=100;trial=1,avg_ms,3.570126,ms,PASS,rejected,PARAM_TUNE,false,slice 256 regression,slice 256 regression
+softmax-cuda,948573,gn1222,P3,5,block_per_slice_ge512_trials3,numSlice=100000;slice=64;impl=0;repeat=100;trial=1,avg_ms,1.576444,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948573,gn1222,P3,5,block_per_slice_ge512_trials3,numSlice=100000;slice=64;impl=1;repeat=100;trial=1,avg_ms,0.073481,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948573,gn1222,P3,5,block_per_slice_ge512_trials3,numSlice=100000;slice=128;impl=0;repeat=100;trial=1,avg_ms,4.389662,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948573,gn1222,P3,5,block_per_slice_ge512_trials3,numSlice=100000;slice=128;impl=1;repeat=100;trial=1,avg_ms,0.136864,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948573,gn1222,P3,5,block_per_slice_ge512_trials3,numSlice=100000;slice=256;impl=0;repeat=100;trial=1,avg_ms,15.616708,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948573,gn1222,P3,5,block_per_slice_ge512_trials3,numSlice=100000;slice=256;impl=1;repeat=100;trial=1,avg_ms,0.306587,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948573,gn1222,P3,5,block_per_slice_ge512_trials3,numSlice=100000;slice=512;impl=0;repeat=100;trial=1,avg_ms,32.788342,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948573,gn1222,P3,5,block_per_slice_ge512_trials3,numSlice=100000;slice=512;impl=1;repeat=100;trial=1,avg_ms,0.634553,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948573,gn1222,P3,5,block_per_slice_ge512_trials3,numSlice=100000;slice=784;impl=0;repeat=100;trial=1,avg_ms,54.790619,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948573,gn1222,P3,5,block_per_slice_ge512_trials3,numSlice=100000;slice=784;impl=1;repeat=100;trial=1,avg_ms,0.995072,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948573,gn1222,P3,5,block_per_slice_ge512_trials3,numSlice=100000;slice=1024;impl=0;repeat=100;trial=1,avg_ms,64.674850,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948573,gn1222,P3,5,block_per_slice_ge512_trials3,numSlice=100000;slice=1024;impl=1;repeat=100;trial=1,avg_ms,1.209758,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948573,gn1222,P3,5,block_per_slice_ge512_trials3,numSlice=100000;slice=2048;impl=0;repeat=100;trial=1,avg_ms,137.702271,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948573,gn1222,P3,5,block_per_slice_ge512_trials3,numSlice=100000;slice=2048;impl=1;repeat=100;trial=1,avg_ms,3.532282,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948573,gn1222,P3,5,block_per_slice_ge512_trials3,numSlice=100000;slice=64;impl=0;repeat=100;trial=2,avg_ms,1.734823,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948573,gn1222,P3,5,block_per_slice_ge512_trials3,numSlice=100000;slice=64;impl=1;repeat=100;trial=2,avg_ms,0.072757,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948573,gn1222,P3,5,block_per_slice_ge512_trials3,numSlice=100000;slice=128;impl=0;repeat=100;trial=2,avg_ms,4.404030,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948573,gn1222,P3,5,block_per_slice_ge512_trials3,numSlice=100000;slice=128;impl=1;repeat=100;trial=2,avg_ms,0.137127,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948573,gn1222,P3,5,block_per_slice_ge512_trials3,numSlice=100000;slice=256;impl=0;repeat=100;trial=2,avg_ms,15.637608,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948573,gn1222,P3,5,block_per_slice_ge512_trials3,numSlice=100000;slice=256;impl=1;repeat=100;trial=2,avg_ms,0.306209,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948573,gn1222,P3,5,block_per_slice_ge512_trials3,numSlice=100000;slice=512;impl=0;repeat=100;trial=2,avg_ms,32.770187,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948573,gn1222,P3,5,block_per_slice_ge512_trials3,numSlice=100000;slice=512;impl=1;repeat=100;trial=2,avg_ms,0.634551,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948573,gn1222,P3,5,block_per_slice_ge512_trials3,numSlice=100000;slice=784;impl=0;repeat=100;trial=2,avg_ms,54.718887,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948573,gn1222,P3,5,block_per_slice_ge512_trials3,numSlice=100000;slice=784;impl=1;repeat=100;trial=2,avg_ms,0.995810,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948573,gn1222,P3,5,block_per_slice_ge512_trials3,numSlice=100000;slice=1024;impl=0;repeat=100;trial=2,avg_ms,64.596954,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948573,gn1222,P3,5,block_per_slice_ge512_trials3,numSlice=100000;slice=1024;impl=1;repeat=100;trial=2,avg_ms,1.209448,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948573,gn1222,P3,5,block_per_slice_ge512_trials3,numSlice=100000;slice=2048;impl=0;repeat=100;trial=2,avg_ms,138.373276,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948573,gn1222,P3,5,block_per_slice_ge512_trials3,numSlice=100000;slice=2048;impl=1;repeat=100;trial=2,avg_ms,3.553319,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948573,gn1222,P3,5,block_per_slice_ge512_trials3,numSlice=100000;slice=64;impl=0;repeat=100;trial=3,avg_ms,1.699988,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948573,gn1222,P3,5,block_per_slice_ge512_trials3,numSlice=100000;slice=64;impl=1;repeat=100;trial=3,avg_ms,0.073259,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948573,gn1222,P3,5,block_per_slice_ge512_trials3,numSlice=100000;slice=128;impl=0;repeat=100;trial=3,avg_ms,4.403379,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948573,gn1222,P3,5,block_per_slice_ge512_trials3,numSlice=100000;slice=128;impl=1;repeat=100;trial=3,avg_ms,0.136631,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948573,gn1222,P3,5,block_per_slice_ge512_trials3,numSlice=100000;slice=256;impl=0;repeat=100;trial=3,avg_ms,15.600123,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948573,gn1222,P3,5,block_per_slice_ge512_trials3,numSlice=100000;slice=256;impl=1;repeat=100;trial=3,avg_ms,0.305878,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948573,gn1222,P3,5,block_per_slice_ge512_trials3,numSlice=100000;slice=512;impl=0;repeat=100;trial=3,avg_ms,32.772694,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948573,gn1222,P3,5,block_per_slice_ge512_trials3,numSlice=100000;slice=512;impl=1;repeat=100;trial=3,avg_ms,0.634294,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948573,gn1222,P3,5,block_per_slice_ge512_trials3,numSlice=100000;slice=784;impl=0;repeat=100;trial=3,avg_ms,54.714527,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948573,gn1222,P3,5,block_per_slice_ge512_trials3,numSlice=100000;slice=784;impl=1;repeat=100;trial=3,avg_ms,0.994848,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948573,gn1222,P3,5,block_per_slice_ge512_trials3,numSlice=100000;slice=1024;impl=0;repeat=100;trial=3,avg_ms,64.638908,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948573,gn1222,P3,5,block_per_slice_ge512_trials3,numSlice=100000;slice=1024;impl=1;repeat=100;trial=3,avg_ms,1.209506,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948573,gn1222,P3,5,block_per_slice_ge512_trials3,numSlice=100000;slice=2048;impl=0;repeat=100;trial=3,avg_ms,138.680191,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948573,gn1222,P3,5,block_per_slice_ge512_trials3,numSlice=100000;slice=2048;impl=1;repeat=100;trial=3,avg_ms,3.581077,ms,PASS,accepted,KERNEL_OPT,true,,
+softmax-cuda,948566,gn1222,P3,2,block_per_slice_ge512_compile_fail,build,avg_ms,,ms,UNKNOWN,rejected,BUILD_FIX,false,compile failed: CUDART_INF_F undefined,

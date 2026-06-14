@@ -1,0 +1,83 @@
+job_id=948404
+node=gn1221.twcc.ai
+CUDA_VISIBLE_DEVICES=0
+date=2026-06-09T13:53:30+08:00
+modules:
+
+Currently Loaded Modules:
+  1) cuda/12.8
+
+ 
+
+ncu_path=/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/cuda/cuda-12.8/bin/ncu
+nvprof_path=/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/cuda/cuda-12.8/bin/nvprof
+nsys_path=/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/cuda/cuda-12.8/bin/nsys
+rm -rf main main.o
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 -c main.cu -o main.o
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 main.o -o main 
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+NCU topk=1
+==PROF== Connected to process 2412236 (/home/r14525078/p3/HeCBench/src/moe-cuda/main)
+PASS
+Average execution time of kernels: 31958.337891 (us)
+==PROF== Disconnected from process 2412236
+"ID","Process ID","Process Name","Host Name","Kernel Name","Context","Stream","Block Size","Grid Size","Device","CC","Section Name","Metric Name","Metric Unit","Metric Value"
+"0","2412236","main","127.0.0.1","void moeSoftmaxTopKSmallK<256>(const float *, const bool *, float *, int *, int *, int, int, int, int)","1","7","(256, 1, 1)","(32768, 1, 1)","0","7.0","Command line profiler metrics","dram__bytes.sum","byte","51066720"
+"0","2412236","main","127.0.0.1","void moeSoftmaxTopKSmallK<256>(const float *, const bool *, float *, int *, int *, int, int, int, int)","1","7","(256, 1, 1)","(32768, 1, 1)","0","7.0","Command line profiler metrics","l1tex__data_pipe_lsu_wavefronts_mem_shared.sum","","9170573"
+"0","2412236","main","127.0.0.1","void moeSoftmaxTopKSmallK<256>(const float *, const bool *, float *, int *, int *, int, int, int, int)","1","7","(256, 1, 1)","(32768, 1, 1)","0","7.0","Command line profiler metrics","lts__t_bytes.sum","byte","53865856"
+"0","2412236","main","127.0.0.1","void moeSoftmaxTopKSmallK<256>(const float *, const bool *, float *, int *, int *, int, int, int, int)","1","7","(256, 1, 1)","(32768, 1, 1)","0","7.0","Command line profiler metrics","sm__warps_active.avg.pct_of_peak_sustained_active","%","95.95"
+"1","2412236","main","127.0.0.1","void moeSoftmaxTopKSmallK<256>(const float *, const bool *, float *, int *, int *, int, int, int, int)","1","7","(256, 1, 1)","(32768, 1, 1)","0","7.0","Command line profiler metrics","dram__bytes.sum","byte","50684768"
+"1","2412236","main","127.0.0.1","void moeSoftmaxTopKSmallK<256>(const float *, const bool *, float *, int *, int *, int, int, int, int)","1","7","(256, 1, 1)","(32768, 1, 1)","0","7.0","Command line profiler metrics","l1tex__data_pipe_lsu_wavefronts_mem_shared.sum","","9171100"
+"1","2412236","main","127.0.0.1","void moeSoftmaxTopKSmallK<256>(const float *, const bool *, float *, int *, int *, int, int, int, int)","1","7","(256, 1, 1)","(32768, 1, 1)","0","7.0","Command line profiler metrics","lts__t_bytes.sum","byte","53866176"
+"1","2412236","main","127.0.0.1","void moeSoftmaxTopKSmallK<256>(const float *, const bool *, float *, int *, int *, int, int, int, int)","1","7","(256, 1, 1)","(32768, 1, 1)","0","7.0","Command line profiler metrics","sm__warps_active.avg.pct_of_peak_sustained_active","%","95.85"
+NCU topk=2
+==PROF== Connected to process 2412289 (/home/r14525078/p3/HeCBench/src/moe-cuda/main)
+PASS
+Average execution time of kernels: 32027.398438 (us)
+==PROF== Disconnected from process 2412289
+"ID","Process ID","Process Name","Host Name","Kernel Name","Context","Stream","Block Size","Grid Size","Device","CC","Section Name","Metric Name","Metric Unit","Metric Value"
+"0","2412289","main","127.0.0.1","void moeSoftmaxTopKSmallK<256>(const float *, const bool *, float *, int *, int *, int, int, int, int)","1","7","(256, 1, 1)","(32768, 1, 1)","0","7.0","Command line profiler metrics","dram__bytes.sum","byte","51431072"
+"0","2412289","main","127.0.0.1","void moeSoftmaxTopKSmallK<256>(const float *, const bool *, float *, int *, int *, int, int, int, int)","1","7","(256, 1, 1)","(32768, 1, 1)","0","7.0","Command line profiler metrics","l1tex__data_pipe_lsu_wavefronts_mem_shared.sum","","12809201"
+"0","2412289","main","127.0.0.1","void moeSoftmaxTopKSmallK<256>(const float *, const bool *, float *, int *, int *, int, int, int, int)","1","7","(256, 1, 1)","(32768, 1, 1)","0","7.0","Command line profiler metrics","lts__t_bytes.sum","byte","57010912"
+"0","2412289","main","127.0.0.1","void moeSoftmaxTopKSmallK<256>(const float *, const bool *, float *, int *, int *, int, int, int, int)","1","7","(256, 1, 1)","(32768, 1, 1)","0","7.0","Command line profiler metrics","sm__warps_active.avg.pct_of_peak_sustained_active","%","97.06"
+"1","2412289","main","127.0.0.1","void moeSoftmaxTopKSmallK<256>(const float *, const bool *, float *, int *, int *, int, int, int, int)","1","7","(256, 1, 1)","(32768, 1, 1)","0","7.0","Command line profiler metrics","dram__bytes.sum","byte","51030656"
+"1","2412289","main","127.0.0.1","void moeSoftmaxTopKSmallK<256>(const float *, const bool *, float *, int *, int *, int, int, int, int)","1","7","(256, 1, 1)","(32768, 1, 1)","0","7.0","Command line profiler metrics","l1tex__data_pipe_lsu_wavefronts_mem_shared.sum","","12809120"
+"1","2412289","main","127.0.0.1","void moeSoftmaxTopKSmallK<256>(const float *, const bool *, float *, int *, int *, int, int, int, int)","1","7","(256, 1, 1)","(32768, 1, 1)","0","7.0","Command line profiler metrics","lts__t_bytes.sum","byte","56995968"
+"1","2412289","main","127.0.0.1","void moeSoftmaxTopKSmallK<256>(const float *, const bool *, float *, int *, int *, int, int, int, int)","1","7","(256, 1, 1)","(32768, 1, 1)","0","7.0","Command line profiler metrics","sm__warps_active.avg.pct_of_peak_sustained_active","%","97.01"
+NCU topk=4
+==PROF== Connected to process 2412457 (/home/r14525078/p3/HeCBench/src/moe-cuda/main)
+PASS
+Average execution time of kernels: 30678.404297 (us)
+==PROF== Disconnected from process 2412457
+"ID","Process ID","Process Name","Host Name","Kernel Name","Context","Stream","Block Size","Grid Size","Device","CC","Section Name","Metric Name","Metric Unit","Metric Value"
+"0","2412457","main","127.0.0.1","void moeSoftmaxTopKSmallK<256>(const float *, const bool *, float *, int *, int *, int, int, int, int)","1","7","(256, 1, 1)","(32768, 1, 1)","0","7.0","Command line profiler metrics","dram__bytes.sum","byte","52195552"
+"0","2412457","main","127.0.0.1","void moeSoftmaxTopKSmallK<256>(const float *, const bool *, float *, int *, int *, int, int, int, int)","1","7","(256, 1, 1)","(32768, 1, 1)","0","7.0","Command line profiler metrics","l1tex__data_pipe_lsu_wavefronts_mem_shared.sum","","20439999"
+"0","2412457","main","127.0.0.1","void moeSoftmaxTopKSmallK<256>(const float *, const bool *, float *, int *, int *, int, int, int, int)","1","7","(256, 1, 1)","(32768, 1, 1)","0","7.0","Command line profiler metrics","lts__t_bytes.sum","byte","63218016"
+"0","2412457","main","127.0.0.1","void moeSoftmaxTopKSmallK<256>(const float *, const bool *, float *, int *, int *, int, int, int, int)","1","7","(256, 1, 1)","(32768, 1, 1)","0","7.0","Command line profiler metrics","sm__warps_active.avg.pct_of_peak_sustained_active","%","97.95"
+"1","2412457","main","127.0.0.1","void moeSoftmaxTopKSmallK<256>(const float *, const bool *, float *, int *, int *, int, int, int, int)","1","7","(256, 1, 1)","(32768, 1, 1)","0","7.0","Command line profiler metrics","dram__bytes.sum","byte","51784576"
+"1","2412457","main","127.0.0.1","void moeSoftmaxTopKSmallK<256>(const float *, const bool *, float *, int *, int *, int, int, int, int)","1","7","(256, 1, 1)","(32768, 1, 1)","0","7.0","Command line profiler metrics","l1tex__data_pipe_lsu_wavefronts_mem_shared.sum","","20437621"
+"1","2412457","main","127.0.0.1","void moeSoftmaxTopKSmallK<256>(const float *, const bool *, float *, int *, int *, int, int, int, int)","1","7","(256, 1, 1)","(32768, 1, 1)","0","7.0","Command line profiler metrics","lts__t_bytes.sum","byte","63181408"
+"1","2412457","main","127.0.0.1","void moeSoftmaxTopKSmallK<256>(const float *, const bool *, float *, int *, int *, int, int, int, int)","1","7","(256, 1, 1)","(32768, 1, 1)","0","7.0","Command line profiler metrics","sm__warps_active.avg.pct_of_peak_sustained_active","%","97.92"
+NCU topk=8
+==PROF== Connected to process 2412580 (/home/r14525078/p3/HeCBench/src/moe-cuda/main)
+PASS
+Average execution time of kernels: 67902.156250 (us)
+==PROF== Disconnected from process 2412580
+"ID","Process ID","Process Name","Host Name","Kernel Name","Context","Stream","Block Size","Grid Size","Device","CC","Section Name","Metric Name","Metric Unit","Metric Value"
+"0","2412580","main","127.0.0.1","void moeSoftmax<256>(const float *, const bool *, float *, int)","1","7","(256, 1, 1)","(32768, 1, 1)","0","7.0","Command line profiler metrics","dram__bytes.sum","byte","97932256"
+"0","2412580","main","127.0.0.1","void moeSoftmax<256>(const float *, const bool *, float *, int)","1","7","(256, 1, 1)","(32768, 1, 1)","0","7.0","Command line profiler metrics","l1tex__data_pipe_lsu_wavefronts_mem_shared.sum","","5937641"
+"0","2412580","main","127.0.0.1","void moeSoftmax<256>(const float *, const bool *, float *, int)","1","7","(256, 1, 1)","(32768, 1, 1)","0","7.0","Command line profiler metrics","lts__t_bytes.sum","byte","102382144"
+"0","2412580","main","127.0.0.1","void moeSoftmax<256>(const float *, const bool *, float *, int)","1","7","(256, 1, 1)","(32768, 1, 1)","0","7.0","Command line profiler metrics","sm__warps_active.avg.pct_of_peak_sustained_active","%","93.17"
+"1","2412580","main","127.0.0.1","void moeTopK<256>(const float *, const bool *, float *, int *, int *, int, int, int, int)","1","7","(256, 1, 1)","(32768, 1, 1)","0","7.0","Command line profiler metrics","dram__bytes.sum","byte","53140544"
+"1","2412580","main","127.0.0.1","void moeTopK<256>(const float *, const bool *, float *, int *, int *, int, int, int, int)","1","7","(256, 1, 1)","(32768, 1, 1)","0","7.0","Command line profiler metrics","l1tex__data_pipe_lsu_wavefronts_mem_shared.sum","","28899176"
+"1","2412580","main","127.0.0.1","void moeTopK<256>(const float *, const bool *, float *, int *, int *, int, int, int, int)","1","7","(256, 1, 1)","(32768, 1, 1)","0","7.0","Command line profiler metrics","lts__t_bytes.sum","byte","75758272"
+"1","2412580","main","127.0.0.1","void moeTopK<256>(const float *, const bool *, float *, int *, int *, int, int, int, int)","1","7","(256, 1, 1)","(32768, 1, 1)","0","7.0","Command line profiler metrics","sm__warps_active.avg.pct_of_peak_sustained_active","%","98.42"
+"2","2412580","main","127.0.0.1","void moeSoftmax<256>(const float *, const bool *, float *, int)","1","7","(256, 1, 1)","(32768, 1, 1)","0","7.0","Command line profiler metrics","dram__bytes.sum","byte","97517088"
+"2","2412580","main","127.0.0.1","void moeSoftmax<256>(const float *, const bool *, float *, int)","1","7","(256, 1, 1)","(32768, 1, 1)","0","7.0","Command line profiler metrics","l1tex__data_pipe_lsu_wavefronts_mem_shared.sum","","5923562"
+"2","2412580","main","127.0.0.1","void moeSoftmax<256>(const float *, const bool *, float *, int)","1","7","(256, 1, 1)","(32768, 1, 1)","0","7.0","Command line profiler metrics","lts__t_bytes.sum","byte","102318464"
+"2","2412580","main","127.0.0.1","void moeSoftmax<256>(const float *, const bool *, float *, int)","1","7","(256, 1, 1)","(32768, 1, 1)","0","7.0","Command line profiler metrics","sm__warps_active.avg.pct_of_peak_sustained_active","%","93.00"
+"3","2412580","main","127.0.0.1","void moeTopK<256>(const float *, const bool *, float *, int *, int *, int, int, int, int)","1","7","(256, 1, 1)","(32768, 1, 1)","0","7.0","Command line profiler metrics","dram__bytes.sum","byte","53112416"
+"3","2412580","main","127.0.0.1","void moeTopK<256>(const float *, const bool *, float *, int *, int *, int, int, int, int)","1","7","(256, 1, 1)","(32768, 1, 1)","0","7.0","Command line profiler metrics","l1tex__data_pipe_lsu_wavefronts_mem_shared.sum","","28899155"
+"3","2412580","main","127.0.0.1","void moeTopK<256>(const float *, const bool *, float *, int *, int *, int, int, int, int)","1","7","(256, 1, 1)","(32768, 1, 1)","0","7.0","Command line profiler metrics","lts__t_bytes.sum","byte","75777344"
+"3","2412580","main","127.0.0.1","void moeTopK<256>(const float *, const bool *, float *, int *, int *, int, int, int, int)","1","7","(256, 1, 1)","(32768, 1, 1)","0","7.0","Command line profiler metrics","sm__warps_active.avg.pct_of_peak_sustained_active","%","98.42"

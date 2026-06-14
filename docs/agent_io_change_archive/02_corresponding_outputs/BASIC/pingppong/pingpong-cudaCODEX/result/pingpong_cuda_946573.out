@@ -1,0 +1,131 @@
+=== Environment ===
+
+Currently Loaded Modules:
+  1) hpcx-ompi   2) nvhpc-24.11_hpcx-2.20_cuda-12.6
+
+ 
+
+which nvcc: /work/HPC_SYS/twnia2/pkg-rocky8/nvidia/hpc_sdk/Linux_x86_64/24.11/compilers/bin/nvcc
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2024 NVIDIA Corporation
+Built on Thu_Sep_12_02:18:05_PDT_2024
+Cuda compilation tools, release 12.6, V12.6.77
+Build cuda_12.6.r12.6/compiler.34841621_0
+which mpicc: /work/HPC_SYS/twnia2/pkg-rocky8/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/hpcx/hpcx-2.20/ompi/bin/mpicc
+which mpirun: /work/HPC_SYS/twnia2/pkg-rocky8/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/hpcx/hpcx-2.20/ompi/bin/mpirun
+mpirun (Open MPI) 4.1.7a1
+
+Report bugs to http://www.open-mpi.org/community/help/
+GPU 0: Tesla V100-SXM2-32GB (UUID: GPU-f19ea2fc-4fa5-b54a-8007-bc60b89e9c8b)
+GPU 1: Tesla V100-SXM2-32GB (UUID: GPU-bc07e200-ab98-39c4-6fe1-eb2f4bb33aea)
+CUDA_VISIBLE_DEVICES=0,1
+MPI_ROOT=/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/hpcx/hpcx-2.20/ompi
+UCX_TLS=self,shm,cuda_copy,cuda_ipc
+Launcher: mpirun -x UCX_TLS --mca coll ^hcoll,ucc --mca pml ucx -n 2
+=== Build ===
+rm -rf main-mpi main-mpi.o
+rm -rf main-nccl main-nccl.o
+nvcc  -std=c++17 -I/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/hpcx/hpcx-2.20/ompi/include -DOMPI_SKIP_MPICXX= -Xcompiler -Wall -arch=sm_70 -O3 -c main-mpi.cu -o main-mpi.o
+nvcc  -std=c++17 -I/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/hpcx/hpcx-2.20/ompi/include -DOMPI_SKIP_MPICXX= -Xcompiler -Wall -arch=sm_70 -O3 main-mpi.o -o main-mpi -L/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/hpcx/hpcx-2.20/ompi/lib -lmpi -lnccl
+nvcc  -std=c++17 -I/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/hpcx/hpcx-2.20/ompi/include -DOMPI_SKIP_MPICXX= -Xcompiler -Wall -arch=sm_70 -O3 -c main-nccl.cu -o main-nccl.o
+nvcc  -std=c++17 -I/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/hpcx/hpcx-2.20/ompi/include -DOMPI_SKIP_MPICXX= -Xcompiler -Wall -arch=sm_70 -O3 main-nccl.o -o main-nccl -L/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/hpc_sdk/Linux_x86_64/24.11/comm_libs/12.6/hpcx/hpcx-2.20/ompi/lib -lmpi -lnccl
+=== MPI baseline ===
+RESULT,backend=MPI,size_bytes=524288,loop_count=50,trial=1,avg_time_s=0.000068372,gbps=7.668155919
+RESULT,backend=MPI,size_bytes=524288,loop_count=50,trial=2,avg_time_s=0.000066914,gbps=7.835214919
+RESULT,backend=MPI,size_bytes=524288,loop_count=50,trial=3,avg_time_s=0.000066713,gbps=7.858879298
+SUMMARY,backend=MPI,size_bytes=524288,loop_count=50,trials=3,avg_time_s=0.000067333,min_time_s=0.000066713,max_time_s=0.000068372,gbps=7.786484741
+RESULT,backend=MPI,size_bytes=1048576,loop_count=50,trial=1,avg_time_s=0.000152305,gbps=6.884730132
+RESULT,backend=MPI,size_bytes=1048576,loop_count=50,trial=2,avg_time_s=0.000234990,gbps=4.462224338
+RESULT,backend=MPI,size_bytes=1048576,loop_count=50,trial=3,avg_time_s=0.000237929,gbps=4.407102347
+SUMMARY,backend=MPI,size_bytes=1048576,loop_count=50,trials=3,avg_time_s=0.000208408,min_time_s=0.000152305,max_time_s=0.000237929,gbps=5.031371297
+RESULT,backend=MPI,size_bytes=2097152,loop_count=50,trial=1,avg_time_s=0.000365677,gbps=5.734988620
+RESULT,backend=MPI,size_bytes=2097152,loop_count=50,trial=2,avg_time_s=0.000428219,gbps=4.897379317
+RESULT,backend=MPI,size_bytes=2097152,loop_count=50,trial=3,avg_time_s=0.000394389,gbps=5.317471226
+SUMMARY,backend=MPI,size_bytes=2097152,loop_count=50,trials=3,avg_time_s=0.000396095,min_time_s=0.000365677,max_time_s=0.000428219,gbps=5.294568445
+RESULT,backend=MPI,size_bytes=4194304,loop_count=50,trial=1,avg_time_s=0.000870113,gbps=4.820415585
+RESULT,backend=MPI,size_bytes=4194304,loop_count=50,trial=2,avg_time_s=0.000879892,gbps=4.766839512
+RESULT,backend=MPI,size_bytes=4194304,loop_count=50,trial=3,avg_time_s=0.000825306,gbps=5.082118243
+SUMMARY,backend=MPI,size_bytes=4194304,loop_count=50,trials=3,avg_time_s=0.000858437,min_time_s=0.000825306,max_time_s=0.000879892,gbps=4.885978034
+RESULT,backend=MPI,size_bytes=8388608,loop_count=50,trial=1,avg_time_s=0.001692798,gbps=4.955469256
+RESULT,backend=MPI,size_bytes=8388608,loop_count=50,trial=2,avg_time_s=0.001469364,gbps=5.709006734
+RESULT,backend=MPI,size_bytes=8388608,loop_count=50,trial=3,avg_time_s=0.001395244,gbps=6.012288620
+SUMMARY,backend=MPI,size_bytes=8388608,loop_count=50,trials=3,avg_time_s=0.001519135,min_time_s=0.001395244,max_time_s=0.001692798,gbps=5.521962916
+RESULT,backend=MPI,size_bytes=16777216,loop_count=50,trial=1,avg_time_s=0.003805745,gbps=4.408391760
+RESULT,backend=MPI,size_bytes=16777216,loop_count=50,trial=2,avg_time_s=0.004175444,gbps=4.018067790
+RESULT,backend=MPI,size_bytes=16777216,loop_count=50,trial=3,avg_time_s=0.003331016,gbps=5.036666124
+SUMMARY,backend=MPI,size_bytes=16777216,loop_count=50,trials=3,avg_time_s=0.003770735,min_time_s=0.003331016,max_time_s=0.004175444,gbps=4.449322440
+RESULT,backend=MPI,size_bytes=33554432,loop_count=50,trial=1,avg_time_s=0.006355079,gbps=5.279939474
+RESULT,backend=MPI,size_bytes=33554432,loop_count=50,trial=2,avg_time_s=0.006125320,gbps=5.477988415
+RESULT,backend=MPI,size_bytes=33554432,loop_count=50,trial=3,avg_time_s=0.005915111,gbps=5.672662858
+SUMMARY,backend=MPI,size_bytes=33554432,loop_count=50,trials=3,avg_time_s=0.006131837,min_time_s=0.005915111,max_time_s=0.006355079,gbps=5.472166578
+RESULT,backend=MPI,size_bytes=67108864,loop_count=50,trial=1,avg_time_s=0.012729738,gbps=5.271818205
+RESULT,backend=MPI,size_bytes=67108864,loop_count=50,trial=2,avg_time_s=0.012766335,gbps=5.256705740
+RESULT,backend=MPI,size_bytes=67108864,loop_count=50,trial=3,avg_time_s=0.012977534,gbps=5.171156807
+SUMMARY,backend=MPI,size_bytes=67108864,loop_count=50,trials=3,avg_time_s=0.012824536,min_time_s=0.012729738,max_time_s=0.012977534,gbps=5.232849477
+RESULT,backend=MPI,size_bytes=134217728,loop_count=50,trial=1,avg_time_s=0.027077575,gbps=4.956785430
+RESULT,backend=MPI,size_bytes=134217728,loop_count=50,trial=2,avg_time_s=0.026803760,gbps=5.007421640
+RESULT,backend=MPI,size_bytes=134217728,loop_count=50,trial=3,avg_time_s=0.026919691,gbps=4.985856844
+SUMMARY,backend=MPI,size_bytes=134217728,loop_count=50,trials=3,avg_time_s=0.026933675,min_time_s=0.026803760,max_time_s=0.027077575,gbps=4.983268191
+RESULT,backend=MPI,size_bytes=268435456,loop_count=50,trial=1,avg_time_s=0.057695848,gbps=4.652595734
+RESULT,backend=MPI,size_bytes=268435456,loop_count=50,trial=2,avg_time_s=0.056757125,gbps=4.729546415
+RESULT,backend=MPI,size_bytes=268435456,loop_count=50,trial=3,avg_time_s=0.056332849,gbps=4.765167440
+SUMMARY,backend=MPI,size_bytes=268435456,loop_count=50,trials=3,avg_time_s=0.056928607,min_time_s=0.056332849,max_time_s=0.057695848,gbps=4.715299911
+RESULT,backend=MPI,size_bytes=536870912,loop_count=50,trial=1,avg_time_s=0.113139666,gbps=4.745205019
+RESULT,backend=MPI,size_bytes=536870912,loop_count=50,trial=2,avg_time_s=0.114203782,gbps=4.700990648
+RESULT,backend=MPI,size_bytes=536870912,loop_count=50,trial=3,avg_time_s=0.113274569,gbps=4.739553797
+SUMMARY,backend=MPI,size_bytes=536870912,loop_count=50,trials=3,avg_time_s=0.113539339,min_time_s=0.113139666,max_time_s=0.114203782,gbps=4.728501299
+RESULT,backend=MPI,size_bytes=1073741824,loop_count=50,trial=1,avg_time_s=0.222794241,gbps=4.819432571
+RESULT,backend=MPI,size_bytes=1073741824,loop_count=50,trial=2,avg_time_s=0.220766153,gbps=4.863706740
+RESULT,backend=MPI,size_bytes=1073741824,loop_count=50,trial=3,avg_time_s=0.221690943,gbps=4.843417650
+SUMMARY,backend=MPI,size_bytes=1073741824,loop_count=50,trials=3,avg_time_s=0.221750446,min_time_s=0.220766153,max_time_s=0.222794241,gbps=4.842118001
+=== NCCL baseline ===
+RESULT,backend=NCCL,size_bytes=524288,loop_count=50,trial=1,avg_time_s=0.000457858,gbps=1.145089552
+RESULT,backend=NCCL,size_bytes=524288,loop_count=50,trial=2,avg_time_s=0.000080883,gbps=6.482021468
+RESULT,backend=NCCL,size_bytes=524288,loop_count=50,trial=3,avg_time_s=0.000157468,gbps=3.329496989
+SUMMARY,backend=NCCL,size_bytes=524288,loop_count=50,trials=3,avg_time_s=0.000232070,min_time_s=0.000080883,max_time_s=0.000457858,gbps=2.259184703
+RESULT,backend=NCCL,size_bytes=1048576,loop_count=50,trial=1,avg_time_s=0.000204848,gbps=5.118799781
+RESULT,backend=NCCL,size_bytes=1048576,loop_count=50,trial=2,avg_time_s=0.000286446,gbps=3.660637775
+RESULT,backend=NCCL,size_bytes=1048576,loop_count=50,trial=3,avg_time_s=0.000208779,gbps=5.022419635
+SUMMARY,backend=NCCL,size_bytes=1048576,loop_count=50,trials=3,avg_time_s=0.000233358,min_time_s=0.000204848,max_time_s=0.000286446,gbps=4.493426424
+RESULT,backend=NCCL,size_bytes=2097152,loop_count=50,trial=1,avg_time_s=0.000378843,gbps=5.535679674
+RESULT,backend=NCCL,size_bytes=2097152,loop_count=50,trial=2,avg_time_s=0.000498557,gbps=4.206441350
+RESULT,backend=NCCL,size_bytes=2097152,loop_count=50,trial=3,avg_time_s=0.000385327,gbps=5.442526852
+SUMMARY,backend=NCCL,size_bytes=2097152,loop_count=50,trials=3,avg_time_s=0.000420909,min_time_s=0.000378843,max_time_s=0.000498557,gbps=4.982435949
+RESULT,backend=NCCL,size_bytes=4194304,loop_count=50,trial=1,avg_time_s=0.000682976,gbps=6.141214294
+RESULT,backend=NCCL,size_bytes=4194304,loop_count=50,trial=2,avg_time_s=0.000812034,gbps=5.165185728
+RESULT,backend=NCCL,size_bytes=4194304,loop_count=50,trial=3,avg_time_s=0.000857736,gbps=4.889969211
+SUMMARY,backend=NCCL,size_bytes=4194304,loop_count=50,trials=3,avg_time_s=0.000784249,min_time_s=0.000682976,max_time_s=0.000857736,gbps=5.348180913
+RESULT,backend=NCCL,size_bytes=8388608,loop_count=50,trial=1,avg_time_s=0.001759683,gbps=4.767114441
+RESULT,backend=NCCL,size_bytes=8388608,loop_count=50,trial=2,avg_time_s=0.001856662,gbps=4.518112735
+RESULT,backend=NCCL,size_bytes=8388608,loop_count=50,trial=3,avg_time_s=0.001837462,gbps=4.565322784
+SUMMARY,backend=NCCL,size_bytes=8388608,loop_count=50,trials=3,avg_time_s=0.001817936,min_time_s=0.001759683,max_time_s=0.001856662,gbps=4.614359387
+RESULT,backend=NCCL,size_bytes=16777216,loop_count=50,trial=1,avg_time_s=0.004547364,gbps=3.689437418
+RESULT,backend=NCCL,size_bytes=16777216,loop_count=50,trial=2,avg_time_s=0.003181455,gbps=5.273441571
+RESULT,backend=NCCL,size_bytes=16777216,loop_count=50,trial=3,avg_time_s=0.005758819,gbps=2.913308592
+SUMMARY,backend=NCCL,size_bytes=16777216,loop_count=50,trials=3,avg_time_s=0.004495879,min_time_s=0.003181455,max_time_s=0.005758819,gbps=3.731687397
+RESULT,backend=NCCL,size_bytes=33554432,loop_count=50,trial=1,avg_time_s=0.005549840,gbps=6.046018350
+RESULT,backend=NCCL,size_bytes=33554432,loop_count=50,trial=2,avg_time_s=0.006172714,gbps=5.435928912
+RESULT,backend=NCCL,size_bytes=33554432,loop_count=50,trial=3,avg_time_s=0.006968700,gbps=4.815020374
+SUMMARY,backend=NCCL,size_bytes=33554432,loop_count=50,trials=3,avg_time_s=0.006230418,min_time_s=0.005549840,max_time_s=0.006968700,gbps=5.385583077
+RESULT,backend=NCCL,size_bytes=67108864,loop_count=50,trial=1,avg_time_s=0.012817234,gbps=5.235830482
+RESULT,backend=NCCL,size_bytes=67108864,loop_count=50,trial=2,avg_time_s=0.011896728,gbps=5.640951517
+RESULT,backend=NCCL,size_bytes=67108864,loop_count=50,trial=3,avg_time_s=0.011297704,gbps=5.940044439
+SUMMARY,backend=NCCL,size_bytes=67108864,loop_count=50,trials=3,avg_time_s=0.012003889,min_time_s=0.011297704,max_time_s=0.012817234,gbps=5.590593731
+RESULT,backend=NCCL,size_bytes=134217728,loop_count=50,trial=1,avg_time_s=0.027071368,gbps=4.957921963
+RESULT,backend=NCCL,size_bytes=134217728,loop_count=50,trial=2,avg_time_s=0.026697794,gbps=5.027296609
+RESULT,backend=NCCL,size_bytes=134217728,loop_count=50,trial=3,avg_time_s=0.028151909,gbps=4.767624454
+SUMMARY,backend=NCCL,size_bytes=134217728,loop_count=50,trials=3,avg_time_s=0.027307023,min_time_s=0.026697794,max_time_s=0.028151909,gbps=4.915135802
+RESULT,backend=NCCL,size_bytes=268435456,loop_count=50,trial=1,avg_time_s=0.054786862,gbps=4.899631900
+RESULT,backend=NCCL,size_bytes=268435456,loop_count=50,trial=2,avg_time_s=0.056952167,gbps=4.713349258
+RESULT,backend=NCCL,size_bytes=268435456,loop_count=50,trial=3,avg_time_s=0.056033672,gbps=4.790609763
+SUMMARY,backend=NCCL,size_bytes=268435456,loop_count=50,trials=3,avg_time_s=0.055924234,min_time_s=0.054786862,max_time_s=0.056952167,gbps=4.799984515
+RESULT,backend=NCCL,size_bytes=536870912,loop_count=50,trial=1,avg_time_s=0.115511076,gbps=4.647787294
+RESULT,backend=NCCL,size_bytes=536870912,loop_count=50,trial=2,avg_time_s=0.115338843,gbps=4.654727750
+RESULT,backend=NCCL,size_bytes=536870912,loop_count=50,trial=3,avg_time_s=0.114482703,gbps=4.689537359
+SUMMARY,backend=NCCL,size_bytes=536870912,loop_count=50,trials=3,avg_time_s=0.115110874,min_time_s=0.114482703,max_time_s=0.115511076,gbps=4.663946105
+RESULT,backend=NCCL,size_bytes=1073741824,loop_count=50,trial=1,avg_time_s=0.229291161,gbps=4.682874901
+RESULT,backend=NCCL,size_bytes=1073741824,loop_count=50,trial=2,avg_time_s=0.218245058,gbps=4.919890664
+RESULT,backend=NCCL,size_bytes=1073741824,loop_count=50,trial=3,avg_time_s=0.222277668,gbps=4.830632944
+SUMMARY,backend=NCCL,size_bytes=1073741824,loop_count=50,trials=3,avg_time_s=0.223271296,min_time_s=0.218245058,max_time_s=0.229291161,gbps=4.809135096
+=== CSV parse ===
+CSV_FILE=result/pingpong_results_946573.csv

@@ -1,0 +1,59 @@
+--------------------------------
+loading CUDA 12.8 with cuDNN / NCCL
+based on cuda_12.8.0_570.86.10_linux.run
+--------------------------------
+
+=== Environment ===
+
+Currently Loaded Modules:
+  1) cuda/12.8
+
+ 
+
+which nvcc: /work/HPC_SYS/twnia2/pkg-rocky8/nvidia/cuda/cuda-12.8/bin/nvcc
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2025 NVIDIA Corporation
+Built on Wed_Jan_15_19:20:09_PST_2025
+Cuda compilation tools, release 12.8, V12.8.61
+Build cuda_12.8.r12.8/compiler.35404655_0
+hostname: gn1222.twcc.ai
+CUDA_VISIBLE_DEVICES=0
+GPU 0: Tesla V100-SXM2-32GB (UUID: GPU-145c9ce9-e63a-59f8-c6d7-cd0a7a73ba66)
+Sat Jun  6 23:07:16 2026       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 535.161.08             Driver Version: 535.161.08   CUDA Version: 12.8     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  Tesla V100-SXM2-32GB           On  | 00000000:B1:00.0 Off |                    0 |
+| N/A   25C    P0              40W / 300W |      0MiB / 32768MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|  No running processes found                                                           |
++---------------------------------------------------------------------------------------+
+=== Build ===
+rm -rf main main.o shmem_kernels.o
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 -c main.cu -o main.o
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 -c shmem_kernels.cu -o shmem_kernels.o
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 main.o shmem_kernels.o -o main 
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+=== Run ===
+Shared memory bandwidth microbenchmark
+Buffer sizes: 8MB
+Average kernel execution time : 6.508802 (ms)
+Kernel execution min/max      : 6.490023 / 6.538071 (ms)
+Timing config: repeat=1000, warmup=5, trials=5, block=256, grid=1024, shared_bytes=24576, access_pattern=barriered_float4_swaps
+CHECKSUM,sum=2.12564587603847411e+28,expected=2.12564587603847411e+28,status=PASS
+Memory throughput
+	using 128bit operations : 13205.15 GB/sec (825.32 billion accesses/sec)
+RESULT,test=barriered_float4_swaps,repeat=1000,block=256,grid=1024,shared_bytes=24576,avg_us=6508.801937,min_us=6490.023136,max_us=6538.070679,bandwidth_GBps=13205.145647,correctness=PASS,status=PASS

@@ -1,0 +1,37 @@
+job_id=948395
+node=gn1226.twcc.ai
+CUDA_VISIBLE_DEVICES=0
+date=2026-06-09T13:47:14+08:00
+pwd=/home/r14525078/p3/HeCBench/src/moe-cuda
+modules:
+
+Currently Loaded Modules:
+  1) cuda/12.8
+
+ 
+
+nvcc:
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2025 NVIDIA Corporation
+Built on Wed_Jan_15_19:20:09_PST_2025
+Cuda compilation tools, release 12.8, V12.8.61
+Build cuda_12.8.r12.8/compiler.35404655_0
+benchmark commands:
+make clean || true && make ARCH=sm_70
+./main 32768 384 1 1000
+./main 32768 384 2 1000
+./main 32768 384 4 1000
+./main 32768 384 8 1000
+rm -rf main main.o
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 -c main.cu -o main.o
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+nvcc  -std=c++17 -Xcompiler -Wall -arch=sm_70 -O3 main.o -o main 
+nvcc warning : Support for offline compilation for architectures prior to '<compute/sm/lto>_75' will be removed in a future release (Use -Wno-deprecated-gpu-targets to suppress warning).
+PASS
+Average execution time of kernels: 285.113678 (us)
+PASS
+Average execution time of kernels: 347.580872 (us)
+PASS
+Average execution time of kernels: 519.113708 (us)
+PASS
+Average execution time of kernels: 949.848694 (us)

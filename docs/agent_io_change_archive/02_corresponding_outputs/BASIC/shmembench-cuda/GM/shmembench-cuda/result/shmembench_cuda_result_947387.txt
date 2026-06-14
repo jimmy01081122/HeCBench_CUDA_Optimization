@@ -1,0 +1,9 @@
+Shared memory bandwidth microbenchmark
+Buffer sizes: 8MB
+checksum failed for block size 128
+RESULT,test=shmembench,repeat=1000,block=128,shared_bytes=12288,avg_us=6458.281,min_us=6020.096,max_us=7963.648,bandwidth_GBps=13308.45,correctness=FAIL,status=FAIL
+RESULT,test=shmembench,repeat=1000,block=256,shared_bytes=24576,avg_us=6472.031,min_us=5750.784,max_us=6598.656,bandwidth_GBps=13280.17,correctness=PASS,status=PASS
+checksum failed for block size 512
+RESULT,test=shmembench,repeat=1000,block=512,shared_bytes=49152,avg_us=6183.793,min_us=6147.072,max_us=7000.064,bandwidth_GBps=13899.18,correctness=FAIL,status=FAIL
+checksum failed for block size 1024
+RESULT,test=shmembench,repeat=1000,block=1024,shared_bytes=98304,avg_us=7116.097,min_us=7108.608,max_us=7123.968,bandwidth_GBps=12078.20,correctness=FAIL,status=FAIL

@@ -1,19 +1,3 @@
-以下是校對與潤稿後的版本。我已修正：
-
-```text
-1. 章節格式不一致
-2. 表格破裂
-3. 句子截斷
-4. code block 殘留錯誤
-5. 部分概念重複或語意不清
-6. Mode B / Mode C 結論邊界
-7. profiler / ablation 的因果限制
-8. topk / shmembench 的 optional supporting evidence 定位
-```
-
-以下版本可作為正式報告草稿使用。
-
-***
 
 # AI 輔助 HeCBench Benchmark 優化與人機協作工作流研究報告
 

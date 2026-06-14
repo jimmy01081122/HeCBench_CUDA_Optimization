@@ -1,0 +1,90 @@
+=== Loading modules ===
+=== Environment ===
+/work/HPC_SYS/twnia2/pkg-rocky8/nvidia/cuda/cuda-12.8/bin/nvcc
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2025 NVIDIA Corporation
+Built on Wed_Jan_15_19:20:09_PST_2025
+Cuda compilation tools, release 12.8, V12.8.61
+Build cuda_12.8.r12.8/compiler.35404655_0
+gn1224.twcc.ai
+CUDA_VISIBLE_DEVICES: 0,1,2,3
+GPU 0: Tesla V100-SXM2-32GB (UUID: GPU-5492b972-e756-f9e1-ec9e-74c0cacb0cef)
+GPU 1: Tesla V100-SXM2-32GB (UUID: GPU-61ce1b75-9645-45f9-63d1-6ecbdfaa99a9)
+GPU 2: Tesla V100-SXM2-32GB (UUID: GPU-7f27a409-6e21-fbd6-915d-d60d09aac49d)
+GPU 3: Tesla V100-SXM2-32GB (UUID: GPU-74b4ff55-5c23-3f79-4db7-eeb957fcf88a)
+=== Build ===
+rm -rf main main.o
+nvcc  -std=c++17 -DMAX_GPU_COUNT=4 -Wno-deprecated-gpu-targets -Xcompiler -Wall -arch=sm_70 -O3 -c main.cu -o main.o
+nvcc  -std=c++17 -DMAX_GPU_COUNT=4 -Wno-deprecated-gpu-targets -Xcompiler -Wall -arch=sm_70 -O3 main.o -o main 
+=== Run 1 GPU ===
+Starting simpleMultiDevice
+GPU device count: 1
+Generating input data of size 33554432 ...
+
+Computing with 1 GPUs...
+  Initialization/Allocation time: 636726.136000 (us)
+  Average GPU Processing time: 12562.944766 (us)
+  Average H2D copy time: 12008.346258 (us)
+  Average kernel time: 544.629720 (us)
+  Average D2H partial copy time: 9.902252 (us)
+
+Computing with Host CPU...
+
+Comparing GPU and Host CPU results...
+  GPU sum: 16777372.000000
+  CPU sum: 16777380.811828
+  Relative difference: 5.252207E-07 
+
+Status: PASS
+CORRECTNESS,num_gpus=1,gpu_sum=16777372.000000000,cpu_sum=16777380.811827715,relative_diff=5.252207013e-07,tolerance=1.0e-05,status=PASS
+RESULT,num_gpus=1,repeat=1000,total_us=12562.944766,h2d_us=12008.346258,kernel_us=544.629720,d2h_us=9.902252,diff=5.252207013e-07,status=PASS
+=== Run 2 GPUs ===
+Starting simpleMultiDevice
+GPU device count: 2
+Generating input data of size 33554432 ...
+
+Computing with 2 GPUs...
+  Initialization/Allocation time: 721972.704000 (us)
+  Average GPU Processing time: 11144.060085 (us)
+  Average H2D copy time: 10850.680188 (us)
+  Average kernel time: 281.019866 (us)
+  Average D2H partial copy time: 12.304826 (us)
+
+Computing with Host CPU...
+
+Comparing GPU and Host CPU results...
+  GPU sum: 16777387.500000
+  CPU sum: 16777380.811828
+  Relative difference: 3.986422E-07 
+
+Status: PASS
+CORRECTNESS,num_gpus=2,gpu_sum=16777387.500000000,cpu_sum=16777380.811827715,relative_diff=3.986422171e-07,tolerance=1.0e-05,status=PASS
+RESULT,num_gpus=2,repeat=1000,total_us=11144.060085,h2d_us=10850.680188,kernel_us=281.019866,d2h_us=12.304826,diff=3.986422171e-07,status=PASS
+=== Run 4 GPUs ===
+Starting simpleMultiDevice
+GPU device count: 4
+Generating input data of size 33554432 ...
+
+Computing with 4 GPUs...
+  Initialization/Allocation time: 903477.490000 (us)
+  Average GPU Processing time: 5627.024411 (us)
+  Average H2D copy time: 5458.060001 (us)
+  Average kernel time: 152.971370 (us)
+  Average D2H partial copy time: 15.936681 (us)
+
+Computing with Host CPU...
+
+Comparing GPU and Host CPU results...
+  GPU sum: 16777378.500000
+  CPU sum: 16777380.811828
+  Relative difference: 1.377943E-07 
+
+Status: PASS
+CORRECTNESS,num_gpus=4,gpu_sum=16777378.500000000,cpu_sum=16777380.811827715,relative_diff=1.377943161e-07,tolerance=1.0e-05,status=PASS
+RESULT,num_gpus=4,repeat=1000,total_us=5627.024411,h2d_us=5458.060001,kernel_us=152.971370,d2h_us=15.936681,diff=1.377943161e-07,status=PASS
+=== Processing Results ===
+=== CSV Content ===
+job_id,node,num_gpus,repeat,total_us,h2d_us,kernel_us,d2h_us,gpu_sum,cpu_sum,relative_diff,status
+947382,gn1224.twcc.ai,1,1000,12562.944766,12008.346258,544.629720,9.902252,16777372.000000000,16777380.811827715,5.252207013e-07,PASS
+947382,gn1224.twcc.ai,2,1000,11144.060085,10850.680188,281.019866,12.304826,16777387.500000000,16777380.811827715,3.986422171e-07,PASS
+947382,gn1224.twcc.ai,4,1000,5627.024411,5458.060001,152.971370,15.936681,16777378.500000000,16777380.811827715,1.377943161e-07,PASS

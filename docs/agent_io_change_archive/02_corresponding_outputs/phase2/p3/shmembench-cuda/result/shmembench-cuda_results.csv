@@ -1,0 +1,13 @@
+benchmark,job_id,node,prompt_level,submission_index,variant,case,metric_name,metric_value,metric_unit,correctness,status,result_type,accepted,reject_reason,notes
+shmembench-cuda,948936,gn1222.twcc.ai,P3,0,baseline,size_bytes=8388608;repeat=1000,avg_kernel_time,7.692324,ms,PASS,baseline,NO_EFFECT,true,,Baseline run with original source.
+shmembench-cuda,948936,gn1222.twcc.ai,P3,0,baseline,size_bytes=8388608;repeat=1000,shared_memory_throughput,11173.43,GB/s,PASS,baseline,NO_EFFECT,true,,Baseline run with original source.
+shmembench-cuda,948937,gn1222.twcc.ai,P3,1,BLOCK_SIZE_128,size_bytes=8388608;repeat=1000,avg_kernel_time,7.572923,ms,FAIL,rejected,CORRECT_FIX,false,checksum failed,Block-size sweep invalid because checksum/reference did not remain valid.
+shmembench-cuda,948937,gn1222.twcc.ai,P3,1,BLOCK_SIZE_128,size_bytes=8388608;repeat=1000,shared_memory_throughput,11349.60,GB/s,FAIL,rejected,CORRECT_FIX,false,checksum failed,Metric invalid.
+shmembench-cuda,948938,gn1222.twcc.ai,P3,2,threadfence_block,size_bytes=8388608;repeat=1000,avg_kernel_time,8.450486,ms,PASS,rejected,REGRESSION,false,slower than baseline,Checksum valid but performance regressed.
+shmembench-cuda,948938,gn1222.twcc.ai,P3,2,threadfence_block,size_bytes=8388608;repeat=1000,shared_memory_throughput,10170.97,GB/s,PASS,rejected,REGRESSION,false,slower than baseline,Checksum valid but performance regressed.
+shmembench-cuda,948939,gn1222.twcc.ai,P3,3,remove_unneeded_sync,size_bytes=8388608;repeat=1000,avg_kernel_time,7.476312,ms,PASS,accepted,KERNEL_OPT,true,,Final candidate trial 1.
+shmembench-cuda,948939,gn1222.twcc.ai,P3,3,remove_unneeded_sync,size_bytes=8388608;repeat=1000,shared_memory_throughput,11496.27,GB/s,PASS,accepted,KERNEL_OPT,true,,Final candidate trial 1.
+shmembench-cuda,948940,gn1222.twcc.ai,P3,4,remove_unneeded_sync,size_bytes=8388608;repeat=1000,avg_kernel_time,7.478203,ms,PASS,accepted,KERNEL_OPT,true,,Final candidate trial 2.
+shmembench-cuda,948940,gn1222.twcc.ai,P3,4,remove_unneeded_sync,size_bytes=8388608;repeat=1000,shared_memory_throughput,11493.36,GB/s,PASS,accepted,KERNEL_OPT,true,,Final candidate trial 2.
+shmembench-cuda,948941,gn1222.twcc.ai,P3,5,remove_unneeded_sync,size_bytes=8388608;repeat=1000,avg_kernel_time,7.464596,ms,PASS,accepted,KERNEL_OPT,true,,Final candidate trial 3.
+shmembench-cuda,948941,gn1222.twcc.ai,P3,5,remove_unneeded_sync,size_bytes=8388608;repeat=1000,shared_memory_throughput,11514.31,GB/s,PASS,accepted,KERNEL_OPT,true,,Final candidate trial 3.

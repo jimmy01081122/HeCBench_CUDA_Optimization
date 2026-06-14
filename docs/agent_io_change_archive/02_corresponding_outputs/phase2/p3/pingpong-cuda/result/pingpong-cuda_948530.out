@@ -1,0 +1,118 @@
+benchmark=pingpong-cuda
+job_id=948530
+node=gn1228
+nodelist=gn1228
+CUDA_VISIBLE_DEVICES=0,1
+UCX_TLS=self,shm,cuda_copy,cuda_ipc
+NCCL_DEBUG=unset
+NCCL_SOCKET_IFNAME=unset
+NCCL_IB_DISABLE=unset
+date=2026-06-09T16:12:28+08:00
+
+=== modules ===
++--------------------------------------------------+
+| Nvidia hpc sdk v24.11 with cuda v12.6 is loaded. |
++--------------------------------------------------+
+
+Currently Loaded Modules:
+  1) hpcx-ompi   2) nvhpc-24.11_hpcx-2.20_cuda-12.6
+
+ 
+
+
+=== compiler ===
+nvcc: NVIDIA (R) Cuda compiler driver
+Copyright (c) 2005-2024 NVIDIA Corporation
+Built on Thu_Sep_12_02:18:05_PDT_2024
+Cuda compilation tools, release 12.6, V12.6.77
+Build cuda_12.6.r12.6/compiler.34841621_0
+
+=== GPU topology ===
+Tue Jun  9 16:12:28 2026       
++---------------------------------------------------------------------------------------+
+| NVIDIA-SMI 535.161.08             Driver Version: 535.161.08   CUDA Version: 12.2     |
+|-----------------------------------------+----------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id        Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |         Memory-Usage | GPU-Util  Compute M. |
+|                                         |                      |               MIG M. |
+|=========================================+======================+======================|
+|   0  Tesla V100-SXM2-32GB           On  | 00000000:1B:00.0 Off |                    0 |
+| N/A   29C    P0              42W / 300W |      0MiB / 32768MiB |      1%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+|   1  Tesla V100-SXM2-32GB           On  | 00000000:1C:00.0 Off |                    0 |
+| N/A   25C    P0              42W / 300W |      0MiB / 32768MiB |      0%      Default |
+|                                         |                      |                  N/A |
++-----------------------------------------+----------------------+----------------------+
+                                                                                         
++---------------------------------------------------------------------------------------+
+| Processes:                                                                            |
+|  GPU   GI   CI        PID   Type   Process name                            GPU Memory |
+|        ID   ID                                                             Usage      |
+|=======================================================================================|
+|  No running processes found                                                           |
++---------------------------------------------------------------------------------------+
+	[4mGPU0	GPU1	NIC0	NIC1	NIC2	NIC3	NIC4	CPU Affinity	NUMA Affinity	GPU NUMA ID[0m
+GPU0	 X 	NV1	PIX	NODE	SYS	SYS	NODE	0-1	0		N/A
+GPU1	NV1	 X 	PIX	NODE	SYS	SYS	NODE	0-1	0		N/A
+NIC0	PIX	PIX	 X 	NODE	SYS	SYS	NODE				
+NIC1	NODE	NODE	NODE	 X 	SYS	SYS	NODE				
+NIC2	SYS	SYS	SYS	SYS	 X 	NODE	SYS				
+NIC3	SYS	SYS	SYS	SYS	NODE	 X 	SYS				
+NIC4	NODE	NODE	NODE	NODE	SYS	SYS	 X 				
+
+Legend:
+
+  X    = Self
+  SYS  = Connection traversing PCIe as well as the SMP interconnect between NUMA nodes (e.g., QPI/UPI)
+  NODE = Connection traversing PCIe as well as the interconnect between PCIe Host Bridges within a NUMA node
+  PHB  = Connection traversing PCIe as well as a PCIe Host Bridge (typically the CPU)
+  PXB  = Connection traversing multiple PCIe bridges (without traversing the PCIe Host Bridge)
+  PIX  = Connection traversing at most a single PCIe bridge
+  NV#  = Connection traversing a bonded set of # NVLinks
+
+NIC Legend:
+
+  NIC0: mlx5_0
+  NIC1: mlx5_1
+  NIC2: mlx5_4
+  NIC3: mlx5_5
+  NIC4: mlx5_bond_0
+
+
+=== build ===
+rm -rf main-mpi main-mpi.o
+rm -rf main-nccl main-nccl.o
+nvcc  -std=c++17 -I/opt/nvidia/hpc_sdk/Linux_x86_64/25.7/comm_libs/12.9/openmpi4/openmpi-4.1.5//include -Xcompiler -Wall -arch=sm_70 -O3 -c main-mpi.cu -o main-mpi.o
+nvcc  -std=c++17 -I/opt/nvidia/hpc_sdk/Linux_x86_64/25.7/comm_libs/12.9/openmpi4/openmpi-4.1.5//include -Xcompiler -Wall -arch=sm_70 -O3 main-mpi.o -o main-mpi -L/opt/nvidia/hpc_sdk/Linux_x86_64/25.7/comm_libs/12.9/openmpi4/openmpi-4.1.5//lib -lmpi -lnccl
+
+=== MPI command ===
+UCX_TLS=self,shm,cuda_copy,cuda_ipc mpirun -x UCX_TLS --mca coll ^hcoll,ucc --mca pml ucx -n 2 ./main-mpi
+MPI : Transfer size (B):     524288, Transfer Time (s):     0.000033229, Bandwidth (GB/s):    15.778153423
+MPI : Transfer size (B):    1048576, Transfer Time (s):     0.000053980, Bandwidth (GB/s):    19.425232632
+MPI : Transfer size (B):    2097152, Transfer Time (s):     0.000096472, Bandwidth (GB/s):    21.738421061
+MPI : Transfer size (B):    4194304, Transfer Time (s):     0.000181441, Bandwidth (GB/s):    23.116608333
+MPI : Transfer size (B):    8388608, Transfer Time (s):     0.000355034, Bandwidth (GB/s):    23.627610777
+MPI : Transfer size (B):   16777216, Transfer Time (s):     0.000700926, Bandwidth (GB/s):    23.935788484
+MPI : Transfer size (B):   33554432, Transfer Time (s):     0.001392441, Bandwidth (GB/s):    24.097569699
+MPI : Transfer size (B):   67108864, Transfer Time (s):     0.002775353, Bandwidth (GB/s):    24.180297722
+MPI : Transfer size (B):  134217728, Transfer Time (s):     0.005541518, Bandwidth (GB/s):    24.220391552
+MPI : Transfer size (B):  268435456, Transfer Time (s):     0.011074072, Bandwidth (GB/s):    24.239995528
+MPI : Transfer size (B):  536870912, Transfer Time (s):     0.022138980, Bandwidth (GB/s):    24.250028874
+MPI : Transfer size (B): 1073741824, Transfer Time (s):     0.044267169, Bandwidth (GB/s):    24.255940716
+mpi_exit_status=0
+
+=== NCCL command ===
+UCX_TLS=self,shm,cuda_copy,cuda_ipc mpirun -x UCX_TLS --mca coll ^hcoll,ucc --mca pml ucx -n 2 ./main-nccl
+--------------------------------------------------------------------------
+mpirun was unable to launch the specified application as it could not access
+or execute an executable:
+
+Executable: ./main-nccl
+Node: gn1228
+
+while attempting to start process rank 0.
+--------------------------------------------------------------------------
+2 total processes failed to start
+nccl_exit_status=132
+
