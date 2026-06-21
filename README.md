@@ -1,5 +1,11 @@
 # HeCBench CUDA Optimization (AI-Assisted Code Optimization & Prompt Auditability Evaluation)
 
+- 課程名稱	平行與分散式程式設計
+- 開課學期  114-2 (2026 Spring)
+- 授課教師	洪士灝 教授
+- 課號	CSIE 7210
+- 課程辨識碼	922 U3970
+
 本專案基於 [ORNL HeCBench](https://github.com/ORNL/HeCBench.git)，旨在研究如何利用 AI 輔助進行 GPU CUDA 核函數與 MoE (Mixture-of-Experts) 算子的效能優化，並系統性評估不同 Prompt 約束層級（P1 弱約束、P2 中約束、P3 強約束）對 AI Agent 優化行為可重現性與可審核性的影響。
 
 ---
